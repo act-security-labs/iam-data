@@ -174,6 +174,16 @@
     "description": "Filters access by maximum number of keys returned in a ListBucket request",
     "type": "Numeric"
   },
+  "s3:object-lock-event-hold": {
+    "key": "s3:object-lock-event-hold",
+    "description": "Filters access by object event hold status (ON or OFF)",
+    "type": "String"
+  },
+  "s3:object-lock-event-hold-duration-days": {
+    "key": "s3:object-lock-event-hold-duration-days",
+    "description": "Filters access by object event hold duration in days",
+    "type": "Numeric"
+  },
   "s3:object-lock-legal-hold": {
     "key": "s3:object-lock-legal-hold",
     "description": "Filters access by object legal hold status",
