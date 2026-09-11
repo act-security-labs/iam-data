@@ -1,10 +1,16 @@
 {
   "service": {
     "key": "Service",
-    "arn": "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/${RequestPath}"
+    "arn": "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/${RequestPath}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "tcp service": {
     "key": "TCP Service",
-    "arn": "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}"
+    "arn": "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }

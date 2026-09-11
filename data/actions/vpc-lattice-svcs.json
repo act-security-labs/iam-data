@@ -7,7 +7,9 @@
       {
         "name": "TCP Service",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -28,7 +30,9 @@
       {
         "name": "Service",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],

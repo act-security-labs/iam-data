@@ -471,6 +471,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createconsentportal": {
+    "name": "CreateConsentPortal",
+    "description": "Grants permission to create a new consent portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "consent-portal",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createdataset": {
     "name": "CreateDataset",
     "description": "Grants permission to create a new dataset",
@@ -984,6 +1002,21 @@
     "resourceTypes": [
       {
         "name": "configuration-bundle",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteconsentportal": {
+    "name": "DeleteConsentPortal",
+    "description": "Grants permission to delete a consent portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "consent-portal",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1674,6 +1707,21 @@
     "resourceTypes": [
       {
         "name": "configuration-bundle",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getconsentportal": {
+    "name": "GetConsentPortal",
+    "description": "Grants permission to retrieve information about a consent portal",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "consent-portal",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -2726,6 +2774,14 @@
   "listconfigurationbundles": {
     "name": "ListConfigurationBundles",
     "description": "Grants permission to list configuration bundles",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listconsentportals": {
+    "name": "ListConsentPortals",
+    "description": "Grants permission to list all of the consent portals in your account",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -3983,6 +4039,21 @@
     "resourceTypes": [
       {
         "name": "configuration-bundle",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateconsentportal": {
+    "name": "UpdateConsentPortal",
+    "description": "Grants permission to update an existing consent portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "consent-portal",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

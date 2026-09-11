@@ -4134,6 +4134,23 @@
     ],
     "dependentActions": []
   },
+  "listevaluationformaiversions": {
+    "name": "ListEvaluationFormAIVersions",
+    "description": "Grants permission to list the AI versions for evaluation forms in the specified Amazon Connect instance",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "instance",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
   "listevaluationformversions": {
     "name": "ListEvaluationFormVersions",
     "description": "Grants permission to list versions of an evaluation form in the specified Amazon Connect instance",

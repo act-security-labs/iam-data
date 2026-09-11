@@ -1,4 +1,9 @@
 {
+  "aws:resourcetag/${tagkey}": {
+    "key": "aws:ResourceTag/${TagKey}",
+    "description": "Filters access by tag key-value pairs attached to the resource",
+    "type": "String"
+  },
   "vpc-lattice-svcs:port": {
     "key": "vpc-lattice-svcs:Port",
     "description": "Filters access by the destination port the request is made to",

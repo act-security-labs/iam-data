@@ -63,6 +63,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "consent-portal": {
+    "key": "consent-portal",
+    "arn": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:consent-portal/${ConsentPortalId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "dataset": {
     "key": "dataset",
     "arn": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:dataset/${DatasetId}",
