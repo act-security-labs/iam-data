@@ -98,7 +98,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "createchat": {
@@ -471,7 +474,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "getassetcontent": {
@@ -486,7 +492,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "getassetfile": {
@@ -501,7 +510,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "getassociation": {
@@ -537,7 +549,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "getknowledgeitem": {
@@ -667,7 +682,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listassettypes": {
@@ -705,7 +723,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listassociations": {
@@ -735,7 +756,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listchats": {
@@ -765,7 +789,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listgoals": {
@@ -795,7 +822,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listknowledgeitemversions": {

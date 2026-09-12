@@ -1,4 +1,14 @@
 {
+  "aidevops:sourceagentspacearn": {
+    "key": "aidevops:SourceAgentSpaceArn",
+    "description": "Filters access by the source AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
+    "type": "String"
+  },
+  "aidevops:targetagentspacearn": {
+    "key": "aidevops:TargetAgentSpaceArn",
+    "description": "Filters access by the target AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
+    "type": "String"
+  },
   "aws:requesttag/${tagkey}": {
     "key": "aws:RequestTag/${TagKey}",
     "description": "Filters access by the tags that are passed in the request",

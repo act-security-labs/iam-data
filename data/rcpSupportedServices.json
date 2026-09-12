@@ -3,6 +3,7 @@
   "appconfig",
   "appstream",
   "autoscaling",
+  "clouddirectory",
   "cloudfront",
   "cloudsearch",
   "codebuild",
