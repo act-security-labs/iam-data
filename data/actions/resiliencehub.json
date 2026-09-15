@@ -1472,9 +1472,43 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listtestrundependencies": {
+    "name": "ListTestRunDependencies",
+    "description": "Grants permission to list snapshotted dependencies for a test run",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "service",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtestrunevents": {
     "name": "ListTestRunEvents",
     "description": "Grants permission to list events for a test run",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "service",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtestrunsourceevents": {
+    "name": "ListTestRunSourceEvents",
+    "description": "Grants permission to list source events for a test run",
     "accessLevel": "Read",
     "resourceTypes": [
       {
