@@ -59,6 +59,16 @@
     "description": "Filters access by SES Mail Manager traffic policy ARN",
     "type": "ARN"
   },
+  "ses:clicktrackingenabled": {
+    "key": "ses:ClickTrackingEnabled",
+    "description": "Filters access by the click tracking override value specified in configuration overrides",
+    "type": "String"
+  },
+  "ses:configurationsetoptions": {
+    "key": "ses:ConfigurationSetOptions",
+    "description": "Filters access by the configuration set options included in the request",
+    "type": "ArrayOfString"
+  },
   "ses:exportsourcetype": {
     "key": "ses:ExportSourceType",
     "description": "Filters access by the export source type",
@@ -67,6 +77,11 @@
   "ses:multiregionendpointid": {
     "key": "ses:MultiRegionEndpointId",
     "description": "Filters access by the multi-region endpoint ID that is used to send email",
+    "type": "String"
+  },
+  "ses:opentrackingenabled": {
+    "key": "ses:OpenTrackingEnabled",
+    "description": "Filters access by the open tracking override value specified in configuration overrides",
     "type": "String"
   },
   "ses:replicaregion": {

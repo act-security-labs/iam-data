@@ -6,6 +6,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "dx-resiliency-group": {
+    "key": "dx-resiliency-group",
+    "arn": "arn:${Partition}:directconnect::${Account}:dx-resiliency-group/${ResiliencyGroupId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "dxcon": {
     "key": "dxcon",
     "arn": "arn:${Partition}:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",

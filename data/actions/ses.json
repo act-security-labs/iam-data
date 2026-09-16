@@ -2512,6 +2512,17 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "applytrackingconfigurationoverrides": {
+    "name": "ApplyTrackingConfigurationOverrides",
+    "description": "Grants permission to apply tracking configuration overrides when sending email",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "ses:ClickTrackingEnabled",
+      "ses:OpenTrackingEnabled"
+    ],
+    "dependentActions": []
+  },
   "replicateemailidentitydkimsigningkey": {
     "name": "ReplicateEmailIdentityDkimSigningKey",
     "description": "Grants permission to replicate email identity DKIM signing key",
@@ -2526,6 +2537,25 @@
     ],
     "conditionKeys": [
       "ses:ReplicaRegion"
+    ],
+    "dependentActions": []
+  },
+  "associateemailidentitycertificate": {
+    "name": "AssociateEmailIdentityCertificate",
+    "description": "Grants permission to associate a certificate with an email identity",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "identity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "ses:ApiVersion",
+      "ses:FromAddress"
     ],
     "dependentActions": []
   },
@@ -2896,6 +2926,25 @@
     ],
     "dependentActions": []
   },
+  "disassociateemailidentitycertificate": {
+    "name": "DisassociateEmailIdentityCertificate",
+    "description": "Grants permission to disassociate a certificate from an email identity",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "identity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "ses:ApiVersion",
+      "ses:FromAddress"
+    ],
+    "dependentActions": []
+  },
   "getcontact": {
     "name": "GetContact",
     "description": "Grants permission to return a contact from a contact list",
@@ -3135,6 +3184,24 @@
       }
     ],
     "conditionKeys": [
+      "ses:ApiVersion"
+    ],
+    "dependentActions": []
+  },
+  "listemailidentitycertificates": {
+    "name": "ListEmailIdentityCertificates",
+    "description": "Grants permission to list the certificates associated with an email identity",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "identity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "ses:ApiVersion"
     ],
     "dependentActions": []
@@ -3533,6 +3600,25 @@
     ],
     "conditionKeys": [
       "ses:ApiVersion"
+    ],
+    "dependentActions": []
+  },
+  "updateconfigurationset": {
+    "name": "UpdateConfigurationSet",
+    "description": "Grants permission to update a configuration set",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "configuration-set",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "ses:ApiVersion",
+      "ses:ConfigurationSetOptions"
     ],
     "dependentActions": []
   },

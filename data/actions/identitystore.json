@@ -3,7 +3,14 @@
     "name": "AddRegion",
     "description": "Grants permission to add a region to an IdentityStore",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -144,7 +151,14 @@
     "name": "DeleteIdentityStore",
     "description": "Grants permission to delete an IdentityStore",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -235,7 +249,14 @@
     "name": "DescribeRegion",
     "description": "Grants permission to retrieve configuration details for a specific IdentityStore region",
     "accessLevel": "Read",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "identitystore:PrimaryRegion"
     ],
@@ -243,7 +264,7 @@
   },
   "describeuser": {
     "name": "DescribeUser",
-    "description": "Grants permission to retrieve information about user in the specified IdentityStore",
+    "description": "Grants permission to retrieve information about a user in the specified IdentityStore",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -267,7 +288,7 @@
   },
   "getgroupid": {
     "name": "GetGroupId",
-    "description": "Grants permission to retrieve ID information about group in the specified IdentityStore",
+    "description": "Grants permission to retrieve ID information about a group in the specified IdentityStore",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -325,7 +346,7 @@
   },
   "getuserid": {
     "name": "GetUserId",
-    "description": "Grants permission to retrieves ID information about user in the specified IdentityStore",
+    "description": "Grants permission to retrieve ID information about a user in the specified IdentityStore",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -441,7 +462,7 @@
   },
   "listgroups": {
     "name": "ListGroups",
-    "description": "Grants permission to search for groups within the specified IdentityStore",
+    "description": "Grants permission to retrieve information about all groups in the specified IdentityStore",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -467,7 +488,14 @@
     "name": "ListRegions",
     "description": "Grants permission to list all regions configured for an IdentityStore",
     "accessLevel": "List",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "identitystore:PrimaryRegion"
     ],
@@ -475,7 +503,7 @@
   },
   "listusers": {
     "name": "ListUsers",
-    "description": "Grants permission to search for users in the specified IdentityStore",
+    "description": "Grants permission to retrieve information about all users in the specified IdentityStore",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -501,7 +529,14 @@
     "name": "RemoveRegion",
     "description": "Grants permission to remove a region from an IdentityStore",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -550,7 +585,14 @@
     "name": "UpdateIdentityStore",
     "description": "Grants permission to update the configuration of an IdentityStore",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

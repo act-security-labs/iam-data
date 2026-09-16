@@ -146,6 +146,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "associateconnectionstoresiliencygroup": {
+    "name": "AssociateConnectionsToResiliencyGroup",
+    "description": "Grants permission to associate one or more connections with a resiliency group",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "dxcon",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "associatehostedconnection": {
     "name": "AssociateHostedConnection",
     "description": "Grants permission to associate a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect",
@@ -447,6 +468,17 @@
     ],
     "dependentActions": []
   },
+  "createresiliencygroup": {
+    "name": "CreateResiliencyGroup",
+    "description": "Grants permission to create a resiliency group",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createtransitvirtualinterface": {
     "name": "CreateTransitVirtualInterface",
     "description": "Grants permission to create a new transit virtual interface",
@@ -561,6 +593,21 @@
     "resourceTypes": [
       {
         "name": "dxlag",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteresiliencygroup": {
+    "name": "DeleteResiliencyGroup",
+    "description": "Grants permission to delete a resiliency group",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -819,6 +866,12 @@
         "dependentActions": []
       },
       {
+        "name": "dx-resiliency-group",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "dxcon",
         "required": false,
         "conditionKeys": [],
@@ -896,6 +949,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disassociateconnectionsfromresiliencygroup": {
+    "name": "DisassociateConnectionsFromResiliencyGroup",
+    "description": "Grants permission to disassociate one or more connections from a resiliency group",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "dxcon",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disassociatemacseckey": {
     "name": "DisassociateMacSecKey",
     "description": "Grants permission to remove the association between a MAC Security (MACsec) security key and an AWS Direct Connect dedicated connection",
@@ -914,6 +988,44 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getresiliencygroup": {
+    "name": "GetResiliencyGroup",
+    "description": "Grants permission to describe a resiliency group",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresiliencygroupassociations": {
+    "name": "ListResiliencyGroupAssociations",
+    "description": "Grants permission to list the connection associations of a resiliency group",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresiliencygroups": {
+    "name": "ListResiliencyGroups",
+    "description": "Grants permission to list all resiliency groups owned by the AWS account",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -989,6 +1101,12 @@
         "dependentActions": []
       },
       {
+        "name": "dx-resiliency-group",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "dxcon",
         "required": false,
         "conditionKeys": [],
@@ -1020,6 +1138,12 @@
     "resourceTypes": [
       {
         "name": "dx-gateway",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "dx-resiliency-group",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1063,6 +1187,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateconnectionsbillingmode": {
+    "name": "UpdateConnectionsBillingMode",
+    "description": "Grants permission to update the billing mode for up to 200 AWS Direct Connect connections in a single request",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dxcon",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatedirectconnectgateway": {
     "name": "UpdateDirectConnectGateway",
     "description": "Grants permission to update the name of a Direct Connect gateway",
@@ -1093,6 +1232,21 @@
     "resourceTypes": [
       {
         "name": "dxlag",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateresiliencygroup": {
+    "name": "UpdateResiliencyGroup",
+    "description": "Grants permission to update the attributes of a resiliency group",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dx-resiliency-group",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
