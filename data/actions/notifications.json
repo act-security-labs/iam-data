@@ -1,4 +1,12 @@
 {
+  "accesssensitiveevents": {
+    "name": "AccessSensitiveEvents",
+    "description": "Grants permission to access sensitive Notification events",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getfeatureoptinstatus": {
     "name": "GetFeatureOptInStatus",
     "description": "Grants permission to read the opt-in status of an AWS User Notification Service feature",
@@ -12,6 +20,21 @@
     "description": "Grants permission to update the opt-in status of an AWS User Notification Service feature",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "subscribesensitiveevents": {
+    "name": "SubscribeSensitiveEvents",
+    "description": "Grants permission to subscribe to sensitive events on an existing Managed Notification channel association",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ManagedNotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -187,7 +210,7 @@
   },
   "disassociateorganizationalunit": {
     "name": "DisassociateOrganizationalUnit",
-    "description": "Grants permission to disassociate an Organizational Unit to a particular Notification Configuration",
+    "description": "Grants permission to remove an Organizational Unit from a NotificationConfiguration",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -370,7 +393,7 @@
   },
   "listmemberaccounts": {
     "name": "ListMemberAccounts",
-    "description": "Grants permission to list Member Accounts for a Notification Configuration",
+    "description": "Grants permission to list MemberAccounts by AdminNotificationConfiguration",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -409,7 +432,7 @@
   },
   "listorganizationalunits": {
     "name": "ListOrganizationalUnits",
-    "description": "Grants permission to list Organizational Units for a Notification Configuration",
+    "description": "Grants permission to list Organizational Units by NotificationConfiguration",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -480,6 +503,21 @@
     "resourceTypes": [
       {
         "name": "EventRule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatemanagednotificationchannelassociation": {
+    "name": "UpdateManagedNotificationChannelAssociation",
+    "description": "Grants permission to toggle the sensitive-events subscription on an existing Managed Notification channel association",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ManagedNotificationConfiguration",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
