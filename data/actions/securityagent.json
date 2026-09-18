@@ -344,6 +344,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "batchgetvalidationruns": {
+    "name": "BatchGetValidationRuns",
+    "description": "Grants permission to retrieve multiple validation runs in a single request",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchupdatesecurityrequirements": {
     "name": "BatchUpdateSecurityRequirements",
     "description": "Grants permission to batch update security requirements within a customer managed pack",
@@ -972,6 +987,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdiscovereddomains": {
+    "name": "ListDiscoveredDomains",
+    "description": "Grants permission to list discovered domains associated with a pentest",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdiscoveredendpoints": {
     "name": "ListDiscoveredEndpoints",
     "description": "Grants permission to list discovered endpoints associated with a pentest job with optional URI prefix filtering",
@@ -1319,6 +1349,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startvalidationrun": {
+    "name": "StartValidationRun",
+    "description": "Grants permission to initiate the execution of a validation run",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "stopcodereviewjob": {
     "name": "StopCodeReviewJob",
     "description": "Grants permission to stop the execution of a running code review",
@@ -1507,6 +1552,21 @@
   "updatecodereview": {
     "name": "UpdateCodeReview",
     "description": "Grants permission to update an existing code review with new configuration or settings",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatediscovereddomains": {
+    "name": "UpdateDiscoveredDomains",
+    "description": "Grants permission to update classification of multiple discovered domain in a single request",
     "accessLevel": "Write",
     "resourceTypes": [
       {

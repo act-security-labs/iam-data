@@ -969,6 +969,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listavailablephonenumbers": {
+    "name": "ListAvailablePhoneNumbers",
+    "description": "Grants permission to list available phone numbers for purchase",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listnotifycountries": {
     "name": "ListNotifyCountries",
     "description": "Grants permission to list countries that support notify messaging",

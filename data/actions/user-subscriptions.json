@@ -1,4 +1,20 @@
 {
+  "cancelpurchasesession": {
+    "name": "CancelPurchaseSession",
+    "description": "Grants permission to cancel a User subscription purchase session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "confirmpurchasesession": {
+    "name": "ConfirmPurchaseSession",
+    "description": "Grants permission to confirm a User subscription purchase session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createclaim": {
     "name": "CreateClaim",
     "description": "Grants permission to create a User subscription Claim",
@@ -12,6 +28,22 @@
   "createclaimaddon": {
     "name": "CreateClaimAddOn",
     "description": "Grants permission to create a User subscription Claim add-on",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createpurchasesession": {
+    "name": "CreatePurchaseSession",
+    "description": "Grants permission to create a User subscription purchase session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createupdateplanpreview": {
+    "name": "CreateUpdatePlanPreview",
+    "description": "Grants permission to create a preview of a User subscription plan update",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -41,9 +73,25 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getcurrentplandetails": {
+    "name": "GetCurrentPlanDetails",
+    "description": "Grants permission to get the current plan details for a User subscription",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "geteffectiveusagelimit": {
     "name": "GetEffectiveUsageLimit",
     "description": "Grants permission to get a User subscription effective usage limit",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpurchasesession": {
+    "name": "GetPurchaseSession",
+    "description": "Grants permission to get a User subscription purchase session",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
