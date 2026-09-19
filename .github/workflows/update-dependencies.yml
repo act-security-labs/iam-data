@@ -13,4 +13,4 @@ jobs:
       pull-requests: write # Create and merge PRs
     steps:
       - name: Run dependency update
-        uses: cloud-copilot/action-update-dependencies@fe48d42724df9c4ed34abf9c0cc97a8da42917f4
+        uses: cloud-copilot/action-update-dependencies@50435f0b39245db65f5030c8257cbc19daac1709
