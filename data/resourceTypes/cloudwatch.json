@@ -1,4 +1,18 @@
 {
+  "access-grant": {
+    "key": "access-grant",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:access-grant/${GrantId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "access-profile": {
+    "key": "access-profile",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:access-profile/${ProfileId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "alarm": {
     "key": "alarm",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm:${AlarmName}",
@@ -9,6 +23,13 @@
   "alarm-mute-rule": {
     "key": "alarm-mute-rule",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm-mute-rule:${AlarmMuteRuleName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "alert": {
+    "key": "alert",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:alert/${AlertId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
@@ -27,6 +48,20 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "domain": {
+    "key": "domain",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:domain/${DomainId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "ingestion-endpoint": {
+    "key": "ingestion-endpoint",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "insight-rule": {
     "key": "insight-rule",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}",
@@ -34,9 +69,37 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "integration": {
+    "key": "integration",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "metric-stream": {
     "key": "metric-stream",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "omni-dashboard": {
+    "key": "omni-dashboard",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "organization-access-grant": {
+    "key": "organization-access-grant",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-access-grant/${GrantId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "organization-domain": {
+    "key": "organization-domain",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-domain/${DomainId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
@@ -51,6 +114,20 @@
   "slo": {
     "key": "slo",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:slo/${SloName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "space": {
+    "key": "space",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:space/${SpaceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "view": {
+    "key": "view",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

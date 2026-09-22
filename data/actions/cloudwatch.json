@@ -100,6 +100,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "assumeaccessprofile": {
+    "name": "AssumeAccessProfile",
+    "description": "Grants permission to assume an access profile",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "batchgetservicelevelindicatorreport": {
     "name": "BatchGetServiceLevelIndicatorReport",
     "description": "Grants permission to batch get service level indicator report",
@@ -123,6 +133,108 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createaccessgrant": {
+    "name": "CreateAccessGrant",
+    "description": "Grants permission to create an access grant",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createaccessprofile": {
+    "name": "CreateAccessProfile",
+    "description": "Grants permission to create an access profile",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createalert": {
+    "name": "CreateAlert",
+    "description": "Grants permission to create an alert",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createdomain": {
+    "name": "CreateDomain",
+    "description": "Grants permission to create a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createdomainaccessgrantfororganization": {
+    "name": "CreateDomainAccessGrantForOrganization",
+    "description": "Grants permission to create a domain access grant for an organization",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createdomainfororganization": {
+    "name": "CreateDomainForOrganization",
+    "description": "Grants permission to create a domain for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createingestionendpoint": {
+    "name": "CreateIngestionEndpoint",
+    "description": "Grants permission to create an ingestion endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createintegration": {
+    "name": "CreateIntegration",
+    "description": "Grants permission to create an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createomnidashboard": {
+    "name": "CreateOmniDashboard",
+    "description": "Grants permission to create an omni dashboard",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createomnithread": {
+    "name": "CreateOmniThread",
+    "description": "Grants permission to create an omni thread",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createonetimedeeplinkcode": {
+    "name": "CreateOneTimeDeepLinkCode",
+    "description": "Grants permission to create a one-time deep link code",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createservicelevelobjective": {
     "name": "CreateServiceLevelObjective",
     "description": "Grants permission to create a service level objective",
@@ -131,6 +243,58 @@
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createspace": {
+    "name": "CreateSpace",
+    "description": "Grants permission to create a space",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createview": {
+    "name": "CreateView",
+    "description": "Grants permission to create a view",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteaccessgrant": {
+    "name": "DeleteAccessGrant",
+    "description": "Grants permission to delete an access grant",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "access-grant",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteaccessprofile": {
+    "name": "DeleteAccessProfile",
+    "description": "Grants permission to delete an access profile",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": []
   },
@@ -164,6 +328,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletealert": {
+    "name": "DeleteAlert",
+    "description": "Grants permission to delete an alert",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "alert",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "deleteanomalydetector": {
     "name": "DeleteAnomalyDetector",
     "description": "Grants permission to delete the specified anomaly detection model from your account",
@@ -187,6 +368,68 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletedomain": {
+    "name": "DeleteDomain",
+    "description": "Grants permission to delete a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletedomainaccessgrantfororganization": {
+    "name": "DeleteDomainAccessGrantForOrganization",
+    "description": "Grants permission to delete a domain access grant for an organization",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "organization-access-grant",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deletedomainfororganization": {
+    "name": "DeleteDomainForOrganization",
+    "description": "Grants permission to delete a domain for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "organization-domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteingestionendpoint": {
+    "name": "DeleteIngestionEndpoint",
+    "description": "Grants permission to delete an ingestion endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ingestion-endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteinsightrules": {
     "name": "DeleteInsightRules",
     "description": "Grants permission to delete a collection of insight rules",
@@ -200,6 +443,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteintegration": {
+    "name": "DeleteIntegration",
+    "description": "Grants permission to delete an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "deletemetricstream": {
@@ -217,6 +477,33 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteomnidashboard": {
+    "name": "DeleteOmniDashboard",
+    "description": "Grants permission to delete an omni dashboard",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteomnithread": {
+    "name": "DeleteOmniThread",
+    "description": "Grants permission to delete an omni thread",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "deleteservicelevelobjective": {
     "name": "DeleteServiceLevelObjective",
     "description": "Grants permission to delete a service level objective",
@@ -230,6 +517,38 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletespace": {
+    "name": "DeleteSpace",
+    "description": "Grants permission to delete a space",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "space",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteview": {
+    "name": "DeleteView",
+    "description": "Grants permission to delete a view",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "view",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "describealarmhistory": {
@@ -370,6 +689,48 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getaccessgrant": {
+    "name": "GetAccessGrant",
+    "description": "Grants permission to get an access grant",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "access-grant",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getaccessprofile": {
+    "name": "GetAccessProfile",
+    "description": "Grants permission to get an access profile",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getagentgraph": {
+    "name": "GetAgentGraph",
+    "description": "Grants permission to get an agent graph",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getalarmmuterule": {
     "name": "GetAlarmMuteRule",
     "description": "Grants permission to get an alarm mute rule",
@@ -383,6 +744,33 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getalert": {
+    "name": "GetAlert",
+    "description": "Grants permission to get an alert",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "alert",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getcontextgraph": {
+    "name": "GetContextGraph",
+    "description": "Grants permission to get a context graph",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "getdashboard": {
@@ -417,6 +805,70 @@
     ],
     "dependentActions": []
   },
+  "getdomain": {
+    "name": "GetDomain",
+    "description": "Grants permission to get a domain",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getdomainaccessgrantfororganization": {
+    "name": "GetDomainAccessGrantForOrganization",
+    "description": "Grants permission to get a domain access grant for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "organization-access-grant",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getdomainfororganization": {
+    "name": "GetDomainForOrganization",
+    "description": "Grants permission to get a domain for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "organization-domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getingestionendpoint": {
+    "name": "GetIngestionEndpoint",
+    "description": "Grants permission to get an ingestion endpoint",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ingestion-endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getinsightrulereport": {
     "name": "GetInsightRuleReport",
     "description": "Grants permission to return the top-N report of unique contributors over a time range for a given insight rule",
@@ -430,6 +882,33 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getintegration": {
+    "name": "GetIntegration",
+    "description": "Grants permission to get an integration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getintelligenceconfiguration": {
+    "name": "GetIntelligenceConfiguration",
+    "description": "Grants permission to get an intelligence configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "getmetricdata": {
@@ -446,7 +925,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "getmetricstatistics": {
@@ -480,6 +961,53 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getomnidashboard": {
+    "name": "GetOmniDashboard",
+    "description": "Grants permission to get an omni dashboard",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getomnithread": {
+    "name": "GetOmniThread",
+    "description": "Grants permission to get an omni thread",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getpreferences": {
+    "name": "GetPreferences",
+    "description": "Grants permission to get preferences",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getrecords": {
+    "name": "GetRecords",
+    "description": "Grants permission to fetch logs, metrics, and traces",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "getservice": {
     "name": "GetService",
     "description": "Grants permission to retrieve information about a service",
@@ -510,12 +1038,102 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getspace": {
+    "name": "GetSpace",
+    "description": "Grants permission to get a space",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "space",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getspacecredentials": {
+    "name": "GetSpaceCredentials",
+    "description": "Grants permission to get space credentials",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getspacecredentialsfororganization": {
+    "name": "GetSpaceCredentialsForOrganization",
+    "description": "Grants permission to get space credentials for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gettelemetryqueryresults": {
+    "name": "GetTelemetryQueryResults",
+    "description": "Grants permission to get telemetry query results",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "gettopologymap": {
     "name": "GetTopologyMap",
     "description": "Grants permission to retrieve a CloudWatch topology map",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getview": {
+    "name": "GetView",
+    "description": "Grants permission to get a view",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "view",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "invokeintegration": {
+    "name": "InvokeIntegration",
+    "description": "Grants permission to invoke an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listaccessgrants": {
+    "name": "ListAccessGrants",
+    "description": "Grants permission to list access grants",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listaccessprofiles": {
+    "name": "ListAccessProfiles",
+    "description": "Grants permission to list access profiles",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "listalarmmuterules": {
@@ -533,12 +1151,68 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listalertcontributors": {
+    "name": "ListAlertContributors",
+    "description": "Grants permission to list alert contributors",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listalerts": {
+    "name": "ListAlerts",
+    "description": "Grants permission to list alerts",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "listdashboards": {
     "name": "ListDashboards",
     "description": "Grants permission to return a list of all CloudWatch dashboards in your account",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdomainaccessgrantsfororganization": {
+    "name": "ListDomainAccessGrantsForOrganization",
+    "description": "Grants permission to list domain access grants for an organization",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listdomains": {
+    "name": "ListDomains",
+    "description": "Grants permission to list domains",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listingestionendpoints": {
+    "name": "ListIngestionEndpoints",
+    "description": "Grants permission to list ingestion endpoints",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrations": {
+    "name": "ListIntegrations",
+    "description": "Grants permission to list integrations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "listmanagedinsightrules": {
@@ -575,7 +1249,29 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listomnidashboards": {
+    "name": "ListOmniDashboards",
+    "description": "Grants permission to list omni dashboards",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listomnithreads": {
+    "name": "ListOmniThreads",
+    "description": "Grants permission to list omni threads",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "listservicelevelobjectives": {
@@ -592,6 +1288,36 @@
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listspaceaccess": {
+    "name": "ListSpaceAccess",
+    "description": "Grants permission to list access to a space",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listspaces": {
+    "name": "ListSpaces",
+    "description": "Grants permission to list spaces",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listspacesfororganization": {
+    "name": "ListSpacesForOrganization",
+    "description": "Grants permission to list spaces for an organization",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "listtagsforresource": {
@@ -664,7 +1390,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": [],
     "scenarios": [
       {
@@ -740,6 +1468,36 @@
         ]
       }
     ]
+  },
+  "listtelemetryfields": {
+    "name": "ListTelemetryFields",
+    "description": "Grants permission to list telemetry fields",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listtelemetryquerysessions": {
+    "name": "ListTelemetryQuerySessions",
+    "description": "Grants permission to list telemetry query sessions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listviews": {
+    "name": "ListViews",
+    "description": "Grants permission to list views",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
   },
   "putalarmmuterule": {
     "name": "PutAlarmMuteRule",
@@ -826,6 +1584,16 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys",
       "cloudwatch:requestInsightRuleLogGroups"
+    ],
+    "dependentActions": []
+  },
+  "putintelligenceconfiguration": {
+    "name": "PutIntelligenceConfiguration",
+    "description": "Grants permission to configure an intelligence configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": []
   },
@@ -924,6 +1692,24 @@
     ],
     "dependentActions": []
   },
+  "querytraces": {
+    "name": "QueryTraces",
+    "description": "Grants permission to query traces",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "searchprincipals": {
+    "name": "SearchPrincipals",
+    "description": "Grants permission to search principals",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "setalarmstate": {
     "name": "SetAlarmState",
     "description": "Grants permission to temporarily set the state of an alarm for testing purposes",
@@ -954,6 +1740,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startomnithreadsession": {
+    "name": "StartOmniThreadSession",
+    "description": "Grants permission to start an omni thread session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "starttelemetryquery": {
+    "name": "StartTelemetryQuery",
+    "description": "Grants permission to start a telemetry query",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "starttelemetryquerysession": {
+    "name": "StartTelemetryQuerySession",
+    "description": "Grants permission to start a telemetry query session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "stopmetricstreams": {
     "name": "StopMetricStreams",
     "description": "Grants permission to stop all CloudWatch metric streams that you specify",
@@ -967,6 +1783,36 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stoptelemetryquery": {
+    "name": "StopTelemetryQuery",
+    "description": "Grants permission to stop a telemetry query",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "stoptelemetryquerysession": {
+    "name": "StopTelemetryQuerySession",
+    "description": "Grants permission to stop a telemetry query session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "submitfeedback": {
+    "name": "SubmitFeedback",
+    "description": "Grants permission to submit feedback",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "tagresource": {
@@ -1041,7 +1887,8 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": [],
     "scenarios": [
@@ -1190,7 +2037,8 @@
       }
     ],
     "conditionKeys": [
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": [],
     "scenarios": [
@@ -1268,6 +2116,139 @@
       }
     ]
   },
+  "updateaccessprofile": {
+    "name": "UpdateAccessProfile",
+    "description": "Grants permission to update an access profile",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updatealert": {
+    "name": "UpdateAlert",
+    "description": "Grants permission to update an alert",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "alert",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updatedomain": {
+    "name": "UpdateDomain",
+    "description": "Grants permission to update a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatedomainfororganization": {
+    "name": "UpdateDomainForOrganization",
+    "description": "Grants permission to update a domain for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "organization-domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateingestionendpoint": {
+    "name": "UpdateIngestionEndpoint",
+    "description": "Grants permission to update an ingestion endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ingestion-endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateintegration": {
+    "name": "UpdateIntegration",
+    "description": "Grants permission to update an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateomnidashboard": {
+    "name": "UpdateOmniDashboard",
+    "description": "Grants permission to update an omni dashboard",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateomnithread": {
+    "name": "UpdateOmniThread",
+    "description": "Grants permission to update an omni thread",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updatepreferences": {
+    "name": "UpdatePreferences",
+    "description": "Grants permission to update preferences",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "updateservicelevelobjective": {
     "name": "UpdateServiceLevelObjective",
     "description": "Grants permission to update a service level objective",
@@ -1281,6 +2262,40 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatespace": {
+    "name": "UpdateSpace",
+    "description": "Grants permission to update a space",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "space",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateview": {
+    "name": "UpdateView",
+    "description": "Grants permission to update a view",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "view",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   }
 }

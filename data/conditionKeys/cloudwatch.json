@@ -19,6 +19,11 @@
     "description": "Filters access by defined alarm actions",
     "type": "ArrayOfString"
   },
+  "cloudwatch:hasaccessgrant": {
+    "key": "cloudwatch:HasAccessGrant",
+    "description": "Filters access by the presence of access grants associated with the request",
+    "type": "String"
+  },
   "cloudwatch:namespace": {
     "key": "cloudwatch:namespace",
     "description": "Filters access by the presence of optional namespace values",

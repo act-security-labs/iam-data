@@ -241,6 +241,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getbillingtransferpreference": {
+    "name": "GetBillingTransferPreference",
+    "description": "Grants permission to get the billing transfer preference",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listaccountassociations": {
     "name": "ListAccountAssociations",
     "description": "Grants permission to list the linked accounts of the payer account for the given billing period while also providing the billing group the linked accounts belong to",
@@ -469,6 +477,16 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatebillingtransferpreference": {
+    "name": "UpdateBillingTransferPreference",
+    "description": "Grants permission to update the billing transfer preference",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "billingconductor:PricingPlanArn"
+    ],
     "dependentActions": []
   },
   "updatecustomlineitem": {
