@@ -29,6 +29,22 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "validatenetworksecuritymanagerruleconfiguration": {
+    "name": "ValidateNetworkSecurityManagerRuleConfiguration",
+    "description": "Grants permission to AWS Network Security Manager to validate a Rule configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "validatenetworksecuritymanagerwebaclconfiguration": {
+    "name": "ValidateNetworkSecurityManagerWebACLConfiguration",
+    "description": "Grants permission to AWS Network Security Manager to validate a WebACL configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "associatewebacl": {
     "name": "AssociateWebACL",
     "description": "Grants permission to associate a WebACL with a resource",

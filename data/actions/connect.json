@@ -1422,6 +1422,24 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "application",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "contact-flow-module",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "hierarchy-group",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "security-profile",
         "required": true,
         "conditionKeys": [],
@@ -4639,6 +4657,24 @@
     ],
     "dependentActions": []
   },
+  "listsecurityprofileaiagents": {
+    "name": "ListSecurityProfileAIAgents",
+    "description": "Grants permission to list the AI agents associated with a specific security profile in an Amazon Connect instance",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "security-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
   "listsecurityprofileapplications": {
     "name": "ListSecurityProfileApplications",
     "description": "Grants permission to list applications associated with a specific security profile in an Amazon Connect instance",
@@ -7598,6 +7634,24 @@
     "description": "Grants permission to update a security profile group for a user in an Amazon Connect instance",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "application",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "contact-flow-module",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "hierarchy-group",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "security-profile",
         "required": true,

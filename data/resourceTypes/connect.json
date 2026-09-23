@@ -13,6 +13,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "application": {
+    "key": "application",
+    "arn": "arn:${Partition}:app-integrations:${Region}:${Account}:application/${ApplicationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "attached-file": {
     "key": "attached-file",
     "arn": "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/file/${FileId}",

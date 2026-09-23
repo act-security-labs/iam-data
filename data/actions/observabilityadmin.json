@@ -23,6 +23,24 @@
     ],
     "dependentActions": []
   },
+  "createdatasetintegration": {
+    "name": "CreateDatasetIntegration",
+    "description": "Grants permission to create a dataset integration for the account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "creates3tableintegration": {
     "name": "CreateS3TableIntegration",
     "description": "Grants permission to create a new s3 table integration with the specified configuration",
@@ -115,6 +133,21 @@
     ],
     "dependentActions": []
   },
+  "deletedatasetintegration": {
+    "name": "DeleteDatasetIntegration",
+    "description": "Grants permission to delete the specified dataset integration for the account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletes3tableintegration": {
     "name": "DeleteS3TableIntegration",
     "description": "Grants permission to delete the s3 table integration with the specified arn",
@@ -190,6 +223,21 @@
     "conditionKeys": [
       "observabilityadmin:CentralizationRuleName"
     ],
+    "dependentActions": []
+  },
+  "getdatasetintegration": {
+    "name": "GetDatasetIntegration",
+    "description": "Grants permission to retrieve the specified dataset integration for the account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "gets3tableintegration": {
@@ -284,6 +332,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdatasetintegrations": {
+    "name": "ListDatasetIntegrations",
+    "description": "Grants permission to list dataset integrations for the account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listresourcetelemetry": {
     "name": "ListResourceTelemetry",
     "description": "Grants permission to retrieve telemetry configurations for resources associated with the account",
@@ -317,6 +373,12 @@
     "description": "Grants permission to list the tags for the specified resource",
     "accessLevel": "List",
     "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "organization-centralization-rule",
         "required": false,
@@ -433,6 +495,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "dataset-integration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "organization-centralization-rule",
         "required": false,
         "conditionKeys": [],
@@ -482,6 +550,12 @@
     "description": "Grants permission to remove the specified tags from the specified resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "organization-centralization-rule",
         "required": false,
@@ -538,6 +612,21 @@
       "observabilityadmin:CentralizationSourceId",
       "observabilityadmin:CentralizationSourceRegions"
     ],
+    "dependentActions": []
+  },
+  "updatedatasetintegration": {
+    "name": "UpdateDatasetIntegration",
+    "description": "Grants permission to update the specified dataset integration for the account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updatetelemetrypipeline": {

@@ -1,4 +1,11 @@
 {
+  "dataset-integration": {
+    "key": "dataset-integration",
+    "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "organization-centralization-rule": {
     "key": "organization-centralization-rule",
     "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:organization-centralization-rule/${CentralizationRuleName}",
