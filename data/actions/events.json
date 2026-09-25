@@ -6,7 +6,13 @@
     "resourceTypes": [
       {
         "name": "event-bus",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -170,11 +176,42 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createeventsource": {
+    "name": "CreateEventSource",
+    "description": "Grants permission to create an event source that forwards events to an event bus",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "events:source"
     ],
     "dependentActions": []
   },
@@ -191,6 +228,33 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createsubscriber": {
+    "name": "CreateSubscriber",
+    "description": "Grants permission to create a subscriber",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "events:ContentFilterPresent",
+      "events:Metadata/${MetadataKey}",
+      "events:Metadata/${MetadataKey}/Matcher"
+    ],
     "dependentActions": []
   },
   "deactivateeventsource": {
@@ -293,6 +357,27 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteeventsource": {
+    "name": "DeleteEventSource",
+    "description": "Grants permission to delete an event source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-sourcev2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -311,6 +396,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteresourcepolicy": {
+    "name": "DeleteResourcePolicy",
+    "description": "Grants permission to delete a resource policy attached to an event bus",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:PolicyName"
+    ],
     "dependentActions": []
   },
   "deleterule": {
@@ -335,6 +437,21 @@
       "events:ManagedBy",
       "events:creatorAccount"
     ],
+    "dependentActions": []
+  },
+  "deletesubscriber": {
+    "name": "DeleteSubscriber",
+    "description": "Grants permission to delete a subscriber",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "subscriber",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "describeapidestination": {
@@ -413,6 +530,12 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -425,7 +548,13 @@
     "resourceTypes": [
       {
         "name": "event-source",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -486,6 +615,21 @@
     ],
     "dependentActions": []
   },
+  "describesubscriber": {
+    "name": "DescribeSubscriber",
+    "description": "Grants permission to retrieve details about a subscriber",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "subscriber",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disablerule": {
     "name": "DisableRule",
     "description": "Grants permission to disable rules",
@@ -531,6 +675,23 @@
     "conditionKeys": [
       "events:ManagedBy",
       "events:creatorAccount"
+    ],
+    "dependentActions": []
+  },
+  "getresourcepolicy": {
+    "name": "GetResourcePolicy",
+    "description": "Grants permission to retrieve the resource policy attached to an event bus",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:PolicyName"
     ],
     "dependentActions": []
   },
@@ -613,6 +774,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listresourcepolicies": {
+    "name": "ListResourcePolicies",
+    "description": "Grants permission to list the resource policies attached to an event bus",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listrulenamesbytarget": {
     "name": "ListRuleNamesByTarget",
     "description": "Grants permission to retrieve a list of the names of the rules associated with a target",
@@ -624,6 +800,14 @@
   "listrules": {
     "name": "ListRules",
     "description": "Grants permission to retrieve a list of the Amazon EventBridge rules in the account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listsubscribers": {
+    "name": "ListSubscribers",
+    "description": "Grants permission to retrieve a list of subscribers",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -641,6 +825,18 @@
         "dependentActions": []
       },
       {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "rule-on-custom-event-bus",
         "required": false,
         "conditionKeys": [],
@@ -648,6 +844,12 @@
       },
       {
         "name": "rule-on-default-event-bus",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -691,9 +893,18 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
+      "events:SystemMetadata/AwsDetailType",
+      "events:SystemMetadata/AwsSource",
+      "events:SystemMetadata/ContentType",
       "events:detail-type",
       "events:eventBusInvocation",
       "events:source"
@@ -714,6 +925,44 @@
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putrawevents": {
+    "name": "PutRawEvents",
+    "description": "Grants permission to publish raw-format events with custom content types, metadata, binary payloads, and FIFO ordering to Amazon EventBridge",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:Metadata/${MetadataKey}",
+      "events:SystemMetadata/AwsDetailType",
+      "events:SystemMetadata/AwsSource",
+      "events:SystemMetadata/ContentType",
+      "events:eventBusInvocation"
+    ],
+    "dependentActions": []
+  },
+  "putresourcepolicy": {
+    "name": "PutResourcePolicy",
+    "description": "Grants permission to attach a resource policy to an event bus",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:PolicyName"
+    ],
     "dependentActions": []
   },
   "putrule": {
@@ -804,6 +1053,21 @@
     ],
     "dependentActions": []
   },
+  "revokeresource": {
+    "name": "RevokeResource",
+    "description": "Grants permission to revoke a subscriber or an event source on an event bus",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startreplay": {
     "name": "StartReplay",
     "description": "Grants permission to start a replay of an archive",
@@ -843,6 +1107,18 @@
         "dependentActions": []
       },
       {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "rule-on-custom-event-bus",
         "required": false,
         "conditionKeys": [],
@@ -850,6 +1126,12 @@
       },
       {
         "name": "rule-on-default-event-bus",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -882,6 +1164,18 @@
         "dependentActions": []
       },
       {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "rule-on-custom-event-bus",
         "required": false,
         "conditionKeys": [],
@@ -889,6 +1183,12 @@
       },
       {
         "name": "rule-on-default-event-bus",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -984,9 +1284,63 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateeventsource": {
+    "name": "UpdateEventSource",
+    "description": "Grants permission to update an event source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "event-sourcev2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:source"
+    ],
+    "dependentActions": []
+  },
+  "updatesubscriber": {
+    "name": "UpdateSubscriber",
+    "description": "Grants permission to update a subscriber",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subscriber",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:ContentFilterPresent",
+      "events:Metadata/${MetadataKey}",
+      "events:Metadata/${MetadataKey}/Matcher"
+    ],
     "dependentActions": []
   }
 }

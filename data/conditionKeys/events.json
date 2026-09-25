@@ -14,6 +14,11 @@
     "description": "Filters access by the tags in the request to event bus and rule actions",
     "type": "ArrayOfString"
   },
+  "events:contentfilterpresent": {
+    "key": "events:ContentFilterPresent",
+    "description": "Filters access by whether a subscriber declares a payload-scope content filter to CreateSubscriber and UpdateSubscriber actions",
+    "type": "Bool"
+  },
   "events:eventbusarn": {
     "key": "events:EventBusArn",
     "description": "Filters access by the ARN of the event buses that can be associated with an endpoint to CreateEndpoint and UpdateEndpoint actions",
@@ -22,6 +27,36 @@
   "events:managedby": {
     "key": "events:ManagedBy",
     "description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule",
+    "type": "String"
+  },
+  "events:metadata/${metadatakey}": {
+    "key": "events:Metadata/${MetadataKey}",
+    "description": "Filters access by a metadata key-value pair on the published event to PutRawEvents actions, or by the exact-match values declared for that key in a subscriber's metadata filter to CreateSubscriber and UpdateSubscriber actions",
+    "type": "ArrayOfString"
+  },
+  "events:metadata/${metadatakey}/matcher": {
+    "key": "events:Metadata/${MetadataKey}/Matcher",
+    "description": "Filters access by the match type declared for a metadata key in a subscriber's filter to CreateSubscriber and UpdateSubscriber actions",
+    "type": "String"
+  },
+  "events:policyname": {
+    "key": "events:PolicyName",
+    "description": "Filters access by the name of the resource policy specified in the request to resource policy actions",
+    "type": "String"
+  },
+  "events:systemmetadata/awsdetailtype": {
+    "key": "events:SystemMetadata/AwsDetailType",
+    "description": "Filters access by the detail type recorded in the system metadata of an event forwarded onto an event bus to PutEvents and PutRawEvents actions",
+    "type": "String"
+  },
+  "events:systemmetadata/awssource": {
+    "key": "events:SystemMetadata/AwsSource",
+    "description": "Filters access by the source recorded in the system metadata of an event forwarded onto an event bus to PutEvents and PutRawEvents actions",
+    "type": "String"
+  },
+  "events:systemmetadata/contenttype": {
+    "key": "events:SystemMetadata/ContentType",
+    "description": "Filters access by the content type declared on an event for PutRawEvents and for forwarded events authorized as PutEvents",
     "type": "String"
   },
   "events:targetarn": {
@@ -56,12 +91,12 @@
   },
   "events:eventbusinvocation": {
     "key": "events:eventBusInvocation",
-    "description": "Filters access by whether the event was generated via API or cross-account bus invocation to PutEvents actions",
+    "description": "Filters access to PutEvents and PutRawEvents by whether an event was forwarded from an event bus rather than published through a direct API call",
     "type": "String"
   },
   "events:source": {
     "key": "events:source",
-    "description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions. Matches the literal string of the source field of the event",
+    "description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions, or by the configured source of an event source to the CreateEventSource and UpdateEventSource actions. Matches the literal string of the source field of the event",
     "type": "ArrayOfString"
   }
 }

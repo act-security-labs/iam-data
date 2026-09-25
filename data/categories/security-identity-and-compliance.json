@@ -32,6 +32,7 @@
     "mpa",
     "network-firewall",
     "network-security-director",
+    "network-security-manager",
     "pca-connector-ad",
     "pca-connector-scep",
     "ram",

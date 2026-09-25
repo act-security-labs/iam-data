@@ -1,0 +1,72 @@
+{
+  "deployment": {
+    "key": "deployment",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "deployment-snapshot": {
+    "key": "deployment-snapshot",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}:${VersionNumber}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "policy": {
+    "key": "policy",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "policy-snapshot": {
+    "key": "policy-snapshot",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}:${VersionNumber}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "rule": {
+    "key": "rule",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "rule-snapshot": {
+    "key": "rule-snapshot",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}:${VersionNumber}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "scope": {
+    "key": "scope",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "scope-snapshot": {
+    "key": "scope-snapshot",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}:${VersionNumber}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "template": {
+    "key": "template",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "template-snapshot": {
+    "key": "template-snapshot",
+    "arn": "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}:${VersionNumber}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

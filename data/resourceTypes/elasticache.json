@@ -19,6 +19,9 @@
     "key": "globalreplicationgroup",
     "arn": "arn:${Partition}:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
     "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
       "elasticache:AtRestEncryptionEnabled",
       "elasticache:AuthTokenEnabled",
       "elasticache:AutomaticFailoverEnabled",

@@ -1,0 +1,1028 @@
+{
+  "createdeployment": {
+    "name": "CreateDeployment",
+    "description": "Grants permission to create a deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createdeploymentsnapshot": {
+    "name": "CreateDeploymentSnapshot",
+    "description": "Grants permission to create a snapshot of a deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createpolicy": {
+    "name": "CreatePolicy",
+    "description": "Grants permission to create a policy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createpolicysnapshot": {
+    "name": "CreatePolicySnapshot",
+    "description": "Grants permission to create a snapshot of a policy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createrule": {
+    "name": "CreateRule",
+    "description": "Grants permission to create a rule",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createrulesnapshot": {
+    "name": "CreateRuleSnapshot",
+    "description": "Grants permission to create a snapshot of a rule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createscope": {
+    "name": "CreateScope",
+    "description": "Grants permission to create a scope",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createscopesnapshot": {
+    "name": "CreateScopeSnapshot",
+    "description": "Grants permission to create a snapshot of a scope",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createtemplate": {
+    "name": "CreateTemplate",
+    "description": "Grants permission to create a template",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createtemplatesnapshot": {
+    "name": "CreateTemplateSnapshot",
+    "description": "Grants permission to create a snapshot of a template",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "deleteadminaccount": {
+    "name": "DeleteAdminAccount",
+    "description": "Grants permission to remove a Network Security Manager administrator account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletedeployment": {
+    "name": "DeleteDeployment",
+    "description": "Grants permission to delete a deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletepolicy": {
+    "name": "DeletePolicy",
+    "description": "Grants permission to delete a policy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleterule": {
+    "name": "DeleteRule",
+    "description": "Grants permission to delete a rule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletescope": {
+    "name": "DeleteScope",
+    "description": "Grants permission to delete a scope",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletetemplate": {
+    "name": "DeleteTemplate",
+    "description": "Grants permission to delete a template",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "generateruleconfiguration": {
+    "name": "GenerateRuleConfiguration",
+    "description": "Grants permission to generate a rule configuration from a natural-language prompt",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getadminaccount": {
+    "name": "GetAdminAccount",
+    "description": "Grants permission to retrieve a Network Security Manager administrator account",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdeployment": {
+    "name": "GetDeployment",
+    "description": "Grants permission to retrieve a deployment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpolicy": {
+    "name": "GetPolicy",
+    "description": "Grants permission to retrieve a policy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getrule": {
+    "name": "GetRule",
+    "description": "Grants permission to retrieve a rule",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getscope": {
+    "name": "GetScope",
+    "description": "Grants permission to retrieve a scope",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gettemplate": {
+    "name": "GetTemplate",
+    "description": "Grants permission to retrieve a template",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listadminaccounts": {
+    "name": "ListAdminAccounts",
+    "description": "Grants permission to list Network Security Manager administrator accounts",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaggregateresourcesynchronizationstatuses": {
+    "name": "ListAggregateResourceSynchronizationStatuses",
+    "description": "Grants permission to list aggregate resource synchronization statuses across the caller's deployments",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdeploymentsnapshots": {
+    "name": "ListDeploymentSnapshots",
+    "description": "Grants permission to list the snapshots of a deployment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdeployments": {
+    "name": "ListDeployments",
+    "description": "Grants permission to list deployments",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpolicies": {
+    "name": "ListPolicies",
+    "description": "Grants permission to list policies",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpolicysnapshots": {
+    "name": "ListPolicySnapshots",
+    "description": "Grants permission to list the snapshots of a policy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresourceassociations": {
+    "name": "ListResourceAssociations",
+    "description": "Grants permission to list the associations of a Network Security Manager resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listresourcesynchronizationstatuses": {
+    "name": "ListResourceSynchronizationStatuses",
+    "description": "Grants permission to list resource synchronization statuses for a deployment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listrulesnapshots": {
+    "name": "ListRuleSnapshots",
+    "description": "Grants permission to list the snapshots of a rule",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listrules": {
+    "name": "ListRules",
+    "description": "Grants permission to list rules",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listscopesnapshots": {
+    "name": "ListScopeSnapshots",
+    "description": "Grants permission to list the snapshots of a scope",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listscopes": {
+    "name": "ListScopes",
+    "description": "Grants permission to list scopes",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list the tags of a Network Security Manager resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listtemplatesnapshots": {
+    "name": "ListTemplateSnapshots",
+    "description": "Grants permission to list the snapshots of a template",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtemplates": {
+    "name": "ListTemplates",
+    "description": "Grants permission to list templates",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putadminaccount": {
+    "name": "PutAdminAccount",
+    "description": "Grants permission to set a Network Security Manager administrator account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to add or overwrite tags on a Network Security Manager resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a Network Security Manager resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "deployment-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "updatedeployment": {
+    "name": "UpdateDeployment",
+    "description": "Grants permission to update a deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "policy-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "scope-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatepolicy": {
+    "name": "UpdatePolicy",
+    "description": "Grants permission to update a policy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updaterule": {
+    "name": "UpdateRule",
+    "description": "Grants permission to update a rule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatescope": {
+    "name": "UpdateScope",
+    "description": "Grants permission to update a scope",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "scope",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatetemplate": {
+    "name": "UpdateTemplate",
+    "description": "Grants permission to update a template",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "rule",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "rule-snapshot",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "template",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

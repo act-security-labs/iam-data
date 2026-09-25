@@ -1,0 +1,17 @@
+{
+  "aws:requesttag/${tagkey}": {
+    "key": "aws:RequestTag/${TagKey}",
+    "description": "Filters access by the tags that are passed in the request",
+    "type": "String"
+  },
+  "aws:resourcetag/${tagkey}": {
+    "key": "aws:ResourceTag/${TagKey}",
+    "description": "Filters access by the tags associated with the resource",
+    "type": "String"
+  },
+  "aws:tagkeys": {
+    "key": "aws:TagKeys",
+    "description": "Filters access by the tag keys that are passed in the request",
+    "type": "ArrayOfString"
+  }
+}

@@ -79,6 +79,11 @@
     "description": "Filters access by the ID of an Availability Zone in an AWS Region",
     "type": "String"
   },
+  "ec2:bootmodeoverride": {
+    "key": "ec2:BootModeOverride",
+    "description": "Filters access by the boot mode",
+    "type": "String"
+  },
   "ec2:capacityreservationfleet": {
     "key": "ec2:CapacityReservationFleet",
     "description": "Filters access by the ARN of the Capacity Reservation Fleet",

@@ -619,7 +619,6 @@
           "ec2:AvailabilityZone",
           "ec2:CapacityReservationFleet",
           "ec2:CreateDate",
-          "ec2:DestinationCapacityReservationId",
           "ec2:EbsOptimized",
           "ec2:EndDate",
           "ec2:EndDateType",
@@ -630,7 +629,6 @@
           "ec2:OutpostArn",
           "ec2:PlacementGroup",
           "ec2:ResourceTag/${TagKey}",
-          "ec2:SourceCapacityReservationId",
           "ec2:Tenancy"
         ],
         "dependentActions": []
@@ -1156,7 +1154,6 @@
           "ec2:AvailabilityZone",
           "ec2:CapacityReservationFleet",
           "ec2:CreateDate",
-          "ec2:DestinationCapacityReservationId",
           "ec2:EbsOptimized",
           "ec2:EndDate",
           "ec2:EndDateType",
@@ -1167,7 +1164,6 @@
           "ec2:OutpostArn",
           "ec2:PlacementGroup",
           "ec2:ResourceTag/${TagKey}",
-          "ec2:SourceCapacityReservationId",
           "ec2:Tenancy"
         ],
         "dependentActions": []
@@ -2973,6 +2969,15 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "capacity-reservation",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "fleet",
         "required": true,
         "conditionKeys": [
@@ -3192,6 +3197,7 @@
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
+          "ec2:BootModeOverride",
           "ec2:ImageID",
           "ec2:Owner"
         ],
@@ -13922,7 +13928,6 @@
           "ec2:AvailabilityZone",
           "ec2:CapacityReservationFleet",
           "ec2:CreateDate",
-          "ec2:DestinationCapacityReservationId",
           "ec2:EbsOptimized",
           "ec2:EndDate",
           "ec2:EndDateType",
@@ -13933,7 +13938,6 @@
           "ec2:OutpostArn",
           "ec2:PlacementGroup",
           "ec2:ResourceTag/${TagKey}",
-          "ec2:SourceCapacityReservationId",
           "ec2:Tenancy"
         ],
         "dependentActions": []
@@ -19779,7 +19783,6 @@
           "ec2:AvailabilityZone",
           "ec2:CapacityReservationFleet",
           "ec2:CreateDate",
-          "ec2:DestinationCapacityReservationId",
           "ec2:EbsOptimized",
           "ec2:EndDate",
           "ec2:EndDateType",
@@ -19790,7 +19793,6 @@
           "ec2:OutpostArn",
           "ec2:PlacementGroup",
           "ec2:ResourceTag/${TagKey}",
-          "ec2:SourceCapacityReservationId",
           "ec2:Tenancy"
         ],
         "dependentActions": []
@@ -20048,6 +20050,31 @@
     "description": "Grants permission to replace image criteria in allowed images settings",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "replaceimageinstancetypespecification": {
+    "name": "ReplaceImageInstanceTypeSpecification",
+    "description": "Grants permission to replace or remove the instance type specification for an Amazon Machine Image (AMI)",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "image",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ImageID",
+          "ec2:ImageType",
+          "ec2:Owner",
+          "ec2:Public",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType"
+        ],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "ec2:Region"
     ],
@@ -21905,6 +21932,28 @@
     "name": "UpdateSecurityGroupRuleDescriptionsIngress",
     "description": "Grants permission to update descriptions for one or more inbound rules in a security group",
     "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "security-group",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SecurityGroupID",
+          "ec2:Vpc"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "validatesecuritygroupquotasforinterface": {
+    "name": "ValidateSecurityGroupQuotasForInterface",
+    "description": "Grants permission to validate whether the specified security groups can be associated with a single network interface without exceeding applicable quotas",
+    "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "security-group",

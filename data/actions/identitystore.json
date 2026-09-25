@@ -245,6 +245,23 @@
     ],
     "dependentActions": []
   },
+  "describeidentitystore": {
+    "name": "DescribeIdentityStore",
+    "description": "Grants permission to retrieve information about an IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "identitystore:PrimaryRegion"
+    ],
+    "dependentActions": []
+  },
   "describeregion": {
     "name": "DescribeRegion",
     "description": "Grants permission to retrieve configuration details for a specific IdentityStore region",
@@ -482,6 +499,14 @@
       "identitystore:GroupExternalIdIssuers",
       "identitystore:PrimaryRegion"
     ],
+    "dependentActions": []
+  },
+  "listidentitystores": {
+    "name": "ListIdentityStores",
+    "description": "Grants permission to list IdentityStores in an AWS account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listregions": {

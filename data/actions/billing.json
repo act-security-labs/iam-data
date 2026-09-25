@@ -281,6 +281,14 @@
     ],
     "dependentActions": []
   },
+  "listbillingviewsegments": {
+    "name": "ListBillingViewSegments",
+    "description": "Grants permission to get the list of billing view segments for a specified billing view",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listbillingviews": {
     "name": "ListBillingViews",
     "description": "Grants permission to get a list of all your available billing views",

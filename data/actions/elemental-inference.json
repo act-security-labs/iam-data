@@ -66,6 +66,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletefeedpolicy": {
+    "name": "DeleteFeedPolicy",
+    "description": "Grants permission to delete the resource-based policy of a feed",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disassociatefeed": {
     "name": "DisassociateFeed",
     "description": "Grants permission to disassociate a feed from an AWS resource",
@@ -126,6 +141,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getfeedpolicy": {
+    "name": "GetFeedPolicy",
+    "description": "Grants permission to get the resource-based policy of a feed",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getmetadata": {
     "name": "GetMetadata",
     "description": "Grants permission to retrieve metadata for a specific feed output",
@@ -162,6 +192,21 @@
     "description": "Grants permission to list tags on a resource",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putfeedpolicy": {
+    "name": "PutFeedPolicy",
+    "description": "Grants permission to put a resource-based policy on a feed",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

@@ -282,6 +282,7 @@
   "neptune-graph": "Amazon Neptune Analytics",
   "network-firewall": "AWS Network Firewall",
   "network-security-director": "AWS Shield network security director",
+  "network-security-manager": "AWS Network Security Manager",
   "networkflowmonitor": "Network Flow Monitor",
   "networkmanager": "AWS Network Manager",
   "networkmanager-chat": "AWS Network Manager Chat",

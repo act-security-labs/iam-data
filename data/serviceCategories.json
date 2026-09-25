@@ -282,6 +282,7 @@
   "neptune-graph": "analytics",
   "network-firewall": "security-identity-and-compliance",
   "network-security-director": "security-identity-and-compliance",
+  "network-security-manager": "security-identity-and-compliance",
   "networkflowmonitor": "networking-and-content-delivery",
   "networkmanager": "networking-and-content-delivery",
   "networkmanager-chat": "networking-and-content-delivery",

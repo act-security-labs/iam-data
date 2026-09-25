@@ -321,6 +321,7 @@
       "aws:TagKeys",
       "ec2:Attribute",
       "ec2:Attribute/${AttributeName}",
+      "ec2:BootModeOverride",
       "ec2:ImageID",
       "ec2:ImageType",
       "ec2:IsLaunchTemplateResource",

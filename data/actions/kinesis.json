@@ -788,6 +788,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatestreamrecorddistributionstrategy": {
+    "name": "UpdateStreamRecordDistributionStrategy",
+    "description": "Grants permission to update the record distribution strategy for a Kinesis data stream",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "stream",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatestreamwarmthroughput": {
     "name": "UpdateStreamWarmThroughput",
     "description": "Grants permission to update the warm throughput for a Kinesis on-demand data stream",

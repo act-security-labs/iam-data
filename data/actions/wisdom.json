@@ -20,12 +20,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -172,12 +166,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -221,12 +209,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -241,12 +223,6 @@
     "description": "Grants permission to create a version of a message template",
     "accessLevel": "Write",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "MessageTemplate",
         "required": true,
@@ -284,12 +260,6 @@
     "description": "Grants permission to deactivate a message template",
     "accessLevel": "Write",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "MessageTemplate",
         "required": true,
@@ -430,12 +400,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -454,12 +418,6 @@
       },
       {
         "name": "ContentAssociation",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -504,12 +462,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -525,12 +477,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -545,12 +491,6 @@
     "description": "Grants permission to delete quick response",
     "accessLevel": "Write",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "QuickResponse",
         "required": true,
@@ -646,12 +586,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -673,12 +607,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -691,12 +619,6 @@
     "resourceTypes": [
       {
         "name": "Content",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -741,12 +663,6 @@
     "accessLevel": "Read",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -778,12 +694,6 @@
     "description": "Grants permission to retrieve content",
     "accessLevel": "Read",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "QuickResponse",
         "required": true,
@@ -919,12 +829,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -973,12 +877,6 @@
     "description": "Grants permission to list message template versions for the specified message template",
     "accessLevel": "List",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "MessageTemplate",
         "required": true,
@@ -1152,12 +1050,6 @@
     "description": "Grants permission to render a message template",
     "accessLevel": "Read",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "MessageTemplate",
         "required": true,
@@ -1482,12 +1374,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -1514,12 +1400,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -1535,12 +1415,6 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
         "name": "MessageTemplate",
         "required": true,
         "conditionKeys": [],
@@ -1555,12 +1429,6 @@
     "description": "Grants permission to update information or content of the quick response",
     "accessLevel": "Write",
     "resourceTypes": [
-      {
-        "name": "KnowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
       {
         "name": "QuickResponse",
         "required": true,

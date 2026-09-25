@@ -159,6 +159,10 @@
     "elasticmapreduce:RequestTag/.+?": "elasticmapreduce:RequestTag/${TagKey}",
     "elasticmapreduce:ResourceTag/.+?": "elasticmapreduce:ResourceTag/${TagKey}"
   },
+  "events": {
+    "events:Metadata/.+?": "events:Metadata/${MetadataKey}",
+    "events:Metadata/.+?/Matcher": "events:Metadata/${MetadataKey}/Matcher"
+  },
   "rds": {
     "rds:cluster-pg-tag/.+?": "rds:cluster-pg-tag/${TagKey}",
     "rds:cluster-snapshot-tag/.+?": "rds:cluster-snapshot-tag/${TagKey}",

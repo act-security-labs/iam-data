@@ -30,9 +30,23 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "event-busv2": {
+    "key": "event-busv2",
+    "arn": "arn:${Partition}:events:${Region}:${Account}:event-busv2/${EventBusName}/${OpaqueId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "event-source": {
     "key": "event-source",
     "arn": "arn:${Partition}:events:${Region}::event-source/${EventSourceName}"
+  },
+  "event-sourcev2": {
+    "key": "event-sourcev2",
+    "arn": "arn:${Partition}:events:${Region}:${Account}:event-sourcev2/${SourceType}/${EventSourceName}/${OpaqueId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "key": {
     "key": "key",
@@ -63,6 +77,13 @@
   "stop-instance": {
     "key": "stop-instance",
     "arn": "arn:${Partition}:events:${Region}:${Account}:target/stop-instance"
+  },
+  "subscriber": {
+    "key": "subscriber",
+    "arn": "arn:${Partition}:events:${Region}:${Account}:subscriber/${SubscriberName}/${OpaqueId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "terminate-instance": {
     "key": "terminate-instance",

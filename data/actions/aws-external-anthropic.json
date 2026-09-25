@@ -365,6 +365,7 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
+      "aws-external-anthropic:KeyArn",
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
@@ -506,6 +507,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disablekey": {
+    "name": "DisableKey",
+    "description": "Grants permission to disable an external encryption key",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-external-anthropic:KeyArn"
+    ],
+    "dependentActions": []
+  },
   "getaccountstatus": {
     "name": "GetAccountStatus",
     "description": "Grants permission to retrieve the status of account setup and AWS Marketplace registration",
@@ -580,6 +591,16 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getkey": {
+    "name": "GetKey",
+    "description": "Grants permission to get an external encryption key",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-external-anthropic:KeyArn"
+    ],
     "dependentActions": []
   },
   "getmemorystore": {
@@ -786,6 +807,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listkeys": {
+    "name": "ListKeys",
+    "description": "Grants permission to list external encryption keys",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listmemorystores": {
     "name": "ListMemoryStores",
     "description": "Grants permission to list managed agent memory stores in a workspace",
@@ -947,6 +976,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "registerkey": {
+    "name": "RegisterKey",
+    "description": "Grants permission to register an external encryption key",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "rotatewebhooksecret": {
     "name": "RotateWebhookSecret",
     "description": "Grants permission to rotate the signing secret of a webhook",
@@ -1033,6 +1070,16 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatekey": {
+    "name": "UpdateKey",
+    "description": "Grants permission to update an external encryption key",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-external-anthropic:KeyArn"
+    ],
     "dependentActions": []
   },
   "updatememorystore": {
@@ -1151,7 +1198,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws-external-anthropic:KeyArn"
+    ],
     "dependentActions": []
   }
 }

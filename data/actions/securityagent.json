@@ -881,6 +881,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listactormessages": {
+    "name": "ListActorMessages",
+    "description": "Grants permission to list the MFA messages received for an actor at its server-generated address",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listagentspaces": {
     "name": "ListAgentSpaces",
     "description": "Grants permission to list agent spaces",

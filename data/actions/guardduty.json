@@ -431,14 +431,7 @@
     "name": "GetCustomDetectionRule",
     "description": "Grants permission to retrieve a GuardDuty custom detection rule",
     "accessLevel": "Read",
-    "resourceTypes": [
-      {
-        "name": "customdetectionrule",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

@@ -28,6 +28,12 @@
         "dependentActions": []
       },
       {
+        "name": "globalreplicationgroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "parametergroup",
         "required": false,
         "conditionKeys": [],
@@ -382,7 +388,10 @@
       {
         "name": "globalreplicationgroup",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
@@ -663,6 +672,7 @@
       }
     ],
     "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "elasticache:NumNodeGroups"
     ],
     "dependentActions": []
@@ -772,7 +782,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "deletereplicationgroup": {
@@ -1010,7 +1022,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "describereplicationgroups": {
@@ -1191,7 +1205,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "exportserverlesscachesnapshot": {
@@ -1223,7 +1239,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "increasenodegroupsinglobalreplicationgroup": {
@@ -1239,6 +1257,7 @@
       }
     ],
     "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "elasticache:NumNodeGroups"
     ],
     "dependentActions": []
@@ -1445,6 +1464,7 @@
       }
     ],
     "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "elasticache:AutomaticFailoverEnabled",
       "elasticache:CacheNodeType",
       "elasticache:EngineVersion"
@@ -1619,7 +1639,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "rebootcachecluster": {
@@ -1646,6 +1668,12 @@
     "resourceTypes": [
       {
         "name": "cluster",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "globalreplicationgroup",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
