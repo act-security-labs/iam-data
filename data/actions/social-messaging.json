@@ -176,6 +176,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getwhatsappcallpermission": {
+    "name": "GetWhatsAppCallPermission",
+    "description": "Grants permission to retrieve voice calling permission for a WhatsApp phone number",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getwhatsappflow": {
     "name": "GetWhatsAppFlow",
     "description": "Grants permission to retrieve the metadata and status of a WhatsApp Flow",
@@ -370,6 +385,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "sendwhatsappcallevent": {
+    "name": "SendWhatsAppCallEvent",
+    "description": "Grants permission to send a voice calling event through WhatsApp",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "sendwhatsappmessage": {
     "name": "SendWhatsAppMessage",
     "description": "Grants permission to send a message through WhatsApp",
@@ -432,6 +462,21 @@
       "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "updatelinkedwhatsappbusinessaccountphonenumber": {
+    "name": "UpdateLinkedWhatsAppBusinessAccountPhoneNumber",
+    "description": "Grants permission to update the settings of a linked WhatsApp phone number",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updatewhatsappflow": {

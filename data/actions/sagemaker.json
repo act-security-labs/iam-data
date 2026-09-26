@@ -636,6 +636,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "attachclusternodenetworkinterface": {
+    "name": "AttachClusterNodeNetworkInterface",
+    "description": "Grants permission to attach an elastic network interface to a SageMaker HyperPod cluster node",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "attachclusternodevolume": {
     "name": "AttachClusterNodeVolume",
     "description": "Grants permission to attach an Amazon EBS volume to a SageMaker HyperPod cluster node",
@@ -2750,9 +2765,7 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deleteflowdefinition": {

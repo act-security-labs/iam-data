@@ -850,6 +850,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "handleprovidercallback": {
+    "name": "HandleProviderCallback",
+    "description": "Grants permission to handle the provider OAuth registration callback that completes integration setup",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "handleproviderregistrationcallback": {
     "name": "HandleProviderRegistrationCallback",
     "description": "Grants permission to handle the provider OAuth registration callback that completes integration setup",
@@ -1620,6 +1628,21 @@
         "conditionKeys": [],
         "dependentActions": []
       },
+      {
+        "name": "Integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateintegration": {
+    "name": "UpdateIntegration",
+    "description": "Grants permission to update an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [
       {
         "name": "Integration",
         "required": true,
