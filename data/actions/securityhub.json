@@ -1302,6 +1302,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getremediationsv2": {
+    "name": "GetRemediationsV2",
+    "description": "Grants permission to retrieve a list of remediation targets and their metadata",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getresourcesstatisticsv2": {
     "name": "GetResourcesStatisticsV2",
     "description": "Grants permission to retrieve aggregate statistics about resources",
@@ -1434,6 +1449,21 @@
       {
         "name": "hub",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listexposuresbyremediationv2": {
+    "name": "ListExposuresByRemediationV2",
+    "description": "Grants permission to retrieve a list of exposure findings associated with a remediation target",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }

@@ -13,5 +13,10 @@
     "key": "aws:TagKeys",
     "description": "Filters access by a list of tag keys that are allowed in the request",
     "type": "ArrayOfString"
+  },
+  "interconnect:remoteaccount": {
+    "key": "interconnect:RemoteAccount",
+    "description": "Filters access by the remote partner account identifier supplied when creating a connection",
+    "type": "String"
   }
 }

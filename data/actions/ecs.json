@@ -1163,7 +1163,9 @@
       "ecs:cluster",
       "ecs:container-instances",
       "ecs:enable-ebs-volumes",
-      "ecs:enable-execute-command"
+      "ecs:enable-execute-command",
+      "ecs:task-cpu",
+      "ecs:task-memory"
     ],
     "dependentActions": []
   },

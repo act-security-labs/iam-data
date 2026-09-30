@@ -508,6 +508,7 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
+          "elasticache:ConnectionType",
           "elasticache:DataStorageUnit",
           "elasticache:EngineType",
           "elasticache:EngineVersion",

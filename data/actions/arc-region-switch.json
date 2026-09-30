@@ -229,6 +229,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listservicequotawarnings": {
+    "name": "ListServiceQuotaWarnings",
+    "description": "Grants permission to list service quota warnings for plans that have opted in to the feature",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtagsforresource": {
     "name": "ListTagsForResource",
     "description": "Grants permission to list tags for a resource",

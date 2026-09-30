@@ -1,0 +1,10 @@
+{
+  "getspendsummary": {
+    "name": "GetSpendSummary",
+    "description": "Grants permission to summarize billing, cost, and cost forecast information for which you have permissions",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

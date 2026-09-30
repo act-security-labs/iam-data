@@ -24,7 +24,8 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "interconnect:RemoteAccount"
     ],
     "dependentActions": []
   },

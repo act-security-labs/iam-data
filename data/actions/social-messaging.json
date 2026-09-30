@@ -11,6 +11,21 @@
     ],
     "dependentActions": []
   },
+  "createwhatsappdataset": {
+    "name": "CreateWhatsAppDataset",
+    "description": "Grants permission to create a new WhatsApp dataset for a WhatsApp Business Account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "waba",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createwhatsappflow": {
     "name": "CreateWhatsAppFlow",
     "description": "Grants permission to create a new WhatsApp Flow",
@@ -164,6 +179,21 @@
   "getlinkedwhatsappbusinessaccountphonenumber": {
     "name": "GetLinkedWhatsAppBusinessAccountPhoneNumber",
     "description": "Grants permission to view the details of a phone number",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getwhatsappbusinesspublickey": {
+    "name": "GetWhatsAppBusinessPublicKey",
+    "description": "Grants permission to retrieve the WhatsApp business public key for a phone number",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -385,6 +415,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putwhatsappbusinesspublickey": {
+    "name": "PutWhatsAppBusinessPublicKey",
+    "description": "Grants permission to set the WhatsApp business public key for a phone number",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "sendwhatsappcallevent": {
     "name": "SendWhatsAppCallEvent",
     "description": "Grants permission to send a voice calling event through WhatsApp",
@@ -392,6 +437,21 @@
     "resourceTypes": [
       {
         "name": "phone-number-id",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "sendwhatsappconversionevent": {
+    "name": "SendWhatsAppConversionEvent",
+    "description": "Grants permission to send a conversion event through WhatsApp",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "waba",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

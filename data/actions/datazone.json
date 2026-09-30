@@ -371,14 +371,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "createdataapp": {
-    "name": "CreateDataApp",
-    "description": "Grants permission to create data apps",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "createdataproduct": {
     "name": "CreateDataProduct",
     "description": "Grants permission to create data product",
@@ -630,22 +622,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "deleteconversation": {
-    "name": "DeleteConversation",
-    "description": "Grants permission to delete conversations",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "deletedataapp": {
-    "name": "DeleteDataApp",
-    "description": "Grants permission to delete data apps",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "deletedataexportconfiguration": {
     "name": "DeleteDataExportConfiguration",
     "description": "Grants permission to delete DataZone catalog data export configuration",
@@ -853,14 +829,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "deregisteragentartifact": {
-    "name": "DeregisterAgentArtifact",
-    "description": "Grants permission to deregister agent artifacts",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "disassociateenvironmentrole": {
     "name": "DisassociateEnvironmentRole",
     "description": "Grants permission to disassociate a role in a default service blueprint environment",
@@ -968,14 +936,6 @@
   "getcurrenteffectivepolicy": {
     "name": "GetCurrentEffectivePolicy",
     "description": "Grants permission to Get Current Effective Policy",
-    "accessLevel": "Read",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "getdataapp": {
-    "name": "GetDataApp",
-    "description": "Grants permission to get data apps",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1284,14 +1244,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "invokeagent": {
-    "name": "InvokeAgent",
-    "description": "Grants permission to invoke agent",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "listaccountenvironments": {
     "name": "ListAccountEnvironments",
     "description": "Grants permission to list Environments across all domains in an AWS Account",
@@ -1311,22 +1263,6 @@
   "listaccountsinaccountpool": {
     "name": "ListAccountsInAccountPool",
     "description": "Grants permission to list accounts in an account pool",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "listagentartifacts": {
-    "name": "ListAgentArtifacts",
-    "description": "Grants permission to list agent artifacts",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "listagentsessionrecords": {
-    "name": "ListAgentSessionRecords",
-    "description": "Grants permission to list agent session records",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1367,14 +1303,6 @@
   "listconversations": {
     "name": "ListConversations",
     "description": "Grants permission to list conversations",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "listdataapps": {
-    "name": "ListDataApps",
-    "description": "Grants permission to list data apps",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1588,14 +1516,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "listshareddataapps": {
-    "name": "ListSharedDataApps",
-    "description": "Grants permission to list shared data apps",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "listsubscriptiongrants": {
     "name": "ListSubscriptionGrants",
     "description": "Grants permission to List subscription grants for a subscribed principal",
@@ -1695,14 +1615,6 @@
     "name": "QueryGraph",
     "description": "Grants permission to query graph",
     "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "registeragentartifact": {
-    "name": "RegisterAgentArtifact",
-    "description": "Grants permission to register agent artifacts",
-    "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
@@ -1867,14 +1779,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "stopagent": {
-    "name": "StopAgent",
-    "description": "Grants permission to stop agent",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "stopcompute": {
     "name": "StopCompute",
     "description": "Grants permission to stop compute",
@@ -1977,22 +1881,6 @@
   "updateconnection": {
     "name": "UpdateConnection",
     "description": "Grants permission to update connections",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "updateconversation": {
-    "name": "UpdateConversation",
-    "description": "Grants permission to update conversations",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "updatedataapp": {
-    "name": "UpdateDataApp",
-    "description": "Grants permission to update data apps",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
