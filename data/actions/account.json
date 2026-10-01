@@ -325,6 +325,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "sendphonenumberverification": {
+    "name": "SendPhoneNumberVerification",
+    "description": "Grants permission to send a verification code to the primary contact phone number for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "account",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "accountInOrganization",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startprimaryemailupdate": {
     "name": "StartPrimaryEmailUpdate",
     "description": "Grants permission to start the process to update the primary email address of an account",
@@ -340,6 +361,27 @@
     "conditionKeys": [
       "account:EmailTargetDomain"
     ],
+    "dependentActions": []
+  },
+  "verifyphonenumber": {
+    "name": "VerifyPhoneNumber",
+    "description": "Grants permission to verify the primary contact phone number for an account by submitting a verification code",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "account",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "accountInOrganization",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   }
 }

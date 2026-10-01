@@ -255,6 +255,24 @@
     ],
     "dependentActions": []
   },
+  "putvectorbucketdefaultindexmode": {
+    "name": "PutVectorBucketDefaultIndexMode",
+    "description": "Grants permission to update the default index mode for a specified vector bucket",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "VectorBucket",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3vectors:VectorBucketTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "putvectorbucketpolicy": {
     "name": "PutVectorBucketPolicy",
     "description": "Grants permission to add an IAM resource policy to a specified vector bucket",
@@ -356,6 +374,24 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "aws:TagKeys",
+      "s3vectors:VectorBucketTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updateindexmode": {
+    "name": "UpdateIndexMode",
+    "description": "Grants permission to update the index mode for a specified vector index",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Index",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "s3vectors:VectorBucketTag/${TagKey}"
     ],
     "dependentActions": []

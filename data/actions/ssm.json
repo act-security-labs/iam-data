@@ -439,25 +439,7 @@
     "resourceTypes": [
       {
         "name": "association",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "document",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "instance",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "managed-instance",
-        "required": false,
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -736,25 +718,7 @@
     "resourceTypes": [
       {
         "name": "association",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "document",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "instance",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "managed-instance",
-        "required": false,
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }

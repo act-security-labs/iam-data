@@ -44,6 +44,11 @@
     "description": "Filters access by the cluster mode parameter present in the request. Default value for single node group (shard) creations is false",
     "type": "Bool"
   },
+  "elasticache:connectiontype": {
+    "key": "elasticache:ConnectionType",
+    "description": "Filters access by the ConnectionType parameter in the request",
+    "type": "String"
+  },
   "elasticache:datastorageunit": {
     "key": "elasticache:DataStorageUnit",
     "description": "Filters access by the CacheUsageLimits.DataStorage.Unit parameter in the CreateServerlessCache and ModifyServerlessCache request",
