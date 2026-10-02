@@ -297,6 +297,22 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listbusinesssupportaccountcharges": {
+    "name": "ListBusinessSupportAccountCharges",
+    "description": "Grants permission to view Business Support charges broken down by linked account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listbusinesssupportsubscriptionhistory": {
+    "name": "ListBusinessSupportSubscriptionHistory",
+    "description": "Grants permission to view Business Support subscription contract history",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listenterprisesupportlinkedaccountcharges": {
     "name": "ListEnterpriseSupportLinkedAccountCharges",
     "description": "Grants permission to view Enterprise Support charges broken down by linked account",

@@ -56,6 +56,23 @@
     ],
     "dependentActions": []
   },
+  "invokewebfunctionendpoint": {
+    "name": "InvokeWebFunctionEndpoint",
+    "description": "Grants permission to invoke a Lambda web function endpoint via HTTP",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunctionEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "lambda:Resource/WebFunctionAuthType"
+    ],
+    "dependentActions": []
+  },
   "passcapacityprovider": {
     "name": "PassCapacityProvider",
     "description": "Grants permission to pass an AWS Lambda capacity provider to a service",
@@ -287,6 +304,57 @@
     ],
     "dependentActions": []
   },
+  "createwebfunction": {
+    "name": "CreateWebFunction",
+    "description": "Grants permission to create a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "lambda:Request/WebFunctionAuthType"
+    ],
+    "dependentActions": []
+  },
+  "createwebfunctionendpoint": {
+    "name": "CreateWebFunctionEndpoint",
+    "description": "Grants permission to create an endpoint for a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "lambda:Request/WebFunctionAuthType"
+    ],
+    "dependentActions": []
+  },
+  "createwebfunctionrevision": {
+    "name": "CreateWebFunctionRevision",
+    "description": "Grants permission to create a revision for a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletealias": {
     "name": "DeleteAlias",
     "description": "Grants permission to delete an AWS Lambda function alias",
@@ -510,11 +578,17 @@
   },
   "deleteresourcepolicy": {
     "name": "DeleteResourcePolicy",
-    "description": "Grants permission to detach a policy from an AWS Lambda resource",
+    "description": "Grants permission to detach a policy from an AWS Lambda resource, additionally requiring lambda:RemovePermission only for a function resource",
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "function",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "webFunction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -523,6 +597,53 @@
     "conditionKeys": [
       "lambda:Principal"
     ],
+    "dependentActions": []
+  },
+  "deletewebfunction": {
+    "name": "DeleteWebFunction",
+    "description": "Grants permission to delete a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletewebfunctionendpoint": {
+    "name": "DeleteWebFunctionEndpoint",
+    "description": "Grants permission to delete an endpoint for a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunctionEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "lambda:Resource/WebFunctionAuthType"
+    ],
+    "dependentActions": []
+  },
+  "deletewebfunctionrevision": {
+    "name": "DeleteWebFunctionRevision",
+    "description": "Grants permission to delete a revision for a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunctionRevision",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getaccountsettings": {
@@ -906,11 +1027,17 @@
   },
   "getresourcepolicy": {
     "name": "GetResourcePolicy",
-    "description": "Grants permission to view a policy for an AWS Lambda resource",
+    "description": "Grants permission to view a policy for an AWS Lambda resource, additionally requiring lambda:GetPolicy only for a function resource",
     "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "function",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "webFunction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -926,6 +1053,61 @@
     "resourceTypes": [
       {
         "name": "function",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getwebaccountsettings": {
+    "name": "GetWebAccountSettings",
+    "description": "Grants permission to view the account settings",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getwebfunction": {
+    "name": "GetWebFunction",
+    "description": "Grants permission to view details about a Lambda web function",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getwebfunctionendpoint": {
+    "name": "GetWebFunctionEndpoint",
+    "description": "Grants permission to view details about an endpoint for a Lambda web function",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "webFunctionEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "lambda:Resource/WebFunctionAuthType"
+    ],
+    "dependentActions": []
+  },
+  "getwebfunctionrevision": {
+    "name": "GetWebFunctionRevision",
+    "description": "Grants permission to view details about a revision for a Lambda web function",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "webFunctionRevision",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1201,7 +1383,7 @@
   },
   "listtags": {
     "name": "ListTags",
-    "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+    "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -1239,6 +1421,12 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "webFunction",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -1256,6 +1444,44 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listwebfunctionendpoints": {
+    "name": "ListWebFunctionEndpoints",
+    "description": "Grants permission to retrieve a list of endpoints for a Lambda web function",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listwebfunctionrevisions": {
+    "name": "ListWebFunctionRevisions",
+    "description": "Grants permission to retrieve a list of revisions for a Lambda web function",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "webFunction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listwebfunctions": {
+    "name": "ListWebFunctions",
+    "description": "Grants permission to retrieve a list of Lambda web functions",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -1395,11 +1621,17 @@
   },
   "putresourcepolicy": {
     "name": "PutResourcePolicy",
-    "description": "Grants permission to attach a policy to an AWS Lambda resource",
+    "description": "Grants permission to attach a policy to an AWS Lambda resource, additionally requiring lambda:AddPermission and lambda:RemovePermission only for a function resource",
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "function",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "webFunction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1565,7 +1797,7 @@
   },
   "tagresource": {
     "name": "TagResource",
-    "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+    "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
@@ -1600,6 +1832,12 @@
       },
       {
         "name": "networkConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "webFunction",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1628,7 +1866,7 @@
   },
   "untagresource": {
     "name": "UntagResource",
-    "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+    "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
@@ -1663,6 +1901,12 @@
       },
       {
         "name": "networkConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "webFunction",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1867,6 +2111,24 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatewebfunctionendpoint": {
+    "name": "UpdateWebFunctionEndpoint",
+    "description": "Grants permission to update an endpoint for a Lambda web function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "webFunctionEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "lambda:Request/WebFunctionAuthType",
+      "lambda:Resource/WebFunctionAuthType"
+    ],
     "dependentActions": []
   }
 }

@@ -140,6 +140,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getfindingmetrics": {
+    "name": "GetFindingMetrics",
+    "description": "Grants permission to retrieve finding-lifecycle metrics for a membership over a date range",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "membership",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getmembership": {
     "name": "GetMembership",
     "description": "Grants permission to get a membership",

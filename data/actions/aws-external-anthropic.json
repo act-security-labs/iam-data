@@ -293,18 +293,9 @@
   },
   "createuserprofile": {
     "name": "CreateUserProfile",
-    "description": "Grants permission to create a user profile in a workspace",
+    "description": "Grants permission to create a user profile",
     "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "workspace",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -312,16 +303,7 @@
     "name": "CreateUserProfileEnrollmentUrl",
     "description": "Grants permission to create an enrollment URL for a user profile",
     "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "workspace",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -675,16 +657,7 @@
     "name": "GetUserProfile",
     "description": "Grants permission to retrieve details of a user profile",
     "accessLevel": "Read",
-    "resourceTypes": [
-      {
-        "name": "workspace",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -902,18 +875,9 @@
   },
   "listuserprofiles": {
     "name": "ListUserProfiles",
-    "description": "Grants permission to list user profiles in a workspace",
+    "description": "Grants permission to list user profiles",
     "accessLevel": "List",
-    "resourceTypes": [
-      {
-        "name": "workspace",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -1135,18 +1099,9 @@
   },
   "updateuserprofile": {
     "name": "UpdateUserProfile",
-    "description": "Grants permission to update a user profile in a workspace",
+    "description": "Grants permission to update a user profile",
     "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "workspace",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

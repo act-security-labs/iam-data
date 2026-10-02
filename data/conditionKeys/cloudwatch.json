@@ -24,6 +24,11 @@
     "description": "Filters access by the presence of access grants associated with the request",
     "type": "String"
   },
+  "cloudwatch:resourcearn": {
+    "key": "cloudwatch:ResourceArn",
+    "description": "Filters access by the ARN of the AWS resource that a resource metrics configuration request targets",
+    "type": "ARN"
+  },
   "cloudwatch:namespace": {
     "key": "cloudwatch:namespace",
     "description": "Filters access by the presence of optional namespace values",

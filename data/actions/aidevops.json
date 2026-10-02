@@ -1050,7 +1050,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "tagresource": {
@@ -1230,7 +1233,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "updategoal": {

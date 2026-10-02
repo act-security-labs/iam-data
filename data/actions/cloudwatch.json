@@ -100,6 +100,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateotelenrichment": {
+    "name": "UpdateOTelEnrichment",
+    "description": "Grants permission to update the metric filters of OTel Enrichment of vended metrics for PromQL querying",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "assumeaccessprofile": {
     "name": "AssumeAccessProfile",
     "description": "Grants permission to assume an access profile",
@@ -233,6 +241,16 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createresourcemetricsconfiguration": {
+    "name": "CreateResourceMetricsConfiguration",
+    "description": "Grants permission to create a resource metrics configuration that enables detailed monitoring for a resource",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:ResourceArn"
+    ],
     "dependentActions": []
   },
   "createservicelevelobjective": {
@@ -501,6 +519,16 @@
     "resourceTypes": [],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteresourcemetricsconfiguration": {
+    "name": "DeleteResourceMetricsConfiguration",
+    "description": "Grants permission to delete a resource metrics configuration and disable detailed monitoring for a resource",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:ResourceArn"
     ],
     "dependentActions": []
   },
@@ -1005,6 +1033,16 @@
     "resourceTypes": [],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getresourcemetricsconfiguration": {
+    "name": "GetResourceMetricsConfiguration",
+    "description": "Grants permission to retrieve the resource metrics configuration and detailed monitoring status for a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:ResourceArn"
     ],
     "dependentActions": []
   },
@@ -2246,6 +2284,16 @@
     "resourceTypes": [],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateresourcemetricsconfiguration": {
+    "name": "UpdateResourceMetricsConfiguration",
+    "description": "Grants permission to update the resource metrics configuration for a resource",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:ResourceArn"
     ],
     "dependentActions": []
   },

@@ -1,4 +1,12 @@
 {
+  "describetopcontributorsbyevent": {
+    "name": "DescribeTopContributorsByEvent",
+    "description": "Grants permission to retrieve the top contributors of an event detected by the AWS WAF anti-DDoS managed rule group, used by shield:DescribeAttack",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disassociatefirewallmanager": {
     "name": "DisassociateFirewallManager",
     "description": "Grants permission to disassociate Firewall Manager from a WebACL",

@@ -49,6 +49,16 @@
     "description": "Filters access by restricting the AWS service or account that can invoke a function",
     "type": "String"
   },
+  "lambda:request/webfunctionauthtype": {
+    "key": "lambda:Request/WebFunctionAuthType",
+    "description": "Filters access by the auth type specified in the request. Available during CreateWebFunction, CreateWebFunctionEndpoint, and UpdateWebFunctionEndpoint operations",
+    "type": "String"
+  },
+  "lambda:resource/webfunctionauthtype": {
+    "key": "lambda:Resource/WebFunctionAuthType",
+    "description": "Filters access by the auth type configured on the web function endpoint resource. Available during InvokeWebFunctionEndpoint, UpdateWebFunctionEndpoint, DeleteWebFunctionEndpoint, and GetWebFunctionEndpoint operations",
+    "type": "String"
+  },
   "lambda:securitygroupids": {
     "key": "lambda:SecurityGroupIds",
     "description": "Filters access by the ID of security groups configured for the AWS Lambda function",

@@ -69,5 +69,26 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "webfunction": {
+    "key": "webFunction",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "webfunctionendpoint": {
+    "key": "webFunctionEndpoint",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/endpoint/${EndpointName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "webfunctionrevision": {
+    "key": "webFunctionRevision",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/revision/${RevisionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }
