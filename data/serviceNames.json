@@ -164,6 +164,7 @@
   "elemental-support-content": "AWS Elemental Support Content",
   "emr-containers": "Amazon EMR on EKS (EMR Containers)",
   "emr-serverless": "Amazon EMR Serverless",
+  "end-user-messaging": "AWS End User Messaging",
   "entityresolution": "AWS Entity Resolution",
   "es": "Amazon OpenSearch Service",
   "events": "Amazon EventBridge",

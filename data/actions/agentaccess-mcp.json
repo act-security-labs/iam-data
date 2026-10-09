@@ -39,6 +39,16 @@
     ],
     "dependentActions": []
   },
+  "getsessioninfo": {
+    "name": "GetSessionInfo",
+    "description": "Grants permission to retrieve information about the current session",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
   "holdkey": {
     "name": "HoldKey",
     "description": "Grants permission to hold key down",
@@ -62,6 +72,16 @@
   "keypress": {
     "name": "KeyPress",
     "description": "Grants permission to press key or key combination",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
+  "launchapplication": {
+    "name": "LaunchApplication",
+    "description": "Grants permission to launch an application on a streaming session",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
@@ -142,6 +162,16 @@
   "scroll": {
     "name": "Scroll",
     "description": "Grants permission to scroll in any direction",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
+  "toggleappswitcher": {
+    "name": "ToggleAppSwitcher",
+    "description": "Grants permission to toggle the application switcher overlay",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [

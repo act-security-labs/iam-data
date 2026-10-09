@@ -414,6 +414,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "cancelexportjobv2": {
+    "name": "CancelExportJobV2",
+    "description": "Grants permission to cancel an export job",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "connectorregistrationsv2": {
     "name": "ConnectorRegistrationsV2",
     "description": "Grants permission to complete the OAuth 2.0 authorization code flow based on input parameters",
@@ -1146,6 +1154,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getexportjobv2": {
+    "name": "GetExportJobV2",
+    "description": "Grants permission to retrieve an export job",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getfindingaggregator": {
     "name": "GetFindingAggregator",
     "description": "Grants permission to retrieve details for a finding aggregator, which configures finding aggregation across Regions",
@@ -1456,6 +1472,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listexportjobsv2": {
+    "name": "ListExportJobsV2",
+    "description": "Grants permission to list export jobs",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listexposuresbyremediationv2": {
     "name": "ListExposuresByRemediationV2",
     "description": "Grants permission to retrieve a list of exposure findings associated with a remediation target",
@@ -1604,6 +1628,21 @@
     "resourceTypes": [
       {
         "name": "hub",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startexportjobv2": {
+    "name": "StartExportJobV2",
+    "description": "Grants permission to start an export job",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []

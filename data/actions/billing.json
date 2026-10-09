@@ -313,6 +313,22 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listcreditentitlementperiods": {
+    "name": "ListCreditEntitlementPeriods",
+    "description": "Grants permission to view the measurement periods of a credit entitlement",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcreditentitlements": {
+    "name": "ListCreditEntitlements",
+    "description": "Grants permission to view the credit entitlements the caller's account is set to receive",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listenterprisesupportlinkedaccountcharges": {
     "name": "ListEnterpriseSupportLinkedAccountCharges",
     "description": "Grants permission to view Enterprise Support charges broken down by linked account",
@@ -363,6 +379,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "splitcredit": {
+    "name": "SplitCredit",
+    "description": "Grants permission to split a credit into multiple child credits in the same account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to add tags to a specified billing view",
@@ -380,6 +404,14 @@
       "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "transfercredit": {
+    "name": "TransferCredit",
+    "description": "Grants permission to transfer a credit to another account under the same payer",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "untagresource": {

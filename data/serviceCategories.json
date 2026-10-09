@@ -164,6 +164,7 @@
   "elemental-support-content": "media",
   "emr-containers": "analytics",
   "emr-serverless": "analytics",
+  "end-user-messaging": "business-applications",
   "entityresolution": "analytics",
   "es": "analytics",
   "events": "application-integration",

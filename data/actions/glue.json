@@ -3239,6 +3239,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsystemlogsforjobrun": {
+    "name": "GetSystemLogsForJobRun",
+    "description": "Grants permission to retrieve system logs for a job run",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getsystemlogsforsession": {
+    "name": "GetSystemLogsForSession",
+    "description": "Grants permission to retrieve system logs for an interactive session",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "gettable": {
     "name": "GetTable",
     "description": "Grants permission to retrieve a table",

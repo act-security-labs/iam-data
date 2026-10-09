@@ -1,0 +1,16 @@
+{
+  "brand-profile": {
+    "key": "brand-profile",
+    "arn": "arn:${Partition}:end-user-messaging:${Region}:${Account}:brand-profile/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "notify-code-configuration": {
+    "key": "notify-code-configuration",
+    "arn": "arn:${Partition}:end-user-messaging:${Region}:${Account}:notify-code-configuration/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

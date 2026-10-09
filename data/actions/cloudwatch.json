@@ -100,6 +100,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "submitalarmfeedback": {
+    "name": "SubmitAlarmFeedback",
+    "description": "Grants permission to submit feedback on an anomaly detection alarm to improve its anomaly detection model",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updateotelenrichment": {
     "name": "UpdateOTelEnrichment",
     "description": "Grants permission to update the metric filters of OTel Enrichment of vended metrics for PromQL querying",
@@ -1028,7 +1036,7 @@
   },
   "getrecords": {
     "name": "GetRecords",
-    "description": "Grants permission to fetch logs, metrics, and traces",
+    "description": "Grants permission to fetch logs and traces",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [
@@ -1727,6 +1735,16 @@
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "putrecords": {
+    "name": "PutRecords",
+    "description": "Grants permission to put logs and traces",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": []
   },

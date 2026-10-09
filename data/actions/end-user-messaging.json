@@ -1,0 +1,385 @@
+{
+  "createbrandprofile": {
+    "name": "CreateBrandProfile",
+    "description": "Grants permission to create a brand profile",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createbrandprofileattributes": {
+    "name": "CreateBrandProfileAttributes",
+    "description": "Grants permission to create attributes for a brand profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createbrandprofilefromregistration": {
+    "name": "CreateBrandProfileFromRegistration",
+    "description": "Grants permission to create a new brand profile populated from an existing registration via Bedrock mapping",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createnotifycodeconfiguration": {
+    "name": "CreateNotifyCodeConfiguration",
+    "description": "Grants permission to create a notify code configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createregistrationsfrombrandprofile": {
+    "name": "CreateRegistrationsFromBrandProfile",
+    "description": "Grants permission to create DRAFT registrations pre-filled from brand profile attributes via Bedrock mapping",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletebrandprofile": {
+    "name": "DeleteBrandProfile",
+    "description": "Grants permission to delete a brand profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletebrandprofileattribute": {
+    "name": "DeleteBrandProfileAttribute",
+    "description": "Grants permission to delete a brand profile attribute",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletenotifycodeconfiguration": {
+    "name": "DeleteNotifyCodeConfiguration",
+    "description": "Grants permission to delete a notify code configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "notify-code-configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getbrandprofile": {
+    "name": "GetBrandProfile",
+    "description": "Grants permission to get a brand profile",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getbrandprofileattribute": {
+    "name": "GetBrandProfileAttribute",
+    "description": "Grants permission to get a brand profile attribute",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getjob": {
+    "name": "GetJob",
+    "description": "Grants permission to get the details of an asynchronous job",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getnotifycodeconfiguration": {
+    "name": "GetNotifyCodeConfiguration",
+    "description": "Grants permission to get a notify code configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "notify-code-configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listbrandprofileattributes": {
+    "name": "ListBrandProfileAttributes",
+    "description": "Grants permission to list the attributes for a brand profile",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listbrandprofiles": {
+    "name": "ListBrandProfiles",
+    "description": "Grants permission to list brand profiles",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listjobs": {
+    "name": "ListJobs",
+    "description": "Grants permission to list asynchronous jobs in your account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listnotifycodeconfigurations": {
+    "name": "ListNotifyCodeConfigurations",
+    "description": "Grants permission to list notify code configurations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listregistrationsfrombrandprofile": {
+    "name": "ListRegistrationsFromBrandProfile",
+    "description": "Grants permission to list the registrations created from a brand profile",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list tags for a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "notify-code-configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "sendnotifycodeverification": {
+    "name": "SendNotifyCodeVerification",
+    "description": "Grants permission to send a notify code verification",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "notify-code-configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to tag a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "notify-code-configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to untag a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "notify-code-configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "updatebrandprofile": {
+    "name": "UpdateBrandProfile",
+    "description": "Grants permission to update a brand profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatebrandprofileattribute": {
+    "name": "UpdateBrandProfileAttribute",
+    "description": "Grants permission to update a brand profile attribute",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatebrandprofilefromregistration": {
+    "name": "UpdateBrandProfileFromRegistration",
+    "description": "Grants permission to update a brand profile from a registration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatenotifycodeconfiguration": {
+    "name": "UpdateNotifyCodeConfiguration",
+    "description": "Grants permission to update a notify code configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "notify-code-configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateregistrationsfrombrandprofile": {
+    "name": "UpdateRegistrationsFromBrandProfile",
+    "description": "Grants permission to update registrations from a brand profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "validatenotifycodeverification": {
+    "name": "ValidateNotifyCodeVerification",
+    "description": "Grants permission to validate a notify code verification",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}
