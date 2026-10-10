@@ -1239,6 +1239,17 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listmemberships": {
+    "name": "ListMemberships",
+    "description": "Grants permission to list Deadline Cloud resource memberships associated with an IAM Identity Center principal",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "deadline:PrincipalId",
+      "deadline:RequesterPrincipalId"
+    ],
+    "dependentActions": []
+  },
   "listmeteredproducts": {
     "name": "ListMeteredProducts",
     "description": "Grants permission to list all metered products in a license endpoint",

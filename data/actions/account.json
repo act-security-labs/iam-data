@@ -14,6 +14,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "reopenaccount": {
+    "name": "ReopenAccount",
+    "description": "Grants permission to reopen a closed account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "account",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "acceptprimaryemailupdate": {
     "name": "AcceptPrimaryEmailUpdate",
     "description": "Grants permission to accept the process to update the primary email address of an account",
