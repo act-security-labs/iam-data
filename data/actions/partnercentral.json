@@ -970,6 +970,26 @@
     ],
     "dependentActions": []
   },
+  "getpartnercentralcontentdocument": {
+    "name": "GetPartnerCentralContentDocument",
+    "description": "Grants permission to retrieve a content document in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getpartnercentralcontentmetadata": {
+    "name": "GetPartnerCentralContentMetadata",
+    "description": "Grants permission to retrieve content metadata in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "getpartnerdashboard": {
     "name": "GetPartnerDashboard",
     "description": "Grants permission to retrieve partner dashboard information in AWS Partner Central",
@@ -1433,6 +1453,16 @@
     ],
     "dependentActions": []
   },
+  "listpartnercentralcontent": {
+    "name": "ListPartnerCentralContent",
+    "description": "Grants permission to list content in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "listpartners": {
     "name": "ListPartners",
     "description": "Grants permission to list partners in AWS Partner Central",
@@ -1678,6 +1708,16 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "searchpartnercentralcontent": {
+    "name": "SearchPartnerCentralContent",
+    "description": "Grants permission to search content in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [
       "partnercentral:Catalog"
     ],

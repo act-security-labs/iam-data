@@ -530,6 +530,14 @@
       "sagemaker:ResourceTag/${TagKey}"
     ]
   },
+  "training-session": {
+    "key": "training-session",
+    "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:training-session/${SessionName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "sagemaker:ResourceTag/${TagKey}"
+    ]
+  },
   "transform-job": {
     "key": "transform-job",
     "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:transform-job/${TransformJobName}",

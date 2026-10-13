@@ -1358,6 +1358,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listnetworkconnectorversions": {
+    "name": "ListNetworkConnectorVersions",
+    "description": "Grants permission to retrieve a list of versions of an AWS Lambda network connector",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "networkConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listnetworkconnectors": {
     "name": "ListNetworkConnectors",
     "description": "Grants permission to retrieve a list of AWS Lambda network connectors",

@@ -69,6 +69,14 @@
     ],
     "dependentActions": []
   },
+  "createtimestamp": {
+    "name": "CreateTimeStamp",
+    "description": "Grants permission to create an RFC 3161 timestamp token over a submitted message digest",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteacmedomainvalidation": {
     "name": "DeleteAcmeDomainValidation",
     "description": "Grants permission to delete an ACME domain validation",

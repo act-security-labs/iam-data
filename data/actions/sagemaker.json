@@ -2257,6 +2257,27 @@
     ],
     "dependentActions": []
   },
+  "createtrainingsession": {
+    "name": "CreateTrainingSession",
+    "description": "Grants permission to create a SageMaker training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "sagemaker:OutputKmsKeyArn",
+      "sagemaker:VpcSecurityGroupIds",
+      "sagemaker:VpcSubnets"
+    ],
+    "dependentActions": []
+  },
   "createtransformjob": {
     "name": "CreateTransformJob",
     "description": "Grants permission to start a transform job. After the results are obtained, Amazon SageMaker saves them to an Amazon S3 location that you specify",
@@ -3695,6 +3716,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletetrainingsession": {
+    "name": "DeleteTrainingSession",
+    "description": "Grants permission to delete a SageMaker training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletetrial": {
     "name": "DeleteTrial",
     "description": "Grants permission to delete a trial",
@@ -4872,6 +4908,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describetrainingsession": {
+    "name": "DescribeTrainingSession",
+    "description": "Grants permission to return information about a SageMaker training session",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describetransformjob": {
     "name": "DescribeTransformJob",
     "description": "Grants permission to return information about a transform job",
@@ -5020,6 +5071,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "executesamplingoperation": {
+    "name": "ExecuteSamplingOperation",
+    "description": "Grants permission to execute a sampling operation against a training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "executetrainingoperation": {
+    "name": "ExecuteTrainingOperation",
+    "description": "Grants permission to execute a training operation against a training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "extendtrainingplan": {
     "name": "ExtendTrainingPlan",
     "description": "Grants permission to extend an existing training plan by purchasing an extension offering",
@@ -5119,6 +5200,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsamplingoperationresult": {
+    "name": "GetSamplingOperationResult",
+    "description": "Grants permission to get the result of a sampling operation for a training session",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getscalingconfigurationrecommendation": {
     "name": "GetScalingConfigurationRecommendation",
     "description": "Grants permission to get a scaling policy configuration recommendation",
@@ -5139,6 +5235,21 @@
     "description": "Grants permission to get search suggestions when provided with a keyword",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gettrainingoperationresult": {
+    "name": "GetTrainingOperationResult",
+    "description": "Grants permission to get the result of a training operation for a training session",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -6412,6 +6523,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listtrainingsessions": {
+    "name": "ListTrainingSessions",
+    "description": "Grants permission to list SageMaker training sessions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtransformjobs": {
     "name": "ListTransformJobs",
     "description": "Grants permission to list transform jobs",
@@ -6572,6 +6691,36 @@
     "resourceTypes": [
       {
         "name": "job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "sampletrainingsession": {
+    "name": "SampleTrainingSession",
+    "description": "Grants permission to invoke a synchronous sample request against a training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "sampletrainingsessionwithresponsestream": {
+    "name": "SampleTrainingSessionWithResponseStream",
+    "description": "Grants permission to invoke a streaming sample request against a training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -7078,6 +7227,21 @@
     "resourceTypes": [
       {
         "name": "training-job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stoptrainingsession": {
+    "name": "StopTrainingSession",
+    "description": "Grants permission to stop a SageMaker training session",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "training-session",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

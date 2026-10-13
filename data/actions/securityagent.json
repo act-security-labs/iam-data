@@ -104,6 +104,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "batchdisassociatefindingissue": {
+    "name": "BatchDisassociateFindingIssue",
+    "description": "Grants permission to disassociate issues from findings",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchexportfindings": {
+    "name": "BatchExportFindings",
+    "description": "Grants permission to create issues for the findings",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchgetagentspaces": {
     "name": "BatchGetAgentSpaces",
     "description": "Grants permission to retrieve multiple agent spaces in a single request",
