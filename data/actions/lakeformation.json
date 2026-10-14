@@ -7,6 +7,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "attachrlspolicy": {
+    "name": "AttachRLSPolicy",
+    "description": "Grants permission to attach a Lake Formation row-level security policy to a resource for one or more principals",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchgrantpermissions": {
     "name": "BatchGrantPermissions",
     "description": "Grants permission to data lake permissions to one or more principals in a batch",
@@ -79,6 +87,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createrlspolicy": {
+    "name": "CreateRLSPolicy",
+    "description": "Grants permission to create a Lake Formation row-level security policy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletedatacellsfilter": {
     "name": "DeleteDataCellsFilter",
     "description": "Grants permission to delete a Lake Formation data cell filter",
@@ -127,6 +143,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleterlspolicy": {
+    "name": "DeleteRLSPolicy",
+    "description": "Grants permission to delete a Lake Formation row-level security policy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deregisterresource": {
     "name": "DeregisterResource",
     "description": "Grants permission to deregister a registered location",
@@ -155,6 +179,14 @@
     "name": "DescribeTransaction",
     "description": "Grants permission to get status of the given transaction",
     "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "detachrlspolicy": {
+    "name": "DetachRLSPolicy",
+    "description": "Grants permission to detach a Lake Formation row-level security policy from a resource for one or more principals",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
@@ -236,6 +268,14 @@
   "getquerystatistics": {
     "name": "GetQueryStatistics",
     "description": "Grants permission to retrieve the statistics for the given query",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getrlspolicy": {
+    "name": "GetRLSPolicy",
+    "description": "Grants permission to retrieve a Lake Formation row-level security policy",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -332,6 +372,22 @@
   "listpermissions": {
     "name": "ListPermissions",
     "description": "Grants permission to list permissions filtered by principal or resource",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listrlspolicies": {
+    "name": "ListRLSPolicies",
+    "description": "Grants permission to list Lake Formation row-level security policies",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listrlspolicyattachments": {
+    "name": "ListRLSPolicyAttachments",
+    "description": "Grants permission to list the resource and principal attachments of Lake Formation row-level security policies",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -460,6 +516,14 @@
   "updatelakeformationidentitycenterconfiguration": {
     "name": "UpdateLakeFormationIdentityCenterConfiguration",
     "description": "Grants permission to update the IAM Identity Center connection parameters",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updaterlspolicy": {
+    "name": "UpdateRLSPolicy",
+    "description": "Grants permission to update the filter expression of a Lake Formation row-level security policy",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],

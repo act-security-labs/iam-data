@@ -758,6 +758,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getdependencyinsights": {
+    "name": "GetDependencyInsights",
+    "description": "Grants permission to retrieve dependency insights for a service",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "service",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getfailuremodefinding": {
     "name": "GetFailureModeFinding",
     "description": "Grants permission to retrieve a failure mode finding",
@@ -1207,6 +1224,23 @@
     "description": "Grants permission to list resilience policies",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpolicyevents": {
+    "name": "ListPolicyEvents",
+    "description": "Grants permission to list events for a resilience policy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -1739,6 +1773,23 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "startdependencyinsights": {
+    "name": "StartDependencyInsights",
+    "description": "Grants permission to start generating dependency insights for a service",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "service",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "startfailuremodeassessment": {

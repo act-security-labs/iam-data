@@ -111,6 +111,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getdomainprices": {
+    "name": "GetDomainPrices",
+    "description": "Grants permission to get the prices of operations for the given domain name",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdomainsuggestions": {
     "name": "GetDomainSuggestions",
     "description": "Grants permission to get a list of suggested domain names given a string, which can either be a domain name or simply a word or phrase (without spaces)",
