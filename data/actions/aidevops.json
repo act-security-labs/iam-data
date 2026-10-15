@@ -19,7 +19,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ServiceType"
+    ],
     "dependentActions": []
   },
   "createaccesstoken": {
@@ -374,7 +376,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ServiceType"
+    ],
     "dependentActions": []
   },
   "discovertopology": {
@@ -534,7 +538,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ServiceType"
+    ],
     "dependentActions": []
   },
   "getbacklogtask": {
@@ -978,7 +984,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ServiceType"
+    ],
     "dependentActions": []
   },
   "registerservice": {
@@ -1218,7 +1226,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ServiceType"
+    ],
     "dependentActions": []
   },
   "updatebacklogtask": {

@@ -26,6 +26,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "archivedeployment": {
+    "name": "ArchiveDeployment",
+    "description": "Grants permission to archive a managed agent deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "archiveenvironment": {
     "name": "ArchiveEnvironment",
     "description": "Grants permission to archive a managed agent environment",
@@ -175,6 +192,23 @@
   "createbatchinference": {
     "name": "CreateBatchInference",
     "description": "Grants permission to create a batch inference request",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createdeployment": {
+    "name": "CreateDeployment",
+    "description": "Grants permission to create a managed agent deployment in a workspace",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -541,6 +575,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getdeployment": {
+    "name": "GetDeployment",
+    "description": "Grants permission to retrieve details of a managed agent deployment or its runs",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getenvironment": {
     "name": "GetEnvironment",
     "description": "Grants permission to retrieve details of a managed agent environment",
@@ -746,6 +797,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdeployments": {
+    "name": "ListDeployments",
+    "description": "Grants permission to list managed agent deployments in a workspace",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listenvironments": {
     "name": "ListEnvironments",
     "description": "Grants permission to list managed agent environments in a workspace",
@@ -923,6 +991,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "pausedeployment": {
+    "name": "PauseDeployment",
+    "description": "Grants permission to pause a managed agent deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "processenvironmentwork": {
     "name": "ProcessEnvironmentWork",
     "description": "Grants permission to process work items in a self-hosted managed agent environment",
@@ -965,6 +1050,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "rundeployment": {
+    "name": "RunDeployment",
+    "description": "Grants permission to trigger a managed agent deployment run",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to tag a resource",
@@ -977,6 +1079,23 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "unpausedeployment": {
+    "name": "UnpauseDeployment",
+    "description": "Grants permission to resume a paused managed agent deployment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -1005,6 +1124,23 @@
   "updateagent": {
     "name": "UpdateAgent",
     "description": "Grants permission to update a managed agent",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatedeployment": {
+    "name": "UpdateDeployment",
+    "description": "Grants permission to update a managed agent deployment",
     "accessLevel": "Write",
     "resourceTypes": [
       {
