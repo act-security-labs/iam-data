@@ -1,4 +1,19 @@
 {
+  "exporthostkey": {
+    "name": "ExportHostKey",
+    "description": "Grants permission to expose the private key material of a host key by storing it in AWS Secrets Manager in the caller's account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "host-key",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createaccess": {
     "name": "CreateAccess",
     "description": "Grants permission to add an access associated with a server",
