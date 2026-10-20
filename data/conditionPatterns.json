@@ -129,6 +129,9 @@
   "ssm": {
     "ssm:resourceTag/.+?": "ssm:resourceTag/${TagKey}"
   },
+  "bedrock-agentcore": {
+    "bedrock-agentcore:namespaceVariable/.+?": "bedrock-agentcore:namespaceVariable/${VariableName}"
+  },
   "connect": {
     "connect:PrimaryAttribute/.+?": "connect:PrimaryAttribute/${PrimaryAttribute}",
     "connect:SearchTag/.+?": "connect:SearchTag/${TagKey}"

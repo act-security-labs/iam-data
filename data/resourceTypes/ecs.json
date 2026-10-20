@@ -56,6 +56,21 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "gateway": {
+    "key": "gateway",
+    "arn": "arn:${Partition}:ecs:${Region}:${Account}:gateway/${GatewayName}/${GatewayId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "gateway-route": {
+    "key": "gateway-route",
+    "arn": "arn:${Partition}:ecs:${Region}:${Account}:gateway-route/${GatewayName}/${GatewayId}/${RouteId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "ecs:gateway"
+    ]
+  },
   "service": {
     "key": "service",
     "arn": "arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",

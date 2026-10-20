@@ -134,6 +134,16 @@
     "description": "Filters access by namespace",
     "type": "String"
   },
+  "bedrock-agentcore:namespacepath": {
+    "key": "bedrock-agentcore:namespacePath",
+    "description": "Filters access by the namespace path hierarchy of the memory records in the request",
+    "type": "String"
+  },
+  "bedrock-agentcore:namespacevariable/${variablename}": {
+    "key": "bedrock-agentcore:namespaceVariable/${VariableName}",
+    "description": "Filters access by the value of a custom namespace variable in the request",
+    "type": "String"
+  },
   "bedrock-agentcore:runtimesessionid": {
     "key": "bedrock-agentcore:runtimeSessionId",
     "description": "Filters access by Runtime Session Id",
@@ -147,6 +157,11 @@
   "bedrock-agentcore:sessionid": {
     "key": "bedrock-agentcore:sessionId",
     "description": "Filters access by Memory Session Id",
+    "type": "String"
+  },
+  "bedrock-agentcore:sourcenamespace": {
+    "key": "bedrock-agentcore:sourceNamespace",
+    "description": "Filters access by the source namespace of the memory records in the request",
     "type": "String"
   },
   "bedrock-agentcore:strategyid": {

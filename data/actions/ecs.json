@@ -75,6 +75,24 @@
     ],
     "dependentActions": []
   },
+  "associategatewaywithcluster": {
+    "name": "AssociateGatewayWithCluster",
+    "description": "Grants permission to associate an Amazon ECS gateway with a cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "continueservicedeployment": {
     "name": "ContinueServiceDeployment",
     "description": "Grants permission to continue a paused service deployment",
@@ -199,6 +217,28 @@
       "ecs:task-cpu",
       "ecs:task-definition",
       "ecs:task-memory"
+    ],
+    "dependentActions": []
+  },
+  "creategateway": {
+    "name": "CreateGateway",
+    "description": "Grants permission to create an Amazon ECS gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "ecs:enable-ecs-managed-tags",
+      "ecs:propagate-tags"
     ],
     "dependentActions": []
   },
@@ -366,6 +406,23 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "ecs:cluster"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletegateway": {
+    "name": "DeleteGateway",
+    "description": "Grants permission to delete an Amazon ECS gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -613,6 +670,66 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describegateway": {
+    "name": "DescribeGateway",
+    "description": "Grants permission to describe an Amazon ECS gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describegatewayresources": {
+    "name": "DescribeGatewayResources",
+    "description": "Grants permission to describe the resources associated with an Amazon ECS gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describegatewayroute": {
+    "name": "DescribeGatewayRoute",
+    "description": "Grants permission to describe a route for an Amazon ECS gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "gateway-route",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:gateway"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeservicedeployments": {
     "name": "DescribeServiceDeployments",
     "description": "Grants permission to describe one or more of your service deployments",
@@ -730,6 +847,24 @@
       "aws:ResourceTag/${TagKey}",
       "ecs:cluster"
     ],
+    "dependentActions": []
+  },
+  "disassociategatewayfromcluster": {
+    "name": "DisassociateGatewayFromCluster",
+    "description": "Grants permission to disassociate an Amazon ECS gateway from a cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "discoverpollendpoint": {
@@ -868,6 +1003,95 @@
     "conditionKeys": [
       "ecs:cluster"
     ],
+    "dependentActions": []
+  },
+  "listgatewayclusterassociations": {
+    "name": "ListGatewayClusterAssociations",
+    "description": "Grants permission to list the cluster associations for Amazon ECS gateways",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:gateway"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgatewayroutes": {
+    "name": "ListGatewayRoutes",
+    "description": "Grants permission to list the routes for an Amazon ECS gateway",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "gateway",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:gateway"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "gateway-route",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "service",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:service"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgateways": {
+    "name": "ListGateways",
+    "description": "Grants permission to list Amazon ECS gateways",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:gateway"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listservicedeployments": {
@@ -1302,6 +1526,12 @@
         "dependentActions": []
       },
       {
+        "name": "gateway",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "service",
         "required": false,
         "conditionKeys": [],
@@ -1365,6 +1595,12 @@
       },
       {
         "name": "daemon-task-definition",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "gateway",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1539,6 +1775,26 @@
       "ecs:task-cpu",
       "ecs:task-definition",
       "ecs:task-memory"
+    ],
+    "dependentActions": []
+  },
+  "updategateway": {
+    "name": "UpdateGateway",
+    "description": "Grants permission to modify the parameters of an Amazon ECS gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "gateway",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ecs:enable-ecs-managed-tags",
+      "ecs:propagate-tags"
     ],
     "dependentActions": []
   },

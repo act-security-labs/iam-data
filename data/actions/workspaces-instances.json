@@ -132,6 +132,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "modifyvolume": {
+    "name": "ModifyVolume",
+    "description": "Grants permission to modify a workspace managed volume in your account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "VolumeId",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to add user tags to resources in your account",

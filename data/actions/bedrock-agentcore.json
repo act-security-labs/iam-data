@@ -215,6 +215,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatememoryrecordexpiryspecification": {
+    "name": "UpdateMemoryRecordExpirySpecification",
+    "description": "Grants permission to set or remove the expiry specification of long-term memory records",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "memory",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "adddatasetexamples": {
     "name": "AddDatasetExamples",
     "description": "Grants permission to add examples to a dataset",
@@ -259,7 +274,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock-agentcore:namespace"
+    ],
     "dependentActions": []
   },
   "batchputgatewayratelimits": {
@@ -290,7 +307,8 @@
       }
     ],
     "conditionKeys": [
-      "bedrock-agentcore:namespace"
+      "bedrock-agentcore:namespace",
+      "bedrock-agentcore:sourceNamespace"
     ],
     "dependentActions": []
   },
@@ -542,6 +560,7 @@
     ],
     "conditionKeys": [
       "bedrock-agentcore:actorId",
+      "bedrock-agentcore:namespaceVariable/${VariableName}",
       "bedrock-agentcore:sessionId"
     ],
     "dependentActions": []
@@ -1211,7 +1230,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock-agentcore:namespace"
+    ],
     "dependentActions": []
   },
   "deleteoauth2credentialprovider": {
@@ -1901,7 +1922,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock-agentcore:namespace"
+    ],
     "dependentActions": []
   },
   "getoauth2credentialprovider": {
@@ -2426,6 +2449,25 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "ingestdata": {
+    "name": "IngestData",
+    "description": "Grants permission to ingest content to generate long-term memory records",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "memory",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock-agentcore:actorId",
+      "bedrock-agentcore:namespaceVariable/${VariableName}",
+      "bedrock-agentcore:sessionId"
+    ],
     "dependentActions": []
   },
   "invokeagentruntime": {
@@ -2965,6 +3007,7 @@
     ],
     "conditionKeys": [
       "bedrock-agentcore:namespace",
+      "bedrock-agentcore:namespacePath",
       "bedrock-agentcore:strategyId"
     ],
     "dependentActions": []
@@ -3403,6 +3446,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "resettokenvaultkeymaterial": {
+    "name": "ResetTokenVaultKeyMaterial",
+    "description": "Grants permission to reset a TokenVault's key material to a Service Managed Key after its Customer Managed Key (CMK) has been deleted",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "token-vault",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "retrievememoryrecords": {
     "name": "RetrieveMemoryRecords",
     "description": "Grants permission to retrieve memory records through sematic query",
@@ -3417,6 +3475,7 @@
     ],
     "conditionKeys": [
       "bedrock-agentcore:namespace",
+      "bedrock-agentcore:namespacePath",
       "bedrock-agentcore:strategyId"
     ],
     "dependentActions": []
