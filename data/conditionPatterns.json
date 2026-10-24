@@ -59,6 +59,9 @@
   "ram": {
     "ram:ResourceTag/.+?": "ram:ResourceTag/${TagKey}"
   },
+  "secretsmanager": {
+    "secretsmanager:ResourceTag/.+?": "secretsmanager:ResourceTag/${TagKey}"
+  },
   "securityhub": {
     "securityhub:ASFFSyntaxPath/.+?": "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}",
     "securityhub:OCSFSyntaxPath/.+?": "securityhub:OCSFSyntaxPath/${OCSFSyntaxPath}"
@@ -183,6 +186,9 @@
   "s3express": {
     "s3express:AccessPointTag/.+?": "s3express:AccessPointTag/${TagKey}",
     "s3express:BucketTag/.+?": "s3express:BucketTag/${TagKey}"
+  },
+  "glacier": {
+    "glacier:ResourceTag/.+?": "glacier:ResourceTag/${TagKey}"
   },
   "s3tables": {
     "s3tables:TableBucketTag/.+?": "s3tables:TableBucketTag/${TagKey}"

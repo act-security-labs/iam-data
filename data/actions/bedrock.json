@@ -993,6 +993,32 @@
     ],
     "dependentActions": []
   },
+  "createretrievalinstruction": {
+    "name": "CreateRetrievalInstruction",
+    "description": "Grants permission to create a retrieval instruction",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createretrievalinstructionversion": {
+    "name": "CreateRetrievalInstructionVersion",
+    "description": "Grants permission to create a version of a retrieval instruction",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "retrieval-instruction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createsession": {
     "name": "CreateSession",
     "description": "Grants permission to create a new session",
@@ -1445,6 +1471,21 @@
     "resourceTypes": [
       {
         "name": "provisioned-model",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteretrievalinstruction": {
+    "name": "DeleteRetrievalInstruction",
+    "description": "Grants permission to delete a retrieval instruction",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "retrieval-instruction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -2436,6 +2477,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getretrievalinstruction": {
+    "name": "GetRetrievalInstruction",
+    "description": "Grants permission to retrieve a retrieval instruction",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "retrieval-instruction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getsession": {
     "name": "GetSession",
     "description": "Grants permission to retrieve an existing session",
@@ -3367,6 +3423,29 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listretrievalinstructionversions": {
+    "name": "ListRetrievalInstructionVersions",
+    "description": "Grants permission to list the versions of a retrieval instruction",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "retrieval-instruction",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listretrievalinstructions": {
+    "name": "ListRetrievalInstructions",
+    "description": "Grants permission to list retrieval instructions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listsessions": {
     "name": "ListSessions",
     "description": "Grants permission to list existing sessions",
@@ -3556,6 +3635,12 @@
       },
       {
         "name": "provisioned-model",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "retrieval-instruction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -4065,6 +4150,12 @@
         "dependentActions": []
       },
       {
+        "name": "retrieval-instruction",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "session",
         "required": false,
         "conditionKeys": [],
@@ -4258,6 +4349,12 @@
       },
       {
         "name": "provisioned-model",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "retrieval-instruction",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4620,6 +4717,21 @@
       },
       {
         "name": "provisioned-model",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateretrievalinstruction": {
+    "name": "UpdateRetrievalInstruction",
+    "description": "Grants permission to update a retrieval instruction",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "retrieval-instruction",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

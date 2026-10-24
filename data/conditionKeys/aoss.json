@@ -4,6 +4,11 @@
     "description": "Filters access by the identifier of the collection",
     "type": "String"
   },
+  "aoss:deletionprotection": {
+    "key": "aoss:DeletionProtection",
+    "description": "Filters access by the deletion protection value set on a collection in the request. Valid values are enabled and disabled",
+    "type": "String"
+  },
   "aoss:collection": {
     "key": "aoss:collection",
     "description": "Filters access by the collection name",

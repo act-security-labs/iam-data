@@ -75,9 +75,16 @@
   },
   "getcontractinformation": {
     "name": "GetContractInformation",
-    "description": "Grants permission to view the account's contract information including the contract number, end-user organization names, PO numbers and if the account is used to service public-sector customers",
+    "description": "Grants permision to retrieve your contract information such as the contract's Legal Entity Name, term and accounts",
     "accessLevel": "Read",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -138,6 +145,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "associatecontract": {
+    "name": "AssociateContract",
+    "description": "Grants permission to associate a Private Pricing Addendum with the caller's AWS account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "associatesourceviews": {
     "name": "AssociateSourceViews",
     "description": "Grants permission to associate source views to a billing view",
@@ -153,6 +175,21 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "cancelcontractualinvestmentattestation": {
+    "name": "CancelContractualInvestmentAttestation",
+    "description": "Grants permission to cancel an attestation claiming an investment award for an outcome completion within a Private Pricing Addendum",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createbillingview": {
@@ -173,6 +210,21 @@
     ],
     "dependentActions": []
   },
+  "createcontractualinvestmentattestation": {
+    "name": "CreateContractualInvestmentAttestation",
+    "description": "Grants permission to create an attestation claiming an investment award for an outcome completion within a Private Pricing Addendum",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletebillingview": {
     "name": "DeleteBillingView",
     "description": "Grants permission to delete a billing view",
@@ -188,6 +240,21 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "disassociatecontract": {
+    "name": "DisassociateContract",
+    "description": "Grants permission to disassociate a Private Pricing Addendum from the caller's AWS account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "disassociatesourceviews": {
@@ -310,6 +377,59 @@
     "description": "Grants permission to view Business Support subscription contract history",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontracts": {
+    "name": "ListContracts",
+    "description": "Grants permission to list the contracts visible to the caller's account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontractualinvestmentattestations": {
+    "name": "ListContractualInvestmentAttestations",
+    "description": "Grants permission to list the investment attestations submitted under a Private Pricing Addendum",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontractualinvestmentsummaries": {
+    "name": "ListContractualInvestmentSummaries",
+    "description": "Grants permission to list the investment summaries within a Private Pricing Addendum",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontractualinvestments": {
+    "name": "ListContractualInvestments",
+    "description": "Grants permission to list the investments under an investment summary of a Private Pricing Addendum",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "contract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

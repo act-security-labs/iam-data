@@ -1,0 +1,526 @@
+{
+  "associatecollector": {
+    "name": "AssociateCollector",
+    "description": "Grants permission to associate a collector with an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:CollectorArn"
+    ],
+    "dependentActions": []
+  },
+  "createcodefinding": {
+    "name": "CreateCodeFinding",
+    "description": "Grants permission to create a code finding in an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "code-findings",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcodescan": {
+    "name": "CreateCodeScan",
+    "description": "Grants permission to start a code scan of an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "code-scans",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcollector": {
+    "name": "CreateCollector",
+    "description": "Grants permission to create a collector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createenvironment": {
+    "name": "CreateEnvironment",
+    "description": "Grants permission to create an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "integrations",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:RepositoryName"
+    ],
+    "dependentActions": []
+  },
+  "createintegration": {
+    "name": "CreateIntegration",
+    "description": "Grants permission to create an integration with an external source provider",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "integrations",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:S3BucketName"
+    ],
+    "dependentActions": []
+  },
+  "deletecollector": {
+    "name": "DeleteCollector",
+    "description": "Grants permission to delete a collector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteenvironment": {
+    "name": "DeleteEnvironment",
+    "description": "Grants permission to delete an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteintegration": {
+    "name": "DeleteIntegration",
+    "description": "Grants permission to delete an integration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "integrations",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociatecollector": {
+    "name": "DisassociateCollector",
+    "description": "Grants permission to disassociate a collector from an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:CollectorArn"
+    ],
+    "dependentActions": []
+  },
+  "getcodefinding": {
+    "name": "GetCodeFinding",
+    "description": "Grants permission to get a code finding",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "code-findings",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcodeissue": {
+    "name": "GetCodeIssue",
+    "description": "Grants permission to get a code issue",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "code-issues",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcodeissueartifact": {
+    "name": "GetCodeIssueArtifact",
+    "description": "Grants permission to get an artifact of a code issue",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "code-issues",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcodescan": {
+    "name": "GetCodeScan",
+    "description": "Grants permission to get a code scan",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "code-scans",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcollector": {
+    "name": "GetCollector",
+    "description": "Grants permission to get a collector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcollectordataaccessauthorization": {
+    "name": "GetCollectorDataAccessAuthorization",
+    "description": "Grants permission to access the data of a collector from an environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:EnvironmentArn"
+    ],
+    "dependentActions": []
+  },
+  "getenvironment": {
+    "name": "GetEnvironment",
+    "description": "Grants permission to get an environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getintegration": {
+    "name": "GetIntegration",
+    "description": "Grants permission to get an integration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "integrations",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getresourcepolicy": {
+    "name": "GetResourcePolicy",
+    "description": "Grants permission to get the resource policy attached to a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassociatedcollectors": {
+    "name": "ListAssociatedCollectors",
+    "description": "Grants permission to list the collectors associated with an environment",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassociatedenvironments": {
+    "name": "ListAssociatedEnvironments",
+    "description": "Grants permission to list the environments associated with a collector",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcodefindings": {
+    "name": "ListCodeFindings",
+    "description": "Grants permission to list the code findings in an environment",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcodeissueartifacts": {
+    "name": "ListCodeIssueArtifacts",
+    "description": "Grants permission to list the artifacts of a code issue",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "code-issues",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcodeissues": {
+    "name": "ListCodeIssues",
+    "description": "Grants permission to list the code issues in an environment",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcodescans": {
+    "name": "ListCodeScans",
+    "description": "Grants permission to list the code scans of an environment",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcollectors": {
+    "name": "ListCollectors",
+    "description": "Grants permission to list collectors",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenvironments": {
+    "name": "ListEnvironments",
+    "description": "Grants permission to list environments",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrations": {
+    "name": "ListIntegrations",
+    "description": "Grants permission to list integrations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "integrations",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putresourcepolicy": {
+    "name": "PutResourcePolicy",
+    "description": "Grants permission to attach a resource policy to a resource",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startintegrationauthorization": {
+    "name": "StartIntegrationAuthorization",
+    "description": "Grants permission to start an OAuth authorization for a new integration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecollector": {
+    "name": "UpdateCollector",
+    "description": "Grants permission to update a collector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "collectors",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateenvironment": {
+    "name": "UpdateEnvironment",
+    "description": "Grants permission to update an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environments",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "integrations",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "continuum:RepositoryName"
+    ],
+    "dependentActions": []
+  },
+  "updateintegration": {
+    "name": "UpdateIntegration",
+    "description": "Grants permission to update the IAM role of an Amazon S3 integration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "integrations",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

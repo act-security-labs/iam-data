@@ -8,5 +8,10 @@
     "key": "glacier:ResourceTag/",
     "description": "Filters access by a customer-defined tag",
     "type": "String"
+  },
+  "glacier:resourcetag/${tagkey}": {
+    "key": "glacier:ResourceTag/${TagKey}",
+    "description": "Filters access by a customer-defined tag",
+    "type": "String"
   }
 }

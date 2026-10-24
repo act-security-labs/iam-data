@@ -1,4 +1,19 @@
 {
+  "associatefirewallrulegroupwithservice": {
+    "name": "AssociateFirewallRuleGroupWithService",
+    "description": "Grants permission to associate a Firewall rule group with other AWS services, such as Network Firewall",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "firewall-rule-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "associatefirewallrulegroup": {
     "name": "AssociateFirewallRuleGroup",
     "description": "Grants permission to associate an Amazon VPC with a specified firewall rule group",

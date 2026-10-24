@@ -840,6 +840,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatelakehouseconfiguration": {
+    "name": "UpdateLakehouseConfiguration",
+    "description": "Grants permission to manage Amazon Redshift federated permissions",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "namespace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatenamespace": {
     "name": "UpdateNamespace",
     "description": "Grants permission to update a namespace with the specified configuration settings",

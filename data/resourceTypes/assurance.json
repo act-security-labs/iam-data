@@ -1,0 +1,9 @@
+{
+  "environment": {
+    "key": "environment",
+    "arn": "arn:${Partition}:assurance:${Region}:${Account}:environment/${Environment}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

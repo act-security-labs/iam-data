@@ -1,0 +1,26 @@
+{
+  "code-findings": {
+    "key": "code-findings",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:environments/${EnvironmentId}/code-findings/${FindingId}"
+  },
+  "code-issues": {
+    "key": "code-issues",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:environments/${EnvironmentId}/code-issues/${IssueId}"
+  },
+  "code-scans": {
+    "key": "code-scans",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:environments/${EnvironmentId}/code-scans/${ScanRunId}"
+  },
+  "collectors": {
+    "key": "collectors",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:collectors/${CollectorId}"
+  },
+  "environments": {
+    "key": "environments",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:environments/${EnvironmentId}"
+  },
+  "integrations": {
+    "key": "integrations",
+    "arn": "arn:${Partition}:continuum:${Region}:${Account}:integrations/${IntegrationId}"
+  }
+}

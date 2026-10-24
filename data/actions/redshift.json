@@ -2150,6 +2150,21 @@
     ],
     "dependentActions": []
   },
+  "modifylakehouseconfiguration": {
+    "name": "ModifyLakehouseConfiguration",
+    "description": "Grants permission to manage Amazon Redshift federated permissions",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "modifyredshiftidcapplication": {
     "name": "ModifyRedshiftIdcApplication",
     "description": "Grants permission to modify a redshift idc application",

@@ -244,6 +244,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "retrieval-instruction": {
+    "key": "retrieval-instruction",
+    "arn": "arn:${Partition}:bedrock:${Region}:${Account}:retrieval-instruction/${RetrievalInstructionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "session": {
     "key": "session",
     "arn": "arn:${Partition}:bedrock:${Region}:${Account}:session/${SessionId}",

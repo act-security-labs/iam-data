@@ -164,6 +164,12 @@
         "dependentActions": []
       },
       {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "deployment",
         "required": false,
         "conditionKeys": [],
@@ -311,6 +317,21 @@
     "resourceTypes": [
       {
         "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "canceldbcapacityreservation": {
+    "name": "CancelDBCapacityReservation",
+    "description": "Grants permission to cancel a DB capacity reservation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "db-capacity-reservation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -498,6 +519,25 @@
     ],
     "dependentActions": []
   },
+  "createdbcapacityreservation": {
+    "name": "CreateDBCapacityReservation",
+    "description": "Grants permission to create a DB capacity reservation that reserves DB instance capacity in one or more Availability Zones",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "db-capacity-reservation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "rds:req-tag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "createdbcluster": {
     "name": "CreateDBCluster",
     "description": "Grants permission to create a new DB cluster",
@@ -642,6 +682,12 @@
         "dependentActions": []
       },
       {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "og",
         "required": false,
         "conditionKeys": [],
@@ -690,6 +736,12 @@
       {
         "name": "db",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -1375,6 +1427,21 @@
     "description": "Grants permission to list the set of CA certificates provided by Amazon RDS for this AWS account",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describedbcapacityreservations": {
+    "name": "DescribeDBCapacityReservations",
+    "description": "Grants permission to return information about DB capacity reservations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -2182,6 +2249,12 @@
         "dependentActions": []
       },
       {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "es",
         "required": false,
         "conditionKeys": [],
@@ -2328,6 +2401,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "modifydbcapacityreservation": {
+    "name": "ModifyDBCapacityReservation",
+    "description": "Grants permission to modify settings for a DB capacity reservation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "db-capacity-reservation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "modifydbcluster": {
     "name": "ModifyDBCluster",
     "description": "Grants permission to modify a setting for an Amazon Aurora DB cluster or Amazon DocumentDB cluster",
@@ -2419,6 +2507,12 @@
       {
         "name": "db",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -2905,6 +2999,12 @@
         "dependentActions": []
       },
       {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "deployment",
         "required": false,
         "conditionKeys": [],
@@ -3195,6 +3295,12 @@
         "dependentActions": []
       },
       {
+        "name": "db-capacity-reservation",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "og",
         "required": true,
         "conditionKeys": [],
@@ -3237,6 +3343,12 @@
       {
         "name": "db",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -3288,6 +3400,12 @@
       {
         "name": "db",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -3379,6 +3497,12 @@
       {
         "name": "db",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "db-capacity-reservation",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }

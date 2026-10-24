@@ -1,0 +1,1610 @@
+{
+  "createannotation": {
+    "name": "CreateAnnotation",
+    "description": "Grants permission to create an annotation on a piece of evidence",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createtask": {
+    "name": "CreateTask",
+    "description": "Grants permission to create a new task for a specific control and assessment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteannotation": {
+    "name": "DeleteAnnotation",
+    "description": "Grants permission to delete an annotation from a piece of evidence",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "downloadevidence": {
+    "name": "DownloadEvidence",
+    "description": "Grants permission to retrieve the content of an evidence item",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateannotation": {
+    "name": "UpdateAnnotation",
+    "description": "Grants permission to update the reviewer notes on an existing annotation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateassessment": {
+    "name": "UpdateAssessment",
+    "description": "Grants permission to update an assessment's status and result",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "uploadevidence": {
+    "name": "UploadEvidence",
+    "description": "Grants permission to upload new evidence to support a compliance assessment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "vendconnectionaccesstoken": {
+    "name": "VendConnectionAccessToken",
+    "description": "Grants permission to retrieve a short-lived access token for a third-party connection in an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "acceptinvitation": {
+    "name": "AcceptInvitation",
+    "description": "Grants permission to accept an invitation to connect an account to an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "assignpermissionset": {
+    "name": "AssignPermissionSet",
+    "description": "Grants permission to assign a permission set to a principal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchgetcomment": {
+    "name": "BatchGetComment",
+    "description": "Grants permission to retrieve multiple comments in a single request",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchgetcontrol": {
+    "name": "BatchGetControl",
+    "description": "Grants permission to retrieve multiple controls in a single request",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchgettask": {
+    "name": "BatchGetTask",
+    "description": "Grants permission to retrieve multiple tasks in a single request",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "chat": {
+    "name": "Chat",
+    "description": "Grants permission to start a streaming chat session with the AI Governance agent",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcomment": {
+    "name": "CreateComment",
+    "description": "Grants permission to add a new comment to a specific control",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcontrol": {
+    "name": "CreateControl",
+    "description": "Grants permission to create a leaf control within a custom framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcontrolgroup": {
+    "name": "CreateControlGroup",
+    "description": "Grants permission to create a control group within a custom framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createenvironment": {
+    "name": "CreateEnvironment",
+    "description": "Grants permission to create a new governance environment",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createenvironmentconnection": {
+    "name": "CreateEnvironmentConnection",
+    "description": "Grants permission to create an environment connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createframework": {
+    "name": "CreateFramework",
+    "description": "Grants permission to create a custom customer-owned framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createinvitation": {
+    "name": "CreateInvitation",
+    "description": "Grants permission to invite an account to connect to an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createpermissionset": {
+    "name": "CreatePermissionSet",
+    "description": "Grants permission to create a permission set in an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createproject": {
+    "name": "CreateProject",
+    "description": "Grants permission to create a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletecomment": {
+    "name": "DeleteComment",
+    "description": "Grants permission to delete a specific comment by its identifying fields",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletecontrol": {
+    "name": "DeleteControl",
+    "description": "Grants permission to delete a custom control",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletecontrolgroup": {
+    "name": "DeleteControlGroup",
+    "description": "Grants permission to delete a control group",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteenvironment": {
+    "name": "DeleteEnvironment",
+    "description": "Grants permission to delete a governance environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteenvironmentconnection": {
+    "name": "DeleteEnvironmentConnection",
+    "description": "Grants permission to delete an environment connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteevidence": {
+    "name": "DeleteEvidence",
+    "description": "Grants permission to remove an evidence item",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteframework": {
+    "name": "DeleteFramework",
+    "description": "Grants permission to delete a custom framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteinvitation": {
+    "name": "DeleteInvitation",
+    "description": "Grants permission to delete an invitation or unlink a connected account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletepermissionset": {
+    "name": "DeletePermissionSet",
+    "description": "Grants permission to delete a permission set",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproject": {
+    "name": "DeleteProject",
+    "description": "Grants permission to delete a project and all its associated resources",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deregisterorganizationdelegatedadmin": {
+    "name": "DeregisterOrganizationDelegatedAdmin",
+    "description": "Grants permission to deregister the delegated administrator for AWS Assurance in the caller's organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disableframework": {
+    "name": "DisableFramework",
+    "description": "Grants permission to disable a previously enabled framework for a specific project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "enableframework": {
+    "name": "EnableFramework",
+    "description": "Grants permission to enable a framework for a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getannotation": {
+    "name": "GetAnnotation",
+    "description": "Grants permission to retrieve the annotation for a specific piece of evidence",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getassessment": {
+    "name": "GetAssessment",
+    "description": "Grants permission to retrieve a single assessment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getassessmentreportcontent": {
+    "name": "GetAssessmentReportContent",
+    "description": "Grants permission to retrieve the content of a prepared assessment report",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getassessmentreportexport": {
+    "name": "GetAssessmentReportExport",
+    "description": "Grants permission to retrieve the state of an assessment report export",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getchatmessages": {
+    "name": "GetChatMessages",
+    "description": "Grants permission to get messages for a chat session in chronological order",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcomment": {
+    "name": "GetComment",
+    "description": "Grants permission to retrieve a specific comment by its identifying fields",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcontrol": {
+    "name": "GetControl",
+    "description": "Grants permission to retrieve a single leaf control within a framework version",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcontrolgroup": {
+    "name": "GetControlGroup",
+    "description": "Grants permission to retrieve a single control group within a framework version",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcontrolstatus": {
+    "name": "GetControlStatus",
+    "description": "Grants permission to retrieve the effective compliance status of a control",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getenvironment": {
+    "name": "GetEnvironment",
+    "description": "Grants permission to retrieve a governance environment by ARN or domain",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getevidence": {
+    "name": "GetEvidence",
+    "description": "Grants permission to retrieve metadata for an evidence item",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getevidencecontent": {
+    "name": "GetEvidenceContent",
+    "description": "Grants permission to retrieve the content of an evidence item",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getframework": {
+    "name": "GetFramework",
+    "description": "Grants permission to retrieve a framework resource by type and key fields",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getinvitation": {
+    "name": "GetInvitation",
+    "description": "Grants permission to retrieve an invitation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpermissionset": {
+    "name": "GetPermissionSet",
+    "description": "Grants permission to retrieve a permission set",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproject": {
+    "name": "GetProject",
+    "description": "Grants permission to retrieve a project",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gettask": {
+    "name": "GetTask",
+    "description": "Grants permission to retrieve a specific task by its identifying fields",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessmentannotations": {
+    "name": "ListAssessmentAnnotations",
+    "description": "Grants permission to list the annotations on one assessment, paginated",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessmentjournalrecords": {
+    "name": "ListAssessmentJournalRecords",
+    "description": "Grants permission to list assessment journal records, paginated",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessmentoutcomes": {
+    "name": "ListAssessmentOutcomes",
+    "description": "Grants permission to list a compliance score over time",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessments": {
+    "name": "ListAssessments",
+    "description": "Grants permission to list assessments, paginated",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listchatsessions": {
+    "name": "ListChatSessions",
+    "description": "Grants permission to list chat sessions for the calling user in a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcomments": {
+    "name": "ListComments",
+    "description": "Grants permission to list comments in a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listconnectionitems": {
+    "name": "ListConnectionItems",
+    "description": "Grants permission to list the contents of an environment connection",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontrolgroups": {
+    "name": "ListControlGroups",
+    "description": "Grants permission to list control groups in a framework version",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontrolresources": {
+    "name": "ListControlResources",
+    "description": "Grants permission to list in-scope resources for a control",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontrols": {
+    "name": "ListControls",
+    "description": "Grants permission to list controls within a control group",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdiscoveredresources": {
+    "name": "ListDiscoveredResources",
+    "description": "Grants permission to list the resources found by a discovery job (paginated)",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenabledframeworks": {
+    "name": "ListEnabledFrameworks",
+    "description": "Grants permission to list enabled frameworks for a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenvironmentconnections": {
+    "name": "ListEnvironmentConnections",
+    "description": "Grants permission to list environment connections in a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenvironments": {
+    "name": "ListEnvironments",
+    "description": "Grants permission to list all governance environments with optional pagination",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listevidence": {
+    "name": "ListEvidence",
+    "description": "Grants permission to list evidence items (paginated)",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listevidenceannotations": {
+    "name": "ListEvidenceAnnotations",
+    "description": "Grants permission to list the annotations on one version of a piece of evidence within a project, paginated",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listframeworks": {
+    "name": "ListFrameworks",
+    "description": "Grants permission to list frameworks",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinboundinvitations": {
+    "name": "ListInboundInvitations",
+    "description": "Grants permission to list invitations addressed to the caller's account",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listoutboundinvitations": {
+    "name": "ListOutboundInvitations",
+    "description": "Grants permission to list invitations extended from an owned environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpermissionsetassignments": {
+    "name": "ListPermissionSetAssignments",
+    "description": "Grants permission to list permission set assignments in an environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpermissionsets": {
+    "name": "ListPermissionSets",
+    "description": "Grants permission to list permission sets in an environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listprojects": {
+    "name": "ListProjects",
+    "description": "Grants permission to list all projects within a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresourcesforcontrol": {
+    "name": "ListResourcesForControl",
+    "description": "Grants permission to list in-scope resources for a control",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list tags for a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtaskhistory": {
+    "name": "ListTaskHistory",
+    "description": "Grants permission to list task history for a task",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtasks": {
+    "name": "ListTasks",
+    "description": "Grants permission to list all tasks within a governance environment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "publishframework": {
+    "name": "PublishFramework",
+    "description": "Grants permission to publish a custom framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putcontrolstatusoverride": {
+    "name": "PutControlStatusOverride",
+    "description": "Grants permission to declare or remove an applicability override on a control or requirement",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putevidence": {
+    "name": "PutEvidence",
+    "description": "Grants permission to add evidence, or a new version of existing evidence, to support a compliance assessment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registerorganizationdelegatedadmin": {
+    "name": "RegisterOrganizationDelegatedAdmin",
+    "description": "Grants permission to register a delegated administrator for AWS Assurance in the caller's organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "rejectinvitation": {
+    "name": "RejectInvitation",
+    "description": "Grants permission to reject an invitation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "revokepermissionset": {
+    "name": "RevokePermissionSet",
+    "description": "Grants permission to revoke a permission set assignment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startassessment": {
+    "name": "StartAssessment",
+    "description": "Grants permission to begin a new assessment for a control or framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startassessmentreportexport": {
+    "name": "StartAssessmentReportExport",
+    "description": "Grants permission to start preparing an assessment report",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startresourcediscovery": {
+    "name": "StartResourceDiscovery",
+    "description": "Grants permission to start discovery of in-scope resources",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to add or overwrite tags on a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecomment": {
+    "name": "UpdateComment",
+    "description": "Grants permission to modify the content of an existing comment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecontrol": {
+    "name": "UpdateControl",
+    "description": "Grants permission to update a custom control",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecontrolgroup": {
+    "name": "UpdateControlGroup",
+    "description": "Grants permission to update a control group's mutable attributes",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateenvironment": {
+    "name": "UpdateEnvironment",
+    "description": "Grants permission to update a governance environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateevidence": {
+    "name": "UpdateEvidence",
+    "description": "Grants permission to update evidence metadata and manage control links",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateframework": {
+    "name": "UpdateFramework",
+    "description": "Grants permission to update a custom framework",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatepermissionset": {
+    "name": "UpdatePermissionSet",
+    "description": "Grants permission to update a permission set",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproject": {
+    "name": "UpdateProject",
+    "description": "Grants permission to update a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatetask": {
+    "name": "UpdateTask",
+    "description": "Grants permission to update an existing task's mutable fields",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

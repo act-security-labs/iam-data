@@ -45,6 +45,12 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -120,7 +126,13 @@
       },
       {
         "name": "FirewallPolicy",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallPolicyV2",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -150,6 +162,42 @@
       },
       {
         "name": "StatelessRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "TLSInspectionConfiguration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createfirewallpolicyv2": {
+    "name": "CreateFirewallPolicyV2",
+    "description": "Grants permission to create an AWS Network Firewall firewall policy v2",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -253,6 +301,18 @@
     "description": "Grants permission to create an AWS Network Firewall rule group",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "StatefulRuleGroup",
         "required": false,
@@ -359,6 +419,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletefirewallpolicyv2": {
+    "name": "DeleteFirewallPolicyV2",
+    "description": "Grants permission to delete a firewall policy v2",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletenetworkfirewalltransitgatewayattachment": {
     "name": "DeleteNetworkFirewallTransitGatewayAttachment",
     "description": "Grants permission to delete Network Firewall attachments on a transit gateway",
@@ -452,6 +527,24 @@
         "dependentActions": []
       },
       {
+        "name": "FirewallPolicyV2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "StatefulRuleGroup",
         "required": false,
         "conditionKeys": [],
@@ -472,6 +565,18 @@
     "description": "Grants permission to delete a rule group",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "FirewallRuleGroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "StatefulRuleGroup",
         "required": true,
@@ -596,6 +701,39 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describefirewallpolicyv2": {
+    "name": "DescribeFirewallPolicyV2",
+    "description": "Grants permission to retrieve the data objects that define a firewall policy v2",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "TLSInspectionConfiguration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeflowoperation": {
     "name": "DescribeFlowOperation",
     "description": "Grants permission to describe a flow operation performed on a firewall",
@@ -704,6 +842,24 @@
         "dependentActions": []
       },
       {
+        "name": "FirewallPolicyV2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "StatefulRuleGroup",
         "required": false,
         "conditionKeys": [],
@@ -724,6 +880,18 @@
     "description": "Grants permission to retrieve the data objects that define a rule group",
     "accessLevel": "Read",
     "resourceTypes": [
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "StatefulRuleGroup",
         "required": false,
@@ -746,6 +914,18 @@
     "accessLevel": "Read",
     "resourceTypes": [
       {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "StatefulRuleGroup",
         "required": false,
         "conditionKeys": [],
@@ -766,6 +946,18 @@
     "description": "Grants permission to retrieve the summary information about a rule group",
     "accessLevel": "Read",
     "resourceTypes": [
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "StatefulRuleGroup",
         "required": false,
@@ -916,6 +1108,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listfirewallpoliciesv2": {
+    "name": "ListFirewallPoliciesV2",
+    "description": "Grants permission to retrieve the metadata for firewall policies v2",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listfirewalls": {
     "name": "ListFirewalls",
     "description": "Grants permission to retrieve the metadata for firewalls",
@@ -1053,6 +1260,24 @@
         "dependentActions": []
       },
       {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "StatefulRuleGroup",
         "required": false,
         "conditionKeys": [],
@@ -1108,6 +1333,24 @@
       },
       {
         "name": "FirewallPolicy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallPolicyV2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1212,6 +1455,24 @@
         "dependentActions": []
       },
       {
+        "name": "FirewallPolicyV2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Proxy",
         "required": false,
         "conditionKeys": [],
@@ -1279,6 +1540,24 @@
       },
       {
         "name": "FirewallPolicy",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallPolicyV2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1469,6 +1748,39 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatefirewallpolicyv2": {
+    "name": "UpdateFirewallPolicyV2",
+    "description": "Grants permission to modify a firewall policy v2",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "FirewallPolicyV2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "TLSInspectionConfiguration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updateloggingconfiguration": {
     "name": "UpdateLoggingConfiguration",
     "description": "Grants permission to modify the logging configuration of a firewall",
@@ -1564,6 +1876,18 @@
     "description": "Grants permission to modify a rule group",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "FirewallRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IpsRuleGroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "StatefulRuleGroup",
         "required": false,

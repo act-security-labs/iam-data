@@ -39,6 +39,11 @@
     "description": "Filters access to GenerateDataKeyPair and GenerateDataKeyPairWithoutPlaintext operations based on the value of the KeyPairSpec parameter in the request",
     "type": "String"
   },
+  "kms:encapsulationalgorithm": {
+    "key": "kms:EncapsulationAlgorithm",
+    "description": "Filters access to the Encapsulate and Decapsulate operations based on the value of the EncapsulationAlgorithm parameter in the request",
+    "type": "String"
+  },
   "kms:encryptionalgorithm": {
     "key": "kms:EncryptionAlgorithm",
     "description": "Filters access to encryption operations based on the value of the encryption algorithm in the request",

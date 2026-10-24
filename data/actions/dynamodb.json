@@ -90,6 +90,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disassociatetablereplica": {
+    "name": "DisassociateTableReplica",
+    "description": "Grants permission to disassociate a replica table from a global table while retaining the table and its data",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getabacstatus": {
     "name": "GetAbacStatus",
     "description": "Grants permission to view the status of Attribute Based Access Control for the account",

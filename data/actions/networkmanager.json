@@ -1149,6 +1149,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listattachmentnatconfigurations": {
+    "name": "ListAttachmentNatConfigurations",
+    "description": "Grants permission to list the NAT configurations of attachments",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "attachment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listattachmentroutingpolicyassociations": {
     "name": "ListAttachmentRoutingPolicyAssociations",
     "description": "Grants permission to list all routing policies associated to core network attachments",
@@ -1600,6 +1615,21 @@
     "conditionKeys": [
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "updateattachmentnatconfiguration": {
+    "name": "UpdateAttachmentNatConfiguration",
+    "description": "Grants permission to update the NAT configuration of an attachment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "attachment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updateconnection": {

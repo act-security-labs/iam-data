@@ -28,5 +28,10 @@
     "key": "identitystore:UserId",
     "description": "Filters access by Identity Store User ID",
     "type": "String"
+  },
+  "identitystore:vpceaccessrequired": {
+    "key": "identitystore:VpceAccessRequired",
+    "description": "Filters access by whether the Identity Store requires access through a VPC endpoint",
+    "type": "Bool"
   }
 }

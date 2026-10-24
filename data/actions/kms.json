@@ -124,6 +124,26 @@
     ],
     "dependentActions": []
   },
+  "decapsulate": {
+    "name": "Decapsulate",
+    "description": "Controls permission to use the specified AWS KMS key to recover the plaintext shared secret from its encapsulated (ciphertext) form",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "key",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "kms:CallerAccount",
+      "kms:EncapsulationAlgorithm",
+      "kms:RequestAlias",
+      "kms:ViaService"
+    ],
+    "dependentActions": []
+  },
   "decrypt": {
     "name": "Decrypt",
     "description": "Controls permission to decrypt ciphertext that was encrypted under an AWS KMS key",
@@ -197,6 +217,7 @@
       "kms:RecipientAttestation:PCR6",
       "kms:RecipientAttestation:PCR7",
       "kms:RecipientAttestation:PCR8",
+      "kms:RecipientAttestation:PCR8:ServiceName",
       "kms:RecipientAttestation:PCR9",
       "kms:RequestAlias",
       "kms:ViaService"
@@ -326,6 +347,7 @@
       "kms:RecipientAttestation:PCR6",
       "kms:RecipientAttestation:PCR7",
       "kms:RecipientAttestation:PCR8",
+      "kms:RecipientAttestation:PCR8:ServiceName",
       "kms:RecipientAttestation:PCR9",
       "kms:RequestAlias",
       "kms:ViaService"
@@ -445,6 +467,26 @@
     ],
     "dependentActions": []
   },
+  "encapsulate": {
+    "name": "Encapsulate",
+    "description": "Controls permission to use the specified AWS KMS key to generate a shared secret and its encapsulated (ciphertext) form",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "key",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "kms:CallerAccount",
+      "kms:EncapsulationAlgorithm",
+      "kms:RequestAlias",
+      "kms:ViaService"
+    ],
+    "dependentActions": []
+  },
   "encrypt": {
     "name": "Encrypt",
     "description": "Controls permission to use the specified AWS KMS key to encrypt data and data keys",
@@ -540,6 +582,7 @@
       "kms:RecipientAttestation:PCR6",
       "kms:RecipientAttestation:PCR7",
       "kms:RecipientAttestation:PCR8",
+      "kms:RecipientAttestation:PCR8:ServiceName",
       "kms:RecipientAttestation:PCR9",
       "kms:RequestAlias",
       "kms:ViaService"
@@ -620,6 +663,7 @@
       "kms:RecipientAttestation:PCR6",
       "kms:RecipientAttestation:PCR7",
       "kms:RecipientAttestation:PCR8",
+      "kms:RecipientAttestation:PCR8:ServiceName",
       "kms:RecipientAttestation:PCR9",
       "kms:RequestAlias",
       "kms:ViaService"
@@ -697,6 +741,7 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
+      "kms:CallerAccount",
       "kms:RecipientAttestation:ImageSha384",
       "kms:RecipientAttestation:NitroTPMPCR0",
       "kms:RecipientAttestation:NitroTPMPCR1",
@@ -753,6 +798,7 @@
       "kms:RecipientAttestation:PCR6",
       "kms:RecipientAttestation:PCR7",
       "kms:RecipientAttestation:PCR8",
+      "kms:RecipientAttestation:PCR8:ServiceName",
       "kms:RecipientAttestation:PCR9"
     ],
     "dependentActions": []
@@ -875,7 +921,10 @@
     "description": "Controls permission to view the aliases that are defined in the account. Aliases are optional friendly names that you can associate with AWS KMS keys",
     "accessLevel": "List",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "kms:CallerAccount",
+      "kms:ViaService"
+    ],
     "dependentActions": []
   },
   "listgrants": {
@@ -938,7 +987,10 @@
     "description": "Controls permission to view the key ID and Amazon Resource Name (ARN) of all AWS KMS keys in the account",
     "accessLevel": "List",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "kms:CallerAccount",
+      "kms:ViaService"
+    ],
     "dependentActions": []
   },
   "listresourcetags": {

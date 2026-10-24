@@ -618,7 +618,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "identitystore:VpceAccessRequired"
+    ],
     "dependentActions": []
   },
   "updateuser": {

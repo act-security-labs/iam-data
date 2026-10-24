@@ -46,7 +46,7 @@
   },
   "batchgetcollectiongroup": {
     "name": "BatchGetCollectionGroup",
-    "description": "Grants permission to get attributes for one or more collection groups",
+    "description": "Grants permission to get attributes for one or more collection-groups",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [
@@ -75,6 +75,21 @@
     "description": "Grants permission to get attributes for one or more VPC endpoints",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "cancelingestionjob": {
+    "name": "CancelIngestionJob",
+    "description": "Grants permission to cancel an ingestion job",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "IngestionJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -118,6 +133,42 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createingestionjob": {
+    "name": "CreateIngestionJob",
+    "description": "Grants permission to create an ingestion job on a collection",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createingestionstream": {
+    "name": "CreateIngestionStream",
+    "description": "Grants permission to create an ingestion stream on a collection",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createlifecyclepolicy": {
@@ -223,6 +274,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteingestionstream": {
+    "name": "DeleteIngestionStream",
+    "description": "Grants permission to delete an ingestion stream",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "IngestionStream",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletelifecyclepolicy": {
     "name": "DeleteLifecyclePolicy",
     "description": "Grants permission to delete a lifecycle policy",
@@ -286,6 +352,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getingestionjob": {
+    "name": "GetIngestionJob",
+    "description": "Grants permission to get information about an ingestion job",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "IngestionJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getingestionstream": {
+    "name": "GetIngestionStream",
+    "description": "Grants permission to get information about an ingestion stream",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "IngestionStream",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getpoliciesstats": {
     "name": "GetPoliciesStats",
     "description": "Grants permission to get statistis about the security policies in your account",
@@ -322,7 +418,7 @@
   },
   "listcollectiongroups": {
     "name": "ListCollectionGroups",
-    "description": "Grants permission to list collection groups",
+    "description": "Grants permission to list collection-groups",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -333,6 +429,36 @@
     "description": "Grants permission to list collections",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listingestionjobs": {
+    "name": "ListIngestionJobs",
+    "description": "Grants permission to list ingestion jobs for a collection",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listingestionstreams": {
+    "name": "ListIngestionStreams",
+    "description": "Grants permission to list ingestion streams for a collection",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -362,9 +488,34 @@
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
-    "description": "Grants permission to list tags for a collection",
+    "description": "Grants permission to list tags for a collection, collection group, ingestion job, or ingestion stream",
     "accessLevel": "List",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "CollectionGroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionStream",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -378,9 +529,34 @@
   },
   "tagresource": {
     "name": "TagResource",
-    "description": "Grants permission to tag a serverless collection",
-    "accessLevel": "Write",
-    "resourceTypes": [],
+    "description": "Grants permission to add tags to a collection, collection group, ingestion job, or ingestion stream",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "CollectionGroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionStream",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:ResourceTag/${TagKey}",
@@ -390,9 +566,34 @@
   },
   "untagresource": {
     "name": "UntagResource",
-    "description": "Grants permission to remove tags from a collection",
-    "accessLevel": "Write",
-    "resourceTypes": [],
+    "description": "Grants permission to remove tags from a collection, collection group, ingestion job, or ingestion stream",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "Collection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "CollectionGroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "IngestionStream",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:TagKeys"
     ],
@@ -429,7 +630,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aoss:DeletionProtection"
+    ],
     "dependentActions": []
   },
   "updatecollectiongroup": {

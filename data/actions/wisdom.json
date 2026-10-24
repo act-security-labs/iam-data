@@ -1015,6 +1015,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "registerassistantreplicakey": {
+    "name": "RegisterAssistantReplicaKey",
+    "description": "Grants permission to register a replica KMS key for an assistant",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Assistant",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registerknowledgebasereplicakey": {
+    "name": "RegisterKnowledgeBaseReplicaKey",
+    "description": "Grants permission to register a replica KMS key for a knowledge base",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "KnowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "removeassistantaiagent": {
     "name": "RemoveAssistantAIAgent",
     "description": "Grants permission to remove an ai agent from an assistant",

@@ -7,7 +7,9 @@
       {
         "name": "network-operation",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -22,14 +24,15 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createsolnetworkinstance": {
@@ -40,20 +43,25 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createsolnetworkpackage": {
@@ -64,14 +72,15 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deletesolfunctionpackage": {
@@ -82,7 +91,9 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -97,7 +108,9 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -112,7 +125,9 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -127,13 +142,13 @@
       {
         "name": "function-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolfunctionpackage": {
@@ -144,13 +159,13 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolfunctionpackagecontent": {
@@ -161,13 +176,13 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolfunctionpackagedescriptor": {
@@ -178,13 +193,13 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolnetworkinstance": {
@@ -195,13 +210,13 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolnetworkoperation": {
@@ -212,13 +227,13 @@
       {
         "name": "network-operation",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolnetworkpackage": {
@@ -229,13 +244,13 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolnetworkpackagecontent": {
@@ -246,13 +261,13 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getsolnetworkpackagedescriptor": {
@@ -263,13 +278,13 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "instantiatesolnetworkinstance": {
@@ -280,14 +295,15 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listsolfunctioninstances": {
@@ -298,13 +314,13 @@
       {
         "name": "function-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listsolfunctionpackages": {
@@ -315,13 +331,13 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listsolnetworkinstances": {
@@ -332,13 +348,13 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listsolnetworkoperations": {
@@ -349,13 +365,13 @@
       {
         "name": "network-operation",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listsolnetworkpackages": {
@@ -366,13 +382,13 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:ResourceTag/${TagKey}"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listtagsforresource": {
@@ -391,7 +407,9 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -406,7 +424,9 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -421,38 +441,55 @@
       {
         "name": "function-instance",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "function-package",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-instance",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-operation",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-package",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "terminatesolnetworkinstance": {
@@ -463,14 +500,15 @@
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "untagresource": {
@@ -481,37 +519,50 @@
       {
         "name": "function-instance",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "function-package",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-instance",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-operation",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-package",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updatesolfunctionpackage": {
@@ -522,7 +573,9 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -537,20 +590,25 @@
       {
         "name": "function-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "network-instance",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updatesolnetworkpackage": {
@@ -561,7 +619,9 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -576,7 +636,9 @@
       {
         "name": "function-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -591,7 +653,9 @@
       {
         "name": "network-package",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],

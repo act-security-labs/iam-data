@@ -570,6 +570,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatelanguagemodel": {
+    "name": "UpdateLanguageModel",
+    "description": "Grants permission to update a custom language model",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "languagemodel",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatemedicalvocabulary": {
     "name": "UpdateMedicalVocabulary",
     "description": "Grants permission to update an existing medical vocabulary with new values. The UpdateMedicalVocabulary operation overwrites all of the existing information with the values that you provide in the request",

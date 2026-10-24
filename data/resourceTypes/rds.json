@@ -67,6 +67,13 @@
       "rds:db-tag/${TagKey}"
     ]
   },
+  "db-capacity-reservation": {
+    "key": "db-capacity-reservation",
+    "arn": "arn:${Partition}:rds:${Region}:${Account}:db-capacity-reservation:${DBCapacityReservationIdentifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "deployment": {
     "key": "deployment",
     "arn": "arn:${Partition}:rds:${Region}:${Account}:deployment:${BlueGreenDeploymentIdentifier}",

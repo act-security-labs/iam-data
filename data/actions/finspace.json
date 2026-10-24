@@ -7,7 +7,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -22,7 +24,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -37,14 +41,15 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxchangeset": {
@@ -55,7 +60,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -70,14 +77,15 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxdatabase": {
@@ -88,14 +96,15 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxdataview": {
@@ -106,14 +115,15 @@
       {
         "name": "kxDataview",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxenvironment": {
@@ -135,14 +145,15 @@
       {
         "name": "kxScalingGroup",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxuser": {
@@ -153,14 +164,15 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createkxvolume": {
@@ -171,14 +183,15 @@
       {
         "name": "kxVolume",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createuser": {
@@ -189,20 +202,25 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "user",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deleteenvironment": {
@@ -213,7 +231,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -228,7 +248,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -243,7 +265,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -258,7 +282,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -273,7 +299,9 @@
       {
         "name": "kxDataview",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -288,7 +316,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -303,7 +333,9 @@
       {
         "name": "kxScalingGroup",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -318,7 +350,9 @@
       {
         "name": "kxUser",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -333,7 +367,9 @@
       {
         "name": "kxVolume",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -348,7 +384,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -363,7 +401,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -378,7 +418,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -393,7 +435,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -408,7 +452,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -423,7 +469,9 @@
       {
         "name": "kxDataview",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -438,7 +486,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -453,7 +503,9 @@
       {
         "name": "kxScalingGroup",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -468,7 +520,9 @@
       {
         "name": "kxUser",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -483,7 +537,9 @@
       {
         "name": "kxVolume",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -498,7 +554,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -513,13 +571,17 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "user",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -534,7 +596,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -549,7 +613,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -564,7 +630,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -579,7 +647,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -594,7 +664,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -609,7 +681,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -632,7 +706,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -647,7 +723,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -662,7 +740,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -677,49 +757,65 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDataview",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxScalingGroup",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxUser",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxVolume",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -734,13 +830,17 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "user",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -755,7 +855,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -770,13 +872,17 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "user",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -791,56 +897,85 @@
       {
         "name": "environment",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxCluster",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDatabase",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDataview",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxEnvironment",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxScalingGroup",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxUser",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxVolume",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "untagresource": {
@@ -851,55 +986,77 @@
       {
         "name": "environment",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxCluster",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDatabase",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxDataview",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxEnvironment",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxScalingGroup",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxUser",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
         "name": "kxVolume",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [
-      "aws:TagKeys"
-    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updateenvironment": {
@@ -910,7 +1067,9 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -925,7 +1084,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -940,7 +1101,9 @@
       {
         "name": "kxCluster",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -955,7 +1118,9 @@
       {
         "name": "kxDatabase",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -970,7 +1135,9 @@
       {
         "name": "kxDataview",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -985,7 +1152,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -1000,7 +1169,9 @@
       {
         "name": "kxEnvironment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -1015,7 +1186,9 @@
       {
         "name": "kxUser",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -1030,7 +1203,9 @@
       {
         "name": "kxVolume",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -1045,13 +1220,17 @@
       {
         "name": "environment",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       },
       {
         "name": "user",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],

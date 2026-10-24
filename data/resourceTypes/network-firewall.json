@@ -20,6 +20,27 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "firewallpolicyv2": {
+    "key": "FirewallPolicyV2",
+    "arn": "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy-v2/${Name}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "firewallrulegroup": {
+    "key": "FirewallRuleGroup",
+    "arn": "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-rulegroup/${Name}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "ipsrulegroup": {
+    "key": "IpsRuleGroup",
+    "arn": "arn:${Partition}:network-firewall:${Region}:${Account}:ips-rulegroup/${Name}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "proxy": {
     "key": "Proxy",
     "arn": "arn:${Partition}:network-firewall:${Region}:${Account}:proxy/${Name}",

@@ -1046,6 +1046,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "revokeconnectiontoken": {
+    "name": "RevokeConnectionToken",
+    "description": "Grants permission to revoke connection token for a specified token ID",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startcomposition": {
     "name": "StartComposition",
     "description": "Grants permission to start a new composition",

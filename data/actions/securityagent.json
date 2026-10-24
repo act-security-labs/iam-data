@@ -89,21 +89,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "batchdeletethreats": {
-    "name": "BatchDeleteThreats",
-    "description": "Grants permission to delete multiple threats",
-    "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "AgentSpace",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "batchdisassociatefindingissue": {
     "name": "BatchDisassociateFindingIssue",
     "description": "Grants permission to disassociate issues from findings",

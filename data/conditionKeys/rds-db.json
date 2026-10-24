@@ -1,1 +1,7 @@
-{}
+{
+  "aws:resourcetag/${tagkey}": {
+    "key": "aws:ResourceTag/${TagKey}",
+    "description": "Filters access by the tags associated with the parent RDS DB instance or Aurora DB cluster of the db-user",
+    "type": "String"
+  }
+}

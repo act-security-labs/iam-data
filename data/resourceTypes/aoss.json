@@ -16,5 +16,19 @@
   "dashboards": {
     "key": "Dashboards",
     "arn": "arn:${Partition}:aoss:${Region}:${Account}:dashboards/default"
+  },
+  "ingestionjob": {
+    "key": "IngestionJob",
+    "arn": "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-job/${IngestionJobId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "ingestionstream": {
+    "key": "IngestionStream",
+    "arn": "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-stream/${IngestionStreamId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }

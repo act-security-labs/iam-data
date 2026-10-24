@@ -57,6 +57,12 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -73,6 +79,12 @@
       {
         "name": "cluster",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "configuration",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }

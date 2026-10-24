@@ -1,0 +1,22 @@
+{
+  "continuum:collectorarn": {
+    "key": "continuum:CollectorArn",
+    "description": "Filters access by the ARNs of the collectors in an AssociateCollector or DisassociateCollector request",
+    "type": "ArrayOfARN"
+  },
+  "continuum:environmentarn": {
+    "key": "continuum:EnvironmentArn",
+    "description": "Filters access by the ARN of the environment that requests access to the data of a collector",
+    "type": "ARN"
+  },
+  "continuum:repositoryname": {
+    "key": "continuum:RepositoryName",
+    "description": "Filters access by the repositories, as lowercase owner/repo values, that a CreateEnvironment or UpdateEnvironment request selects as sources",
+    "type": "ArrayOfString"
+  },
+  "continuum:s3bucketname": {
+    "key": "continuum:S3BucketName",
+    "description": "Filters access by the name of the Amazon S3 bucket in a CreateIntegration request",
+    "type": "String"
+  }
+}
