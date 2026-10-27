@@ -50,7 +50,14 @@
     "name": "CreateLocationAzureBlob",
     "description": "Grants permission to create an endpoint for a Microsoft Azure Blob Storage container",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -116,7 +123,14 @@
     "name": "CreateLocationHdfs",
     "description": "Grants permission to create an endpoint for an Amazon Hdfs",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -127,7 +141,14 @@
     "name": "CreateLocationNfs",
     "description": "Grants permission to create an endpoint for a NFS file system",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -138,7 +159,14 @@
     "name": "CreateLocationObjectStorage",
     "description": "Grants permission to create an endpoint for a self-managed object storage bucket",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -149,7 +177,14 @@
     "name": "CreateLocationS3",
     "description": "Grants permission to create an endpoint for an Amazon S3 bucket",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -160,7 +195,14 @@
     "name": "CreateLocationSmb",
     "description": "Grants permission to create an endpoint for an SMB file system",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agent",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -813,6 +855,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "location",
         "required": true,
         "conditionKeys": [],
@@ -903,6 +951,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "location",
         "required": true,
         "conditionKeys": [],
@@ -918,6 +972,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "location",
         "required": true,
         "conditionKeys": [],
@@ -932,6 +992,12 @@
     "description": "Grants permission to update a self-managed object storage server location",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "location",
         "required": true,
@@ -962,6 +1028,12 @@
     "description": "Grants permission to update a SMB sync location",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "agent",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "location",
         "required": true,

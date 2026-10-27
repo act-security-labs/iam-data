@@ -7,6 +7,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "callwithbearertoken": {
+    "name": "CallWithBearerToken",
+    "description": "Grants permission to authenticate requests to AWS X-Ray using a bearer token",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdistincttracegraphs": {
     "name": "GetDistinctTraceGraphs",
     "description": "Grants permission to retrieve distinct service graphs for one or more specific trace IDs",

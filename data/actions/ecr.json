@@ -314,6 +314,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describereplicationbackfillresults": {
+    "name": "DescribeReplicationBackfillResults",
+    "description": "Grants permission to retrieve the results of a replication backfill for the registry",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describerepositories": {
     "name": "DescribeRepositories",
     "description": "Grants permission to describe image repositories in a registry",
@@ -472,6 +480,14 @@
   "listpulltimeupdateexclusions": {
     "name": "ListPullTimeUpdateExclusions",
     "description": "Grants permission to list pull time update exclusions for the registry",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listreplicationbackfills": {
+    "name": "ListReplicationBackfills",
+    "description": "Grants permission to list the replication backfills for the registry",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -647,6 +663,22 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startreplicationbackfill": {
+    "name": "StartReplicationBackfill",
+    "description": "Grants permission to start a replication backfill to a destination region for the registry",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stopreplicationbackfill": {
+    "name": "StopReplicationBackfill",
+    "description": "Grants permission to stop an in-progress replication backfill for the registry",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

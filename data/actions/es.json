@@ -48,6 +48,21 @@
     ],
     "dependentActions": []
   },
+  "addreplicationpeer": {
+    "name": "AddReplicationPeer",
+    "description": "Grants permission to pair two OpenSearch Service domains for replication. Requires the permission on both domains",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "addtags": {
     "name": "AddTags",
     "description": "Grants permission to attach resource tags to an OpenSearch Service domain, data source, or application",
@@ -176,6 +191,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "comparedomainconfiguration": {
+    "name": "CompareDomainConfiguration",
+    "description": "Grants permission to compare the configuration of two OpenSearch Service domains. Requires the permission on both domains",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createapplication": {
     "name": "CreateApplication",
     "description": "Grants permission to create an OpenSearch Application",
@@ -201,7 +231,9 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "es:SecurityGroupIds",
+      "es:SubnetIds"
     ],
     "dependentActions": []
   },
@@ -219,7 +251,9 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "es:SecurityGroupIds",
+      "es:SubnetIds"
     ],
     "dependentActions": []
   },
@@ -566,6 +600,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describedomainreplication": {
+    "name": "DescribeDomainReplication",
+    "description": "Grants permission to retrieve the replication relationship details for an OpenSearch Service domain",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describedomains": {
     "name": "DescribeDomains",
     "description": "Grants permission to view a description of the domain configuration for up to five specified OpenSearch Service domains",
@@ -895,6 +944,21 @@
       {
         "name": "domain",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "failoverreplication": {
+    "name": "FailoverReplication",
+    "description": "Grants permission to promote the secondary domain of a replication relationship when the primary is unavailable. Requires the permission on both domains",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -1409,6 +1473,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "removereplicationpeer": {
+    "name": "RemoveReplicationPeer",
+    "description": "Grants permission to end the replication relationship between two OpenSearch Service domains. Requires the permission on both domains",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "removetags": {
     "name": "RemoveTags",
     "description": "Grants permission to remove resource tags from an OpenSearch Service domain, data source, or application",
@@ -1524,6 +1603,21 @@
   "startservicesoftwareupdate": {
     "name": "StartServiceSoftwareUpdate",
     "description": "Grants permission to start a service software update of a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "switchoverreplication": {
+    "name": "SwitchoverReplication",
+    "description": "Grants permission to swap the primary and secondary roles of a replication relationship between two OpenSearch Service domains without data loss. Requires the permission on both domains",
     "accessLevel": "Write",
     "resourceTypes": [
       {

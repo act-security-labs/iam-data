@@ -104,6 +104,24 @@
     ],
     "dependentActions": []
   },
+  "createfailoverslateconfiguration": {
+    "name": "CreateFailoverSlateConfiguration",
+    "description": "Grants permission to create a new failover slate configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Failover-Slate-Configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createingestconfiguration": {
     "name": "CreateIngestConfiguration",
     "description": "Grants permission to create a new ingest configuration",
@@ -273,6 +291,21 @@
     "resourceTypes": [
       {
         "name": "Encoder-Configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletefailoverslateconfiguration": {
+    "name": "DeleteFailoverSlateConfiguration",
+    "description": "Grants permission to delete a failover slate configuration for the specified ARN",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Failover-Slate-Configuration",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -468,6 +501,21 @@
     "resourceTypes": [
       {
         "name": "Encoder-Configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getfailoverslateconfiguration": {
+    "name": "GetFailoverSlateConfiguration",
+    "description": "Grants permission to get the failover slate configuration for the specified ARN",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Failover-Slate-Configuration",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -759,6 +807,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listfailoverslateconfigurations": {
+    "name": "ListFailoverSlateConfigurations",
+    "description": "Grants permission to get summary information about failover slate configurations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Failover-Slate-Configuration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listingestconfigurations": {
     "name": "ListIngestConfigurations",
     "description": "Grants permission to get summary information about ingest configurations",
@@ -972,6 +1035,12 @@
       },
       {
         "name": "Encoder-Configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Failover-Slate-Configuration",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1198,6 +1267,12 @@
         "dependentActions": []
       },
       {
+        "name": "Failover-Slate-Configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Ingest-Configuration",
         "required": false,
         "conditionKeys": [],
@@ -1282,6 +1357,12 @@
         "dependentActions": []
       },
       {
+        "name": "Failover-Slate-Configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Ingest-Configuration",
         "required": false,
         "conditionKeys": [],
@@ -1350,6 +1431,21 @@
     "resourceTypes": [
       {
         "name": "Channel",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatefailoverslateconfiguration": {
+    "name": "UpdateFailoverSlateConfiguration",
+    "description": "Grants permission to update a failover slate configuration for the specified ARN",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Failover-Slate-Configuration",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

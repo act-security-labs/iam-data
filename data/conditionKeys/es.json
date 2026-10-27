@@ -13,5 +13,15 @@
     "key": "aws:TagKeys",
     "description": "Filters access based on the tag keys that are passed in the request",
     "type": "ArrayOfString"
+  },
+  "es:securitygroupids": {
+    "key": "es:SecurityGroupIds",
+    "description": "Filters access by the security group IDs specified in the VPC options of the request",
+    "type": "ArrayOfString"
+  },
+  "es:subnetids": {
+    "key": "es:SubnetIds",
+    "description": "Filters access by the subnet IDs specified in the VPC options of the request",
+    "type": "ArrayOfString"
   }
 }

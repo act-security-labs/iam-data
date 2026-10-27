@@ -17,9 +17,6 @@
     "codebuild:secondarySources/.+?.insecureSsl": "codebuild:secondarySources/${sourceIdentifier}.insecureSsl",
     "codebuild:secondarySources/.+?.location": "codebuild:secondarySources/${sourceIdentifier}.location"
   },
-  "iam": {
-    "iam:ResourceTag/.+?": "iam:ResourceTag/${TagKey}"
-  },
   "datapipeline": {
     "datapipeline:Tag/.+?": "datapipeline:Tag/${TagKey}"
   },
@@ -41,6 +38,9 @@
   },
   "elasticloadbalancing": {
     "elasticloadbalancing:ResourceTag/.+?": "elasticloadbalancing:ResourceTag/${TagKey}"
+  },
+  "iam": {
+    "iam:ResourceTag/.+?": "iam:ResourceTag/${TagKey}"
   },
   "iotanalytics": {
     "iotanalytics:ResourceTag/.+?": "iotanalytics:ResourceTag/${TagKey}"

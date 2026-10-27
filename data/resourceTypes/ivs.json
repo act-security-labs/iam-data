@@ -27,6 +27,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "failover-slate-configuration": {
+    "key": "Failover-Slate-Configuration",
+    "arn": "arn:${Partition}:ivs:${Region}:${Account}:failover-slate-configuration/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "ingest-configuration": {
     "key": "Ingest-Configuration",
     "arn": "arn:${Partition}:ivs:${Region}:${Account}:ingest-configuration/${ResourceId}",
