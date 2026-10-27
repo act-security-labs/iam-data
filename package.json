@@ -1,6 +1,6 @@
 {
   "name": "@actsecurity/iam-data",
-  "version": "0.21.202610271",
+  "version": "0.22.202610271",
   "description": "AWS IAM Data",
   "repository": {
     "type": "git",

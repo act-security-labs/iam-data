@@ -1,13 +1,19 @@
 import { readActionData } from './data.js'
 
-interface ActionResourceType {
+/**
+ * Resource-type requirements and related action metadata for an IAM action.
+ */
+export interface ActionResourceType {
   name: string
   required: boolean
   conditionKeys: string[]
   dependentActions: string[]
 }
 
-interface Action {
+/**
+ * IAM action metadata returned by the public action-data API.
+ */
+export interface Action {
   name: string
   description: string
   accessLevel: 'Read' | 'Write' | 'List' | 'Tagging'
@@ -15,6 +21,10 @@ interface Action {
   conditionKeys: string[]
   dependentActions: string[]
   isWildcardOnly: boolean
+  /**
+   * Present only when AWS rejects unsigned requests for this action regardless of resource policy.
+   */
+  blockAnon?: true
 }
 
 /**

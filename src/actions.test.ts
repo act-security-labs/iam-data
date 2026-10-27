@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, expectTypeOf, it } from 'vitest'
 import { iamActionDetails, iamActionExists, iamActionsForService } from './actions'
 
 describe('actions', () => {
@@ -39,6 +39,20 @@ describe('actions', () => {
       await expect(iamActionDetails(service, action)).rejects.toThrow(
         'Action GetBunchesOfObjects does not exist for service s3'
       )
+    })
+
+    it('preserves sparse anonymous-access metadata in the public return type', async () => {
+      //Given an action that is not marked as blocking anonymous access
+      const service = 's3'
+      const action = 'GetObject'
+
+      //When iamActionDetails is called
+      const result = await iamActionDetails(service, action)
+
+      //Then the public result supports an optional literal true marker without synthesizing false
+      expectTypeOf(result).toMatchTypeOf<{ blockAnon?: true }>()
+      expectTypeOf(result.blockAnon).toEqualTypeOf<true | undefined>()
+      expect(Object.hasOwn(result, 'blockAnon')).toBe(false)
     })
 
     it('should return if the action is wildcard only', async () => {
