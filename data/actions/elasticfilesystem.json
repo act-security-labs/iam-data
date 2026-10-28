@@ -129,7 +129,8 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "createfilesystem": {
     "name": "CreateFileSystem",
@@ -156,7 +157,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "createreplicationconfiguration": {
     "name": "CreateReplicationConfiguration",
@@ -171,7 +173,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "createtags": {
     "name": "CreateTags",
@@ -189,7 +192,8 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deleteaccesspoint": {
     "name": "DeleteAccessPoint",
@@ -204,7 +208,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletefilesystem": {
     "name": "DeleteFileSystem",
@@ -219,7 +224,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletefilesystempolicy": {
     "name": "DeleteFileSystemPolicy",
@@ -234,7 +240,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletemounttarget": {
     "name": "DeleteMountTarget",
@@ -249,7 +256,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletereplicationconfiguration": {
     "name": "DeleteReplicationConfiguration",
@@ -264,7 +272,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletetags": {
     "name": "DeleteTags",
@@ -281,7 +290,8 @@
     "conditionKeys": [
       "aws:TagKeys"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describeaccesspoints": {
     "name": "DescribeAccessPoints",
@@ -302,7 +312,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describeaccountpreferences": {
     "name": "DescribeAccountPreferences",
@@ -325,7 +336,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describefilesystempolicy": {
     "name": "DescribeFileSystemPolicy",
@@ -340,7 +352,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describefilesystems": {
     "name": "DescribeFileSystems",
@@ -355,7 +368,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describelifecycleconfiguration": {
     "name": "DescribeLifecycleConfiguration",
@@ -370,7 +384,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describemounttargetsecuritygroups": {
     "name": "DescribeMountTargetSecurityGroups",
@@ -385,7 +400,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describemounttargets": {
     "name": "DescribeMountTargets",
@@ -406,7 +422,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describereplicationconfigurations": {
     "name": "DescribeReplicationConfigurations",
@@ -421,7 +438,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describetags": {
     "name": "DescribeTags",
@@ -436,7 +454,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
@@ -457,7 +476,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "modifymounttargetsecuritygroups": {
     "name": "ModifyMountTargetSecurityGroups",
@@ -472,7 +492,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "putaccountpreferences": {
     "name": "PutAccountPreferences",
@@ -495,7 +516,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "putfilesystempolicy": {
     "name": "PutFileSystemPolicy",
@@ -510,7 +532,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "putlifecycleconfiguration": {
     "name": "PutLifecycleConfiguration",
@@ -525,7 +548,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "tagresource": {
     "name": "TagResource",
@@ -550,7 +574,8 @@
       "aws:TagKeys",
       "elasticfilesystem:CreateAction"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "untagresource": {
     "name": "UntagResource",
@@ -573,7 +598,8 @@
     "conditionKeys": [
       "aws:TagKeys"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "updatefilesystem": {
     "name": "UpdateFileSystem",
@@ -588,7 +614,8 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "updatefilesystemprotection": {
     "name": "UpdateFileSystemProtection",
@@ -603,6 +630,7 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   }
 }

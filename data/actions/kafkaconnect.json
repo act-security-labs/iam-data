@@ -200,6 +200,51 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "pauseconnector": {
+    "name": "PauseConnector",
+    "description": "Grants permission to pause an MSK Connect connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "restartconnector": {
+    "name": "RestartConnector",
+    "description": "Grants permission to restart an MSK Connect connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "resumeconnector": {
+    "name": "ResumeConnector",
+    "description": "Grants permission to resume an MSK Connect connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to tag an MSK Connect resource",

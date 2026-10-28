@@ -318,6 +318,12 @@
         "dependentActions": []
       },
       {
+        "name": "exascale-db-storage-vault",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "odb-network",
         "required": true,
         "conditionKeys": [],
@@ -358,7 +364,14 @@
     "name": "CreateExascaleDbStorageVault",
     "description": "Grants permission to create an Exascale DB storage vault",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "cloud-exadata-infrastructure",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
@@ -976,7 +989,14 @@
     "name": "ListExascaleDbStorageVaults",
     "description": "Grants permission to list information about the Exascale DB storage vaults owned by your Amazon Web Services account",
     "accessLevel": "List",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "cloud-exadata-infrastructure",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -1456,6 +1476,21 @@
     "resourceTypes": [
       {
         "name": "exadb-vm-cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateexascalecloudexadatainfrastructure": {
+    "name": "UpdateExascaleCloudExadataInfrastructure",
+    "description": "Grants permission to configure Exascale storage on an Exadata infrastructure resource",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-exadata-infrastructure",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

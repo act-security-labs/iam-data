@@ -13,5 +13,10 @@
     "key": "aws:TagKeys",
     "description": "Filters access by the presence of tag keys in the request",
     "type": "ArrayOfString"
+  },
+  "inspector2:expectedbucketowner": {
+    "key": "inspector2:ExpectedBucketOwner",
+    "description": "Filters access by the AWS account ID that must own the destination S3 bucket when requesting a findings report or SBOM export",
+    "type": "String"
   }
 }

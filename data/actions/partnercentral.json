@@ -1713,6 +1713,16 @@
     ],
     "dependentActions": []
   },
+  "searchopportunities": {
+    "name": "SearchOpportunities",
+    "description": "Grants permission to search Opportunities on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "searchpartnercentralcontent": {
     "name": "SearchPartnerCentralContent",
     "description": "Grants permission to search content in AWS Partner Central",

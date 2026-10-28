@@ -115,7 +115,8 @@
       "www.amazon.com:app_id",
       "www.amazon.com:user_id"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "assumerolewithsaml": {
     "name": "AssumeRoleWithSAML",
@@ -340,7 +341,8 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "getsessiontoken": {
     "name": "GetSessionToken",

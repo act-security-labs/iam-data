@@ -36,6 +36,21 @@
     ],
     "dependentActions": []
   },
+  "createscheduleaction": {
+    "name": "CreateScheduleAction",
+    "description": "Grants permission to create a schedule action for a feed",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletedictionary": {
     "name": "DeleteDictionary",
     "description": "Grants permission to delete a dictionary",
@@ -69,6 +84,21 @@
   "deletefeedpolicy": {
     "name": "DeleteFeedPolicy",
     "description": "Grants permission to delete the resource-based policy of a feed",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletescheduleaction": {
+    "name": "DeleteScheduleAction",
+    "description": "Grants permission to delete a schedule action for a feed",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -184,6 +214,21 @@
     "description": "Grants permission to list feeds in the account",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listscheduleactions": {
+    "name": "ListScheduleActions",
+    "description": "Grants permission to list schedule actions for a feed",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "feed",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

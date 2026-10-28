@@ -30,7 +30,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "connectcustomkeystore": {
     "name": "ConnectCustomKeyStore",
@@ -64,7 +65,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "createcustomkeystore": {
     "name": "CreateCustomKeyStore",
@@ -102,7 +104,8 @@
       "kms:RetiringServicePrincipal",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "createkey": {
     "name": "CreateKey",
@@ -222,7 +225,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletealias": {
     "name": "DeleteAlias",
@@ -246,7 +250,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "deletecustomkeystore": {
     "name": "DeleteCustomKeyStore",
@@ -274,7 +279,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "derivesharedsecret": {
     "name": "DeriveSharedSecret",
@@ -352,7 +358,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "describecustomkeystores": {
     "name": "DescribeCustomKeyStores",
@@ -381,7 +388,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "disablekey": {
     "name": "DisableKey",
@@ -400,7 +408,8 @@
       "kms:TrailingDaysWithoutKeyUsage",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "disablekeyrotation": {
     "name": "DisableKeyRotation",
@@ -418,7 +427,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "disconnectcustomkeystore": {
     "name": "DisconnectCustomKeyStore",
@@ -446,7 +456,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "enablekeyrotation": {
     "name": "EnableKeyRotation",
@@ -465,7 +476,8 @@
       "kms:RotationPeriodInDays",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "encapsulate": {
     "name": "Encapsulate",
@@ -507,7 +519,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generatedatakey": {
     "name": "GenerateDataKey",
@@ -587,7 +600,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generatedatakeypair": {
     "name": "GenerateDataKeyPair",
@@ -668,7 +682,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generatedatakeypairwithoutplaintext": {
     "name": "GenerateDataKeyPairWithoutPlaintext",
@@ -691,7 +706,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generatedatakeywithoutplaintext": {
     "name": "GenerateDataKeyWithoutPlaintext",
@@ -713,7 +729,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generatemac": {
     "name": "GenerateMac",
@@ -733,7 +750,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "generaterandom": {
     "name": "GenerateRandom",
@@ -837,7 +855,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "getkeyrotationstatus": {
     "name": "GetKeyRotationStatus",
@@ -855,7 +874,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "getparametersforimport": {
     "name": "GetParametersForImport",
@@ -875,7 +895,8 @@
       "kms:WrappingAlgorithm",
       "kms:WrappingKeySpec"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "getpublickey": {
     "name": "GetPublicKey",
@@ -894,7 +915,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "importkeymaterial": {
     "name": "ImportKeyMaterial",
@@ -914,7 +936,8 @@
       "kms:ValidTo",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listaliases": {
     "name": "ListAliases",
@@ -944,7 +967,8 @@
       "kms:GrantIsForAWSResource",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listkeypolicies": {
     "name": "ListKeyPolicies",
@@ -962,7 +986,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listkeyrotations": {
     "name": "ListKeyRotations",
@@ -980,7 +1005,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listkeys": {
     "name": "ListKeys",
@@ -1009,7 +1035,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "listretirablegrants": {
     "name": "ListRetirableGrants",
@@ -1036,7 +1063,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "reencryptfrom": {
     "name": "ReEncryptFrom",
@@ -1059,7 +1087,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "reencryptto": {
     "name": "ReEncryptTo",
@@ -1082,7 +1111,8 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "replicatekey": {
     "name": "ReplicateKey",
@@ -1101,7 +1131,8 @@
       "kms:ReplicaRegion",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "retiregrant": {
     "name": "RetireGrant",
@@ -1122,7 +1153,8 @@
       "kms:GrantConstraintType",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "revokegrant": {
     "name": "RevokeGrant",
@@ -1141,7 +1173,8 @@
       "kms:GrantIsForAWSResource",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "rotatekeyondemand": {
     "name": "RotateKeyOnDemand",
@@ -1159,7 +1192,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "schedulekeydeletion": {
     "name": "ScheduleKeyDeletion",
@@ -1179,7 +1213,8 @@
       "kms:TrailingDaysWithoutKeyUsage",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "sign": {
     "name": "Sign",
@@ -1200,7 +1235,8 @@
       "kms:SigningAlgorithm",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "tagresource": {
     "name": "TagResource",
@@ -1220,7 +1256,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "untagresource": {
     "name": "UntagResource",
@@ -1239,7 +1276,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "updatealias": {
     "name": "UpdateAlias",
@@ -1263,7 +1301,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "updatecustomkeystore": {
     "name": "UpdateCustomKeyStore",
@@ -1291,7 +1330,8 @@
       "kms:CallerAccount",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "updateprimaryregion": {
     "name": "UpdatePrimaryRegion",
@@ -1310,7 +1350,8 @@
       "kms:PrimaryRegion",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "verify": {
     "name": "Verify",
@@ -1331,7 +1372,8 @@
       "kms:SigningAlgorithm",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   },
   "verifymac": {
     "name": "VerifyMac",
@@ -1351,6 +1393,7 @@
       "kms:RequestAlias",
       "kms:ViaService"
     ],
-    "dependentActions": []
+    "dependentActions": [],
+    "blockAnon": true
   }
 }

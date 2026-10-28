@@ -183,7 +183,9 @@
     "description": "Grants permission to request the generation of a findings report",
     "accessLevel": "Write",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "inspector2:ExpectedBucketOwner"
+    ],
     "dependentActions": []
   },
   "createsbomexport": {
@@ -191,7 +193,9 @@
     "description": "Grants permission to request the generation of an SBOM report",
     "accessLevel": "Write",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "inspector2:ExpectedBucketOwner"
+    ],
     "dependentActions": []
   },
   "deletecisscanconfiguration": {
@@ -415,6 +419,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getondemandscanstatus": {
+    "name": "GetOnDemandScanStatus",
+    "description": "Grants permission to retrieve the status of an on-demand scan for a specified resource",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getsbomexport": {
     "name": "GetSbomExport",
     "description": "Grants permission to retrieve a requested SBOM report",
@@ -559,6 +571,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listondemandscans": {
+    "name": "ListOnDemandScans",
+    "description": "Grants permission to retrieve information about on-demand scans for a specified resource",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtagsforresource": {
     "name": "ListTagsForResource",
     "description": "Grants permission to retrieve the tags for an Amazon Inspector resource",
@@ -618,6 +638,14 @@
   "startcodesecurityscan": {
     "name": "StartCodeSecurityScan",
     "description": "Grants permission to initiate a code security scan on a specified repository",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startondemandscan": {
+    "name": "StartOnDemandScan",
+    "description": "Grants permission to initiate an on-demand scan on a specified resource",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
