@@ -561,6 +561,14 @@
     ],
     "dependentActions": []
   },
+  "getcatalogcapability": {
+    "name": "GetCatalogCapability",
+    "description": "Grants permission to get a capability from the catalog",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getknowledgeitem": {
     "name": "GetKnowledgeItem",
     "description": "Grants permission to get a knowledge item",
@@ -766,6 +774,30 @@
       "aidevops:SourceAgentSpaceArn",
       "aidevops:TargetAgentSpaceArn"
     ],
+    "dependentActions": []
+  },
+  "listcatalogcapabilities": {
+    "name": "ListCatalogCapabilities",
+    "description": "Grants permission to list capabilities in the catalog",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcatalogcapabilityfiles": {
+    "name": "ListCatalogCapabilityFiles",
+    "description": "Grants permission to list the files in a capability from the catalog",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcatalogcapabilitytypes": {
+    "name": "ListCatalogCapabilityTypes",
+    "description": "Grants permission to list the capability types in the catalog",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listchats": {
@@ -1036,6 +1068,24 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "searchassets": {
+    "name": "SearchAssets",
+    "description": "Grants permission to search assets",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "searchserviceaccessibleresource": {

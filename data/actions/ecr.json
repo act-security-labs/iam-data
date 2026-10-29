@@ -44,6 +44,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "replicateimagedelete": {
+    "name": "ReplicateImageDelete",
+    "description": "Grants permission to replicate image deletions to the destination registry",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "repository",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchchecklayeravailability": {
     "name": "BatchCheckLayerAvailability",
     "description": "Grants permission to check the availability of multiple image layers in a specified registry and repository",

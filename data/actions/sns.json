@@ -36,8 +36,7 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": [],
-    "blockAnon": true
+    "dependentActions": []
   },
   "createplatformapplication": {
     "name": "CreatePlatformApplication",
@@ -453,8 +452,7 @@
       }
     ],
     "conditionKeys": [],
-    "dependentActions": [],
-    "blockAnon": true
+    "dependentActions": []
   },
   "untagresource": {
     "name": "UntagResource",
