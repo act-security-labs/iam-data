@@ -133,6 +133,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "connectendpoints": {
+    "name": "ConnectEndpoints",
+    "description": "Grants permission to connect a source endpoint to a destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createbridge": {
     "name": "CreateBridge",
     "description": "Grants permission to create bridges",
@@ -280,6 +295,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteresourcepolicy": {
+    "name": "DeleteResourcePolicy",
+    "description": "Grants permission to delete a resource policy from a resource in AWS Elemental MediaConnect",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleterouterinput": {
     "name": "DeleteRouterInput",
     "description": "Grants permission to delete a router input in AWS Elemental MediaConnect",
@@ -325,6 +348,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deregisterdestinationendpoint": {
+    "name": "DeregisterDestinationEndpoint",
+    "description": "Grants permission to deregister a destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deregistergatewayinstance": {
     "name": "DeregisterGatewayInstance",
     "description": "Grants permission to deregister gateway instance",
@@ -332,6 +370,21 @@
     "resourceTypes": [
       {
         "name": "GatewayInstance",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deregistersourceendpoint": {
+    "name": "DeregisterSourceEndpoint",
+    "description": "Grants permission to deregister a source endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "SourceEndpoint",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -460,6 +513,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disconnectendpoints": {
+    "name": "DisconnectEndpoints",
+    "description": "Grants permission to disconnect a source endpoint from a destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "discovergatewaypollendpoint": {
     "name": "DiscoverGatewayPollEndpoint",
     "description": "Grants permission to discover gateway poll endpoint",
@@ -472,6 +540,29 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdestinationendpoint": {
+    "name": "GetDestinationEndpoint",
+    "description": "Grants permission to retrieve information about a specific destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getresourcepolicy": {
+    "name": "GetResourcePolicy",
+    "description": "Grants permission to retrieve a resource policy for a resource in AWS Elemental MediaConnect",
+    "accessLevel": "Read",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -550,10 +641,25 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsourceendpoint": {
+    "name": "GetSourceEndpoint",
+    "description": "Grants permission to retrieve information about a specific source endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "SourceEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "grantflowentitlements": {
     "name": "GrantFlowEntitlements",
     "description": "Grants permission to grant entitlements on any flow",
-    "accessLevel": "Write",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "Entitlement",
@@ -577,6 +683,14 @@
   "listbridges": {
     "name": "ListBridges",
     "description": "Grants permission to display a list of bridges that are associated with this account and an optionally specified Arn",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdestinationendpoints": {
+    "name": "ListDestinationEndpoints",
+    "description": "Grants permission to retrieve a list of destination endpoints in AWS Elemental MediaConnect",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -654,6 +768,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listsourceendpoints": {
+    "name": "ListSourceEndpoints",
+    "description": "Grants permission to retrieve a list of source endpoints in AWS Elemental MediaConnect",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtagsforresource": {
     "name": "ListTagsForResource",
     "description": "Grants permission to display a list of all tags associated with a resource",
@@ -677,6 +799,44 @@
     "resourceTypes": [
       {
         "name": "Reservation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putresourcepolicy": {
+    "name": "PutResourcePolicy",
+    "description": "Grants permission to attach a resource policy to a resource in AWS Elemental MediaConnect",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registerdestinationendpoint": {
+    "name": "RegisterDestinationEndpoint",
+    "description": "Grants permission to register a new destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registersourceendpoint": {
+    "name": "RegisterSourceEndpoint",
+    "description": "Grants permission to register a new source endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "SourceEndpoint",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -832,7 +992,7 @@
   "revokeflowentitlement": {
     "name": "RevokeFlowEntitlement",
     "description": "Grants permission to revoke entitlements on any flow",
-    "accessLevel": "Write",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "Entitlement",
@@ -954,6 +1114,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "DestinationEndpoint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Entitlement",
         "required": false,
         "conditionKeys": [],
@@ -997,6 +1163,12 @@
       },
       {
         "name": "Source",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "SourceEndpoint",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1035,6 +1207,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "DestinationEndpoint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Entitlement",
         "required": false,
         "conditionKeys": [],
@@ -1078,6 +1256,12 @@
       },
       {
         "name": "Source",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "SourceEndpoint",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1154,6 +1338,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatedestinationendpoint": {
+    "name": "UpdateDestinationEndpoint",
+    "description": "Grants permission to update the configuration of a destination endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DestinationEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updateflow": {
     "name": "UpdateFlow",
     "description": "Grants permission to update flows",
@@ -1172,7 +1371,7 @@
   "updateflowentitlement": {
     "name": "UpdateFlowEntitlement",
     "description": "Grants permission to update entitlements on any flow",
-    "accessLevel": "Write",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "Flow",
@@ -1299,6 +1498,21 @@
     "resourceTypes": [
       {
         "name": "RouterOutput",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatesourceendpoint": {
+    "name": "UpdateSourceEndpoint",
+    "description": "Grants permission to update the configuration of a source endpoint in AWS Elemental MediaConnect",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "SourceEndpoint",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

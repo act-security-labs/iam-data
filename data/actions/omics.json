@@ -419,7 +419,7 @@
   "deletes3accesspolicy": {
     "name": "DeleteS3AccessPolicy",
     "description": "Grants permission to delete an access policy on a given store",
-    "accessLevel": "Write",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "sequenceStore",
@@ -1190,7 +1190,7 @@
   "puts3accesspolicy": {
     "name": "PutS3AccessPolicy",
     "description": "Grants permission to put an access policy on a given store",
-    "accessLevel": "Write",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "sequenceStore",

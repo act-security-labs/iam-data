@@ -3,6 +3,13 @@
     "key": "Bridge",
     "arn": "arn:${Partition}:mediaconnect:${Region}:${Account}:bridge:${BridgeId}:${BridgeName}"
   },
+  "destinationendpoint": {
+    "key": "DestinationEndpoint",
+    "arn": "arn:${Partition}:mediaconnect:${Region}:${Account}:destinationEndpoint:${DestinationEndpointId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "entitlement": {
     "key": "Entitlement",
     "arn": "arn:${Partition}:mediaconnect:${Region}:${Account}:entitlement:${FlowId}:${EntitlementName}",
@@ -71,6 +78,13 @@
   "source": {
     "key": "Source",
     "arn": "arn:${Partition}:mediaconnect:${Region}:${Account}:source:${SourceId}:${SourceName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "sourceendpoint": {
+    "key": "SourceEndpoint",
+    "arn": "arn:${Partition}:mediaconnect:${Region}:${Account}:sourceEndpoint:${SourceEndpointId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
