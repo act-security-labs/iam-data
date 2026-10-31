@@ -958,6 +958,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describetermsbyclient": {
+    "name": "DescribeTermsByClient",
+    "description": "Grants permission to describe the terms documents associated with an app client",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeuserimportjob": {
     "name": "DescribeUserImportJob",
     "description": "Grants permission to describe any user import job",
@@ -1039,6 +1054,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getclienttoken": {
+    "name": "GetClientToken",
+    "description": "Grants permission to issue an access token for machine-to-machine authorization with an app client ID and client secret",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

@@ -260,6 +260,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "testotelconnection": {
+    "name": "TestOtelConnection",
+    "description": "Grants permission to test the OpenTelemetry export connection of a profile",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "profile",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "untagresource": {
     "name": "UntagResource",
     "description": "Grants permission to invoke UntagResource on CodeWhisperer",

@@ -1034,6 +1034,25 @@
     ],
     "dependentActions": []
   },
+  "getprofilerecords": {
+    "name": "GetProfileRecords",
+    "description": "Grants permission to query and retrieve CloudWatch application profiling data. This action is unrelated to CloudWatch access profiles (GetAccessProfile and related actions)",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "getrecords": {
     "name": "GetRecords",
     "description": "Grants permission to fetch logs and traces",
@@ -1739,6 +1758,23 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "putprofilerecords": {
+    "name": "PutProfileRecords",
+    "description": "Grants permission to ingest CloudWatch application profiling data. This action is unrelated to CloudWatch access profiles (GetAccessProfile and related actions)",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "putrecords": {

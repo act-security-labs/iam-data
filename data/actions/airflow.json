@@ -1,4 +1,25 @@
 {
+  "accessairflowresource": {
+    "name": "AccessAirflowResource",
+    "description": "Grants permission to check whether a user is authorized to perform an action on an Airflow resource within an Amazon MWAA environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "airflow:DagAccessEntity",
+      "airflow:ResourceAction",
+      "airflow:ResourceId",
+      "airflow:ResourceType",
+      "airflow:TeamNames"
+    ],
+    "dependentActions": []
+  },
   "createclitoken": {
     "name": "CreateCliToken",
     "description": "Grants permission to create a short-lived token that allows a user to invoke Airflow CLI via an endpoint on the Apache Airflow Webserver",

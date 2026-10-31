@@ -1082,6 +1082,12 @@
         "dependentActions": []
       },
       {
+        "name": "Stage-Logging-Configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Storage-Configuration",
         "required": false,
         "conditionKeys": [],
@@ -1309,6 +1315,12 @@
         "dependentActions": []
       },
       {
+        "name": "Stage-Logging-Configuration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Storage-Configuration",
         "required": false,
         "conditionKeys": [],
@@ -1394,6 +1406,12 @@
       },
       {
         "name": "Stage",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Stage-Logging-Configuration",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
