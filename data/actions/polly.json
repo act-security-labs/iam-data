@@ -7,7 +7,9 @@
       {
         "name": "lexicon",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -30,7 +32,9 @@
       {
         "name": "lexicon",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -61,6 +65,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list the tags of a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "putlexicon": {
     "name": "PutLexicon",
     "description": "Grants permission to store a pronunciation lexicon in an AWS Region",
@@ -69,11 +90,16 @@
       {
         "name": "lexicon",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "startspeechsynthesisstream": {
@@ -84,7 +110,9 @@
       {
         "name": "lexicon",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -99,7 +127,9 @@
       {
         "name": "lexicon",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
@@ -114,11 +144,52 @@
       {
         "name": "lexicon",
         "required": false,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "dependentActions": []
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to add tags to a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   }
 }

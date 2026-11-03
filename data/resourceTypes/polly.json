@@ -1,6 +1,9 @@
 {
   "lexicon": {
     "key": "lexicon",
-    "arn": "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}"
+    "arn": "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }
