@@ -50,23 +50,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "downloadevidence": {
-    "name": "DownloadEvidence",
-    "description": "Grants permission to retrieve the content of an evidence item",
-    "accessLevel": "Read",
-    "resourceTypes": [
-      {
-        "name": "environment",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "updateannotation": {
     "name": "UpdateAnnotation",
     "description": "Grants permission to update the reviewer notes on an existing annotation",
@@ -87,23 +70,6 @@
   "updateassessment": {
     "name": "UpdateAssessment",
     "description": "Grants permission to update an assessment's status and result",
-    "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "environment",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "uploadevidence": {
-    "name": "UploadEvidence",
-    "description": "Grants permission to upload new evidence to support a compliance assessment",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -1205,23 +1171,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "listresourcesforcontrol": {
-    "name": "ListResourcesForControl",
-    "description": "Grants permission to list in-scope resources for a control",
-    "accessLevel": "Read",
-    "resourceTypes": [
-      {
-        "name": "environment",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "listtagsforresource": {
     "name": "ListTagsForResource",
     "description": "Grants permission to list tags for a resource",
@@ -1386,23 +1335,6 @@
   "startassessmentreportexport": {
     "name": "StartAssessmentReportExport",
     "description": "Grants permission to start preparing an assessment report",
-    "accessLevel": "Write",
-    "resourceTypes": [
-      {
-        "name": "environment",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "startresourcediscovery": {
-    "name": "StartResourceDiscovery",
-    "description": "Grants permission to start discovery of in-scope resources",
     "accessLevel": "Write",
     "resourceTypes": [
       {

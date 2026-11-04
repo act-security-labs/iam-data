@@ -566,6 +566,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createuiconfiguration": {
+    "name": "CreateUIConfiguration",
+    "description": "Grants permission to create a UI configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createuserprofile": {
     "name": "CreateUserProfile",
     "description": "Grants permission to create a user profile for an existing user in the customers IAM Identity Center",
@@ -861,6 +869,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteuiconfiguration": {
+    "name": "DeleteUIConfiguration",
+    "description": "Grants permission to delete a UI configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deregisteragentartifact": {
     "name": "DeregisterAgentArtifact",
     "description": "Grants permission to deregister agent artifacts",
@@ -1055,6 +1071,14 @@
   "getdomainunit": {
     "name": "GetDomainUnit",
     "description": "Grants permission to get an existing domain unit",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "geteffectiveuicustomization": {
+    "name": "GetEffectiveUICustomization",
+    "description": "Grants permission to get the effective UI customization",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1279,6 +1303,14 @@
   "gettimeseriesdatapoint": {
     "name": "GetTimeSeriesDataPoint",
     "description": "Grants permission to get an existing TimeSeriesDataPoints in Amazon DataZone using its identifier",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getuiconfiguration": {
+    "name": "GetUIConfiguration",
+    "description": "Grants permission to get a UI configuration",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1662,6 +1694,14 @@
   "listtimeseriesdatapoints": {
     "name": "ListTimeSeriesDataPoints",
     "description": "Grants permission to list existing TimeSeriesDataPoints",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listuiconfigurations": {
+    "name": "ListUIConfigurations",
+    "description": "Grants permission to list UI configurations",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -2168,6 +2208,14 @@
   "updatesubscriptiontarget": {
     "name": "UpdateSubscriptionTarget",
     "description": "Grants permission to update a subscription target",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateuiconfiguration": {
+    "name": "UpdateUIConfiguration",
+    "description": "Grants permission to update a UI configuration",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],

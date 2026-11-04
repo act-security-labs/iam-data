@@ -1386,6 +1386,51 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsoftwareresourcesv2": {
+    "name": "GetSoftwareResourcesV2",
+    "description": "Grants permission to retrieve a list of resources that contain a software package",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getsoftwarestatisticsv2": {
+    "name": "GetSoftwareStatisticsV2",
+    "description": "Grants permission to retrieve aggregate statistics about software packages",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getsoftwarev2": {
+    "name": "GetSoftwareV2",
+    "description": "Grants permission to retrieve a list of software packages found on resources",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "invitemembers": {
     "name": "InviteMembers",
     "description": "Grants permission to invite other AWS accounts to become Security Hub member accounts",
