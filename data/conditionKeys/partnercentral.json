@@ -14,6 +14,21 @@
     "description": "Filters access by the tag keys that are passed in the request",
     "type": "ArrayOfString"
   },
+  "partnercentral:allowawsengagement": {
+    "key": "partnercentral:AllowAwsEngagement",
+    "description": "Filters access by whether the partner allows AWS to make changes to their business plans",
+    "type": "String"
+  },
+  "partnercentral:businessplanitemstage": {
+    "key": "partnercentral:BusinessPlanItemStage",
+    "description": "Filters access by the stage of a business plan item",
+    "type": "String"
+  },
+  "partnercentral:businessplanitemtype": {
+    "key": "partnercentral:BusinessPlanItemType",
+    "description": "Filters access by the type of a business plan item",
+    "type": "String"
+  },
   "partnercentral:catalog": {
     "key": "partnercentral:Catalog",
     "description": "Filters access by a specific Catalog",

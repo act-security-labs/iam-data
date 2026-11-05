@@ -510,6 +510,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createnotificationpreference": {
+    "name": "CreateNotificationPreference",
+    "description": "Grants permission to create a notification preference",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createproject": {
     "name": "CreateProject",
     "description": "Grants permission to create a Project to enable your team to publish and subscribe to data",
@@ -800,6 +808,14 @@
   "deletenotebook": {
     "name": "DeleteNotebook",
     "description": "Grants permission to delete notebooks",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletenotificationpreference": {
+    "name": "DeleteNotificationPreference",
+    "description": "Grants permission to delete a notification preference",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1244,6 +1260,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getnotificationpreference": {
+    "name": "GetNotificationPreference",
+    "description": "Grants permission to get a notification preference",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getproject": {
     "name": "GetProject",
     "description": "Grants permission to get Project details",
@@ -1295,6 +1319,14 @@
   "getsubscriptiontarget": {
     "name": "GetSubscriptionTarget",
     "description": "Grants permission to retireve details of subscription target",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getsystemtableexportconfiguration": {
+    "name": "GetSystemTableExportConfiguration",
+    "description": "Grants permission to get a system table export configuration",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1455,6 +1487,14 @@
   "listdatasources": {
     "name": "ListDataSources",
     "description": "Grants permission to list existing DataSources",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdeployableenvironmentblueprints": {
+    "name": "ListDeployableEnvironmentBlueprints",
+    "description": "Grants permission to list deployable environment blueprints",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1755,6 +1795,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putsystemtableexportconfiguration": {
+    "name": "PutSystemTableExportConfiguration",
+    "description": "Grants permission to put a system table export configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "querygraph": {
     "name": "QueryGraph",
     "description": "Grants permission to query graph",
@@ -2022,6 +2070,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateassetowner": {
+    "name": "UpdateAssetOwner",
+    "description": "Grants permission to update the owning project of the asset",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatecell": {
     "name": "UpdateCell",
     "description": "Grants permission to update cells",
@@ -2160,6 +2216,14 @@
   "updatenotebook": {
     "name": "UpdateNotebook",
     "description": "Grants permission to update notebooks",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatenotificationpreference": {
+    "name": "UpdateNotificationPreference",
+    "description": "Grants permission to update a notification preference",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],

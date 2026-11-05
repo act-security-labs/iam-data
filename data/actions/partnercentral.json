@@ -1,12 +1,4 @@
 {
-  "createbusinessplan": {
-    "name": "CreateBusinessPlan",
-    "description": "Grants permission to create business plans in AWS Partner Central",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "createcollaborationchannelmembers": {
     "name": "CreateCollaborationChannelMembers",
     "description": "Grants permission to create collaboration channel members in AWS Partner Central",
@@ -27,14 +19,6 @@
     "name": "EnrollInPartnerPath",
     "description": "Grants permission to enroll in partner paths in AWS Partner Central",
     "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "getbusinessplan": {
-    "name": "GetBusinessPlan",
-    "description": "Grants permission to retrieve business plan details in AWS Partner Central",
-    "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
@@ -65,14 +49,6 @@
     ],
     "dependentActions": []
   },
-  "listbusinessplans": {
-    "name": "ListBusinessPlans",
-    "description": "Grants permission to list business plans in AWS Partner Central",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "listcollaborationchannels": {
     "name": "ListCollaborationChannels",
     "description": "Grants permission to list collaboration channels in AWS Partner Central",
@@ -91,7 +67,7 @@
   },
   "putbusinessplan": {
     "name": "PutBusinessPlan",
-    "description": "Grants permission to update business plans in AWS Partner Central",
+    "description": "Grants permission to set business plan in AWS Partner Central. This permission is only for partners using legacy AWS Partner Central",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -254,6 +230,24 @@
     ],
     "dependentActions": []
   },
+  "associatebusinessplan": {
+    "name": "AssociateBusinessPlan",
+    "description": "Grants permission to associate business plan items with opportunities or campaigns in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "associateopportunity": {
     "name": "AssociateOpportunity",
     "description": "Grants permission to associate Opportunities on AWS Partner Central with other entities",
@@ -289,6 +283,44 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "cancelbusinessplan": {
+    "name": "CancelBusinessPlan",
+    "description": "Grants permission to cancel business plans in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "cancelbusinessplansubmissiontask": {
+    "name": "CancelBusinessPlanSubmissionTask",
+    "description": "Grants permission to cancel business plan submission tasks in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },
@@ -375,6 +407,41 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "createbusinessplan": {
+    "name": "CreateBusinessPlan",
+    "description": "Grants permission to create business plans in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "createbusinessplanitem": {
+    "name": "CreateBusinessPlanItem",
+    "description": "Grants permission to create business plan items in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:BusinessPlanItemStage",
+      "partnercentral:BusinessPlanItemType",
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },
@@ -608,6 +675,46 @@
     ],
     "dependentActions": []
   },
+  "deletebusinessplanattachment": {
+    "name": "DeleteBusinessPlanAttachment",
+    "description": "Grants permission to delete business plan attachments in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletebusinessplanitem": {
+    "name": "DeleteBusinessPlanItem",
+    "description": "Grants permission to delete business plan items in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:BusinessPlanItemStage",
+      "partnercentral:BusinessPlanItemType",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "deleteprogrammanagementaccount": {
     "name": "DeleteProgramManagementAccount",
     "description": "Grants permission to delete program management accounts in AWS Partner Central",
@@ -708,6 +815,24 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "disassociatebusinessplan": {
+    "name": "DisassociateBusinessPlan",
+    "description": "Grants permission to disassociate business plan items from opportunities or campaigns in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },
@@ -820,6 +945,118 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplan": {
+    "name": "GetBusinessPlan",
+    "description": "Grants permission to retrieve business plan details in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplanattachment": {
+    "name": "GetBusinessPlanAttachment",
+    "description": "Grants permission to retrieve business plan attachment details in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplanattachmentimporttask": {
+    "name": "GetBusinessPlanAttachmentImportTask",
+    "description": "Grants permission to retrieve business plan attachment import task details in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplanitem": {
+    "name": "GetBusinessPlanItem",
+    "description": "Grants permission to retrieve business plan item details in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:BusinessPlanItemStage",
+      "partnercentral:BusinessPlanItemType",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplanitemschema": {
+    "name": "GetBusinessPlanItemSchema",
+    "description": "Grants permission to retrieve the item schema of business plans in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplansettings": {
+    "name": "GetBusinessPlanSettings",
+    "description": "Grants permission to retrieve business plan settings in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getbusinessplansubmissiontask": {
+    "name": "GetBusinessPlanSubmissionTask",
+    "description": "Grants permission to retrieve business plan submission task details in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },
@@ -997,6 +1234,23 @@
     "resourceTypes": [
       {
         "name": "Dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getpartnerreportingdata": {
+    "name": "GetPartnerReportingData",
+    "description": "Grants permission to execute a structured query against a partner analytics dataset in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Dataset",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1291,6 +1545,118 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplanassociations": {
+    "name": "ListBusinessPlanAssociations",
+    "description": "Grants permission to list business plan associations in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplanattachmentimporttasks": {
+    "name": "ListBusinessPlanAttachmentImportTasks",
+    "description": "Grants permission to list business plan attachment import tasks in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplanattachments": {
+    "name": "ListBusinessPlanAttachments",
+    "description": "Grants permission to list business plan attachments in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplanhistory": {
+    "name": "ListBusinessPlanHistory",
+    "description": "Grants permission to list the change history of business plans in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplanitems": {
+    "name": "ListBusinessPlanItems",
+    "description": "Grants permission to list business plan items in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplansubmissiontasks": {
+    "name": "ListBusinessPlanSubmissionTasks",
+    "description": "Grants permission to list business plan submission tasks in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listbusinessplans": {
+    "name": "ListBusinessPlans",
+    "description": "Grants permission to list business plans in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },
@@ -1613,6 +1979,16 @@
     ],
     "dependentActions": []
   },
+  "putbusinessplansettings": {
+    "name": "PutBusinessPlanSettings",
+    "description": "Grants permission to set business plan settings, including whether AWS can contribute to business plans, in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "putprofilevisibility": {
     "name": "PutProfileVisibility",
     "description": "Grants permission to set profile visibility in AWS Partner Central",
@@ -1739,6 +2115,44 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "startbusinessplanattachmentimporttask": {
+    "name": "StartBusinessPlanAttachmentImportTask",
+    "description": "Grants permission to initiate tasks that import business plan attachments in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "startbusinessplansubmissiontask": {
+    "name": "StartBusinessPlanSubmissionTask",
+    "description": "Grants permission to initiate tasks that submit business plans for review in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
       "partnercentral:Catalog"
     ],
     "dependentActions": []
@@ -1985,6 +2399,12 @@
         "dependentActions": []
       },
       {
+        "name": "BusinessPlan",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "ChannelHandshake",
         "required": false,
         "conditionKeys": [],
@@ -2050,6 +2470,12 @@
     "resourceTypes": [
       {
         "name": "BenefitApplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "BusinessPlan",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -2129,6 +2555,46 @@
       "partnercentral:Catalog",
       "partnercentral:FulfillmentTypes",
       "partnercentral:Programs"
+    ],
+    "dependentActions": []
+  },
+  "updatebusinessplan": {
+    "name": "UpdateBusinessPlan",
+    "description": "Grants permission to update business plans in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "updatebusinessplanitem": {
+    "name": "UpdateBusinessPlanItem",
+    "description": "Grants permission to update business plan items in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "BusinessPlan",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:AllowAwsEngagement",
+      "partnercentral:BusinessPlanItemStage",
+      "partnercentral:BusinessPlanItemType",
+      "partnercentral:Catalog"
     ],
     "dependentActions": []
   },

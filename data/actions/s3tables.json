@@ -54,6 +54,26 @@
     ],
     "dependentActions": []
   },
+  "completetablemigration": {
+    "name": "CompleteTableMigration",
+    "description": "Grants permission to complete a table migration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3tables:TableBucketTag/${TagKey}",
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
+    "dependentActions": []
+  },
   "createnamespace": {
     "name": "CreateNamespace",
     "description": "Grants permission to create a namespace",
@@ -472,6 +492,26 @@
     ],
     "dependentActions": []
   },
+  "gettablemigration": {
+    "name": "GetTableMigration",
+    "description": "Grants permission to get the status and details of a table migration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3tables:TableBucketTag/${TagKey}",
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
+    "dependentActions": []
+  },
   "gettablepolicy": {
     "name": "GetTablePolicy",
     "description": "Grants permission to retrieve a policy on a table",
@@ -601,6 +641,32 @@
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtablemigrations": {
+    "name": "ListTableMigrations",
+    "description": "Grants permission to list table migrations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "TableBucket",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3tables:TableBucketTag/${TagKey}",
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
     "dependentActions": []
   },
   "listtables": {
@@ -848,6 +914,47 @@
     ],
     "dependentActions": []
   },
+  "starttablemigration": {
+    "name": "StartTableMigration",
+    "description": "Grants permission to start a migration of a table into a table bucket",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "TableBucket",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "s3tables:TableBucketTag/${TagKey}",
+      "s3tables:namespace"
+    ],
+    "dependentActions": []
+  },
+  "synctablemigration": {
+    "name": "SyncTableMigration",
+    "description": "Grants permission to sync a migrated table with its source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3tables:TableBucketTag/${TagKey}",
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to tag a S3 Tables resource",
@@ -912,6 +1019,26 @@
       }
     ],
     "conditionKeys": [
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
+    "dependentActions": []
+  },
+  "updatetablemigration": {
+    "name": "UpdateTableMigration",
+    "description": "Grants permission to update a table migration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3tables:TableBucketTag/${TagKey}",
       "s3tables:namespace",
       "s3tables:tableName"
     ],

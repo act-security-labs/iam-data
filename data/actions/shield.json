@@ -1,4 +1,19 @@
 {
+  "allowvendedlogdeliveryforresource": {
+    "name": "AllowVendedLogDeliveryForResource",
+    "description": "Grants permission to allow vended log delivery for a protection",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "protection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeattackcontributors": {
     "name": "DescribeAttackContributors",
     "description": "Grants permission to get detailed information about the contributors to a specific DDoS attack",

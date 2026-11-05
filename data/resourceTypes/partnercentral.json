@@ -14,6 +14,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "businessplan": {
+    "key": "BusinessPlan",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/business-plan/${Identifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "channelhandshake": {
     "key": "ChannelHandshake",
     "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/channel-handshake/${Identifier}",
@@ -36,6 +43,10 @@
   "dashboard": {
     "key": "Dashboard",
     "arn": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}"
+  },
+  "dataset": {
+    "key": "Dataset",
+    "arn": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${Domain}/Dataset/${DatasetName}"
   },
   "engagement": {
     "key": "Engagement",

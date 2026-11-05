@@ -569,6 +569,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getchat": {
+    "name": "GetChat",
+    "description": "Grants permission to get a chat",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getknowledgeitem": {
     "name": "GetKnowledgeItem",
     "description": "Grants permission to get a knowledge item",
@@ -1297,6 +1312,21 @@
       "aidevops:SourceAgentSpaceArn",
       "aidevops:TargetAgentSpaceArn"
     ],
+    "dependentActions": []
+  },
+  "updatechat": {
+    "name": "UpdateChat",
+    "description": "Grants permission to update a chat",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updategoal": {
