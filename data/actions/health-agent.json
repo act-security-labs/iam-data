@@ -1,4 +1,25 @@
 {
+  "batchrefillpatientpharmacyprescriptions": {
+    "name": "BatchRefillPatientPharmacyPrescriptions",
+    "description": "Grants permission to batch request patient pharmacy prescription refills",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "cancelappointment": {
     "name": "CancelAppointment",
     "description": "Grants permission to cancel an appointment",
@@ -374,6 +395,27 @@
   "listpatientmedications": {
     "name": "ListPatientMedications",
     "description": "Grants permission to list patient medications",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpatientpharmacyprescriptions": {
+    "name": "ListPatientPharmacyPrescriptions",
+    "description": "Grants permission to list a patient's pharmacy prescriptions",
     "accessLevel": "Read",
     "resourceTypes": [
       {

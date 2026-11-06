@@ -15,6 +15,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "authorizeoauthaccess": {
+    "name": "AuthorizeOAuthAccess",
+    "description": "Grants permission to authorize OAuth 2.0 access for Amazon QuickSight clients",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchgetpreferences": {
     "name": "BatchGetPreferences",
     "description": "Grants permission to get user preferences",
@@ -28,6 +36,39 @@
     "description": "Grants permission to update user preferences",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createaccesscontrolapplication": {
+    "name": "CreateAccessControlApplication",
+    "description": "Grants permission to create an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createaccesscontrolapplicationsecret": {
+    "name": "CreateAccessControlApplicationSecret",
+    "description": "Grants permission to create a client secret for an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -94,6 +135,32 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createinboundconnector": {
+    "name": "CreateInboundConnector",
+    "description": "Grants permission to create an inbound connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createoauthtoken": {
+    "name": "CreateOAuthToken",
+    "description": "Grants permission to issue OAuth 2.0 access and refresh tokens for Amazon QuickSight clients",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createreader": {
     "name": "CreateReader",
     "description": "Grants permission to provision Amazon QuickSight readers",
@@ -116,6 +183,36 @@
     "resourceTypes": [
       {
         "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteaccesscontrolapplication": {
+    "name": "DeleteAccessControlApplication",
+    "description": "Grants permission to delete an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteaccesscontrolapplicationsecret": {
+    "name": "DeleteAccessControlApplicationSecret",
+    "description": "Grants permission to delete a client secret from an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -161,6 +258,36 @@
     "resourceTypes": [
       {
         "name": "extensionaccess",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteinboundconnector": {
+    "name": "DeleteInboundConnector",
+    "description": "Grants permission to delete an inbound connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeaccesscontrolapplication": {
+    "name": "DescribeAccessControlApplication",
+    "description": "Grants permission to describe an access control application",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -252,6 +379,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describeinboundconnector": {
+    "name": "DescribeInboundConnector",
+    "description": "Grants permission to describe an inbound connector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describequickindexcapacity": {
     "name": "DescribeQuickIndexCapacity",
     "description": "Grants permission to describe index capacity",
@@ -299,6 +441,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listaccesscontrolapplications": {
+    "name": "ListAccessControlApplications",
+    "description": "Grants permission to list access control applications in an account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listcustompermissionassignments": {
     "name": "ListCustomPermissionAssignments",
     "description": "Grants permission to list assignment information of the custom permission profile in an account",
@@ -334,6 +484,29 @@
   "listextensions": {
     "name": "ListExtensions",
     "description": "Grants permission to list extensions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinboundconnectorapplicationassociations": {
+    "name": "ListInboundConnectorApplicationAssociations",
+    "description": "Grants permission to list the access control applications associated with an inbound connector",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinboundconnectors": {
+    "name": "ListInboundConnectors",
+    "description": "Grants permission to list inbound connectors in an account",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -428,6 +601,14 @@
   "removecustomermanagedkey": {
     "name": "RemoveCustomerManagedKey",
     "description": "Grants permission to remove a customer managed key",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "revokeoauthtoken": {
+    "name": "RevokeOAuthToken",
+    "description": "Grants permission to revoke OAuth 2.0 tokens issued to Amazon QuickSight clients",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -536,6 +717,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateaccesscontrolapplication": {
+    "name": "UpdateAccessControlApplication",
+    "description": "Grants permission to update an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateaccesscontrolapplicationsecret": {
+    "name": "UpdateAccessControlApplicationSecret",
+    "description": "Grants permission to update a client secret for an access control application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "accessControlApplication",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatechatconfiguration": {
     "name": "UpdateChatConfiguration",
     "description": "Grants permission to update chat configuration",
@@ -604,17 +815,39 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "updatequickindexcapacity": {
-    "name": "UpdateQuickIndexCapacity",
-    "description": "Grants permission to update index capacity",
+  "updateinboundconnector": {
+    "name": "UpdateInboundConnector",
+    "description": "Grants permission to update an inbound connector",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
-  "updateresourcepermissions": {
-    "name": "UpdateResourcePermissions",
-    "description": "Grants permission to update resource-level permissions in QuickSight",
+  "updateinboundconnectorapplicationassociations": {
+    "name": "UpdateInboundConnectorApplicationAssociations",
+    "description": "Grants permission to associate or disassociate access control applications with an inbound connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inboundConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatequickindexcapacity": {
+    "name": "UpdateQuickIndexCapacity",
+    "description": "Grants permission to update index capacity",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -2576,6 +2809,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describeresourcepermissions": {
+    "name": "DescribeResourcePermissions",
+    "description": "Grants permission to describe the QuickSight service role configuration for an account",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describerolecustompermission": {
     "name": "DescribeRoleCustomPermission",
     "description": "Grants permission to describe the custom permission associated with a role",
@@ -3383,6 +3624,12 @@
     "accessLevel": "Read",
     "resourceTypes": [
       {
+        "name": "accessControlApplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "actionconnector",
         "required": false,
         "conditionKeys": [],
@@ -3456,6 +3703,12 @@
       },
       {
         "name": "folder",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "inboundConnector",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -3994,6 +4247,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "accessControlApplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "actionconnector",
         "required": false,
         "conditionKeys": [],
@@ -4067,6 +4326,12 @@
       },
       {
         "name": "folder",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "inboundConnector",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4132,6 +4397,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "accessControlApplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "actionconnector",
         "required": false,
         "conditionKeys": [],
@@ -4205,6 +4476,12 @@
       },
       {
         "name": "folder",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "inboundConnector",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4857,6 +5134,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateresourcepermissions": {
+    "name": "UpdateResourcePermissions",
+    "description": "Grants permission to update resource permissions and the QuickSight service role configuration for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

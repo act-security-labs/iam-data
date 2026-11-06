@@ -1,4 +1,11 @@
 {
+  "connectedaccount": {
+    "key": "connectedaccount",
+    "arn": "arn:${Partition}:payments::${Account}:connectedaccount/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "payment-instrument": {
     "key": "payment-instrument",
     "arn": "arn:${Partition}:payments::${Account}:payment-instrument:${ResourceId}",

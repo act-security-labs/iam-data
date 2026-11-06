@@ -109,6 +109,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "invokewebanswer": {
+    "name": "InvokeWebAnswer",
+    "description": "Grants permission to invoke a web answer target",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "web-answer",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "invokewebsearch": {
     "name": "InvokeWebSearch",
     "description": "Grants permission to invoke a web search target",

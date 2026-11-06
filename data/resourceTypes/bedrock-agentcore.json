@@ -191,6 +191,10 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "web-answer": {
+    "key": "web-answer",
+    "arn": "arn:${Partition}:bedrock-agentcore:${Region}:aws:tool/web-answer.v1"
+  },
   "web-search": {
     "key": "web-search",
     "arn": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:tool/web-search.v1"

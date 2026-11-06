@@ -3,6 +3,10 @@
     "key": "backup",
     "arn": "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}"
   },
+  "bulk-operation": {
+    "key": "bulk-operation",
+    "arn": "arn:${Partition}:dynamodb:${Region}:${Account}:bulk-operation/${BulkOperationId}"
+  },
   "export": {
     "key": "export",
     "arn": "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/export/${ExportName}"

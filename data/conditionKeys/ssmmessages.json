@@ -8,5 +8,15 @@
     "key": "ssm:SourceInstanceARN",
     "description": "Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager's managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile",
     "type": "ARN"
+  },
+  "ssm:resourcetag/aws:ssmmessages:session-id": {
+    "key": "ssm:resourceTag/aws:ssmmessages:session-id",
+    "description": "Filters access by the user ID of the principal that started the session, as recorded in the AWS-supplied aws:ssmmessages:session-id tag",
+    "type": "String"
+  },
+  "ssm:resourcetag/aws:ssmmessages:target-id": {
+    "key": "ssm:resourceTag/aws:ssmmessages:target-id",
+    "description": "Filters access by the ID of the managed node that the session connects to, as recorded in the AWS-supplied aws:ssmmessages:target-id tag",
+    "type": "String"
   }
 }

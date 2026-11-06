@@ -275,6 +275,36 @@
     ],
     "dependentActions": []
   },
+  "bulkputitems": {
+    "name": "BulkPutItems",
+    "description": "Grants permission to write items into a table as part of a bulk put items operation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "cancelbulkoperation": {
+    "name": "CancelBulkOperation",
+    "description": "Grants permission to cancel an in-progress bulk operation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "bulk-operation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "conditioncheckitem": {
     "name": "ConditionCheckItem",
     "description": "Grants permission to the ConditionCheckItem operation checks the existence of a set of attributes for the item with the given primary key",
@@ -428,6 +458,21 @@
     "resourceTypes": [
       {
         "name": "backup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describebulkoperation": {
+    "name": "DescribeBulkOperation",
+    "description": "Grants permission to describe an existing bulk operation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "bulk-operation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -763,6 +808,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listbulkoperations": {
+    "name": "ListBulkOperations",
+    "description": "Grants permission to list bulk operations associated with the account and endpoint",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listcontributorinsights": {
     "name": "ListContributorInsights",
     "description": "Grants permission to list the ContributorInsightsSummary for all tables and global secondary indexes associated with the current account and endpoint",
@@ -1076,6 +1129,21 @@
       },
       {
         "name": "table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startbulkoperation": {
+    "name": "StartBulkOperation",
+    "description": "Grants permission to start a bulk operation that writes items from an Amazon S3 source into an existing DynamoDB table",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "bulk-operation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

@@ -1,4 +1,11 @@
 {
+  "accesscontrolapplication": {
+    "key": "accessControlApplication",
+    "arn": "arn:${Partition}:quicksight:${Region}:${Account}:access-control-application/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "account": {
     "key": "account",
     "arn": "arn:${Partition}:quicksight:${Region}:${Account}:account/${ResourceId}"
@@ -144,6 +151,13 @@
   "group": {
     "key": "group",
     "arn": "arn:${Partition}:quicksight:${Region}:${Account}:group/${ResourceId}"
+  },
+  "inboundconnector": {
+    "key": "inboundConnector",
+    "arn": "arn:${Partition}:quicksight:${Region}:${Account}:inbound-connector/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "ingestion": {
     "key": "ingestion",

@@ -215,6 +215,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "restoredomain": {
+    "name": "RestoreDomain",
+    "description": "Grants permission to restore domains",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "retrievedomainauthcode": {
     "name": "RetrieveDomainAuthCode",
     "description": "Grants permission to get the AuthCode for the domain",

@@ -127,7 +127,7 @@
   },
   "view": {
     "key": "view",
-    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}/${ViewId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

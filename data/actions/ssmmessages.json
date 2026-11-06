@@ -30,7 +30,17 @@
     "name": "OpenDataChannel",
     "description": "Grants permission to open a websocket connection for a registered data channel stream from an instance to Systems Manager service",
     "accessLevel": "Write",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "session",
+        "required": true,
+        "conditionKeys": [
+          "ssm:resourceTag/aws:ssmmessages:session-id",
+          "ssm:resourceTag/aws:ssmmessages:target-id"
+        ],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   }

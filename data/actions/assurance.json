@@ -84,14 +84,6 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "vendconnectionaccesstoken": {
-    "name": "VendConnectionAccessToken",
-    "description": "Grants permission to retrieve a short-lived access token for a third-party connection in an environment",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "acceptinvitation": {
     "name": "AcceptInvitation",
     "description": "Grants permission to accept an invitation to connect an account to an environment",
@@ -179,7 +171,7 @@
   },
   "chat": {
     "name": "Chat",
-    "description": "Grants permission to start a streaming chat session with the AI Governance agent",
+    "description": "Grants permission to start a streaming chat session with the AWS Assurance agent",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -807,6 +799,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getresourceactivitiesqueryresults": {
+    "name": "GetResourceActivitiesQueryResults",
+    "description": "Grants permission to retrieve results of an asynchronous resource-activities query for an AI agent",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "gettask": {
     "name": "GetTask",
     "description": "Grants permission to retrieve a specific task by its identifying fields",
@@ -1336,6 +1345,23 @@
     "name": "StartAssessmentReportExport",
     "description": "Grants permission to start preparing an assessment report",
     "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startresourceactivitiesquery": {
+    "name": "StartResourceActivitiesQuery",
+    "description": "Grants permission to start an asynchronous resource-activities query for an AI agent",
+    "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "environment",

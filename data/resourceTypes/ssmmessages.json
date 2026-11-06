@@ -1,1 +1,10 @@
-{}
+{
+  "session": {
+    "key": "session",
+    "arn": "arn:${Partition}:ssm:${Region}:${Account}:session/${SessionId}",
+    "conditionKeys": [
+      "ssm:resourceTag/aws:ssmmessages:session-id",
+      "ssm:resourceTag/aws:ssmmessages:target-id"
+    ]
+  }
+}

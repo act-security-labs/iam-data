@@ -7213,6 +7213,27 @@
     ],
     "dependentActions": []
   },
+  "updateoutboundemailcontactmessage": {
+    "name": "UpdateOutboundEmailContactMessage",
+    "description": "Grants permission to update the draft outbound email message for a contact in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "contact",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:Channel",
+      "connect:ContactAssociationId",
+      "connect:InstanceId",
+      "connect:UserArn"
+    ],
+    "dependentActions": []
+  },
   "updateparticipantauthentication": {
     "name": "UpdateParticipantAuthentication",
     "description": "Grants permission to update and continue authentication for a specific contact",

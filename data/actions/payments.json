@@ -63,6 +63,17 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createconnectedaccount": {
+    "name": "CreateConnectedAccount",
+    "description": "Grants permission to create a connected account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createfinancingapplication": {
     "name": "CreateFinancingApplication",
     "description": "Grants permission to create a financing application",
@@ -80,6 +91,40 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "deleteconnectedaccount": {
+    "name": "DeleteConnectedAccount",
+    "description": "Grants permission to delete a connected account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connectedaccount",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getconnectedaccount": {
+    "name": "GetConnectedAccount",
+    "description": "Grants permission to get information about a connected account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "connectedaccount",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getfinancingapplication": {
@@ -131,6 +176,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listconnectedaccounts": {
+    "name": "ListConnectedAccounts",
+    "description": "Grants permission to list connected accounts",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listfinancingapplications": {
     "name": "ListFinancingApplications",
     "description": "Grants permission to list financing application metadata",
@@ -177,6 +230,14 @@
     "accessLevel": "List",
     "resourceTypes": [
       {
+        "name": "connectedaccount",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "payment-instrument",
         "required": false,
         "conditionKeys": [
@@ -193,6 +254,16 @@
     "description": "Grants permission to tag a payment resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "connectedaccount",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
       {
         "name": "payment-instrument",
         "required": false,
@@ -212,6 +283,15 @@
     "description": "Grants permission to untag a payment resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "connectedaccount",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
       {
         "name": "payment-instrument",
         "required": false,

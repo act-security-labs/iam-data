@@ -19,6 +19,16 @@
     ],
     "dependentActions": []
   },
+  "closesession": {
+    "name": "CloseSession",
+    "description": "Grants permission to close a desktop session",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
   "doubleclick": {
     "name": "DoubleClick",
     "description": "Grants permission to perform double click at coordinates",
