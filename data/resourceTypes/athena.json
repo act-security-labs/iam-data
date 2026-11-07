@@ -20,6 +20,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "system-table": {
+    "key": "system-table",
+    "arn": "arn:${Partition}:athena:${Region}:${Account}:system-table/${TableName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "workgroup": {
     "key": "workgroup",
     "arn": "arn:${Partition}:athena:${Region}:${Account}:workgroup/${WorkGroupName}",

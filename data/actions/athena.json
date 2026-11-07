@@ -170,6 +170,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createsystemtableconfiguration": {
+    "name": "CreateSystemTableConfiguration",
+    "description": "Grants permission to create a system table configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "system-table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createworkgroup": {
     "name": "CreateWorkGroup",
     "description": "Grants permission to create a workgroup",
@@ -255,6 +273,21 @@
     "resourceTypes": [
       {
         "name": "workgroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletesystemtableconfiguration": {
+    "name": "DeleteSystemTableConfiguration",
+    "description": "Grants permission to delete a system table configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "system-table",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -635,6 +668,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsystemtableconfiguration": {
+    "name": "GetSystemTableConfiguration",
+    "description": "Grants permission to get a system table configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "system-table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "gettable": {
     "name": "GetTable",
     "description": "Grants permission to enable access to the specified table. Applies only to AWS services managed policy and principals that use an Athena JDBC driver version 1.1.0",
@@ -856,6 +904,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listsystemtablestatuses": {
+    "name": "ListSystemTableStatuses",
+    "description": "Grants permission to return the statuses of system tables for the specified AWS account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtablemetadata": {
     "name": "ListTableMetadata",
     "description": "Grants permission to return a list of table metadata in a database for a given datacatalog",
@@ -890,6 +946,12 @@
       },
       {
         "name": "session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "system-table",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1049,6 +1111,12 @@
         "dependentActions": []
       },
       {
+        "name": "system-table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "workgroup",
         "required": true,
         "conditionKeys": [],
@@ -1101,6 +1169,12 @@
       },
       {
         "name": "session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "system-table",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1199,6 +1273,21 @@
     "resourceTypes": [
       {
         "name": "workgroup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatesystemtableconfiguration": {
+    "name": "UpdateSystemTableConfiguration",
+    "description": "Grants permission to update a system table configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "system-table",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

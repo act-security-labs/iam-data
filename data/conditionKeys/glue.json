@@ -14,9 +14,19 @@
     "description": "Filters access by the presence of tag keys in the request",
     "type": "ArrayOfString"
   },
+  "glue:connectiontype": {
+    "key": "glue:ConnectionType",
+    "description": "Filters access by the connection type specified in the request",
+    "type": "String"
+  },
   "glue:credentialissuingservice": {
     "key": "glue:CredentialIssuingService",
     "description": "Filters access by the service from which the credentials of the request is issued",
+    "type": "String"
+  },
+  "glue:credentialvendingmode": {
+    "key": "glue:CredentialVendingMode",
+    "description": "Filters access by the credential vending mode connection property specified in the request",
     "type": "String"
   },
   "glue:enabledforredshiftautodiscovery": {
@@ -27,6 +37,11 @@
   "glue:federatedauthorizationsource": {
     "key": "glue:FederatedAuthorizationSource",
     "description": "Filters access by whether the resource belongs to federated authorization",
+    "type": "String"
+  },
+  "glue:instanceurl": {
+    "key": "glue:InstanceUrl",
+    "description": "Filters access by the URL and INSTANCE_URL connection property specified in the request",
     "type": "String"
   },
   "glue:lakeformationpermissions": {

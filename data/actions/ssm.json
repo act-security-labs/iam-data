@@ -629,6 +629,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deregisterdefaulthostmanagementconfiguration": {
+    "name": "DeregisterDefaultHostManagementConfiguration",
+    "description": "Grants permission to disable Default Host Management Configuration (DHMC) for an AWS account and Region",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deregistermanagedinstance": {
     "name": "DeregisterManagedInstance",
     "description": "Grants permission to deregister a specified on-premises server or virtual machine (VM) from Systems Manager",
@@ -1939,6 +1947,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registerdefaulthostmanagementconfiguration": {
+    "name": "RegisterDefaultHostManagementConfiguration",
+    "description": "Grants permission to enable Default Host Management Configuration (DHMC) for an AWS account and Region",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

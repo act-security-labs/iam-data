@@ -21,17 +21,22 @@
   },
   "ram:permissionarn": {
     "key": "ram:PermissionArn",
-    "description": "Filters access by the specified Permission ARN",
+    "description": "Filters access by the specified Permission ARN. WARNING: We recommend using ram:RequestedPermissionArns instead",
     "type": "ARN"
   },
   "ram:permissionresourcetype": {
     "key": "ram:PermissionResourceType",
-    "description": "Filters access by permissions of specified resource type",
+    "description": "Filters access by permissions of specified resource type. WARNING: We recommend using ram:RequestedPermissionResourceTypes instead",
     "type": "String"
+  },
+  "ram:permissiontemplateparameter/${parametername}": {
+    "key": "ram:PermissionTemplateParameter/${ParameterName}",
+    "description": "Filters access by permission template parameter values",
+    "type": "ArrayOfString"
   },
   "ram:principal": {
     "key": "ram:Principal",
-    "description": "Filters access by format of the specified principal",
+    "description": "Filters access by format of the specified principal. WARNING: We recommend using ram:RequestedPrincipals instead",
     "type": "String"
   },
   "ram:requestedallowsexternalprincipals": {
@@ -39,14 +44,39 @@
     "description": "Filters access by the specified value for 'allowExternalPrincipals'. External principals are AWS accounts that are outside of its AWS Organization",
     "type": "Bool"
   },
+  "ram:requestedpermissionarns": {
+    "key": "ram:RequestedPermissionArns",
+    "description": "Filters access by the specified Permission ARNs",
+    "type": "ArrayOfARN"
+  },
+  "ram:requestedpermissionresourcetypes": {
+    "key": "ram:RequestedPermissionResourceTypes",
+    "description": "Filters access by permissions of specified resource types",
+    "type": "ArrayOfString"
+  },
+  "ram:requestedprincipals": {
+    "key": "ram:RequestedPrincipals",
+    "description": "Filters access by format of the specified principals",
+    "type": "ArrayOfString"
+  },
+  "ram:requestedresourcearns": {
+    "key": "ram:RequestedResourceArns",
+    "description": "Filters access by the specified ARNs",
+    "type": "ArrayOfARN"
+  },
   "ram:requestedresourcetype": {
     "key": "ram:RequestedResourceType",
-    "description": "Filters access by the specified resource type",
+    "description": "Filters access by the specified resource type. WARNING: We recommend using ram:RequestedResourceTypes instead",
     "type": "String"
+  },
+  "ram:requestedresourcetypes": {
+    "key": "ram:RequestedResourceTypes",
+    "description": "Filters access by the specified resource types",
+    "type": "ArrayOfString"
   },
   "ram:resourcearn": {
     "key": "ram:ResourceArn",
-    "description": "Filters access by  the specified ARN",
+    "description": "Filters access by the specified ARN. WARNING: We recommend using ram:RequestedResourceArns instead",
     "type": "ARN"
   },
   "ram:resourcesharename": {

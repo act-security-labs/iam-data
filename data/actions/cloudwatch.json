@@ -22,6 +22,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "detectgroupoutliers": {
+    "name": "DetectGroupOutliers",
+    "description": "Grants permission to detect outliers within a group of metrics",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getotelenrichment": {
     "name": "GetOTelEnrichment",
     "description": "Grants permission to retrieve the status of OTel Enrichment of vended metrics for PromQL querying",

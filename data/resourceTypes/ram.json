@@ -5,12 +5,13 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "ram:PermissionArn",
-      "ram:PermissionResourceType"
+      "ram:PermissionResourceType",
+      "ram:ResourceTag/${TagKey}"
     ]
   },
   "permission": {
     "key": "permission",
-    "arn": "arn:${Partition}:ram::${Account}:permission/${ResourcePath}",
+    "arn": "arn:${Partition}:ram::aws:permission/${ResourcePath}",
     "conditionKeys": [
       "ram:PermissionArn",
       "ram:PermissionResourceType"
@@ -22,13 +23,16 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "ram:AllowsExternalPrincipals",
-      "ram:ResourceShareName"
+      "ram:ResourceShareName",
+      "ram:ResourceTag/${TagKey}",
+      "ram:RetainSharingOnAccountLeaveOrganization"
     ]
   },
   "resource-share-invitation": {
     "key": "resource-share-invitation",
     "arn": "arn:${Partition}:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}",
     "conditionKeys": [
+      "ram:ResourceShareName",
       "ram:ShareOwnerAccountId"
     ]
   }

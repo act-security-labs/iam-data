@@ -57,6 +57,7 @@
     "license-manager:ResourceTag/.+?": "license-manager:ResourceTag/${TagKey}"
   },
   "ram": {
+    "ram:PermissionTemplateParameter/.+?": "ram:PermissionTemplateParameter/${ParameterName}",
     "ram:ResourceTag/.+?": "ram:ResourceTag/${TagKey}"
   },
   "secretsmanager": {
