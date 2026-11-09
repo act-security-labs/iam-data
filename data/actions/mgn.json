@@ -577,6 +577,17 @@
     ],
     "dependentActions": []
   },
+  "createremotesourceaction": {
+    "name": "CreateRemoteSourceAction",
+    "description": "Grants permission to create a remote source action",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createreplicationconfigurationtemplate": {
     "name": "CreateReplicationConfigurationTemplate",
     "description": "Grants permission to create replication configuration template",
@@ -666,6 +677,21 @@
     "resourceTypes": [
       {
         "name": "NetworkMigrationDefinitionResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteremotesourceaction": {
+    "name": "DeleteRemoteSourceAction",
+    "description": "Grants permission to delete a remote source action",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "RemoteSourceActionResource",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -872,6 +898,21 @@
   "getlaunchconfiguration": {
     "name": "GetLaunchConfiguration",
     "description": "Grants permission to get launch configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "SourceServerResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getlaunchconfigurationdefaults": {
+    "name": "GetLaunchConfigurationDefaults",
+    "description": "Grants permission to get launch configuration defaults",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -1158,6 +1199,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listnetworkmigrationinsights": {
+    "name": "ListNetworkMigrationInsights",
+    "description": "Grants permission to list network migration insights",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "NetworkMigrationDefinitionResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listnetworkmigrationmappersegmentconstructs": {
     "name": "ListNetworkMigrationMapperSegmentConstructs",
     "description": "Grants permission to list network migration mapper segment constructs",
@@ -1215,6 +1271,52 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listremotesourceactioninvocationresults": {
+    "name": "ListRemoteSourceActionInvocationResults",
+    "description": "Grants permission to list the remote source action invocation results of a source server",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "SourceServerResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listremotesourceactioninvocations": {
+    "name": "ListRemoteSourceActionInvocations",
+    "description": "Grants permission to list the invocations of a remote source action job",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "RemoteSourceActionJobResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listremotesourceactionjobs": {
+    "name": "ListRemoteSourceActionJobs",
+    "description": "Grants permission to list remote source action jobs",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listremotesourceactions": {
+    "name": "ListRemoteSourceActions",
+    "description": "Grants permission to list remote source actions",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -1522,6 +1624,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startremotesourceactionjob": {
+    "name": "StartRemoteSourceActionJob",
+    "description": "Grants permission to start a remote source action job",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ConnectorResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "RemoteSourceActionResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "SourceServerResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "startreplication": {
     "name": "StartReplication",
     "description": "Grants permission to start replication",
@@ -1607,6 +1739,18 @@
       },
       {
         "name": "LaunchConfigurationTemplateResource",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "RemoteSourceActionJobResource",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "RemoteSourceActionResource",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1721,6 +1865,18 @@
         "dependentActions": []
       },
       {
+        "name": "RemoteSourceActionJobResource",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "RemoteSourceActionResource",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "ReplicationConfigurationTemplateResource",
         "required": false,
         "conditionKeys": [],
@@ -1803,6 +1959,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatelaunchconfigurationdefaults": {
+    "name": "UpdateLaunchConfigurationDefaults",
+    "description": "Grants permission to update launch configuration defaults",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "SourceServerResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatelaunchconfigurationtemplate": {
     "name": "UpdateLaunchConfigurationTemplate",
     "description": "Grants permission to update launch configuration",
@@ -1855,6 +2026,21 @@
     "resourceTypes": [
       {
         "name": "NetworkMigrationDefinitionResource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateremotesourceaction": {
+    "name": "UpdateRemoteSourceAction",
+    "description": "Grants permission to update a remote source action",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "RemoteSourceActionResource",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

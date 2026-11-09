@@ -48,6 +48,20 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "remotesourceactionjobresource": {
+    "key": "RemoteSourceActionJobResource",
+    "arn": "arn:${Partition}:mgn:${Region}:${Account}:remote-source-action-job/${RemoteSourceActionJobID}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "remotesourceactionresource": {
+    "key": "RemoteSourceActionResource",
+    "arn": "arn:${Partition}:mgn:${Region}:${Account}:remote-source-action/${RemoteSourceActionID}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "replicationconfigurationtemplateresource": {
     "key": "ReplicationConfigurationTemplateResource",
     "arn": "arn:${Partition}:mgn:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}",
