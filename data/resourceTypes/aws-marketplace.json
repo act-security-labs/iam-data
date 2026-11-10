@@ -98,5 +98,9 @@
   "sellerdashboard": {
     "key": "SellerDashboard",
     "arn": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+  },
+  "sellerdataset": {
+    "key": "SellerDataset",
+    "arn": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dataset/${DatasetName}"
   }
 }

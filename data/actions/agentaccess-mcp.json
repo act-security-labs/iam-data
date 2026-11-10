@@ -39,6 +39,16 @@
     ],
     "dependentActions": []
   },
+  "executesequence": {
+    "name": "ExecuteSequence",
+    "description": "Grants permission to use execute sequence tool",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
   "getscreenshot": {
     "name": "GetScreenshot",
     "description": "Grants permission to capture screen state",
@@ -202,6 +212,16 @@
   "typetext": {
     "name": "TypeText",
     "description": "Grants permission to type text string",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "agentaccess-mcp:StackArn"
+    ],
+    "dependentActions": []
+  },
+  "wait": {
+    "name": "Wait",
+    "description": "Grants permission to use wait tool",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [

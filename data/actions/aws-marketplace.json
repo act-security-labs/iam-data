@@ -739,6 +739,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsellerreportingdata": {
+    "name": "GetSellerReportingData",
+    "description": "Grants permission to query a seller reporting dataset",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "SellerDataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "acceptagreementapprovalrequest": {
     "name": "AcceptAgreementApprovalRequest",
     "description": "Grants permission to approve an incoming subscription request (for providers who provide products that require subscription verification)",

@@ -424,6 +424,11 @@
     "description": "Filters access by the platform configuration register (PCR) 8 in the attestation document in the request. PCR8 is a measure of the signing certificate specified for the enclave image file",
     "type": "String"
   },
+  "kms:recipientattestation:pcr8:servicename": {
+    "key": "kms:RecipientAttestation:PCR8:ServiceName",
+    "description": "Filters access by the AWS Service Name corresponding to the platform configuration register (PCR) 8 in the attestation document in the request. PCR8 is a measure of the signing certificate specified for the enclave image file",
+    "type": "String"
+  },
   "kms:recipientattestation:pcr9": {
     "key": "kms:RecipientAttestation:PCR9",
     "description": "Filters access by the platform configuration register (PCR) 9 in the attestation document in the request. PCR9 is a custom PCR that can be defined by the user for specific use cases",

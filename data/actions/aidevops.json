@@ -584,6 +584,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getknowledgegraph": {
+    "name": "GetKnowledgeGraph",
+    "description": "Grants permission to get the knowledge graph of an agentspace",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
+    "dependentActions": []
+  },
   "getknowledgeitem": {
     "name": "GetKnowledgeItem",
     "description": "Grants permission to get a knowledge item",
@@ -602,6 +620,21 @@
   "getoperatorapp": {
     "name": "GetOperatorApp",
     "description": "Grants permission to get operator auth config for any enabled auth flow",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getplan": {
+    "name": "GetPlan",
+    "description": "Grants permission to get a mitigation plan",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -691,12 +724,45 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listagentspacemetrics": {
+    "name": "ListAgentSpaceMetrics",
+    "description": "Grants permission to list the investigation metrics of an agent space",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listagentspaces": {
     "name": "ListAgentSpaces",
     "description": "Grants permission to list agentspace",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassetchanges": {
+    "name": "ListAssetChanges",
+    "description": "Grants permission to list asset changes",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aidevops:SourceAgentSpaceArn",
+      "aidevops:TargetAgentSpaceArn"
+    ],
     "dependentActions": []
   },
   "listassetfiles": {
@@ -1129,6 +1195,21 @@
     ],
     "dependentActions": []
   },
+  "stopplan": {
+    "name": "StopPlan",
+    "description": "Grants permission to stop a mitigation plan",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to tag a resource",
@@ -1240,7 +1321,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aidevops:ApprovalTarget"
+    ],
     "dependentActions": []
   },
   "updateasset": {

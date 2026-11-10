@@ -1645,6 +1645,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateclone": {
+    "name": "UpdateClone",
+    "description": "Grants permission to manage an in-progress cloned blue/green upgrade of an OpenSearch Service domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatedatasource": {
     "name": "UpdateDataSource",
     "description": "Grants permission to update the data source for the OpenSearch Service domain",

@@ -1983,6 +1983,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatesecurityhubv2": {
+    "name": "UpdateSecurityHubV2",
+    "description": "Grants permission to update a Security Hub V2 resource configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "hubv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatestandardscontrol": {
     "name": "UpdateStandardsControl",
     "description": "Grants permission to update Security Hub standards controls",

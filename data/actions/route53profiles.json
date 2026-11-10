@@ -201,6 +201,14 @@
     ],
     "dependentActions": []
   },
+  "updateprofileassociation": {
+    "name": "UpdateProfileAssociation",
+    "description": "Grants permission to update the name or priority of a Profile to VPC association specified by the Profile association ID",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updateprofileresourceassociation": {
     "name": "UpdateProfileResourceAssociation",
     "description": "Grants permission to update the Profile resource association name or the resource properties or both, if both name and resource properties are null, the api returns the existing Profile resource association",

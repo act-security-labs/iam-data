@@ -1,4 +1,9 @@
 {
+  "aidevops:approvaltarget": {
+    "key": "aidevops:ApprovalTarget",
+    "description": "Filters access by the approvalTarget parameter in the request. TOOL_CALL is an approval for a single agent tool call. PLAN is an approval for a mitigation plan stage or its rollback. Defaults to TOOL_CALL",
+    "type": "String"
+  },
   "aidevops:servicetype": {
     "key": "aidevops:ServiceType",
     "description": "Filters access by the type of service in the association, such as github, slack, aws or sourceAws. Set by the service from the association's configuration, not supplied by the caller",

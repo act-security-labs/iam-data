@@ -73,6 +73,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createbearertoken": {
+    "name": "CreateBearerToken",
+    "description": "Grants permission to exchange SigV4 credentials for a bearer token that can be used to access supported AWS services",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "oauth2-resource-service-principal",
+        "required": true,
+        "conditionKeys": [
+          "signin:OAuthClientId",
+          "signin:OAuthGrantType"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createoauth2publicclient": {
     "name": "CreateOAuth2PublicClient",
     "description": "Grants permission to dynamically register an OAuth 2 public client for use with AWS Sign-In",
