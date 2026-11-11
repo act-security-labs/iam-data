@@ -345,6 +345,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "gettablebucketlogging": {
+    "name": "GetTableBucketLogging",
+    "description": "Grants permission to retrieve the server access logging configuration for a table bucket",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "TableBucket",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "gettablebucketmaintenanceconfiguration": {
     "name": "GetTableBucketMaintenanceConfiguration",
     "description": "Grants permission to retrieve a maintenance configuration on a table bucket",
@@ -726,6 +741,21 @@
       "s3tables:KMSKeyArn",
       "s3tables:SSEAlgorithm"
     ],
+    "dependentActions": []
+  },
+  "puttablebucketlogging": {
+    "name": "PutTableBucketLogging",
+    "description": "Grants permission to set, update, or remove the server access logging configuration for a table bucket",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "TableBucket",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "puttablebucketmaintenanceconfiguration": {

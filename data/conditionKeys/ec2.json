@@ -81,7 +81,7 @@
   },
   "ec2:bootmodeoverride": {
     "key": "ec2:BootModeOverride",
-    "description": "Filters access by the boot mode",
+    "description": "Filters access by the boot mode override",
     "type": "String"
   },
   "ec2:capacityreservationfleet": {
@@ -189,6 +189,11 @@
     "description": "Filters access by the ARN of an AWS FIS target",
     "type": "ArrayOfARN"
   },
+  "ec2:futurecapacityspecification": {
+    "key": "ec2:FutureCapacitySpecification",
+    "description": "Filters access by the ARN of the Future Capacity Specification",
+    "type": "ARN"
+  },
   "ec2:gatewaytype": {
     "key": "ec2:GatewayType",
     "description": "Filters access by the gateway type for a VPN endpoint on the AWS side of a VPN connection",
@@ -213,6 +218,11 @@
     "key": "ec2:ImageType",
     "description": "Filters access by the type of image (machine, aki, or ari)",
     "type": "String"
+  },
+  "ec2:imagewatermarkkeys": {
+    "key": "ec2:ImageWatermarkKeys",
+    "description": "Filters access by the watermark keys of an image",
+    "type": "ArrayOfString"
   },
   "ec2:insidetunnelcidr": {
     "key": "ec2:InsideTunnelCidr",

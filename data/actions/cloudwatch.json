@@ -1144,6 +1144,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getspacedataaccess": {
+    "name": "GetSpaceDataAccess",
+    "description": "Grants permission to get temporary credentials, limited to the requested actions, for working with data in a space",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "gettelemetryqueryresults": {
     "name": "GetTelemetryQueryResults",
     "description": "Grants permission to get telemetry query results",

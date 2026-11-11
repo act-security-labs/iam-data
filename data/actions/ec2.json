@@ -1797,6 +1797,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -2153,7 +2154,8 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:CapacityReservationFleet"
+          "ec2:CapacityReservationFleet",
+          "ec2:FutureCapacitySpecification"
         ],
         "dependentActions": []
       },
@@ -2616,12 +2618,43 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
+          "ec2:FutureCapacitySpecification",
           "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       },
       {
         "name": "capacity-reservation-cancellation-quote",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "createcapacityreservationdatechangequote": {
+    "name": "CreateCapacityReservationDateChangeQuote",
+    "description": "Grants permission to generate a quote for changing the start date of a future-dated Capacity Reservation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "capacity-reservation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:FutureCapacitySpecification",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "capacity-reservation-modification-quote",
         "required": true,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
@@ -3264,6 +3297,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -4453,6 +4487,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -4919,6 +4954,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -5043,7 +5079,8 @@
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "ec2:FutureCapacitySpecification"
         ],
         "dependentActions": []
       },
@@ -5263,6 +5300,7 @@
           "aws:TagKeys",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -7294,9 +7332,7 @@
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:ResourceTag/${TagKey}",
-          "ec2:VpceMultiRegion",
-          "ec2:VpceServiceRegion"
+          "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -7581,6 +7617,32 @@
   "deleteclientvpnendpoint": {
     "name": "DeleteClientVpnEndpoint",
     "description": "Grants permission to delete a Client VPN endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "client-vpn-endpoint",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ClientRootCertificateChainArn",
+          "ec2:CloudwatchLogGroupArn",
+          "ec2:CloudwatchLogStreamArn",
+          "ec2:DirectoryArn",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SamlProviderArn",
+          "ec2:ServerCertificateArn"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "deleteclientvpnendpointauthorizationpolicy": {
+    "name": "DeleteClientVpnEndpointAuthorizationPolicy",
+    "description": "Grants permission to delete the authorization policy for a Client VPN endpoint",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -10584,9 +10646,7 @@
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:ResourceTag/${TagKey}",
-          "ec2:VpceMultiRegion",
-          "ec2:VpceSupportedRegion"
+          "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -10826,6 +10886,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -11147,6 +11208,16 @@
   "describecapacityreservationcancellationquotes": {
     "name": "DescribeCapacityReservationCancellationQuotes",
     "description": "Grants permission to describe one or more Capacity Reservation cancellation quotes",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "describecapacityreservationdatechangequotes": {
+    "name": "DescribeCapacityReservationDateChangeQuotes",
+    "description": "Grants permission to describe one or more Capacity Reservation date change quotes",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -11585,6 +11656,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -13011,9 +13083,7 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:ResourceTag/${TagKey}",
-          "ec2:VpceMultiRegion",
-          "ec2:VpceSupportedRegion"
+          "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -13151,6 +13221,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -13530,6 +13601,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -13565,6 +13637,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -13590,6 +13663,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -14541,6 +14615,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -14638,6 +14713,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -15041,6 +15117,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -15210,7 +15287,34 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:CapacityReservationFleet"
+          "ec2:CapacityReservationFleet",
+          "ec2:FutureCapacitySpecification"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "getclientvpnendpointauthorizationpolicy": {
+    "name": "GetClientVpnEndpointAuthorizationPolicy",
+    "description": "Grants permission to describe the authorization policy for a Client VPN endpoint",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "client-vpn-endpoint",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ClientRootCertificateChainArn",
+          "ec2:CloudwatchLogGroupArn",
+          "ec2:CloudwatchLogStreamArn",
+          "ec2:DirectoryArn",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SamlProviderArn",
+          "ec2:ServerCertificateArn"
         ],
         "dependentActions": []
       }
@@ -15409,7 +15513,8 @@
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:CapacityReservationFleet"
+          "ec2:CapacityReservationFleet",
+          "ec2:FutureCapacitySpecification"
         ],
         "dependentActions": []
       }
@@ -15441,6 +15546,7 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -15459,6 +15565,32 @@
     "description": "Grants permission to get the current state of block public access for AMIs at the account level in the specified AWS Region",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "getimagefindings": {
+    "name": "GetImageFindings",
+    "description": "Grants permission to describe the Amazon Inspector vulnerability findings for an Amazon Machine Image (AMI)",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "image",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ImageID",
+          "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
+          "ec2:Owner",
+          "ec2:Public",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType"
+        ],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "ec2:Region"
     ],
@@ -16277,6 +16409,26 @@
     ],
     "dependentActions": []
   },
+  "gettransitgatewayattachmentnatconfiguration": {
+    "name": "GetTransitGatewayAttachmentNatConfiguration",
+    "description": "Grants permission to describe the NAT configuration for a transit gateway attachment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "transit-gateway-attachment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
   "gettransitgatewayattachmentpropagations": {
     "name": "GetTransitGatewayAttachmentPropagations",
     "description": "Grants permission to list the route tables to which a resource attachment propagates routes",
@@ -16922,7 +17074,17 @@
           "aws:ResourceTag/${TagKey}",
           "ec2:Attribute",
           "ec2:Attribute/${AttributeName}",
-          "ec2:CapacityReservationFleet"
+          "ec2:CapacityReservationFleet",
+          "ec2:FutureCapacitySpecification"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "capacity-reservation-modification-quote",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -17005,6 +17167,34 @@
           "ec2:ResourceTag/${TagKey}",
           "ec2:Tenancy",
           "ec2:VpcID"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
+  "modifyclientvpnendpointauthorizationpolicy": {
+    "name": "ModifyClientVpnEndpointAuthorizationPolicy",
+    "description": "Grants permission to create or update the authorization policy for a Client VPN endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "client-vpn-endpoint",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:ClientRootCertificateChainArn",
+          "ec2:CloudwatchLogGroupArn",
+          "ec2:CloudwatchLogStreamArn",
+          "ec2:DirectoryArn",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SamlProviderArn",
+          "ec2:ServerCertificateArn"
         ],
         "dependentActions": []
       }
@@ -17173,6 +17363,7 @@
           "ec2:Attribute/${AttributeName}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -17267,7 +17458,8 @@
         "name": "capacity-reservation",
         "required": false,
         "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:ResourceTag/${TagKey}",
+          "ec2:FutureCapacitySpecification"
         ],
         "dependentActions": []
       },
@@ -18514,6 +18706,28 @@
     ],
     "dependentActions": []
   },
+  "modifytransitgatewayattachmentnatconfiguration": {
+    "name": "ModifyTransitGatewayAttachmentNatConfiguration",
+    "description": "Grants permission to modify the NAT configuration for a transit gateway attachment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "transit-gateway-attachment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "ec2:Region"
+    ],
+    "dependentActions": []
+  },
   "modifytransitgatewaymeteringpolicy": {
     "name": "ModifyTransitGatewayMeteringPolicy",
     "description": "Grants permission to modify a transit gateway metering policy",
@@ -19060,9 +19274,7 @@
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "ec2:ResourceTag/${TagKey}",
-          "ec2:VpceMultiRegion",
-          "ec2:VpceSupportedRegion"
+          "ec2:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -20594,6 +20806,7 @@
           "ec2:Attribute/${AttributeName}",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:Owner",
           "ec2:Public",
           "ec2:ResourceTag/${TagKey}",
@@ -20915,6 +21128,7 @@
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
+          "ec2:FutureCapacitySpecification",
           "ec2:IsLaunchTemplateResource",
           "ec2:LaunchTemplate"
         ],

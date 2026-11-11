@@ -1,4 +1,19 @@
 {
+  "allowvendedlogdeliveryforresource": {
+    "name": "AllowVendedLogDeliveryForResource",
+    "description": "Grants permission to configure vended log delivery for a queue",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "gameSessionQueue",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "acceptmatch": {
     "name": "AcceptMatch",
     "description": "Grants permission to register player acceptance or rejection of a proposed FlexMatch match",

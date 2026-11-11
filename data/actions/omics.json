@@ -1,4 +1,19 @@
 {
+  "authorizerunprocessing": {
+    "name": "AuthorizeRunProcessing",
+    "description": "Grants permission to manage internal service operations required for run and task processing",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "run",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "abortmultipartreadsetupload": {
     "name": "AbortMultipartReadSetUpload",
     "description": "Grants permission to abort multipart read set uploads",
