@@ -36,6 +36,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "contributeknowledgeitems": {
+    "name": "ContributeKnowledgeItems",
+    "description": "Grants permission to contribute knowledge items to a Transformation Package on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "conversestream": {
     "name": "ConverseStream",
     "description": "Grants permission to invoke ConverseStream on AWS Transform custom",
@@ -260,6 +277,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteresourcepolicy": {
+    "name": "DeleteResourcePolicy",
+    "description": "Grants permission to delete the resource policy attached to a shareable resource",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletesource": {
     "name": "DeleteSource",
     "description": "Grants permission to invoke DeleteSource on AWS Transform custom",
@@ -438,6 +472,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getresourcepolicy": {
+    "name": "GetResourcePolicy",
+    "description": "Grants permission to retrieve the resource policy attached to a shareable resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getsource": {
     "name": "GetSource",
     "description": "Grants permission to invoke GetSource on AWS Transform custom",
@@ -582,6 +633,23 @@
     "name": "ListTransformationPackageShares",
     "description": "Grants permission to list active shares of a Transformation Package",
     "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putresourcepolicy": {
+    "name": "PutResourcePolicy",
+    "description": "Grants permission to attach or replace the resource policy on a shareable resource",
+    "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
         "name": "package",

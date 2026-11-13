@@ -76,6 +76,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "metric-query-definition": {
+    "key": "metric-query-definition",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-query-definition/${MetricDataQueryDefinitionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "metric-stream": {
     "key": "metric-stream",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}",

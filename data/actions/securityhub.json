@@ -71,6 +71,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getcspmorganizationsimportstatus": {
+    "name": "GetCSPMOrganizationsImportStatus",
+    "description": "Grants permission to retrieve the Security Hub CSPM Organizations Policy import status for an account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hub",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getcontrolfindingsummary": {
     "name": "GetControlFindingSummary",
     "description": "Grants permission to retrieve a security score and counts of finding and control statuses for a security standard",
@@ -195,6 +210,21 @@
     "name": "ListControlEvaluationSummaries",
     "description": "Grants permission to retrieve a list of controls for a standard, including the control IDs, statuses and finding counts",
     "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "hub",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putcspmorganizationsimportstatus": {
+    "name": "PutCSPMOrganizationsImportStatus",
+    "description": "Grants permission to put the Security Hub CSPM Organizations Policy import status for an account",
+    "accessLevel": "Write",
     "resourceTypes": [
       {
         "name": "hub",

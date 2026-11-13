@@ -1,4 +1,12 @@
 {
+  "createairflowuiurl": {
+    "name": "CreateAirflowUiUrl",
+    "description": "Grants permission to create a URL with access to the Airflow UI",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createworkflow": {
     "name": "CreateWorkflow",
     "description": "Grants permission to create a new workflow",

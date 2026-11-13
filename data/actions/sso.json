@@ -1933,7 +1933,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "sso:VpceAccessRequired"
+    ],
     "dependentActions": []
   },
   "updateinstanceaccesscontrolattributeconfiguration": {

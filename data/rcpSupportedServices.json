@@ -1,5 +1,4 @@
 [
-  "acm-pca",
   "amplify",
   "aoss",
   "app-integrations",
@@ -73,6 +72,7 @@
   "signin",
   "sns",
   "sqs",
+  "ssm-incidents",
   "sts",
   "support",
   "swf",

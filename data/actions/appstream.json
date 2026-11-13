@@ -1330,6 +1330,23 @@
     ],
     "dependentActions": []
   },
+  "updateimagebuilder": {
+    "name": "UpdateImageBuilder",
+    "description": "Grants permission to update a specific image builder. An image builder is a virtual machine that is used to create an image",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "image-builder",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "updateimagepermissions": {
     "name": "UpdateImagePermissions",
     "description": "Grants permission to add or update permissions for the specified private image",

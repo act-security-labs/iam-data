@@ -496,6 +496,21 @@
     ],
     "dependentActions": []
   },
+  "deletemetricdataquerydefinition": {
+    "name": "DeleteMetricDataQueryDefinition",
+    "description": "Grants permission to delete a CloudWatch metric data query definition",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "metric-query-definition",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletemetricstream": {
     "name": "DeleteMetricStream",
     "description": "Grants permission to delete the CloudWatch metric stream that you specify",
@@ -974,6 +989,21 @@
     ],
     "dependentActions": []
   },
+  "getmetricdataquerydefinition": {
+    "name": "GetMetricDataQueryDefinition",
+    "description": "Grants permission to retrieve a CloudWatch metric data query definition",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "metric-query-definition",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getmetricstatistics": {
     "name": "GetMetricStatistics",
     "description": "Grants permission to retrieve statistics for the specified metric",
@@ -1310,6 +1340,14 @@
     ],
     "dependentActions": []
   },
+  "listmetricdataquerydefinitions": {
+    "name": "ListMetricDataQueryDefinitions",
+    "description": "Grants permission to list CloudWatch metric data query definitions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listmetricstreams": {
     "name": "ListMetricStreams",
     "description": "Grants permission to return a list of all CloudWatch metric streams in your account",
@@ -1449,6 +1487,14 @@
         "dependentActions": []
       },
       {
+        "name": "metric-query-definition",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "metric-stream",
         "required": false,
         "conditionKeys": [
@@ -1546,6 +1592,15 @@
         "resourceTypes": [
           {
             "name": "service",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CloudWatch-MetricQueryDefinition",
+        "resourceTypes": [
+          {
+            "name": "metric-query-definition",
             "required": true
           }
         ]
@@ -1757,6 +1812,24 @@
     ],
     "conditionKeys": [
       "cloudwatch:namespace"
+    ],
+    "dependentActions": []
+  },
+  "putmetricdataquerydefinition": {
+    "name": "PutMetricDataQueryDefinition",
+    "description": "Grants permission to create or update a CloudWatch metric data query definition",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "metric-query-definition",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
     ],
     "dependentActions": []
   },
@@ -1974,6 +2047,14 @@
         "dependentActions": []
       },
       {
+        "name": "metric-query-definition",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "metric-stream",
         "required": false,
         "conditionKeys": [
@@ -2076,6 +2157,15 @@
             "required": true
           }
         ]
+      },
+      {
+        "name": "CloudWatch-MetricQueryDefinition",
+        "resourceTypes": [
+          {
+            "name": "metric-query-definition",
+            "required": true
+          }
+        ]
       }
     ]
   },
@@ -2118,6 +2208,14 @@
       },
       {
         "name": "insight-rule",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "metric-query-definition",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -2223,6 +2321,15 @@
         "resourceTypes": [
           {
             "name": "service",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "CloudWatch-MetricQueryDefinition",
+        "resourceTypes": [
+          {
+            "name": "metric-query-definition",
             "required": true
           }
         ]
