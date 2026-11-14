@@ -1,27 +1,27 @@
 {
   "airflow:dagaccessentity": {
     "key": "airflow:DagAccessEntity",
-    "description": "Filters access by the DAG sub-resource being accessed",
+    "description": "Filters access by the DAG sub-resource that the caller specifies in the request, such as RUN, CODE, or TASK_LOGS",
     "type": "String"
   },
   "airflow:resourceaction": {
     "key": "airflow:ResourceAction",
-    "description": "Filters access by the action being performed on the Airflow resource",
+    "description": "Filters access by the action on the Airflow resource that the caller specifies in the request, such as GET, POST, PUT, DELETE, or LIST",
     "type": "String"
   },
   "airflow:resourceid": {
     "key": "airflow:ResourceId",
-    "description": "Filters access by the identifier of the specific Airflow resource, such as a DAG ID or connection ID",
+    "description": "Filters access by the Airflow resource identifier that the caller specifies in the request, such as a DAG ID or connection ID",
     "type": "String"
   },
   "airflow:resourcetype": {
     "key": "airflow:ResourceType",
-    "description": "Filters access by the Airflow resource type specified in the request",
+    "description": "Filters access by the Airflow resource type that the caller specifies in the request, such as DAG, Connection, Variable, or Pool",
     "type": "String"
   },
   "airflow:teamnames": {
     "key": "airflow:TeamNames",
-    "description": "Filters access by the team names associated with the caller's identity, enabling team-based access control for Airflow resources",
+    "description": "Filters access by the team names that the caller specifies in the request. AWS does not verify that the caller is a member of these teams",
     "type": "ArrayOfString"
   },
   "aws:requesttag/${tagkey}": {

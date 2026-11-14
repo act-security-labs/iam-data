@@ -1327,6 +1327,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "resumepentestjob": {
+    "name": "ResumePentestJob",
+    "description": "Grants permission to resume a stopped or paused penetration test",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startcoderemediation": {
     "name": "StartCodeRemediation",
     "description": "Grants permission to start code remediation for the findings",

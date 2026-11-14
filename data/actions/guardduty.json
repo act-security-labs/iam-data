@@ -738,6 +738,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listinvestigationrecords": {
+    "name": "ListInvestigationRecords",
+    "description": "Grants permission to retrieve the records of a GuardDuty investigation",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listinvestigations": {
     "name": "ListInvestigations",
     "description": "Grants permission to retrieve a list of GuardDuty investigations",

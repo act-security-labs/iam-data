@@ -112,6 +112,14 @@
     ],
     "dependentActions": []
   },
+  "createipguardrailpolicy": {
+    "name": "CreateIpGuardrailPolicy",
+    "description": "Grants permission to create an IP guardrail policy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createkeysigningkey": {
     "name": "CreateKeySigningKey",
     "description": "Grants permission to create a new key-signing key associated with a hosted zone",
@@ -130,6 +138,21 @@
   "createqueryloggingconfig": {
     "name": "CreateQueryLoggingConfig",
     "description": "Grants permission to create a configuration for DNS query logging",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createresourcerecordsetprotections": {
+    "name": "CreateResourceRecordSetProtections",
+    "description": "Grants permission to create protections that block changes to specified records in a hosted zone",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -271,6 +294,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteipguardrailpolicy": {
+    "name": "DeleteIpGuardrailPolicy",
+    "description": "Grants permission to delete an IP guardrail policy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletekeysigningkey": {
     "name": "DeleteKeySigningKey",
     "description": "Grants permission to delete a key-signing key",
@@ -293,6 +324,21 @@
     "resourceTypes": [
       {
         "name": "queryloggingconfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteresourcerecordsetprotections": {
+    "name": "DeleteResourceRecordSetProtections",
+    "description": "Grants permission to delete protections from specified records in a hosted zone",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -555,6 +601,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getipguardrailpolicy": {
+    "name": "GetIpGuardrailPolicy",
+    "description": "Grants permission to get information about an IP guardrail policy",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getqueryloggingconfig": {
     "name": "GetQueryLoggingConfig",
     "description": "Grants permission to get information about a specified configuration for DNS query logging",
@@ -718,6 +772,14 @@
     ],
     "dependentActions": []
   },
+  "listipguardrailpolicies": {
+    "name": "ListIpGuardrailPolicies",
+    "description": "Grants permission to list the IP guardrail policies in an organization",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listqueryloggingconfigs": {
     "name": "ListQueryLoggingConfigs",
     "description": "Grants permission to list the configurations for DNS query logging that are associated with the current AWS account or the configuration that is associated with a specified hosted zone",
@@ -726,6 +788,21 @@
       {
         "name": "hostedzone",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresourcerecordsetprotections": {
+    "name": "ListResourceRecordSetProtections",
+    "description": "Grants permission to list the record protections in a specified hosted zone",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -924,6 +1001,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateipguardrailpolicy": {
+    "name": "UpdateIpGuardrailPolicy",
+    "description": "Grants permission to update the rules of an IP guardrail policy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

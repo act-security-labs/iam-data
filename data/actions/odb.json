@@ -205,6 +205,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "associatevirtualmachinestocloudvmcluster": {
+    "name": "AssociateVirtualMachinesToCloudVmCluster",
+    "description": "Grants permission to associate virtual machines to a specified VM cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-vm-cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "associatevirtualmachinestoexadbvmcluster": {
     "name": "AssociateVirtualMachinesToExadbVmCluster",
     "description": "Grants permission to associate virtual machines to a specified Exadb VM cluster",
@@ -556,6 +571,21 @@
       {
         "name": "cloud-vm-cluster",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociatevirtualmachinesfromcloudvmcluster": {
+    "name": "DisassociateVirtualMachinesFromCloudVmCluster",
+    "description": "Grants permission to disassociate virtual machines from a specified VM cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-vm-cluster",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -1454,6 +1484,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatecloudautonomousvmcluster": {
+    "name": "UpdateCloudAutonomousVmCluster",
+    "description": "Grants permission to update properties of a specified Autonomous VM cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-autonomous-vm-cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatecloudexadatainfrastructure": {
     "name": "UpdateCloudExadataInfrastructure",
     "description": "Grants permission to update the properties of an Exadata infrastructure resource",
@@ -1461,6 +1506,36 @@
     "resourceTypes": [
       {
         "name": "cloud-exadata-infrastructure",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecloudexadatainfrastructurestoragecapacity": {
+    "name": "UpdateCloudExadataInfrastructureStorageCapacity",
+    "description": "Grants permission to update the storage capacity of an Exadata infrastructure resource",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-exadata-infrastructure",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecloudvmcluster": {
+    "name": "UpdateCloudVmCluster",
+    "description": "Grants permission to update properties of a specified VM cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cloud-vm-cluster",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

@@ -1,4 +1,14 @@
 {
+  "agentaccess-mcp:imagebuilderarn": {
+    "key": "agentaccess-mcp:ImageBuilderArn",
+    "description": "Filters access by the ARN of the WorkSpaces Applications image builder",
+    "type": "ARN"
+  },
+  "agentaccess-mcp:localuser": {
+    "key": "agentaccess-mcp:LocalUser",
+    "description": "Filters access by the local user account an agent may log in as on the image builder",
+    "type": "String"
+  },
   "agentaccess-mcp:stackarn": {
     "key": "agentaccess-mcp:StackArn",
     "description": "Filters access by the ARN of the WorkSpaces Applications stack",

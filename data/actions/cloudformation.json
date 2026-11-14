@@ -1065,6 +1065,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "removealias": {
+    "name": "RemoveAlias",
+    "description": "Grants permission to remove an alias from the stack it is associated with",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "stack",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "rollbackstack": {
     "name": "RollbackStack",
     "description": "Grants permission to rollback the stack to the last stable state",
@@ -1080,6 +1095,21 @@
     "conditionKeys": [
       "cloudformation:RoleArn"
     ],
+    "dependentActions": []
+  },
+  "setalias": {
+    "name": "SetAlias",
+    "description": "Grants permission to set an alias for the specified stack",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "stack",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "setstackpolicy": {

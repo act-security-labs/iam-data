@@ -41,6 +41,17 @@
     ],
     "dependentActions": []
   },
+  "createagentbasicprofile": {
+    "name": "CreateAgentBasicProfile",
+    "description": "Grants permission to create a basic profile for the calling account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createagentcontext": {
     "name": "CreateAgentContext",
     "description": "Grants permission to create a context associated with a profile",
@@ -73,6 +84,25 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "createagentorganizationalprofile": {
+    "name": "CreateAgentOrganizationalProfile",
+    "description": "Grants permission to create an organizational profile for use with AWS Organizations integration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createagentorganizationalreport": {
+    "name": "CreateAgentOrganizationalReport",
+    "description": "Grants permission to create an organizational report, a point-in-time snapshot of recommendations across all agent profiles in the AWS Organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createagentprofile": {
@@ -256,6 +286,14 @@
     ],
     "dependentActions": []
   },
+  "deleteagentorganizationalreport": {
+    "name": "DeleteAgentOrganizationalReport",
+    "description": "Grants permission to delete an organizational report and its associated artifacts",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteagentprofile": {
     "name": "DeleteAgentProfile",
     "description": "Grants permission to delete an agent profile",
@@ -263,6 +301,40 @@
     "resourceTypes": [
       {
         "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "deleteagentprofilepolicy": {
+    "name": "DeleteAgentProfilePolicy",
+    "description": "Grants permission to remove the resource-based policy from the specified agent profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "deleteagentrecommendationpolicy": {
+    "name": "DeleteAgentRecommendationPolicy",
+    "description": "Grants permission to remove the resource-based policy from the specified agent recommendation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-recommendation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -494,9 +566,50 @@
     ],
     "dependentActions": []
   },
+  "getagentorganizationalreport": {
+    "name": "GetAgentOrganizationalReport",
+    "description": "Grants permission to retrieve metadata and current state for a single organizational report",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getagentorganizationalreportdata": {
+    "name": "GetAgentOrganizationalReportData",
+    "description": "Grants permission to retrieve the data artifact for a completed organizational report as a short-lived presigned S3 URL",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getagentpreferences": {
+    "name": "GetAgentPreferences",
+    "description": "Grants permission to get the caller's complete set of Well-Architected Agent preferences",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getagentprofile": {
     "name": "GetAgentProfile",
     "description": "Grants permission to get agent profile by profile arn",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getagentprofilepolicy": {
+    "name": "GetAgentProfilePolicy",
+    "description": "Grants permission to retrieve the resource-based policy attached to the specified agent profile",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -535,6 +648,23 @@
     "resourceTypes": [
       {
         "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getagentrecommendationpolicy": {
+    "name": "GetAgentRecommendationPolicy",
+    "description": "Grants permission to retrieve the resource-based policy attached to the specified agent recommendation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agent-recommendation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -770,7 +900,7 @@
   "listagentcontexts": {
     "name": "ListAgentContexts",
     "description": "Grants permission to list contexts associated with a profile by filters on the fields",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agent-profile",
@@ -787,7 +917,7 @@
   "listagentgoals": {
     "name": "ListAgentGoals",
     "description": "Grants permission to list goals associated with a profile by filters on the fields",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agent-profile",
@@ -801,10 +931,18 @@
     ],
     "dependentActions": []
   },
+  "listagentorganizationalreports": {
+    "name": "ListAgentOrganizationalReports",
+    "description": "Grants permission to list organizational reports owned by the caller's account within the AWS Organization",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listagentprofiles": {
     "name": "ListAgentProfiles",
     "description": "Grants permission to list agent profiles",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
@@ -812,7 +950,7 @@
   "listagentrecommendationgenerations": {
     "name": "ListAgentRecommendationGenerations",
     "description": "Grants permission to list recommendation generations",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agent-profile",
@@ -829,7 +967,7 @@
   "listagentrecommendationitems": {
     "name": "ListAgentRecommendationItems",
     "description": "Grants permission to list recommendation items associated with a recommendation",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agent-recommendation",
@@ -846,7 +984,7 @@
   "listagentrecommendations": {
     "name": "ListAgentRecommendations",
     "description": "Grants permission to list recommendations by profile ARN",
-    "accessLevel": "Read",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agent-profile",
@@ -1150,6 +1288,31 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putagentpreferences": {
+    "name": "PutAgentPreferences",
+    "description": "Grants permission to create or replace the caller's Well-Architected Agent preferences",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putagentprofilepolicy": {
+    "name": "PutAgentProfilePolicy",
+    "description": "Grants permission to attach or replace a resource-based policy on the specified agent profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "putagentrecommendationfeedback": {
     "name": "PutAgentRecommendationFeedback",
     "description": "Grants permission to put feedback on a recommendation",
@@ -1165,6 +1328,31 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "putagentrecommendationpolicy": {
+    "name": "PutAgentRecommendationPolicy",
+    "description": "Grants permission to attach or replace a resource-based policy on the specified agent recommendation",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-recommendation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "sendagentorganizationalreportdatatos3": {
+    "name": "SendAgentOrganizationalReportDataToS3",
+    "description": "Grants permission to write the data artifact for a completed organizational report directly into a caller-owned S3 bucket",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "startagentrecommendationgeneration": {
@@ -1299,6 +1487,23 @@
   "updateagentgoal": {
     "name": "UpdateAgentGoal",
     "description": "Grants permission to update a goal associated with a profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updateagentorganizationalprofile": {
+    "name": "UpdateAgentOrganizationalProfile",
+    "description": "Grants permission to update an organizational profile",
     "accessLevel": "Write",
     "resourceTypes": [
       {

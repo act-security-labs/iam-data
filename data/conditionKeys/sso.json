@@ -33,5 +33,10 @@
     "key": "sso:PrimaryRegion",
     "description": "Filters access by the primary region of the IAM Identity Center instance",
     "type": "String"
+  },
+  "sso:vpceaccessrequired": {
+    "key": "sso:VpceAccessRequired",
+    "description": "Filters access by whether the network configuration that results from the operation requires requests to the IAM Identity Center instance to arrive through a VPC endpoint",
+    "type": "Bool"
   }
 }
