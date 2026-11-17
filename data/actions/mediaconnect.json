@@ -143,6 +143,12 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "SourceEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -523,6 +529,12 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "SourceEndpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -798,7 +810,7 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
-        "name": "Reservation",
+        "name": "Offering",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1373,6 +1385,12 @@
     "description": "Grants permission to update entitlements on any flow",
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [
+      {
+        "name": "Entitlement",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "Flow",
         "required": true,

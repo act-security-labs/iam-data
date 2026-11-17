@@ -1093,6 +1093,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listcontextstores": {
+    "name": "ListContextStores",
+    "description": "Grants permission to retrieve the context stores associated with the transit gateway firewalls in an account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listfirewallpolicies": {
     "name": "ListFirewallPolicies",
     "description": "Grants permission to retrieve the metadata for firewall policies",
@@ -1210,6 +1218,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresourcesincontextstore": {
+    "name": "ListResourcesInContextStore",
+    "description": "Grants permission to retrieve the resource contexts recorded in a context store",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

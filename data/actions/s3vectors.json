@@ -311,7 +311,7 @@
   },
   "queryvectors": {
     "name": "QueryVectors",
-    "description": "Grants permission to find approximate nearest neighbors within a specified search vector index for a given query vector",
+    "description": "Grants permission to query a specified vector index using vector similarity, full-text, or hybrid search",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -381,6 +381,24 @@
   "updateindexmode": {
     "name": "UpdateIndexMode",
     "description": "Grants permission to update the index mode for a specified vector index",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Index",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "s3vectors:VectorBucketTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updatemetadataconfiguration": {
+    "name": "UpdateMetadataConfiguration",
+    "description": "Grants permission to update the metadata configuration for a specified vector index",
     "accessLevel": "Write",
     "resourceTypes": [
       {

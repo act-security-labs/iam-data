@@ -442,6 +442,12 @@
         "dependentActions": []
       },
       {
+        "name": "inference-router",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "job",
         "required": false,
         "conditionKeys": [],
@@ -1637,6 +1643,24 @@
     ],
     "dependentActions": []
   },
+  "createinferencerouter": {
+    "name": "CreateInferenceRouter",
+    "description": "Grants permission to create an inference router",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createjob": {
     "name": "CreateJob",
     "description": "Grants permission to create a SageMaker model customization job",
@@ -2759,6 +2783,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteendpointpolicy": {
+    "name": "DeleteEndpointPolicy",
+    "description": "Grants permission to delete the resource-based policy of an endpoint",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteexperiment": {
     "name": "DeleteExperiment",
     "description": "Grants permission to delete an experiment",
@@ -2958,6 +2997,21 @@
     "resourceTypes": [
       {
         "name": "inference-experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteinferencerouter": {
+    "name": "DeleteInferenceRouter",
+    "description": "Grants permission to delete an inference router",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -3525,6 +3579,12 @@
       },
       {
         "name": "inference-recommendations-job",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "inference-router",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4448,6 +4508,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describeinferencerouter": {
+    "name": "DescribeInferenceRouter",
+    "description": "Grants permission to return the description of an inference router",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describejob": {
     "name": "DescribeJob",
     "description": "Grants permission to return information about a SageMaker model customization job",
@@ -5154,6 +5229,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getendpointpolicy": {
+    "name": "GetEndpointPolicy",
+    "description": "Grants permission to get the resource-based policy of an endpoint",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getlineagegrouppolicy": {
     "name": "GetLineageGroupPolicy",
     "description": "Grants permission to retreive a lineage group policy",
@@ -5296,6 +5386,7 @@
       }
     ],
     "conditionKeys": [
+      "sagemaker:SourceInferenceRouterArn",
       "sagemaker:TargetModel"
     ],
     "dependentActions": []
@@ -5312,7 +5403,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "sagemaker:SourceInferenceRouterArn"
+    ],
     "dependentActions": []
   },
   "invokeendpointwithresponsestream": {
@@ -5329,6 +5422,36 @@
       {
         "name": "inference-component",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "invokeinferencerouter": {
+    "name": "InvokeInferenceRouter",
+    "description": "Grants permission to invoke an inference router",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "invokeinferencerouterasync": {
+    "name": "InvokeInferenceRouterAsync",
+    "description": "Grants permission to invoke an inference router in an asynchronous manner",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -5729,6 +5852,14 @@
   "listinferencerecommendationsjobs": {
     "name": "ListInferenceRecommendationsJobs",
     "description": "Grants permission to list inference recommendations jobs",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinferencerouters": {
+    "name": "ListInferenceRouters",
+    "description": "Grants permission to list inference routers",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -6317,6 +6448,12 @@
         "dependentActions": []
       },
       {
+        "name": "inference-router",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "job",
         "required": false,
         "conditionKeys": [],
@@ -6591,6 +6728,21 @@
     "description": "Grants permission to list workteams",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putendpointpolicy": {
+    "name": "PutEndpointPolicy",
+    "description": "Grants permission to attach or replace the resource-based policy of an endpoint",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -7696,6 +7848,21 @@
     "resourceTypes": [
       {
         "name": "inference-experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateinferencerouter": {
+    "name": "UpdateInferenceRouter",
+    "description": "Grants permission to update an inference router",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "inference-router",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

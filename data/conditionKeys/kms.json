@@ -134,6 +134,11 @@
     "description": "Filters access to an API operation based on the MultiRegionKeyType property of the AWS KMS key created by or used in the operation. Use it to qualify authorization of the CreateKey operation or any operation that is authorized for a KMS key resource",
     "type": "String"
   },
+  "kms:policyname": {
+    "key": "kms:PolicyName",
+    "description": "Filters access to the GetKeyPolicy and PutKeyPolicy operations based on the value of the PolicyName parameter in the request",
+    "type": "String"
+  },
   "kms:primaryregion": {
     "key": "kms:PrimaryRegion",
     "description": "Filters access to the UpdatePrimaryRegion operation based on the value of the PrimaryRegion parameter in the request",

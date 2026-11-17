@@ -1,4 +1,38 @@
 {
+  "readrepositorycontent": {
+    "name": "ReadRepositoryContent",
+    "description": "Grants permission to read the contents of a repository through its source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "repository",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "writerepositorycontent": {
+    "name": "WriteRepositoryContent",
+    "description": "Grants permission to write to a repository through its source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "repository",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchcreatefindings": {
     "name": "BatchCreateFindings",
     "description": "Grants permission to invoke BatchCreateFindings on AWS Transform custom",
@@ -19,6 +53,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "cancelskillcreationjob": {
+    "name": "CancelSkillCreationJob",
+    "description": "Grants permission to invoke CancelSkillCreationJob on AWS Transform custom. Does not grant reporting a job's progress or result, which is UpdateSkillCreationJob",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "skill-creation-job",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "completetransformationpackageupload": {
     "name": "CompleteTransformationPackageUpload",
     "description": "Grants permission to invoke CompleteTransformationPackageUpload on AWS Transform custom",
@@ -26,6 +77,23 @@
     "resourceTypes": [
       {
         "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "connectsource": {
+    "name": "ConnectSource",
+    "description": "Grants permission to invoke ConnectSource on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "source",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -106,6 +174,25 @@
     "resourceTypes": [
       {
         "name": "remediation",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createremediationplan": {
+    "name": "CreateRemediationPlan",
+    "description": "Grants permission to invoke CreateRemediationPlan on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "remediation-plan",
         "required": true,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
@@ -250,6 +337,23 @@
     "resourceTypes": [
       {
         "name": "remediation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteremediationplan": {
+    "name": "DeleteRemediationPlan",
+    "description": "Grants permission to invoke DeleteRemediationPlan on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "remediation-plan",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -421,6 +525,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getissuegroup": {
+    "name": "GetIssueGroup",
+    "description": "Grants permission to invoke GetIssueGroup on AWS Transform custom",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "issue-group",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getknowledgeitem": {
     "name": "GetKnowledgeItem",
     "description": "Grants permission to invoke GetKnowledgeItem on AWS Transform custom",
@@ -455,6 +576,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getremediationplan": {
+    "name": "GetRemediationPlan",
+    "description": "Grants permission to invoke GetRemediationPlan on AWS Transform custom",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "remediation-plan",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getrepository": {
     "name": "GetRepository",
     "description": "Grants permission to invoke GetRepository on AWS Transform custom",
@@ -479,6 +617,23 @@
     "resourceTypes": [
       {
         "name": "package",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getskillcreationjob": {
+    "name": "GetSkillCreationJob",
+    "description": "Grants permission to invoke GetSkillCreationJob on AWS Transform custom",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "skill-creation-job",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -581,9 +736,25 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listissuegroups": {
+    "name": "ListIssueGroups",
+    "description": "Grants permission to invoke ListIssueGroups on AWS Transform custom",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listknowledgeitems": {
     "name": "ListKnowledgeItems",
     "description": "Grants permission to invoke ListKnowledgeItems on AWS Transform custom",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listremediationplans": {
+    "name": "ListRemediationPlans",
+    "description": "Grants permission to invoke ListRemediationPlans on AWS Transform custom",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -600,6 +771,14 @@
   "listrepositories": {
     "name": "ListRepositories",
     "description": "Grants permission to invoke ListRepositories on AWS Transform custom",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listskillcreationjobs": {
+    "name": "ListSkillCreationJobs",
+    "description": "Grants permission to invoke ListSkillCreationJobs on AWS Transform custom",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -688,6 +867,25 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startskillcreationjob": {
+    "name": "StartSkillCreationJob",
+    "description": "Grants permission to invoke StartSkillCreationJob on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "skill-creation-job",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to invoke TagResource on AWS Transform custom",
@@ -715,6 +913,16 @@
       },
       {
         "name": "finding",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "issue-group",
         "required": false,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
@@ -754,7 +962,27 @@
         "dependentActions": []
       },
       {
+        "name": "remediation-plan",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "repository",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "skill-creation-job",
         "required": false,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
@@ -827,6 +1055,15 @@
         "dependentActions": []
       },
       {
+        "name": "issue-group",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "knowledge-item",
         "required": false,
         "conditionKeys": [
@@ -854,7 +1091,25 @@
         "dependentActions": []
       },
       {
+        "name": "remediation-plan",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "repository",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "skill-creation-job",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
@@ -926,6 +1181,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateissuegroup": {
+    "name": "UpdateIssueGroup",
+    "description": "Grants permission to invoke UpdateIssueGroup on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "issue-group",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updateknowledgeitemconfiguration": {
     "name": "UpdateKnowledgeItemConfiguration",
     "description": "Grants permission to invoke UpdateKnowledgeItemConfiguration on AWS Transform custom",
@@ -977,6 +1249,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateremediationplan": {
+    "name": "UpdateRemediationPlan",
+    "description": "Grants permission to invoke UpdateRemediationPlan on AWS Transform custom",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "remediation-plan",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updaterepository": {
     "name": "UpdateRepository",
     "description": "Grants permission to invoke UpdateRepository on AWS Transform custom",
@@ -984,6 +1273,23 @@
     "resourceTypes": [
       {
         "name": "repository",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateskillcreationjob": {
+    "name": "UpdateSkillCreationJob",
+    "description": "Grants permission to invoke UpdateSkillCreationJob on AWS Transform custom. Granted to a skill-creation job's executor, which needs only this action and GetSkillCreationJob; it does not grant cancelling a job",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "skill-creation-job",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"

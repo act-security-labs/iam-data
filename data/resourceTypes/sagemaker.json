@@ -299,6 +299,14 @@
       "sagemaker:ResourceTag/${TagKey}"
     ]
   },
+  "inference-router": {
+    "key": "inference-router",
+    "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:inference-router/${InferenceRouterName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "sagemaker:ResourceTag/${TagKey}"
+    ]
+  },
   "job": {
     "key": "job",
     "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:job/${JobCategory}/${JobName}",

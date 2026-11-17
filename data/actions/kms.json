@@ -853,6 +853,7 @@
     ],
     "conditionKeys": [
       "kms:CallerAccount",
+      "kms:PolicyName",
       "kms:ViaService"
     ],
     "dependentActions": [],
@@ -1061,6 +1062,7 @@
     "conditionKeys": [
       "kms:BypassPolicyLockoutSafetyCheck",
       "kms:CallerAccount",
+      "kms:PolicyName",
       "kms:ViaService"
     ],
     "dependentActions": [],

@@ -279,6 +279,11 @@
     "description": "Filters access by limiting memory size used for Serverless inference in the request",
     "type": "Numeric"
   },
+  "sagemaker:sourceinferencerouterarn": {
+    "key": "sagemaker:SourceInferenceRouterArn",
+    "description": "Filters access by the ARN of the inference router that the request was routed through",
+    "type": "ARN"
+  },
   "sagemaker:spacesharingtype": {
     "key": "sagemaker:SpaceSharingType",
     "description": "Filters access by the sharing type associated with the space in the request",

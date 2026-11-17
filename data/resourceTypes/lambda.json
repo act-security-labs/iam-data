@@ -70,6 +70,27 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "runtime": {
+    "key": "runtime",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "runtimealias": {
+    "key": "runtimeAlias",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}/alias/${Name}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "runtimeversion": {
+    "key": "runtimeVersion",
+    "arn": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}/version/${Name}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "webfunction": {
     "key": "webFunction",
     "arn": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}",

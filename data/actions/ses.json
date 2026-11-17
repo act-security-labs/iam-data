@@ -3359,6 +3359,16 @@
     ],
     "dependentActions": []
   },
+  "putaccountdeliveryattributes": {
+    "name": "PutAccountDeliveryAttributes",
+    "description": "Grants permission to change the delivery attributes for your account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "ses:ApiVersion"
+    ],
+    "dependentActions": []
+  },
   "putaccountdetails": {
     "name": "PutAccountDetails",
     "description": "Grants permission to update your account details",

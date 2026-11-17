@@ -1,4 +1,34 @@
 {
+  "associateruntimealias": {
+    "name": "AssociateRuntimeAlias",
+    "description": "Grants permission to associate a customer-managed runtime alias with Lambda Event function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeAlias",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "associateruntimeversion": {
+    "name": "AssociateRuntimeVersion",
+    "description": "Grants permission to associate a customer-managed runtime version with Lambda Event function",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeVersion",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "connectmicrovm": {
     "name": "ConnectMicrovm",
     "description": "Grants permission to connect to a Lambda MicroVM via HTTP (VPC Endpoint only)",
@@ -304,6 +334,54 @@
     ],
     "dependentActions": []
   },
+  "createruntime": {
+    "name": "CreateRuntime",
+    "description": "Grants permission to create an AWS Lambda customer-managed runtime",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createruntimealias": {
+    "name": "CreateRuntimeAlias",
+    "description": "Grants permission to create an AWS Lambda customer-managed runtime alias",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeAlias",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createruntimeversion": {
+    "name": "CreateRuntimeVersion",
+    "description": "Grants permission to create an AWS Lambda customer-managed runtime version",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeVersion",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createwebfunction": {
     "name": "CreateWebFunction",
     "description": "Grants permission to create a Lambda web function",
@@ -583,13 +661,19 @@
     "resourceTypes": [
       {
         "name": "function",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "webFunction",
-        "required": true,
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -597,6 +681,51 @@
     "conditionKeys": [
       "lambda:Principal"
     ],
+    "dependentActions": []
+  },
+  "deleteruntime": {
+    "name": "DeleteRuntime",
+    "description": "Grants permission to delete an AWS Lambda customer-managed runtime",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteruntimealias": {
+    "name": "DeleteRuntimeAlias",
+    "description": "Grants permission to delete an AWS Lambda customer-managed runtime alias",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeAlias",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteruntimeversion": {
+    "name": "DeleteRuntimeVersion",
+    "description": "Grants permission to delete an AWS Lambda customer-managed runtime version",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeVersion",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deletewebfunction": {
@@ -1032,12 +1161,48 @@
     "resourceTypes": [
       {
         "name": "function",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "webFunction",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getruntime": {
+    "name": "GetRuntime",
+    "description": "Grants permission to view details about an AWS Lambda customer-managed runtime",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getruntimealias": {
+    "name": "GetRuntimeAlias",
+    "description": "Grants permission to view details about an AWS Lambda customer-managed runtime alias",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "runtimeAlias",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1053,6 +1218,21 @@
     "resourceTypes": [
       {
         "name": "function",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getruntimeversion": {
+    "name": "GetRuntimeVersion",
+    "description": "Grants permission to view details about an AWS Lambda customer-managed runtime version",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "runtimeVersion",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1396,9 +1576,47 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listruntimealiases": {
+    "name": "ListRuntimeAliases",
+    "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtime aliases",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listruntimeversions": {
+    "name": "ListRuntimeVersions",
+    "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtime versions",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listruntimes": {
+    "name": "ListRuntimes",
+    "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtimes",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtags": {
     "name": "ListTags",
-    "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+    "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -1433,6 +1651,12 @@
       },
       {
         "name": "networkConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1641,13 +1865,19 @@
     "resourceTypes": [
       {
         "name": "function",
-        "required": true,
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "webFunction",
-        "required": true,
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -1703,6 +1933,21 @@
       "lambda:FunctionUrlAuthType",
       "lambda:Principal"
     ],
+    "dependentActions": []
+  },
+  "restoreruntime": {
+    "name": "RestoreRuntime",
+    "description": "Grants permission to restore an AWS Lambda customer-managed runtime",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "resumemicrovm": {
@@ -1812,7 +2057,7 @@
   },
   "tagresource": {
     "name": "TagResource",
-    "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+    "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
@@ -1847,6 +2092,12 @@
       },
       {
         "name": "networkConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1881,7 +2132,7 @@
   },
   "untagresource": {
     "name": "UntagResource",
-    "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+    "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
@@ -1916,6 +2167,12 @@
       },
       {
         "name": "networkConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "runtime",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -2120,6 +2377,51 @@
     "resourceTypes": [
       {
         "name": "networkConnector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateruntime": {
+    "name": "UpdateRuntime",
+    "description": "Grants permission to update an AWS Lambda customer-managed runtime",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateruntimealias": {
+    "name": "UpdateRuntimeAlias",
+    "description": "Grants permission to update an AWS Lambda customer-managed runtime alias",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeAlias",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateruntimeversion": {
+    "name": "UpdateRuntimeVersion",
+    "description": "Grants permission to update an AWS Lambda customer-managed runtime version",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "runtimeVersion",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

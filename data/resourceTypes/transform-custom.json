@@ -20,6 +20,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "issue-group": {
+    "key": "issue-group",
+    "arn": "arn:${Partition}:transform-custom:${Region}:${Account}:issue-group/${IssueGroupId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "knowledge-item": {
     "key": "knowledge-item",
     "arn": "arn:${Partition}:transform-custom:${Region}:${Account}:package/${TransformationPackageName}/knowledge-item/${Id}",
@@ -41,9 +48,23 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "remediation-plan": {
+    "key": "remediation-plan",
+    "arn": "arn:${Partition}:transform-custom:${Region}:${Account}:remediation-plan/${RemediationPlanId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "repository": {
     "key": "repository",
     "arn": "arn:${Partition}:transform-custom:${Region}:${Account}:repository/${RepositoryId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "skill-creation-job": {
+    "key": "skill-creation-job",
+    "arn": "arn:${Partition}:transform-custom:${Region}:${Account}:skill-creation-job/${SkillCreationJobId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

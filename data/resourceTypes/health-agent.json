@@ -6,6 +6,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "dataset": {
+    "key": "Dataset",
+    "arn": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/dataset/${DatasetId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "domain": {
     "key": "Domain",
     "arn": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}",
@@ -16,6 +23,13 @@
   "integration": {
     "key": "Integration",
     "arn": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "medicalcodingjob": {
+    "key": "MedicalCodingJob",
+    "arn": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/medical-coding-job/${JobId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

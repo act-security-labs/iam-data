@@ -665,6 +665,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createdataset": {
+    "name": "CreateDataset",
+    "description": "Grants permission to create a dataset within a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createdomain": {
     "name": "CreateDomain",
     "description": "Grants permission to create a new domain for managing HealthAgent resources",
@@ -718,11 +739,53 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletedataset": {
+    "name": "DeleteDataset",
+    "description": "Grants permission to delete a dataset",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletedomain": {
     "name": "DeleteDomain",
     "description": "Grants permission to delete a domain and all associated resources",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdataset": {
+    "name": "GetDataset",
+    "description": "Grants permission to retrieve information about a dataset",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "Domain",
         "required": true,
@@ -755,6 +818,27 @@
     "resourceTypes": [
       {
         "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getmedicalcodingjob": {
+    "name": "GetMedicalCodingJob",
+    "description": "Grants permission to get details of a started medical coding job",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "MedicalCodingJob",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -826,6 +910,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdatasets": {
+    "name": "ListDatasets",
+    "description": "Grants permission to list the datasets within a domain",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdomains": {
     "name": "ListDomains",
     "description": "Grants permission to list domains for a given account",
@@ -879,6 +978,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startmedicalcodingjob": {
+    "name": "StartMedicalCodingJob",
+    "description": "Grants permission to start a medical coding job",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Domain",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "MedicalCodingJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startmedicalscribelisteningsession": {
     "name": "StartMedicalScribeListeningSession",
     "description": "Grants permission to start a new Medical Scribe listening session for real-time audio transcription",
@@ -913,6 +1033,21 @@
       },
       {
         "name": "PatientInsightsJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "submitfeedback": {
+    "name": "SubmitFeedback",
+    "description": "Grants permission to submit feedback on the output of a job/session within a domain",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Domain",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

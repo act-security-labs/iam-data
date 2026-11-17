@@ -17,6 +17,24 @@
     ],
     "dependentActions": []
   },
+  "createperformancemonitor": {
+    "name": "CreatePerformanceMonitor",
+    "description": "Grants permission to create a performance monitor",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createscope": {
     "name": "CreateScope",
     "description": "Grants permission to create a scope",
@@ -35,6 +53,21 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteperformancemonitor": {
+    "name": "DeletePerformanceMonitor",
+    "description": "Grants permission to delete a performance monitor",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -73,6 +106,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getmonitorscopesuggestions": {
+    "name": "GetMonitorScopeSuggestions",
+    "description": "Grants permission to get scope suggestions for a performance monitor",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getperformancemonitor": {
+    "name": "GetPerformanceMonitor",
+    "description": "Grants permission to get information about a performance monitor",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getqueryresultsmonitortopcontributors": {
     "name": "GetQueryResultsMonitorTopContributors",
     "description": "Grants permission to get the results of a query that retrieves top contributors data for a monitor",
@@ -80,6 +143,21 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getqueryresultsperformancemonitor": {
+    "name": "GetQueryResultsPerformanceMonitor",
+    "description": "Grants permission to get the results of a performance monitor query",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -125,6 +203,21 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getquerystatusperformancemonitor": {
+    "name": "GetQueryStatusPerformanceMonitor",
+    "description": "Grants permission to get the status of a performance monitor query",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -186,6 +279,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listperformancemonitors": {
+    "name": "ListPerformanceMonitors",
+    "description": "Grants permission to list the performance monitors in an account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listscopes": {
     "name": "ListScopes",
     "description": "Grants permission to get all scopes for an account",
@@ -201,6 +302,12 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "performancemonitor",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -230,6 +337,21 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startqueryperformancemonitor": {
+    "name": "StartQueryPerformanceMonitor",
+    "description": "Grants permission to start a query for a performance monitor",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -283,6 +405,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "stopqueryperformancemonitor": {
+    "name": "StopQueryPerformanceMonitor",
+    "description": "Grants permission to stop a query for a performance monitor",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "stopqueryworkloadinsightstopcontributors": {
     "name": "StopQueryWorkloadInsightsTopContributors",
     "description": "Grants permission to stop a query for retrieving top contributors for workload insights",
@@ -325,6 +462,12 @@
         "dependentActions": []
       },
       {
+        "name": "performancemonitor",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "scope",
         "required": false,
         "conditionKeys": [],
@@ -349,6 +492,12 @@
         "dependentActions": []
       },
       {
+        "name": "performancemonitor",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "scope",
         "required": false,
         "conditionKeys": [],
@@ -367,6 +516,21 @@
     "resourceTypes": [
       {
         "name": "monitor",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateperformancemonitor": {
+    "name": "UpdatePerformanceMonitor",
+    "description": "Grants permission to update a performance monitor",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "performancemonitor",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

@@ -653,6 +653,24 @@
     ],
     "dependentActions": []
   },
+  "createdataqualityevaluationconfig": {
+    "name": "CreateDataQualityEvaluationConfig",
+    "description": "Grants permission to create a Data Quality evaluation configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataQualityEvaluationConfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createdataqualityruleset": {
     "name": "CreateDataQualityRuleset",
     "description": "Grants permission to create a Data Quality ruleset",
@@ -1343,6 +1361,21 @@
     "description": "Grants permission to delete a Custom Entity Type",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletedataqualityevaluationconfig": {
+    "name": "DeleteDataQualityEvaluationConfig",
+    "description": "Grants permission to delete a Data Quality evaluation configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataQualityEvaluationConfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -2350,6 +2383,21 @@
     "description": "Grants permission to get Data Preview Statement",
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdataqualityevaluationconfig": {
+    "name": "GetDataQualityEvaluationConfig",
+    "description": "Grants permission to retrieve a Data Quality evaluation configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "dataQualityEvaluationConfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -3483,6 +3531,12 @@
         "dependentActions": []
       },
       {
+        "name": "dataQualityEvaluationConfig",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "database",
         "required": false,
         "conditionKeys": [],
@@ -3779,6 +3833,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdataqualityevaluationconfigs": {
+    "name": "ListDataQualityEvaluationConfigs",
+    "description": "Grants permission to retrieve a list of Data Quality evaluation configurations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "dataQualityEvaluationConfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdataqualityresults": {
     "name": "ListDataQualityResults",
     "description": "Grants permission to retrieve all Data Quality results",
@@ -3904,6 +3973,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrationtableproperties": {
+    "name": "ListIntegrationTableProperties",
+    "description": "Grants permission to list zero-ETL integration table properties",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -4916,6 +4993,12 @@
         "dependentActions": []
       },
       {
+        "name": "dataQualityEvaluationConfig",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "dataQualityRuleset",
         "required": false,
         "conditionKeys": [],
@@ -5067,6 +5150,12 @@
       },
       {
         "name": "customEntityType",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "dataQualityEvaluationConfig",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -5352,6 +5441,21 @@
     "description": "Grants permission to update the schedule of a crawler",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatedataqualityevaluationconfig": {
+    "name": "UpdateDataQualityEvaluationConfig",
+    "description": "Grants permission to update a Data Quality evaluation configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataQualityEvaluationConfig",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

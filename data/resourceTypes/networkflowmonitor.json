@@ -6,6 +6,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "performancemonitor": {
+    "key": "performancemonitor",
+    "arn": "arn:${Partition}:networkflowmonitor:${Region}:${Account}:performancemonitor/${MonitorName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "scope": {
     "key": "scope",
     "arn": "arn:${Partition}:networkflowmonitor:${Region}:${Account}:scope/${ScopeId}",

@@ -45,6 +45,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "dataqualityevaluationconfig": {
+    "key": "dataQualityEvaluationConfig",
+    "arn": "arn:${Partition}:glue:${Region}:${Account}:dataQualityEvaluationConfig/${EvaluationConfigName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "dataqualityruleset": {
     "key": "dataQualityRuleset",
     "arn": "arn:${Partition}:glue:${Region}:${Account}:dataQualityRuleset/${RulesetName}",
