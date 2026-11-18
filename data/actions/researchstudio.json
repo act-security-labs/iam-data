@@ -1,7 +1,7 @@
 {
   "assignprincipal": {
     "name": "AssignPrincipal",
-    "description": "Grants permission to assign princiapl",
+    "description": "Grants permission to assign a principal to a Bio Discovery application",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -9,7 +9,7 @@
   },
   "createapplication": {
     "name": "CreateApplication",
-    "description": "Grants permission to create application",
+    "description": "Grants permission to create a Bio Discovery application",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -17,7 +17,7 @@
   },
   "deleteapplication": {
     "name": "DeleteApplication",
-    "description": "Grants permission to delete application",
+    "description": "Grants permission to delete a Bio Discovery application",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -25,7 +25,7 @@
   },
   "deleteprincipal": {
     "name": "DeletePrincipal",
-    "description": "Grants permission to delete principal",
+    "description": "Grants permission to remove a principal from a Bio Discovery application",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -33,7 +33,7 @@
   },
   "getapplication": {
     "name": "GetApplication",
-    "description": "Grants permission to get application",
+    "description": "Grants permission to retrieve the details of a Bio Discovery application",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -41,8 +41,16 @@
   },
   "listapplications": {
     "name": "ListApplications",
-    "description": "Grants permission to list applications",
+    "description": "Grants permission to list the Bio Discovery applications in an account",
     "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateapplication": {
+    "name": "UpdateApplication",
+    "description": "Grants permission to update a Bio Discovery application",
+    "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []

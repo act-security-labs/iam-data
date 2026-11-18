@@ -24,6 +24,11 @@
     "description": "Filters access by the name of a resource-mutating API action. Use to control which APIs IAM users can use to add or remove tags on a stack or stack set",
     "type": "String"
   },
+  "cloudformation:disablevalidation": {
+    "key": "cloudformation:DisableValidation",
+    "description": "Filters access by whether pre-deployment validation is disabled in the request. Use to control which IAM users can skip pre-deployment validation when they create or update stacks or create change sets",
+    "type": "Bool"
+  },
   "cloudformation:importresourcetypes": {
     "key": "cloudformation:ImportResourceTypes",
     "description": "Filters access by the template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they want to import a resource into a stack",

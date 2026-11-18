@@ -754,6 +754,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "acceptagreementapproval": {
+    "name": "AcceptAgreementApproval",
+    "description": "Grants permission to approve an agreement approval",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
+    "dependentActions": []
+  },
   "acceptagreementapprovalrequest": {
     "name": "AcceptAgreementApprovalRequest",
     "description": "Grants permission to approve an incoming subscription request (for providers who provide products that require subscription verification)",
@@ -843,7 +853,9 @@
     "description": "Grants permission to cancel pending subscription requests for products that require subscription verification",
     "accessLevel": "Write",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
     "dependentActions": []
   },
   "createagreementrequest": {
@@ -868,6 +880,16 @@
     ],
     "dependentActions": []
   },
+  "getagreementapproval": {
+    "name": "GetAgreementApproval",
+    "description": "Grants permission to view the details of an agreement approval",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
+    "dependentActions": []
+  },
   "getagreementapprovalrequest": {
     "name": "GetAgreementApprovalRequest",
     "description": "Grants permission to view the details of incoming subscription requests (for providers who provide products that require subscription verification)",
@@ -884,6 +906,16 @@
     "conditionKeys": [
       "aws-marketplace:AgreementType",
       "aws-marketplace:PartyType"
+    ],
+    "dependentActions": []
+  },
+  "getagreementcontacts": {
+    "name": "GetAgreementContacts",
+    "description": "Grants permission to get the contacts associated with an agreement",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
     ],
     "dependentActions": []
   },
@@ -913,7 +945,29 @@
     "description": "Grants permission to view the details of subscription requests for data products that require subscription verification",
     "accessLevel": "Read",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
+    "dependentActions": []
+  },
+  "getagreementrequestapprovalplans": {
+    "name": "GetAgreementRequestApprovalPlans",
+    "description": "Grants permission to view the approval plans for an agreement request",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
+    "dependentActions": []
+  },
+  "getagreementrequestterms": {
+    "name": "GetAgreementRequestTerms",
+    "description": "Grants permission to view the terms of an agreement request",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
     "dependentActions": []
   },
   "getagreementterms": {
@@ -941,6 +995,14 @@
   "listagreementapprovalrequests": {
     "name": "ListAgreementApprovalRequests",
     "description": "Grants permission to list incoming subscription requests (for providers who provide products that require subscription verification)",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listagreementapprovals": {
+    "name": "ListAgreementApprovals",
+    "description": "Grants permission to list agreement approvals",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1016,6 +1078,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "rejectagreementapproval": {
+    "name": "RejectAgreementApproval",
+    "description": "Grants permission to reject an agreement approval",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
+    ],
+    "dependentActions": []
+  },
   "rejectagreementapprovalrequest": {
     "name": "RejectAgreementApprovalRequest",
     "description": "Grants permission to decline an incoming subscription requests (for providers who provide products that require subscription verification)",
@@ -1076,6 +1148,16 @@
     "conditionKeys": [
       "aws-marketplace:AgreementType",
       "aws-marketplace:PartyType"
+    ],
+    "dependentActions": []
+  },
+  "startagreementapprovals": {
+    "name": "StartAgreementApprovals",
+    "description": "Grants permission to initiate tasks that request approvals for an agreement. Callers must also have the aws-marketplace:AcceptAgreementRequest permission",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws-marketplace:AgreementType"
     ],
     "dependentActions": []
   },

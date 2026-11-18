@@ -1,35 +1,4 @@
 {
-  "injectapierror": {
-    "name": "InjectApiError",
-    "description": "Grants permission to temporarily inject errors for target API requests",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [
-      "kinesis:FisActionId",
-      "kinesis:FisInjectPercentage",
-      "kinesis:FisTargetArns"
-    ],
-    "dependentActions": []
-  },
-  "addtagstostream": {
-    "name": "AddTagsToStream",
-    "description": "Grants permission to add or update tags for the specified Amazon Kinesis stream. Each stream can have up to 50 tags",
-    "accessLevel": "Tagging, Write",
-    "resourceTypes": [
-      {
-        "name": "stream",
-        "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
-        "dependentActions": []
-      }
-    ],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "associatestreamswithchannel": {
     "name": "AssociateStreamsWithChannel",
     "description": "Grants permission to associate a stream with a channel",
@@ -55,13 +24,114 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "createchannel": {
-    "name": "CreateChannel",
-    "description": "Grants permission to create a channel that delivers data from a selected single stream to a destination",
+  "associatestreamswithqueue": {
+    "name": "AssociateStreamsWithQueue",
+    "description": "Grants permission to associate the specified stream with a queue when the queue is created",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "stream",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "injectapierror": {
+    "name": "InjectApiError",
+    "description": "Grants permission to temporarily inject errors for target API requests",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "kinesis:FisActionId",
+      "kinesis:FisInjectPercentage",
+      "kinesis:FisTargetArns"
+    ],
+    "dependentActions": []
+  },
+  "acknowledgedeadletterqueuerecords": {
+    "name": "AcknowledgeDeadLetterQueueRecords",
+    "description": "Grants permission to acknowledge one or more dead-letter records received from the specified queue so the queue does not deliver them again",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "acknowledgequeuerecords": {
+    "name": "AcknowledgeQueueRecords",
+    "description": "Grants permission to acknowledge one or more data records received from the specified queue so the queue does not deliver them again",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "addtagstostream": {
+    "name": "AddTagsToStream",
+    "description": "Grants permission to add or update tags for the specified Amazon Kinesis stream. Each stream can have up to 50 tags",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "stream",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createchannel": {
+    "name": "CreateChannel",
+    "description": "Grants permission to create a channel that delivers data from a selected single stream to a destination",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
         "name": "channel",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createqueue": {
+    "name": "CreateQueue",
+    "description": "Grants permission to create a queue",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
@@ -127,13 +197,38 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletequeue": {
+    "name": "DeleteQueue",
+    "description": "Grants permission to delete the specified queue",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteresourcepolicy": {
     "name": "DeleteResourcePolicy",
-    "description": "Grants permission to delete a resource policy associated with a specified stream or consumer",
+    "description": "Grants permission to delete a resource policy associated with a specified stream, consumer, or queue",
     "accessLevel": "Write",
     "resourceTypes": [
       {
         "name": "consumer",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -216,6 +311,23 @@
     "description": "Grants permission to describe the shard limits and usage for the account",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describequeue": {
+    "name": "DescribeQueue",
+    "description": "Grants permission to describe the specified queue",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -305,11 +417,19 @@
   },
   "getresourcepolicy": {
     "name": "GetResourcePolicy",
-    "description": "Grants permission to get a resource policy associated with a specified stream or consumer",
+    "description": "Grants permission to get a resource policy associated with a specified stream, consumer, or queue",
     "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "consumer",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -365,6 +485,14 @@
   "listchannels": {
     "name": "ListChannels",
     "description": "Grants permission to list the channels in the account, optionally filtered by stream",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listqueues": {
+    "name": "ListQueues",
+    "description": "Grants permission to list the queues in the account, optionally filtered by stream",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -427,6 +555,14 @@
       },
       {
         "name": "consumer",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -515,7 +651,7 @@
   },
   "putresourcepolicy": {
     "name": "PutResourcePolicy",
-    "description": "Grants permission to attach a resource policy to a specified stream or consumer",
+    "description": "Grants permission to attach a resource policy to a specified stream, consumer, or queue",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -527,7 +663,49 @@
         "dependentActions": []
       },
       {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "stream",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "receivedeadletterqueuerecords": {
+    "name": "ReceiveDeadLetterQueueRecords",
+    "description": "Grants permission to receive one or more dead-letter records from the specified queue",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "receivequeuerecords": {
+    "name": "ReceiveQueueRecords",
+    "description": "Grants permission to receive one or more data records from the specified queue",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -568,6 +746,23 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "restoredeadletterqueuerecords": {
+    "name": "RestoreDeadLetterQueueRecords",
+    "description": "Grants permission to restore one or more dead-letter records in the specified queue to the normal receive path",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
       }
@@ -681,6 +876,16 @@
         "dependentActions": []
       },
       {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "stream",
         "required": true,
         "conditionKeys": [
@@ -710,6 +915,15 @@
       },
       {
         "name": "consumer",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
@@ -755,6 +969,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updatedeadletterqueuerecordsvisibility": {
+    "name": "UpdateDeadLetterQueueRecordsVisibility",
+    "description": "Grants permission to change the visibility timeout of one or more dead-letter records received from the specified queue",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "updatemaxrecordsize": {
     "name": "UpdateMaxRecordSize",
     "description": "Grants permission to update the maximum record size for a Kinesis data stream",
@@ -762,6 +993,40 @@
     "resourceTypes": [
       {
         "name": "stream",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatequeue": {
+    "name": "UpdateQueue",
+    "description": "Grants permission to update the attributes of the specified queue",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatequeuerecordsvisibility": {
+    "name": "UpdateQueueRecordsVisibility",
+    "description": "Grants permission to change the visibility timeout of one or more data records received from the specified queue",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "queue",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"

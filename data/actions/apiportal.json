@@ -1,0 +1,954 @@
+{
+  "associatemanagedapis": {
+    "name": "AssociateManagedApis",
+    "description": "Grants permission to associate managed APIs with a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createmanagedapi": {
+    "name": "CreateManagedApi",
+    "description": "Grants permission to create a managed API from a discovered API",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ManagedApi",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createportal": {
+    "name": "CreatePortal",
+    "description": "Grants permission to create a portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createportalpreview": {
+    "name": "CreatePortalPreview",
+    "description": "Grants permission to create a preview of a portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createproduct": {
+    "name": "CreateProduct",
+    "description": "Grants permission to create a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createproductapipage": {
+    "name": "CreateProductApiPage",
+    "description": "Grants permission to create an API reference page in a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductApiPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createproductpage": {
+    "name": "CreateProductPage",
+    "description": "Grants permission to create a documentation page in a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletediscoveryconfiguration": {
+    "name": "DeleteDiscoveryConfiguration",
+    "description": "Grants permission to delete the API discovery configuration for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletemanagedapi": {
+    "name": "DeleteManagedApi",
+    "description": "Grants permission to delete a managed API",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ManagedApi",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteorganizationdiscoveryconfiguration": {
+    "name": "DeleteOrganizationDiscoveryConfiguration",
+    "description": "Grants permission to delete the API discovery configuration for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteportal": {
+    "name": "DeletePortal",
+    "description": "Grants permission to delete a portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproduct": {
+    "name": "DeleteProduct",
+    "description": "Grants permission to delete a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproductapipage": {
+    "name": "DeleteProductApiPage",
+    "description": "Grants permission to delete an API reference page from a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductApiPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproductpage": {
+    "name": "DeleteProductPage",
+    "description": "Grants permission to delete a documentation page from a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproductsharingpolicy": {
+    "name": "DeleteProductSharingPolicy",
+    "description": "Grants permission to delete the sharing policy of a product",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "ProductSharingPolicy",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociatemanagedapis": {
+    "name": "DisassociateManagedApis",
+    "description": "Grants permission to disassociate managed APIs from a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getapiinventoryitem": {
+    "name": "GetApiInventoryItem",
+    "description": "Grants permission to retrieve details of a discovered API in the API inventory",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdiscoveryconfiguration": {
+    "name": "GetDiscoveryConfiguration",
+    "description": "Grants permission to retrieve the API discovery configuration for an account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getmanagedapi": {
+    "name": "GetManagedApi",
+    "description": "Grants permission to retrieve a managed API",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ManagedApi",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getorganizationdiscoveryconfiguration": {
+    "name": "GetOrganizationDiscoveryConfiguration",
+    "description": "Grants permission to retrieve the API discovery configuration for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getportal": {
+    "name": "GetPortal",
+    "description": "Grants permission to retrieve a portal",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproduct": {
+    "name": "GetProduct",
+    "description": "Grants permission to retrieve a product",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproductapipage": {
+    "name": "GetProductApiPage",
+    "description": "Grants permission to retrieve an API reference page in a product",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ProductApiPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproductpage": {
+    "name": "GetProductPage",
+    "description": "Grants permission to retrieve a documentation page in a product",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ProductPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproductsharingpolicy": {
+    "name": "GetProductSharingPolicy",
+    "description": "Grants permission to retrieve the sharing policy of a product",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ProductSharingPolicy",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listapiinventoryitems": {
+    "name": "ListApiInventoryItems",
+    "description": "Grants permission to list discovered APIs in the API inventory",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdiscoverystatuses": {
+    "name": "ListDiscoveryStatuses",
+    "description": "Grants permission to list API discovery statuses",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listmanagedapievents": {
+    "name": "ListManagedApiEvents",
+    "description": "Grants permission to list API security events for a managed API",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "ManagedApi",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listmanagedapis": {
+    "name": "ListManagedApis",
+    "description": "Grants permission to list managed APIs",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listportals": {
+    "name": "ListPortals",
+    "description": "Grants permission to list portals",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproductapipages": {
+    "name": "ListProductApiPages",
+    "description": "Grants permission to list the API reference pages in a product",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproductpages": {
+    "name": "ListProductPages",
+    "description": "Grants permission to list the documentation pages in a product",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproducts": {
+    "name": "ListProducts",
+    "description": "Grants permission to list products",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list the tags for an API Portal resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ManagedApi",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Portal",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Product",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductApiPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductSharingPolicy",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putdiscoveryconfiguration": {
+    "name": "PutDiscoveryConfiguration",
+    "description": "Grants permission to create or update the API discovery configuration for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putorganizationdiscoveryconfiguration": {
+    "name": "PutOrganizationDiscoveryConfiguration",
+    "description": "Grants permission to create or update the API discovery configuration for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putproductsharingpolicy": {
+    "name": "PutProductSharingPolicy",
+    "description": "Grants permission to create or update the sharing policy of a product",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "ProductSharingPolicy",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startdiscovery": {
+    "name": "StartDiscovery",
+    "description": "Grants permission to start API discovery for a discovery configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stopdiscovery": {
+    "name": "StopDiscovery",
+    "description": "Grants permission to stop API discovery for a discovery configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to add tags to an API Portal resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ManagedApi",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Portal",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Product",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductApiPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductSharingPolicy",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from an API Portal resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ManagedApi",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Portal",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Product",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductApiPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductPage",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "ProductSharingPolicy",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateportal": {
+    "name": "UpdatePortal",
+    "description": "Grants permission to update a portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateportalpublishstatus": {
+    "name": "UpdatePortalPublishStatus",
+    "description": "Grants permission to publish or unpublish a portal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Portal",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproduct": {
+    "name": "UpdateProduct",
+    "description": "Grants permission to update a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproductapipage": {
+    "name": "UpdateProductApiPage",
+    "description": "Grants permission to update an API reference page in a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductApiPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproductpage": {
+    "name": "UpdateProductPage",
+    "description": "Grants permission to update a documentation page in a product",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ProductPage",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

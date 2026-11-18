@@ -1,0 +1,9 @@
+{
+  "space": {
+    "key": "space",
+    "arn": "arn:${Partition}:osm:${Region}:${Account}:space/${SpaceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

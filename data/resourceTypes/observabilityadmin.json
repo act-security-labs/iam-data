@@ -1,4 +1,11 @@
 {
+  "connector": {
+    "key": "connector",
+    "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:connector/${ConnectorProvider}/${ConnectorId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "dataset-integration": {
     "key": "dataset-integration",
     "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}",
@@ -23,6 +30,13 @@
   "s3tableintegration": {
     "key": "s3tableintegration",
     "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:s3tableintegration/${S3TableIntegrationIdentifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "telemetry-enrichment": {
+    "key": "telemetry-enrichment",
+    "arn": "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-enrichments/${TelemetryEnrichmentId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

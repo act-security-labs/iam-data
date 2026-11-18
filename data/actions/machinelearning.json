@@ -376,7 +376,7 @@
     "accessLevel": "Read",
     "resourceTypes": [
       {
-        "name": "datasource",
+        "name": "evaluation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

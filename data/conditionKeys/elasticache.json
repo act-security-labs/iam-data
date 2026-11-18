@@ -69,6 +69,11 @@
     "description": "Filters access by the engineVersion parameter present in creation or cluster modification requests",
     "type": "String"
   },
+  "elasticache:integrationtype": {
+    "key": "elasticache:IntegrationType",
+    "description": "Filters access by the Integrations.IntegrationType parameter in the CreateServerlessCache request",
+    "type": "String"
+  },
   "elasticache:kmskeyid": {
     "key": "elasticache:KmsKeyId",
     "description": "Filters access by the Key ID of the KMS key",

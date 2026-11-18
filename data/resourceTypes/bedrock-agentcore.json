@@ -6,6 +6,10 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "agent-insight-store": {
+    "key": "agent-insight-store",
+    "arn": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:agent-insight-store/${AgentInsightStoreId}"
+  },
   "apikeycredentialprovider": {
     "key": "apikeycredentialprovider",
     "arn": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/apikeycredentialprovider/${Name}",

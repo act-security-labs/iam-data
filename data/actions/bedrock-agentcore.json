@@ -1553,6 +1553,29 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getagentinsight": {
+    "name": "GetAgentInsight",
+    "description": "Grants permission to get details of an agent insight",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getagentinsightstore": {
+    "name": "GetAgentInsightStore",
+    "description": "Grants permission to get details of an agent insight store",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "agent-insight-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getagentruntime": {
     "name": "GetAgentRuntime",
     "description": "Grants permission to get details of an agent runtime",
@@ -2694,6 +2717,22 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listagentinsightstores": {
+    "name": "ListAgentInsightStores",
+    "description": "Grants permission to list agent insight stores",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listagentinsights": {
+    "name": "ListAgentInsights",
+    "description": "Grants permission to list agent insights",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -4007,6 +4046,29 @@
     "resourceTypes": [
       {
         "name": "ab-test",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateagentinsight": {
+    "name": "UpdateAgentInsight",
+    "description": "Grants permission to update an agent insight",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateagentinsightstore": {
+    "name": "UpdateAgentInsightStore",
+    "description": "Grants permission to update an agent insight store",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agent-insight-store",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

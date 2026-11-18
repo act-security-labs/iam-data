@@ -452,6 +452,29 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getevent": {
+    "name": "GetEvent",
+    "description": "Grants permission to retrieve the full details of a single event detected for a WebACL, including its summary, event actors, tracking timeline",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "webacl",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "geteventactor": {
+    "name": "GetEventActor",
+    "description": "Grants permission to retrieve the full details of a single event actor, including its latest observed attributes, associated events, and attribute history",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getipset": {
     "name": "GetIPSet",
     "description": "Grants permission to retrieve details about an IPSet",
@@ -731,6 +754,37 @@
     "description": "Grants permission to retrieve an array of managed rule groups that are available for you to use",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listeventactors": {
+    "name": "ListEventActors",
+    "description": "Grants permission to retrieve a list of event actor summaries for your account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listevents": {
+    "name": "ListEvents",
+    "description": "Grants permission to retrieve a list of event summaries for the web ACLs in your account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listeventsbywebacl": {
+    "name": "ListEventsByWebACL",
+    "description": "Grants permission to retrieve a list of event summaries for a specific WebACL",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "webacl",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

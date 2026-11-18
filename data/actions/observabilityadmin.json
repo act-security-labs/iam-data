@@ -19,7 +19,26 @@
       "observabilityadmin:CentralizationDestinationRegion",
       "observabilityadmin:CentralizationRuleName",
       "observabilityadmin:CentralizationSourceId",
+      "observabilityadmin:CentralizationSourceOrganizationalUnitId",
       "observabilityadmin:CentralizationSourceRegions"
+    ],
+    "dependentActions": []
+  },
+  "createconnector": {
+    "name": "CreateConnector",
+    "description": "Grants permission to create a connector to a third-party cloud provider",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
     ],
     "dependentActions": []
   },
@@ -133,6 +152,21 @@
     ],
     "dependentActions": []
   },
+  "deleteconnector": {
+    "name": "DeleteConnector",
+    "description": "Grants permission to delete a connector and its telemetry manifest",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletedatasetintegration": {
     "name": "DeleteDatasetIntegration",
     "description": "Grants permission to delete the specified dataset integration for the account",
@@ -223,6 +257,51 @@
     "conditionKeys": [
       "observabilityadmin:CentralizationRuleName"
     ],
+    "dependentActions": []
+  },
+  "getconnector": {
+    "name": "GetConnector",
+    "description": "Grants permission to retrieve the details of a connector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getconnectortelemetrymanifest": {
+    "name": "GetConnectorTelemetryManifest",
+    "description": "Grants permission to retrieve the telemetry manifest of a connector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getconnectortelemetrysetup": {
+    "name": "GetConnectorTelemetrySetup",
+    "description": "Grants permission to generate the setup artifacts for the telemetry manifest of a connector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "getdatasetintegration": {
@@ -324,9 +403,32 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getthirdpartytelemetryenrichment": {
+    "name": "GetThirdPartyTelemetryEnrichment",
+    "description": "Grants permission to retrieve a third-party telemetry enrichment, including its status and source configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "telemetry-enrichment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listcentralizationrulesfororganization": {
     "name": "ListCentralizationRulesForOrganization",
     "description": "Grants permission to list the centralization rules for the organization",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listconnectors": {
+    "name": "ListConnectors",
+    "description": "Grants permission to list the connectors for the account",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -360,6 +462,21 @@
     ],
     "dependentActions": []
   },
+  "listresourcesbyconnector": {
+    "name": "ListResourcesByConnector",
+    "description": "Grants permission to list the resources in a third-party cloud provider that a connector can access",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "lists3tableintegrations": {
     "name": "ListS3TableIntegrations",
     "description": "Grants permission to list s3 table integrations for the account",
@@ -373,6 +490,12 @@
     "description": "Grants permission to list the tags for the specified resource",
     "accessLevel": "List",
     "resourceTypes": [
+      {
+        "name": "connector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "dataset-integration",
         "required": false,
@@ -393,6 +516,12 @@
       },
       {
         "name": "s3tableintegration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "telemetry-enrichment",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -437,6 +566,31 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listthirdpartytelemetryenrichments": {
+    "name": "ListThirdPartyTelemetryEnrichments",
+    "description": "Grants permission to list the third-party telemetry enrichments for the account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putconnectortelemetrymanifest": {
+    "name": "PutConnectorTelemetryManifest",
+    "description": "Grants permission to create or replace the telemetry manifest of a connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "connector",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "observabilityadmin:AzureTelemetryRegion"
+    ],
+    "dependentActions": []
+  },
   "starttelemetryenrichment": {
     "name": "StartTelemetryEnrichment",
     "description": "Grants permission to enable the Resource tags for telemetry feature for the account",
@@ -465,6 +619,39 @@
     ],
     "dependentActions": []
   },
+  "starttelemetrypipelinerefresh": {
+    "name": "StartTelemetryPipelineRefresh",
+    "description": "Grants permission to start a refresh of an external-cloud telemetry pipeline",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "telemetry-pipeline",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startthirdpartytelemetryenrichment": {
+    "name": "StartThirdPartyTelemetryEnrichment",
+    "description": "Grants permission to start a third-party telemetry enrichment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "telemetry-enrichment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "stoptelemetryenrichment": {
     "name": "StopTelemetryEnrichment",
     "description": "Grants permission to disable the Resource tags for telemetry feature for the account",
@@ -489,11 +676,32 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "stopthirdpartytelemetryenrichment": {
+    "name": "StopThirdPartyTelemetryEnrichment",
+    "description": "Grants permission to stop a third-party telemetry enrichment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "telemetry-enrichment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to add or update the specified tags for the specified resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "connector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "dataset-integration",
         "required": false,
@@ -514,6 +722,12 @@
       },
       {
         "name": "s3tableintegration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "telemetry-enrichment",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -551,6 +765,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "connector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "dataset-integration",
         "required": false,
         "conditionKeys": [],
@@ -570,6 +790,12 @@
       },
       {
         "name": "s3tableintegration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "telemetry-enrichment",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -610,6 +836,7 @@
       "observabilityadmin:CentralizationDestinationRegion",
       "observabilityadmin:CentralizationRuleName",
       "observabilityadmin:CentralizationSourceId",
+      "observabilityadmin:CentralizationSourceOrganizationalUnitId",
       "observabilityadmin:CentralizationSourceRegions"
     ],
     "dependentActions": []

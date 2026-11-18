@@ -20,6 +20,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "queue": {
+    "key": "queue",
+    "arn": "arn:${Partition}:kinesis:${Region}:${Account}:queue/${QueueId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "stream": {
     "key": "stream",
     "arn": "arn:${Partition}:kinesis:${Region}:${Account}:stream/${StreamName}",

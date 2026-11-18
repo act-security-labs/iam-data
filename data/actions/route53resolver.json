@@ -653,6 +653,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listfirewallruledomains": {
+    "name": "ListFirewallRuleDomains",
+    "description": "Grants permission to list the domains of a specified Firewall rule in a Firewall rule group, including the domains suggested for an AutoAllowlist Firewall rule",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "firewall-rule-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listfirewallrulegroupassociations": {
     "name": "ListFirewallRuleGroupAssociations",
     "description": "Grants permission to list information about associations between Amazon VPCs and Firewall rule group",

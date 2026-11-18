@@ -127,6 +127,30 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getpartner": {
+    "name": "GetPartner",
+    "description": "Grants permission to invoke GetPartner on AWS Transform",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpartnerbyaccountid": {
+    "name": "GetPartnerByAccountId",
+    "description": "Grants permission to invoke GetPartnerByAccountId on AWS Transform",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpartnerbyarn": {
+    "name": "GetPartnerByArn",
+    "description": "Grants permission to invoke GetPartnerByArn on AWS Transform",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getwebappurl": {
     "name": "GetWebAppUrl",
     "description": "Grants permission to invoke GetWebAppUrl on AWS Transform",
@@ -186,6 +210,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putpartner": {
+    "name": "PutPartner",
+    "description": "Grants permission to invoke PutPartner on AWS Transform",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "rejectconnector": {
     "name": "RejectConnector",
     "description": "Grants permission to invoke RejectConnector on AWS Transform",
@@ -200,6 +232,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "removepartner": {
+    "name": "RemovePartner",
+    "description": "Grants permission to invoke RemovePartner on AWS Transform",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

@@ -3,6 +3,7 @@
   "name": "Networking and content delivery",
   "services": [
     "apigateway",
+    "apiportal",
     "appmesh",
     "appmesh-preview",
     "cloudfront",

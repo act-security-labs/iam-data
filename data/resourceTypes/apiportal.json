@@ -1,0 +1,58 @@
+{
+  "discoveryconfiguration": {
+    "key": "DiscoveryConfiguration",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:discoveryconfiguration",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "managedapi": {
+    "key": "ManagedApi",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:managedapis/${ManagedApiId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "organizationdiscoveryconfiguration": {
+    "key": "OrganizationDiscoveryConfiguration",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:orgdiscoveryconfiguration",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "portal": {
+    "key": "Portal",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:portals/${PortalId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "product": {
+    "key": "Product",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "productapipage": {
+    "key": "ProductApiPage",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/apipages/${ProductApiPageId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "productpage": {
+    "key": "ProductPage",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/productpages/${ProductPageId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "productsharingpolicy": {
+    "key": "ProductSharingPolicy",
+    "arn": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/sharingpolicy",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

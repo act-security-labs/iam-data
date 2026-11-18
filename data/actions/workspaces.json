@@ -67,6 +67,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getworkspaceproactiverecommendation": {
+    "name": "GetWorkspaceProactiveRecommendation",
+    "description": "Grants permission to get a proactive fleet health recommendation",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "invokeonboardingagent": {
     "name": "InvokeOnboardingAgent",
     "description": "Grants permission to use WorkSpaces Advisor for WorkSpace onboarding",
@@ -102,6 +110,22 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listworkspaceproactiverecommendationresources": {
+    "name": "ListWorkspaceProactiveRecommendationResources",
+    "description": "Grants permission to list the WorkSpaces affected by a proactive fleet health recommendation",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listworkspaceproactiverecommendations": {
+    "name": "ListWorkspaceProactiveRecommendations",
+    "description": "Grants permission to list proactive fleet health recommendations",
+    "accessLevel": "Read",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
