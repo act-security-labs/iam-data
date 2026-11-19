@@ -161,6 +161,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "approvetimeoff": {
+    "name": "ApproveTimeOff",
+    "description": "Grants permission to approve a time off request for a user in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
   "associateanalyticsdataset": {
     "name": "AssociateAnalyticsDataSet",
     "description": "Grants permission to grant access and to associate a dataset with the specified AWS account",
@@ -745,6 +763,24 @@
       "connect:ExpressionValue",
       "connect:InstanceId",
       "connect:PrimaryAttribute/${PrimaryAttribute}"
+    ],
+    "dependentActions": []
+  },
+  "canceltimeoff": {
+    "name": "CancelTimeOff",
+    "description": "Grants permission to cancel a time off request for a user in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
     ],
     "dependentActions": []
   },
@@ -1466,6 +1502,24 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createtimeoff": {
+    "name": "CreateTimeOff",
+    "description": "Grants permission to create a time off request for a user in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
     "dependentActions": []
   },
   "createtrafficdistributiongroup": {
@@ -3718,6 +3772,24 @@
     ],
     "dependentActions": []
   },
+  "gettimeoff": {
+    "name": "GetTimeOff",
+    "description": "Grants permission to get a time off request for a user in an Amazon Connect instance",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
   "gettrafficdistribution": {
     "name": "GetTrafficDistribution",
     "description": "Grants permission to read traffic distribution for a traffic distribution group",
@@ -5183,6 +5255,24 @@
     ],
     "dependentActions": []
   },
+  "puttimeoffbalance": {
+    "name": "PutTimeOffBalance",
+    "description": "Grants permission to set the time off balance of a user for a shift activity in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
   "putuserstatus": {
     "name": "PutUserStatus",
     "description": "Grants permission to switch User Status in an Amazon Connect instance",
@@ -5200,6 +5290,24 @@
         "conditionKeys": [],
         "dependentActions": []
       },
+      {
+        "name": "user",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "connect:InstanceId"
+    ],
+    "dependentActions": []
+  },
+  "rejecttimeoff": {
+    "name": "RejectTimeOff",
+    "description": "Grants permission to reject a time off request for a user in an Amazon Connect instance",
+    "accessLevel": "Write",
+    "resourceTypes": [
       {
         "name": "user",
         "required": true,

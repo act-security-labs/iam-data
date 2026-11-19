@@ -14,6 +14,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "allowvendedlogdeliveryforresource": {
+    "name": "AllowVendedLogDeliveryForResource",
+    "description": "Grants permission to configure vended log delivery for an Aurora DSQL cluster",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "Cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "injecterror": {
     "name": "InjectError",
     "description": "Grants permission to inject errors in targeted clusters",

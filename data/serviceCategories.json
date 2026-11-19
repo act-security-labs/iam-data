@@ -1,6 +1,7 @@
 {
   "a2c": "containers",
   "a4b": "business-applications",
+  "abuse": "security-identity-and-compliance",
   "access-analyzer": "security-identity-and-compliance",
   "account": "management-and-governance",
   "account-access": "security-identity-and-compliance",
@@ -60,6 +61,7 @@
   "batch": "compute",
   "bcm-dashboards": "cloud-financial-management",
   "bcm-data-exports": "cloud-financial-management",
+  "bcm-data-hub": "cloud-financial-management",
   "bcm-pricing-calculator": "cloud-financial-management",
   "bcm-recommended-actions": "cloud-financial-management",
   "bedrock": "machine-learning-and-ai",

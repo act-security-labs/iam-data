@@ -13,6 +13,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "core-network-endpoint": {
+    "key": "core-network-endpoint",
+    "arn": "arn:${Partition}:route53globalresolver::${Account}:core-network-endpoint/${Id}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "dns-view": {
     "key": "dns-view",
     "arn": "arn:${Partition}:route53globalresolver::${Account}:dns-view/${Id}",

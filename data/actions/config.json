@@ -1,4 +1,21 @@
 {
+  "allowvendedlogdeliveryforresource": {
+    "name": "AllowVendedLogDeliveryForResource",
+    "description": "Grants permission to configure vended log delivery for Config",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "ConfigurationRecorder",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "config:ConfigurationRecorderServicePrincipal"
+    ],
+    "dependentActions": []
+  },
   "associateresourcetypes": {
     "name": "AssociateResourceTypes",
     "description": "Grants permission to add all specified resource types to the RecordingGroup of configuration recorder and includes those resource types when recording",

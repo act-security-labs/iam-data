@@ -1,6 +1,7 @@
 [
   "a2c",
   "a4b",
+  "abuse",
   "access-analyzer",
   "account",
   "account-access",
@@ -60,6 +61,7 @@
   "batch",
   "bcm-dashboards",
   "bcm-data-exports",
+  "bcm-data-hub",
   "bcm-pricing-calculator",
   "bcm-recommended-actions",
   "bedrock",

@@ -211,6 +211,7 @@
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys",
+      "events:EventSourceType",
       "events:source"
     ],
     "dependentActions": []
@@ -1314,6 +1315,7 @@
       }
     ],
     "conditionKeys": [
+      "events:EventSourceType",
       "events:source"
     ],
     "dependentActions": []

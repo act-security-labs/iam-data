@@ -265,7 +265,13 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "iam:EnableIdentityCenterAssociation",
+      "iam:EnableIdentityPropagation",
+      "iam:RequestIdentityCenterInstanceArn",
+      "iam:RequestIdentityProviderIssuers",
+      "iam:ResourceIdentityCenterInstanceArn",
+      "iam:ResourceIdentityProviderIssuers"
     ],
     "dependentActions": []
   },
@@ -336,7 +342,13 @@
     ],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
-      "aws:TagKeys"
+      "aws:TagKeys",
+      "iam:EnableIdentityCenterAssociation",
+      "iam:EnableIdentityPropagation",
+      "iam:RequestIdentityCenterInstanceArn",
+      "iam:RequestIdentityProviderIssuers",
+      "iam:ResourceIdentityCenterInstanceArn",
+      "iam:ResourceIdentityProviderIssuers"
     ],
     "dependentActions": []
   },
@@ -1242,6 +1254,22 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getrequestauthorizationdetails": {
+    "name": "GetRequestAuthorizationDetails",
+    "description": "Grants permission to retrieve authorization details for a specific access denied request",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getrequestauthorizationpolicy": {
+    "name": "GetRequestAuthorizationPolicy",
+    "description": "Grants permission to retrieve a policy evaluated for a specific access denied request",
+    "accessLevel": "Read",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -2589,7 +2617,14 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "iam:EnableIdentityCenterAssociation",
+      "iam:EnableIdentityPropagation",
+      "iam:RequestIdentityCenterInstanceArn",
+      "iam:RequestIdentityProviderIssuers",
+      "iam:ResourceIdentityCenterInstanceArn",
+      "iam:ResourceIdentityProviderIssuers"
+    ],
     "dependentActions": []
   },
   "updatesshpublickey": {

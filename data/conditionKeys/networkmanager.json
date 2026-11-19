@@ -14,6 +14,11 @@
     "description": "Filters access by the tag keys that are passed in the request",
     "type": "ArrayOfString"
   },
+  "networkmanager:managedby": {
+    "key": "networkmanager:ManagedBy",
+    "description": "Filters access by the service that manages the network scope",
+    "type": "String"
+  },
   "networkmanager:cgwarn": {
     "key": "networkmanager:cgwArn",
     "description": "Filters access by which customer gateways can be associated or disassociated",
@@ -36,7 +41,7 @@
   },
   "networkmanager:tgwarn": {
     "key": "networkmanager:tgwArn",
-    "description": "Filters access by which transit gateways can be registered, deregistered, or peered",
+    "description": "Filters access by which transit gateways can be registered, deregistered, or peered, or associated with or disassociated from a context store",
     "type": "ARN"
   },
   "networkmanager:tgwconnectpeerarn": {

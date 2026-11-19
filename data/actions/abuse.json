@@ -1,0 +1,26 @@
+{
+  "createabusereport": {
+    "name": "CreateAbuseReport",
+    "description": "Grants permission to submit a new abuse report",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getabusereportstatus": {
+    "name": "GetAbuseReportStatus",
+    "description": "Grants permission to retrieve the status of an abuse report",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listabusereportstatuses": {
+    "name": "ListAbuseReportStatuses",
+    "description": "Grants permission to list abuse report statuses",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

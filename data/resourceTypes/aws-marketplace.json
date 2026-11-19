@@ -1,7 +1,10 @@
 {
   "assessment": {
     "key": "Assessment",
-    "arn": "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}"
+    "arn": "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "changeset": {
     "key": "ChangeSet",
@@ -52,6 +55,15 @@
     "arn": "arn:${Partition}:aws-marketplace:${Region}:${Account}:verification-type/${VerificationType}/verification-evidence/${ResourceId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "deploymentconfiguration": {
+    "key": "DeploymentConfiguration",
+    "arn": "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentConfiguration:catalogs/${CatalogName}/products/${ProductId}/delivery-options/${DeliveryOptionType}",
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
     ]
   },
   "deploymentparameter": {

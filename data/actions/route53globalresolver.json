@@ -84,6 +84,24 @@
     ],
     "dependentActions": []
   },
+  "createcorenetworkendpoint": {
+    "name": "CreateCoreNetworkEndpoint",
+    "description": "Grants permission to create a core network endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "core-network-endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "creatednsview": {
     "name": "CreateDNSView",
     "description": "Grants permission to create a dns view",
@@ -181,6 +199,21 @@
     "resourceTypes": [
       {
         "name": "access-token",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletecorenetworkendpoint": {
+    "name": "DeleteCoreNetworkEndpoint",
+    "description": "Grants permission to delete a core network endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "core-network-endpoint",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -310,6 +343,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getcorenetworkendpoint": {
+    "name": "GetCoreNetworkEndpoint",
+    "description": "Grants permission to get a core network endpoint",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "core-network-endpoint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdnsview": {
     "name": "GetDNSView",
     "description": "Grants permission to get a dns view",
@@ -410,6 +458,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listcorenetworkendpoints": {
+    "name": "ListCoreNetworkEndpoints",
+    "description": "Grants permission to list core network endpoints",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdnsviews": {
     "name": "ListDNSViews",
     "description": "Grants permission to list dns views",
@@ -480,6 +536,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listshareddnsviews": {
+    "name": "ListSharedDNSViews",
+    "description": "Grants permission to list shared dns views",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listtagsforresource": {
     "name": "ListTagsForResource",
     "description": "Grants permission to list tags for a resource",
@@ -493,6 +557,12 @@
       },
       {
         "name": "access-token",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "core-network-endpoint",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -537,6 +607,12 @@
         "dependentActions": []
       },
       {
+        "name": "core-network-endpoint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "dns-view",
         "required": false,
         "conditionKeys": [],
@@ -574,6 +650,12 @@
       },
       {
         "name": "access-token",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "core-network-endpoint",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -624,6 +706,21 @@
     "resourceTypes": [
       {
         "name": "access-token",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecorenetworkendpoint": {
+    "name": "UpdateCoreNetworkEndpoint",
+    "description": "Grants permission to update a core network endpoint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "core-network-endpoint",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

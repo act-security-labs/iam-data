@@ -35,6 +35,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "associatecontextstore": {
+    "name": "AssociateContextStore",
+    "description": "Grants permission to associate a transit gateway with a context store",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "networkmanager:tgwArn"
+    ],
+    "dependentActions": []
+  },
   "associatecustomergateway": {
     "name": "AssociateCustomerGateway",
     "description": "Grants permission to associate a customer gateway to a device",
@@ -165,6 +183,24 @@
   "createconnection": {
     "name": "CreateConnection",
     "description": "Grants permission to create a new connection",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-network",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createcontextstore": {
+    "name": "CreateContextStore",
+    "description": "Grants permission to create a context store in a global network",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -432,6 +468,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletecontextstore": {
+    "name": "DeleteContextStore",
+    "description": "Grants permission to delete a context store",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "deletecorenetwork": {
     "name": "DeleteCoreNetwork",
     "description": "Grants permission to delete a core network",
@@ -632,6 +685,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disassociatecontextstore": {
+    "name": "DisassociateContextStore",
+    "description": "Grants permission to disassociate a transit gateway from a context store",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "networkmanager:tgwArn"
+    ],
+    "dependentActions": []
+  },
   "disassociatecustomergateway": {
     "name": "DisassociateCustomerGateway",
     "description": "Grants permission to disassociate a customer gateway from a device",
@@ -772,6 +843,58 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getcontextstore": {
+    "name": "GetContextStore",
+    "description": "Grants permission to retrieve a context store",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getcontextstoreassociation": {
+    "name": "GetContextStoreAssociation",
+    "description": "Grants permission to retrieve the association between a context store and a transit gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "networkmanager:tgwArn"
+    ],
+    "dependentActions": []
+  },
+  "getcontextversion": {
+    "name": "GetContextVersion",
+    "description": "Grants permission to retrieve the current context version of a context store",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "getcorenetwork": {
@@ -1209,6 +1332,72 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listcontextchanges": {
+    "name": "ListContextChanges",
+    "description": "Grants permission to list the resource context changes in a context store since a context version",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listcontextstoreassociations": {
+    "name": "ListContextStoreAssociations",
+    "description": "Grants permission to list the transit gateway associations of a context store",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listcontextstores": {
+    "name": "ListContextStores",
+    "description": "Grants permission to list context stores",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcontexts": {
+    "name": "ListContexts",
+    "description": "Grants permission to list the resource contexts in a context store",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "listcorenetworkpolicyversions": {
     "name": "ListCoreNetworkPolicyVersions",
     "description": "Grants permission to list core network policy versions",
@@ -1302,6 +1491,12 @@
         "dependentActions": []
       },
       {
+        "name": "context-store",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "core-network",
         "required": false,
         "conditionKeys": [],
@@ -1321,6 +1516,12 @@
       },
       {
         "name": "link",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "network-scope",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1509,6 +1710,12 @@
         "dependentActions": []
       },
       {
+        "name": "context-store",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "core-network",
         "required": false,
         "conditionKeys": [],
@@ -1528,6 +1735,12 @@
       },
       {
         "name": "link",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "network-scope",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1576,6 +1789,12 @@
         "dependentActions": []
       },
       {
+        "name": "context-store",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "core-network",
         "required": false,
         "conditionKeys": [],
@@ -1595,6 +1814,12 @@
       },
       {
         "name": "link",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "network-scope",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1651,6 +1876,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecontextstore": {
+    "name": "UpdateContextStore",
+    "description": "Grants permission to update a context store",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "context-store",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
     "dependentActions": []
   },
   "updatecorenetwork": {

@@ -1,4 +1,24 @@
 {
+  "aws:requesttag/${tagkey}": {
+    "key": "aws:RequestTag/${TagKey}",
+    "description": "Filters access by the tag key-value pairs in the request filter",
+    "type": "String"
+  },
+  "aws:tagkeys": {
+    "key": "aws:TagKeys",
+    "description": "Filters access by the tag keys in the request filter",
+    "type": "ArrayOfString"
+  },
+  "health:tagchannel": {
+    "key": "health:TagChannel",
+    "description": "Filters access by the channel (API or EventBridge) for which tag keys are configured",
+    "type": "ArrayOfString"
+  },
+  "health:tagkeys": {
+    "key": "health:TagKeys",
+    "description": "Filters access by the resource tag keys being configured",
+    "type": "ArrayOfString"
+  },
   "health:eventtypecode": {
     "key": "health:eventTypeCode",
     "description": "Filters access by event type",

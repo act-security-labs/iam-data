@@ -478,6 +478,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletedurableexecution": {
+    "name": "DeleteDurableExecution",
+    "description": "Grants permission to delete an AWS Lambda durable execution",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "durable execution",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteeventsourcemapping": {
     "name": "DeleteEventSourceMapping",
     "description": "Grants permission to delete an AWS Lambda event source mapping",
@@ -1724,6 +1739,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "pausedurableexecution": {
+    "name": "PauseDurableExecution",
+    "description": "Grants permission to pause an AWS Lambda durable execution",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "durable execution",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "publishlayerversion": {
     "name": "PublishLayerVersion",
     "description": "Grants permission to create an AWS Lambda layer",
@@ -1942,6 +1972,21 @@
     "resourceTypes": [
       {
         "name": "runtime",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "resumedurableexecution": {
+    "name": "ResumeDurableExecution",
+    "description": "Grants permission to resume a paused AWS Lambda durable execution",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "durable execution",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

@@ -286,6 +286,12 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "question-set",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -307,6 +313,12 @@
       },
       {
         "name": "feed",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "question-set",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []

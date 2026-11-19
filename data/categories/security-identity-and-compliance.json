@@ -2,6 +2,7 @@
   "key": "security-identity-and-compliance",
   "name": "Security, identity, and compliance",
   "services": [
+    "abuse",
     "access-analyzer",
     "account-access",
     "acm",

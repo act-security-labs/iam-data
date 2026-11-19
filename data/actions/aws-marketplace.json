@@ -227,9 +227,15 @@
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
-    "description": "Grants permission to list tags for a deployment parameter resource",
+    "description": "Grants permission to list tags for a deployment parameter or deployment configuration resource",
     "accessLevel": "Read",
     "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "DeploymentParameter",
         "required": false,
@@ -289,6 +295,24 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startassessment": {
+    "name": "StartAssessment",
+    "description": "Grants permission to star a new assessment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Entity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "startchangeset": {
@@ -366,9 +390,19 @@
   },
   "tagresource": {
     "name": "TagResource",
-    "description": "Grants permission to tag a deployment parameter resource",
+    "description": "Grants permission to tag a deployment parameter or deployment configuration resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
       {
         "name": "DeploymentParameter",
         "required": true,
@@ -389,9 +423,18 @@
   },
   "untagresource": {
     "name": "UntagResource",
-    "description": "Grants permission to untag a deployment parameter resource",
+    "description": "Grants permission to untag a deployment parameter or deployment configuration resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
       {
         "name": "DeploymentParameter",
         "required": true,
@@ -423,6 +466,63 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getdeploymentconfiguration": {
+    "name": "GetDeploymentConfiguration",
+    "description": "Grants permission to get the active deployment configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getdeploymentconfigurationjob": {
+    "name": "GetDeploymentConfigurationJob",
+    "description": "Grants permission to get a deployment configuration job",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listdeploymentconfigurationjobs": {
+    "name": "ListDeploymentConfigurationJobs",
+    "description": "Grants permission to list deployment configuration jobs",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "putdeploymentparameter": {
     "name": "PutDeploymentParameter",
     "description": "Grants permission to create or update a deployment parameter resource",
@@ -430,6 +530,29 @@
     "resourceTypes": [
       {
         "name": "DeploymentParameter",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "startdeploymentconfigurationjob": {
+    "name": "StartDeploymentConfigurationJob",
+    "description": "Grants permission to start a job that publishes a deployment configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
         "required": true,
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",

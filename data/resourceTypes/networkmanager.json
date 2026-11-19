@@ -20,6 +20,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "context-store": {
+    "key": "context-store",
+    "arn": "arn:${Partition}:networkmanager::${Account}:context-store/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "core-network": {
     "key": "core-network",
     "arn": "arn:${Partition}:networkmanager::${Account}:core-network/${ResourceId}",
@@ -46,6 +53,14 @@
     "arn": "arn:${Partition}:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "network-scope": {
+    "key": "network-scope",
+    "arn": "arn:${Partition}:networkmanager:${Region}:${Account}:network-scope/${ResourceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "networkmanager:ManagedBy"
     ]
   },
   "peering": {

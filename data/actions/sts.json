@@ -47,6 +47,8 @@
       }
     ],
     "conditionKeys": [
+      "sts:RequestContext/${ContextKey}",
+      "sts:RequestContextProviders",
       "sts:SourceIdentity"
     ],
     "dependentActions": []
@@ -78,6 +80,8 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys",
       "saml:aud",
+      "sts:RequestContext/${ContextKey}",
+      "sts:RequestContextProviders",
       "sts:TransitiveTagKeys"
     ],
     "dependentActions": []
@@ -109,6 +113,8 @@
       "saml:sub",
       "saml:sub_type",
       "sts:ExternalId",
+      "sts:RequestContext/${ContextKey}",
+      "sts:RequestContextProviders",
       "sts:RoleSessionName",
       "sts:SourceIdentity",
       "sts:TransitiveTagKeys",
@@ -165,6 +171,7 @@
       "saml:surname",
       "saml:uid",
       "saml:x500UniqueIdentifier",
+      "sts:RequestContextProviders",
       "sts:RoleSessionName",
       "sts:SourceIdentity",
       "sts:TransitiveTagKeys"
@@ -237,6 +244,7 @@
       "graph.facebook.com:id",
       "idcs-${OciUniqueIdentifier}.identity.oraclecloud.com:rpst_id",
       "oidc.circleci.com/org/${OrgId}:oidc.circleci.com/project-id",
+      "sts:RequestContextProviders",
       "sts:RoleAuthorizedByIdp",
       "sts:RoleSessionName",
       "sts:SourceIdentity",
@@ -362,7 +370,9 @@
       "aws:TagKeys",
       "sts:DurationSeconds",
       "sts:IdentityTokenAudience",
-      "sts:SigningAlgorithm"
+      "sts:IdentityTokenScope",
+      "sts:SigningAlgorithm",
+      "sts:SubjectMode"
     ],
     "dependentActions": []
   }

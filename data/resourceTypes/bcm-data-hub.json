@@ -1,0 +1,9 @@
+{
+  "dataset": {
+    "key": "dataset",
+    "arn": "arn:${Partition}:bcm-data-hub:${Region}:${Account}:dataset/${Identifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}
