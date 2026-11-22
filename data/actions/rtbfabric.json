@@ -239,6 +239,22 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getavailablemodule": {
+    "name": "GetAvailableModule",
+    "description": "Grants permission to retrieve information about a module that you can attach",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getavailablemoduleversion": {
+    "name": "GetAvailableModuleVersion",
+    "description": "Grants permission to retrieve information about a version of a module that you can attach",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getcertificateassociation": {
     "name": "GetCertificateAssociation",
     "description": "Grants permission to retrieve details of a certificate association with a responder gateway",
@@ -362,6 +378,30 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getupdate": {
+    "name": "GetUpdate",
+    "description": "Grants permission to retrieve information about an update",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listavailablemoduleversions": {
+    "name": "ListAvailableModuleVersions",
+    "description": "Grants permission to list the versions of a module that you can attach",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listavailablemodules": {
+    "name": "ListAvailableModules",
+    "description": "Grants permission to list the modules that you can attach",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listcertificateassociations": {
     "name": "ListCertificateAssociations",
     "description": "Grants permission to list certificate associations for a responder gateway",
@@ -454,6 +494,29 @@
       {
         "name": "ResponderGateway",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listupdates": {
+    "name": "ListUpdates",
+    "description": "Grants permission to list the updates on a gateway",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putlinkflows": {
+    "name": "PutLinkFlows",
+    "description": "Grants permission to replace the flow configuration of a link",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Link",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }

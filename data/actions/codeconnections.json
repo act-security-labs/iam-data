@@ -303,6 +303,21 @@
     ],
     "dependentActions": []
   },
+  "getresourcepolicy": {
+    "name": "GetResourcePolicy",
+    "description": "Grants permission to retrieve the resource policy configured for a Connection",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Connection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getresourcesyncstatus": {
     "name": "GetResourceSyncStatus",
     "description": "Grants permission to get the latest sync status for a resource (cfn stack or other resources)",

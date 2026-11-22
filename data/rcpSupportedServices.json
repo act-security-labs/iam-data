@@ -1,4 +1,6 @@
 [
+  "acm-pca",
+  "agent-registry",
   "amplify",
   "aoss",
   "app-integrations",
@@ -9,6 +11,8 @@
   "auditmanager",
   "autoscaling",
   "autoscaling-plans",
+  "backup",
+  "bedrock-agentcore",
   "budgets",
   "cleanrooms",
   "clouddirectory",

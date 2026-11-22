@@ -35,6 +35,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteorganizationenrollmentconfiguration": {
+    "name": "DeleteOrganizationEnrollmentConfiguration",
+    "description": "Grants permission to delete organization enrollment configurations",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disassociateaccounts": {
     "name": "DisassociateAccounts",
     "description": "Grants permission to disassociate member accounts from the management account",
@@ -132,6 +140,22 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listorganizationenrollmentconfigurations": {
+    "name": "ListOrganizationEnrollmentConfigurations",
+    "description": "Grants permission to list organization enrollment configurations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listorganizationalunits": {
+    "name": "ListOrganizationalUnits",
+    "description": "Grants permission to list organizational units and their effective organization rule modes",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listrecommendedactionsummaries": {
     "name": "ListRecommendedActionSummaries",
     "description": "Grants permission to list recommended action summaries",
@@ -162,6 +186,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putorganizationenrollmentconfiguration": {
+    "name": "PutOrganizationEnrollmentConfiguration",
+    "description": "Grants permission to create or update an organization enrollment configurations",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

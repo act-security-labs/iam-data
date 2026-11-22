@@ -5,5 +5,12 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "voice": {
+    "key": "voice",
+    "arn": "arn:${Partition}:polly:${Region}:${Account}:voice/${VoiceId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }

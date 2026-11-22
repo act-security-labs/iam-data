@@ -18,5 +18,10 @@
     "key": "config:ConfigurationRecorderServicePrincipal",
     "description": "Filters access by service principal of the configuration recorder",
     "type": "String"
+  },
+  "config:conformancepacktype": {
+    "key": "config:ConformancePackType",
+    "description": "Filters access by the type of the conformance pack",
+    "type": "String"
   }
 }

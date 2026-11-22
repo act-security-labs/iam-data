@@ -454,6 +454,11 @@
     "description": "Filters access by the audience that is passed in the request",
     "type": "ArrayOfString"
   },
+  "sts:identitytokenscope": {
+    "key": "sts:IdentityTokenScope",
+    "description": "Filters access by the scopes that are passed in the request",
+    "type": "ArrayOfString"
+  },
   "sts:requestcontext/${contextkey}": {
     "key": "sts:RequestContext/${ContextKey}",
     "description": "Filters access by the session context key-value pairs embedded in the signed context assertion retrieved from a trusted context provider",
@@ -482,6 +487,11 @@
   "sts:sourceidentity": {
     "key": "sts:SourceIdentity",
     "description": "Filters access by the source identity that is passed in the request",
+    "type": "String"
+  },
+  "sts:subjectmode": {
+    "key": "sts:SubjectMode",
+    "description": "Filters access by the subject mode that is passed in the request",
     "type": "String"
   },
   "sts:taskpolicyarn": {

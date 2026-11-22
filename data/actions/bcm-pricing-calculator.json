@@ -209,6 +209,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getusagelinesestimatedcost": {
+    "name": "GetUsageLinesEstimatedCost",
+    "description": "Grants permission to estimate cost for usage lines per the requested rate type",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getworkloadestimate": {
     "name": "GetWorkloadEstimate",
     "description": "Grants permission to retrieve information associated with a workload estimate",

@@ -35,6 +35,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putwebhookevents": {
+    "name": "PutWebhookEvents",
+    "description": "Grants permission to send events from webhook event sources to Amazon EventBridge",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "events:Metadata/${MetadataKey}",
+      "events:SystemMetadata/ContentType"
+    ],
+    "dependentActions": []
+  },
   "retrieveconnectioncredentials": {
     "name": "RetrieveConnectionCredentials",
     "description": "Grants permission to retrieve credentials from a connection",
@@ -1061,6 +1079,21 @@
     "resourceTypes": [
       {
         "name": "event-busv2",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "rotatewebhookcredentials": {
+    "name": "RotateWebhookCredentials",
+    "description": "Grants permission to rotate credentials of a webhook event source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "event-sourcev2",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

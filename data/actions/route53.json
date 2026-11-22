@@ -67,13 +67,22 @@
   },
   "changetagsforresource": {
     "name": "ChangeTagsForResource",
-    "description": "Grants permission to add, edit, or delete tags for a health check or a hosted zone",
+    "description": "Grants permission to add, edit, or delete tags for a health check, health check source, or hosted zone",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
         "name": "healthcheck",
         "required": true,
         "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "healthchecksource",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "dependentActions": []
       },
       {
@@ -100,6 +109,24 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createhealthchecksource": {
+    "name": "CreateHealthCheckSource",
+    "description": "Grants permission to create a health check source, which Route 53 uses to run health checks against private endpoints in a VPC",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "healthchecksource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createhostedzone": {
@@ -271,6 +298,21 @@
     "resourceTypes": [
       {
         "name": "healthcheck",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletehealthchecksource": {
+    "name": "DeleteHealthCheckSource",
+    "description": "Grants permission to delete a health check source",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "healthchecksource",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -548,6 +590,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "gethealthchecksource": {
+    "name": "GetHealthCheckSource",
+    "description": "Grants permission to get information about a specified health check source",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "healthchecksource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "gethealthcheckstatus": {
     "name": "GetHealthCheckStatus",
     "description": "Grants permission to get the status of a specified health check",
@@ -566,6 +623,21 @@
   "gethostedzone": {
     "name": "GetHostedZone",
     "description": "Grants permission to get information about a specified hosted zone including the four name servers that Route 53 assigned to the hosted zone",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gethostedzonechangebatch": {
+    "name": "GetHostedZoneChangeBatch",
+    "description": "Grants permission to get the records that a specified change batch created, updated, or deleted in a hosted zone, and to list the changes to a specified record in a hosted zone's change history",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -738,11 +810,49 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listhealthchecksources": {
+    "name": "ListHealthCheckSources",
+    "description": "Grants permission to get a list of the health check sources that are associated with the current AWS account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listhealthchecks": {
     "name": "ListHealthChecks",
     "description": "Grants permission to get a list of the health checks that are associated with the current AWS account",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listhealthchecksbysource": {
+    "name": "ListHealthChecksBySource",
+    "description": "Grants permission to get a list of the health checks that use a specified health check source",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "healthchecksource",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listhostedzonechangebatches": {
+    "name": "ListHostedZoneChangeBatches",
+    "description": "Grants permission to get a list of the change batches in a specified hosted zone's change history",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -835,11 +945,17 @@
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
-    "description": "Grants permission to list tags for one health check or hosted zone",
+    "description": "Grants permission to list tags for one health check, health check source, or hosted zone",
     "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "healthcheck",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "healthchecksource",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -856,11 +972,17 @@
   },
   "listtagsforresources": {
     "name": "ListTagsForResources",
-    "description": "Grants permission to list tags for up to 10 health checks or hosted zones",
+    "description": "Grants permission to list tags for up to 10 health checks, health check sources, or hosted zones",
     "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "healthcheck",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "healthchecksource",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -992,6 +1114,21 @@
   "updatehostedzonefeatures": {
     "name": "UpdateHostedZoneFeatures",
     "description": "Grants permission to update features for a specified hosted zone",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "hostedzone",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatehostedzonetier": {
+    "name": "UpdateHostedZoneTier",
+    "description": "Grants permission to update the tier for a specified hosted zone",
     "accessLevel": "Write",
     "resourceTypes": [
       {

@@ -1,4 +1,11 @@
 {
+  "publisher": {
+    "key": "publisher",
+    "arn": "arn:${Partition}:agent-registry::${Account}:publisher/${PublisherType}/${PublisherValue}/${PublisherId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "registry": {
     "key": "registry",
     "arn": "arn:${Partition}:agent-registry:${Region}:${Account}:registry/${RegistryId}",

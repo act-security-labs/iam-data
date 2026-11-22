@@ -39,6 +39,16 @@
     "description": "Filters access based on the delegation request owner",
     "type": "ARN"
   },
+  "iam:enableidentitycenterassociation": {
+    "key": "iam:EnableIdentityCenterAssociation",
+    "description": "Filters access by whether the request associates an IAM Identity Center instance with an IAM identity provider (true) or removes the association (false)",
+    "type": "Bool"
+  },
+  "iam:enableidentitypropagation": {
+    "key": "iam:EnableIdentityPropagation",
+    "description": "Filters access by whether the request adds (true) or removes (false) a context provider on an IAM identity provider",
+    "type": "Bool"
+  },
   "iam:fido-fips-140-2-certification": {
     "key": "iam:FIDO-FIPS-140-2-certification",
     "description": "Filters access by the MFA device FIPS-140-2 validation certification level at the time of registration of a FIDO security key",
@@ -83,6 +93,26 @@
     "key": "iam:RegisterSecurityKey",
     "description": "Filters access by the current state of MFA device enablement",
     "type": "String"
+  },
+  "iam:requestidentitycenterinstancearn": {
+    "key": "iam:RequestIdentityCenterInstanceArn",
+    "description": "Filters access by the ARN of the IAM Identity Center instance in the request",
+    "type": "ARN"
+  },
+  "iam:requestidentityproviderissuers": {
+    "key": "iam:RequestIdentityProviderIssuers",
+    "description": "Filters access by the issuer values in the request: the issuer URL without the https:// prefix for OIDC providers, or a lowercase hex SHA-384 hash of each signing certificate's DER SubjectPublicKeyInfo for SAML providers",
+    "type": "ArrayOfString"
+  },
+  "iam:resourceidentitycenterinstancearn": {
+    "key": "iam:ResourceIdentityCenterInstanceArn",
+    "description": "Filters access by the ARN of the IAM Identity Center instance associated with the existing IAM identity provider in the request",
+    "type": "ARN"
+  },
+  "iam:resourceidentityproviderissuers": {
+    "key": "iam:ResourceIdentityProviderIssuers",
+    "description": "Filters access by the issuer values of the existing IAM identity provider in the request: the issuer URL without the https:// prefix for OIDC providers, or a lowercase hex SHA-384 hash of each signing certificate's DER SubjectPublicKeyInfo for SAML providers",
+    "type": "ArrayOfString"
   },
   "iam:resourcetag/${tagkey}": {
     "key": "iam:ResourceTag/${TagKey}",

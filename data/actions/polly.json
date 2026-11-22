@@ -1,4 +1,24 @@
 {
+  "createvoice": {
+    "name": "CreateVoice",
+    "description": "Grants permission to create a custom voice from your recordings",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "voice",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "deletelexicon": {
     "name": "DeleteLexicon",
     "description": "Grants permission to delete the specified pronunciation lexicon stored in an AWS Region",
@@ -6,6 +26,23 @@
     "resourceTypes": [
       {
         "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletevoice": {
+    "name": "DeleteVoice",
+    "description": "Grants permission to delete a custom voice",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "voice",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -49,6 +86,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getvoice": {
+    "name": "GetVoice",
+    "description": "Grants permission to get information about a custom voice",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "voice",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listlexicons": {
     "name": "ListLexicons",
     "description": "Grants permission to list the pronunciation lexicons stored in an AWS Region",
@@ -72,6 +126,14 @@
     "resourceTypes": [
       {
         "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "voice",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -114,6 +176,14 @@
           "aws:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
+      },
+      {
+        "name": "voice",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -126,6 +196,14 @@
     "resourceTypes": [
       {
         "name": "lexicon",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "voice",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -148,6 +226,14 @@
           "aws:ResourceTag/${TagKey}"
         ],
         "dependentActions": []
+      },
+      {
+        "name": "voice",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -160,6 +246,14 @@
     "resourceTypes": [
       {
         "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "voice",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -180,6 +274,14 @@
     "resourceTypes": [
       {
         "name": "lexicon",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "voice",
         "required": true,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"

@@ -24,6 +24,11 @@
     "description": "Filters access by the ARN of the event buses that can be associated with an endpoint to CreateEndpoint and UpdateEndpoint actions",
     "type": "ArrayOfARN"
   },
+  "events:eventsourcetype": {
+    "key": "events:EventSourceType",
+    "description": "Filters access by the type of event source (aws.service, aws.partner, or webhook) to CreateEventSource and UpdateEventSource actions",
+    "type": "String"
+  },
   "events:managedby": {
     "key": "events:ManagedBy",
     "description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule",
@@ -31,7 +36,7 @@
   },
   "events:metadata/${metadatakey}": {
     "key": "events:Metadata/${MetadataKey}",
-    "description": "Filters access by a metadata key-value pair on the published event to PutRawEvents actions, or by the exact-match values declared for that key in a subscriber's metadata filter to CreateSubscriber and UpdateSubscriber actions",
+    "description": "Filters access by a metadata key-value pair on the published event to PutRawEvents and PutWebhookEvents actions, or by the exact-match values declared for that key in a subscriber's metadata filter to CreateSubscriber and UpdateSubscriber actions",
     "type": "ArrayOfString"
   },
   "events:metadata/${metadatakey}/matcher": {
@@ -56,7 +61,7 @@
   },
   "events:systemmetadata/contenttype": {
     "key": "events:SystemMetadata/ContentType",
-    "description": "Filters access by the content type declared on an event for PutRawEvents and for forwarded events authorized as PutEvents",
+    "description": "Filters access by the content type declared on an event for PutRawEvents, PutWebhookEvents, and for forwarded events authorized as PutEvents",
     "type": "String"
   },
   "events:targetarn": {

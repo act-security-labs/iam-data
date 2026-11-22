@@ -598,12 +598,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "sequenceStore",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -664,12 +658,6 @@
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
-      },
-      {
-        "name": "sequenceStore",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -682,12 +670,6 @@
     "resourceTypes": [
       {
         "name": "reference",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "referenceStore",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -718,12 +700,6 @@
     "resourceTypes": [
       {
         "name": "reference",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "referenceStore",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

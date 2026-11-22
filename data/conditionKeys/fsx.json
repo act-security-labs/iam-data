@@ -39,6 +39,11 @@
     "description": "Filters access by the containing parent volume for mutating volume operations",
     "type": "String"
   },
+  "fsx:snapmirrorsourcepath": {
+    "key": "fsx:SnapmirrorSourcePath",
+    "description": "Filters access by the source path of a SnapMirror relationship",
+    "type": "String"
+  },
   "fsx:storagevirtualmachineid": {
     "key": "fsx:StorageVirtualMachineId",
     "description": "Filters access by the containing storage virtual machine for a volume for mutating volume operations",

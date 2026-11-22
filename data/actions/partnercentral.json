@@ -266,6 +266,23 @@
     ],
     "dependentActions": []
   },
+  "batchcreatecampaignasset": {
+    "name": "BatchCreateCampaignAsset",
+    "description": "Grants permission to create assets in a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "cancelbenefitapplication": {
     "name": "CancelBenefitApplication",
     "description": "Grants permission to cancel benefit applications in AWS Partner Central",
@@ -321,6 +338,25 @@
       "aws:ResourceTag/${TagKey}",
       "partnercentral:AllowAwsEngagement",
       "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "cancelchannelcontract": {
+    "name": "CancelChannelContract",
+    "description": "Grants permission to cancel channel contracts in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ChannelContract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog",
+      "partnercentral:ChannelContractType"
     ],
     "dependentActions": []
   },
@@ -445,6 +481,46 @@
     ],
     "dependentActions": []
   },
+  "createcampaign": {
+    "name": "CreateCampaign",
+    "description": "Grants permission to create a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "createchannelcontract": {
+    "name": "CreateChannelContract",
+    "description": "Grants permission to create channel contracts in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "ChannelContract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "partnercentral:Catalog",
+      "partnercentral:ChannelContractType"
+    ],
+    "dependentActions": []
+  },
   "createchannelhandshake": {
     "name": "CreateChannelHandshake",
     "description": "Grants permission to create channel handshakes in AWS Partner Central",
@@ -478,6 +554,44 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "createcustomeraccount": {
+    "name": "CreateCustomerAccount",
+    "description": "Grants permission to create customer account mappings on AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccount",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "createdatasubscription": {
+    "name": "CreateDataSubscription",
+    "description": "Grants permission to create a data subscription that delivers a partner analytics dataset to the caller's own AWS account in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
       "partnercentral:Catalog"
     ],
     "dependentActions": []
@@ -675,6 +789,33 @@
     ],
     "dependentActions": []
   },
+  "createsocialconnectionauthorizationurl": {
+    "name": "CreateSocialConnectionAuthorizationUrl",
+    "description": "Grants permission to create an authorization URL for connecting a social media account in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deactivatecampaignasset": {
+    "name": "DeactivateCampaignAsset",
+    "description": "Grants permission to deactivate an asset of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "deletebusinessplanattachment": {
     "name": "DeleteBusinessPlanAttachment",
     "description": "Grants permission to delete business plan attachments in AWS Partner Central",
@@ -711,6 +852,75 @@
       "partnercentral:AllowAwsEngagement",
       "partnercentral:BusinessPlanItemStage",
       "partnercentral:BusinessPlanItemType",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletecampaign": {
+    "name": "DeleteCampaign",
+    "description": "Grants permission to delete a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletecampaignasset": {
+    "name": "DeleteCampaignAsset",
+    "description": "Grants permission to delete an asset of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletecustomeraccount": {
+    "name": "DeleteCustomerAccount",
+    "description": "Grants permission to delete customer account mappings on AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccount",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletedatasubscription": {
+    "name": "DeleteDataSubscription",
+    "description": "Grants permission to delete a data subscription in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "partnercentral:Catalog"
     ],
     "dependentActions": []
@@ -758,6 +968,23 @@
     "resourceTypes": [
       {
         "name": "resource-snapshot-job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "deletesocialconnection": {
+    "name": "DeleteSocialConnection",
+    "description": "Grants permission to delete a connected social media account in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "SocialConnection",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1060,6 +1287,103 @@
     ],
     "dependentActions": []
   },
+  "getcampaign": {
+    "name": "GetCampaign",
+    "description": "Grants permission to retrieve a marketing campaign in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcampaignasset": {
+    "name": "GetCampaignAsset",
+    "description": "Grants permission to retrieve an asset of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcampaignassetactivationtask": {
+    "name": "GetCampaignAssetActivationTask",
+    "description": "Grants permission to retrieve the asset activation task of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcampaignassetexporttask": {
+    "name": "GetCampaignAssetExportTask",
+    "description": "Grants permission to retrieve an asset export task of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcampaigntemplate": {
+    "name": "GetCampaignTemplate",
+    "description": "Grants permission to retrieve a marketing campaign template in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getchannelcontract": {
+    "name": "GetChannelContract",
+    "description": "Grants permission to retrieve channel contracts in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "ChannelContract",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "partnercentral:Catalog",
+      "partnercentral:ChannelContractType"
+    ],
+    "dependentActions": []
+  },
   "getconnection": {
     "name": "GetConnection",
     "description": "Grants permission to retrieve connection details in AWS Partner Central",
@@ -1100,6 +1424,85 @@
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcustomeraccount": {
+    "name": "GetCustomerAccount",
+    "description": "Grants permission to retrieve details of customer account mappings on AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccount",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcustomeraccountbulkjob": {
+    "name": "GetCustomerAccountBulkJob",
+    "description": "Grants permission to retrieve details of customer account bulk jobs on AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccountBulkJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcustomeraccountbulkjobreporturl": {
+    "name": "GetCustomerAccountBulkJobReportUrl",
+    "description": "Grants permission to retrieve the report download URL of customer account bulk jobs on AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccountBulkJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getcustomeraccountstatistics": {
+    "name": "GetCustomerAccountStatistics",
+    "description": "Grants permission to retrieve aggregate statistics for customer account mappings on AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getdatasubscription": {
+    "name": "GetDataSubscription",
+    "description": "Grants permission to retrieve details of a data subscription in AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
       "partnercentral:Catalog"
     ],
     "dependentActions": []
@@ -1179,6 +1582,23 @@
     "resourceTypes": [
       {
         "name": "Opportunity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "getopportunitybulkjobreporturl": {
+    "name": "GetOpportunityBulkJobReportUrl",
+    "description": "Grants permission to retrieve the report download URL of opportunity bulk jobs on AWS Partner Central",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "OpportunityBulkJob",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1660,6 +2080,44 @@
     ],
     "dependentActions": []
   },
+  "listcampaignassets": {
+    "name": "ListCampaignAssets",
+    "description": "Grants permission to list the assets of a marketing campaign in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listcampaigns": {
+    "name": "ListCampaigns",
+    "description": "Grants permission to list marketing campaigns in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listchannelcontracts": {
+    "name": "ListChannelContracts",
+    "description": "Grants permission to list channel contracts in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog",
+      "partnercentral:ChannelContractType"
+    ],
+    "dependentActions": []
+  },
   "listchannelhandshakes": {
     "name": "ListChannelHandshakes",
     "description": "Grants permission to list channel handshakes in AWS Partner Central",
@@ -1698,6 +2156,43 @@
     ],
     "dependentActions": []
   },
+  "listcustomeraccountbulkjobresults": {
+    "name": "ListCustomerAccountBulkJobResults",
+    "description": "Grants permission to list the per-row results of customer account bulk jobs on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccountBulkJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listcustomeraccountbulkjobs": {
+    "name": "ListCustomerAccountBulkJobs",
+    "description": "Grants permission to list customer account bulk jobs on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listdatasubscriptions": {
+    "name": "ListDataSubscriptions",
+    "description": "Grants permission to list data subscriptions in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "listengagementbyacceptinginvitationtasks": {
     "name": "ListEngagementByAcceptingInvitationTasks",
     "description": "Grants permission to listing engagements by accepting invitation tasks in AWS Partner\nCentral",
@@ -1711,6 +2206,16 @@
   "listengagementfromopportunitytasks": {
     "name": "ListEngagementFromOpportunityTasks",
     "description": "Grants permission to listing engagements from opportunity tasks in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listengagementgroups": {
+    "name": "ListEngagementGroups",
+    "description": "Grants permission to list engagement groups on AWS Partner Central",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -1802,6 +2307,33 @@
   "listopportunities": {
     "name": "ListOpportunities",
     "description": "Grants permission to list Opportunities on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listopportunitybulkjobresults": {
+    "name": "ListOpportunityBulkJobResults",
+    "description": "Grants permission to list the per-row results of opportunity bulk jobs on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "OpportunityBulkJob",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listopportunitybulkjobs": {
+    "name": "ListOpportunityBulkJobs",
+    "description": "Grants permission to list opportunity bulk jobs on AWS Partner Central",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -1930,6 +2462,16 @@
   "listrevenueattributions": {
     "name": "ListRevenueAttributions",
     "description": "Grants permission to list revenue attributions in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "listsocialconnections": {
+    "name": "ListSocialConnections",
+    "description": "Grants permission to list connected social media accounts in AWS Partner Central",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -2089,6 +2631,36 @@
     ],
     "dependentActions": []
   },
+  "searchcampaigntemplates": {
+    "name": "SearchCampaignTemplates",
+    "description": "Grants permission to search marketing campaign templates in AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "searchcustomeraccounts": {
+    "name": "SearchCustomerAccounts",
+    "description": "Grants permission to search customer account mappings on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "searchengagements": {
+    "name": "SearchEngagements",
+    "description": "Grants permission to search engagements on AWS Partner Central",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "searchopportunities": {
     "name": "SearchOpportunities",
     "description": "Grants permission to search Opportunities on AWS Partner Central",
@@ -2157,6 +2729,50 @@
     ],
     "dependentActions": []
   },
+  "startcampaignassetactivationtask": {
+    "name": "StartCampaignAssetActivationTask",
+    "description": "Grants permission to activate assets of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "startcampaignassetexporttask": {
+    "name": "StartCampaignAssetExportTask",
+    "description": "Grants permission to export the assets of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "startcustomeraccountbulkjob": {
+    "name": "StartCustomerAccountBulkJob",
+    "description": "Grants permission to start bulk jobs that create customer account mappings on AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "startengagementbyacceptinginvitationtask": {
     "name": "StartEngagementByAcceptingInvitationTask",
     "description": "Grants permission to initiate tasks that start Engagements on AWS Partner Central by accepting an Engagement Invitation",
@@ -2193,6 +2809,16 @@
       "aws:RequestTag/${TagKey}",
       "aws:ResourceTag/${TagKey}",
       "aws:TagKeys",
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "startopportunitybulkjob": {
+    "name": "StartOpportunityBulkJob",
+    "description": "Grants permission to start bulk jobs that create or update Opportunities from a file on AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
       "partnercentral:Catalog"
     ],
     "dependentActions": []
@@ -2405,7 +3031,31 @@
         "dependentActions": []
       },
       {
+        "name": "Campaign",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "ChannelContract",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "ChannelHandshake",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "CustomerAccount",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "DataSubscription",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -2481,7 +3131,31 @@
         "dependentActions": []
       },
       {
+        "name": "Campaign",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "ChannelContract",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "ChannelHandshake",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "CustomerAccount",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "DataSubscription",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -2598,11 +3272,62 @@
     ],
     "dependentActions": []
   },
+  "updatecampaign": {
+    "name": "UpdateCampaign",
+    "description": "Grants permission to update a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "updatecampaignasset": {
+    "name": "UpdateCampaignAsset",
+    "description": "Grants permission to update an asset of a marketing campaign in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Campaign",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
   "updateconnectionpreferences": {
     "name": "UpdateConnectionPreferences",
     "description": "Grants permission to update connection preferences in AWS Partner Central",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "updatecustomeraccount": {
+    "name": "UpdateCustomerAccount",
+    "description": "Grants permission to update customer account mappings on AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "CustomerAccount",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "partnercentral:Catalog"
     ],
@@ -2615,6 +3340,23 @@
     "resourceTypes": [
       {
         "name": "Engagement",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "partnercentral:Catalog"
+    ],
+    "dependentActions": []
+  },
+  "updatemarketplacerevenueshare": {
+    "name": "UpdateMarketplaceRevenueShare",
+    "description": "Grants permission to update marketplace revenue shares in AWS Partner Central",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "MarketplaceRevenueShare",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

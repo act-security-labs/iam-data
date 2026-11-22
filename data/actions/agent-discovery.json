@@ -1,0 +1,10 @@
+{
+  "searchpublicrecords": {
+    "name": "SearchPublicRecords",
+    "description": "Grants permission to search public agent registry records",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

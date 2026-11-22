@@ -52,6 +52,63 @@
     ],
     "dependentActions": []
   },
+  "createblueprint": {
+    "name": "CreateBlueprint",
+    "description": "Grants permission to create an Amazon Textract blueprint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "createblueprintversion": {
+    "name": "CreateBlueprintVersion",
+    "description": "Grants permission to create an Amazon Textract blueprint version",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createproject": {
+    "name": "CreateProject",
+    "description": "Grants permission to create an Amazon Textract project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "deleteadapter": {
     "name": "DeleteAdapter",
     "description": "Grants permission to delete an Amazon Textract adapter",
@@ -74,6 +131,36 @@
     "resourceTypes": [
       {
         "name": "adapterversion",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteblueprint": {
+    "name": "DeleteBlueprint",
+    "description": "Grants permission to delete an Amazon Textract blueprint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteproject": {
+    "name": "DeleteProject",
+    "description": "Grants permission to delete an Amazon Textract project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -120,11 +207,41 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getblueprint": {
+    "name": "GetBlueprint",
+    "description": "Grants permission to get an Amazon Textract blueprint",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdocumentanalysis": {
     "name": "GetDocumentAnalysis",
     "description": "Grants permission to return information about a document analysis job",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdocumentinsights": {
+    "name": "GetDocumentInsights",
+    "description": "Grants permission to return information about a document insights job",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -160,6 +277,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getproject": {
+    "name": "GetProject",
+    "description": "Grants permission to get an Amazon Textract project",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listadapterversions": {
     "name": "ListAdapterVersions",
     "description": "Grants permission to list Amazon Textract adapter versions",
@@ -173,6 +305,48 @@
     "description": "Grants permission to list Amazon Textract adapters",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listblueprints": {
+    "name": "ListBlueprints",
+    "description": "Grants permission to list Amazon Textract blueprints",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listprojects": {
+    "name": "ListProjects",
+    "description": "Grants permission to list Amazon Textract projects",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -192,6 +366,24 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "job",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -203,6 +395,36 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startdocumentinsights": {
+    "name": "StartDocumentInsights",
+    "description": "Grants permission to start an asynchronous job to extract insights from a document",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "job",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "startdocumenttextdetection": {
@@ -245,6 +467,24 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "job",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -269,6 +509,24 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "job",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [
@@ -283,6 +541,42 @@
     "resourceTypes": [
       {
         "name": "adapter",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateblueprint": {
+    "name": "UpdateBlueprint",
+    "description": "Grants permission to update an Amazon Textract blueprint",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproject": {
+    "name": "UpdateProject",
+    "description": "Grants permission to update an Amazon Textract project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "blueprint",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

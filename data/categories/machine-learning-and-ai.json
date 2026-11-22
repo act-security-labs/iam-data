@@ -2,6 +2,7 @@
   "key": "machine-learning-and-ai",
   "name": "Machine Learning (ML) and Artificial Intelligence (AI)",
   "services": [
+    "agent-discovery",
     "agent-registry",
     "aidevops",
     "aiops",

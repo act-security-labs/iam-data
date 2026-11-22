@@ -51,6 +51,7 @@
     "resourceTypes": [],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
     "dependentActions": []
@@ -62,6 +63,7 @@
     "resourceTypes": [],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
     "dependentActions": []
@@ -73,6 +75,7 @@
     "resourceTypes": [],
     "conditionKeys": [
       "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
     "dependentActions": []
@@ -153,7 +156,7 @@
   },
   "deregisterinstance": {
     "name": "DeregisterInstance",
-    "description": "Grants permission to delete the records and the health check, if any, that Amazon Route 53 created for the specified instance",
+    "description": "Grants permission to deregister an instance from a specified service",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -360,7 +363,7 @@
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
-    "description": "Grants permission to lists tags for the specified resource",
+    "description": "Grants permission to list tags for the specified resource",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -407,7 +410,7 @@
   },
   "updatehttpnamespace": {
     "name": "UpdateHttpNamespace",
-    "description": "Grants permission to update the settings for a HTTP namespace",
+    "description": "Grants permission to update the settings for an HTTP namespace",
     "accessLevel": "Write",
     "resourceTypes": [
       {

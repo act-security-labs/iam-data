@@ -227,18 +227,12 @@
   },
   "listtagsforresource": {
     "name": "ListTagsForResource",
-    "description": "Grants permission to list tags for a deployment parameter or deployment configuration resource",
+    "description": "Grants permission to list the tags on a data subscription owned by the calling account",
     "accessLevel": "Read",
     "resourceTypes": [
       {
-        "name": "DeploymentConfiguration",
-        "required": false,
-        "conditionKeys": [],
-        "dependentActions": []
-      },
-      {
-        "name": "DeploymentParameter",
-        "required": false,
+        "name": "DataSubscription",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -390,27 +384,13 @@
   },
   "tagresource": {
     "name": "TagResource",
-    "description": "Grants permission to tag a deployment parameter or deployment configuration resource",
+    "description": "Grants permission to add or overwrite tags on a data subscription owned by the calling account",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
-        "name": "DeploymentConfiguration",
+        "name": "DataSubscription",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
-        "dependentActions": []
-      },
-      {
-        "name": "DeploymentParameter",
-        "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -423,25 +403,13 @@
   },
   "untagresource": {
     "name": "UntagResource",
-    "description": "Grants permission to untag a deployment parameter or deployment configuration resource",
+    "description": "Grants permission to remove tags from a data subscription owned by the calling account",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
-        "name": "DeploymentConfiguration",
+        "name": "DataSubscription",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
-        "dependentActions": []
-      },
-      {
-        "name": "DeploymentParameter",
-        "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -659,6 +627,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listlistingattributes": {
+    "name": "ListListingAttributes",
+    "description": "Grants permission to list attributes of a listing",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Listing",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listprivatelistings": {
     "name": "ListPrivateListings",
     "description": "Grants permission to list private offers",
@@ -847,6 +830,58 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createdatasubscription": {
+    "name": "CreateDataSubscription",
+    "description": "Grants permission to create a data subscription that delivers a seller dataset to an S3 bucket in the caller's AWS account on a schedule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "deletedatasubscription": {
+    "name": "DeleteDataSubscription",
+    "description": "Grants permission to delete a data subscription owned by the calling account, stopping future deliveries",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getdatasubscription": {
+    "name": "GetDataSubscription",
+    "description": "Grants permission to retrieve the details and delivery progress of a data subscription owned by the calling account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DataSubscription",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "getsellerdashboard": {
     "name": "GetSellerDashboard",
     "description": "Grants permission to view a seller dashboard",
@@ -874,6 +909,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdatasubscriptions": {
+    "name": "ListDataSubscriptions",
+    "description": "Grants permission to list the data subscriptions owned by the calling account",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

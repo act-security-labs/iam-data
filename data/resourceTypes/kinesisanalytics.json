@@ -5,5 +5,12 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "snapshot": {
+    "key": "snapshot",
+    "arn": "arn:${Partition}:kinesisanalytics:${Region}:${Account}:snapshot/${SnapshotName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }

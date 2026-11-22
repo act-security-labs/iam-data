@@ -280,6 +280,24 @@
     ],
     "dependentActions": []
   },
+  "disassociatetablereplication": {
+    "name": "DisassociateTableReplication",
+    "description": "Grants permission to disassociate table replication on a table",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Table",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "s3tables:namespace",
+      "s3tables:tableName"
+    ],
+    "dependentActions": []
+  },
   "getnamespace": {
     "name": "GetNamespace",
     "description": "Grants permission to get a namespace",

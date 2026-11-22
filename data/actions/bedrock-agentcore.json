@@ -1095,6 +1095,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletedatasetgeneration": {
+    "name": "DeleteDatasetGeneration",
+    "description": "Grants permission to delete a dataset generation job record",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteevaluator": {
     "name": "DeleteEvaluator",
     "description": "Grants permission to delete an evaluator",
@@ -1798,6 +1813,21 @@
   "getdataset": {
     "name": "GetDataset",
     "description": "Grants permission to get details of a dataset",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdatasetgeneration": {
+    "name": "GetDatasetGeneration",
+    "description": "Grants permission to get details of a dataset generation job",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -2904,6 +2934,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listdatasetgenerations": {
+    "name": "ListDatasetGenerations",
+    "description": "Grants permission to list the dataset generation jobs of a dataset",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdatasetversions": {
     "name": "ListDatasetVersions",
     "description": "Grants permission to list versions of a dataset",
@@ -3645,6 +3690,21 @@
       },
       {
         "name": "code-interpreter-custom",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startdatasetgeneration": {
+    "name": "StartDatasetGeneration",
+    "description": "Grants permission to start a dataset generation job that adds examples to a dataset from agent traces",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "dataset",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

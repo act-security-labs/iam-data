@@ -433,6 +433,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "geteffectivecustompermissions": {
+    "name": "GetEffectiveCustomPermissions",
+    "description": "Grants permission to get the effective custom permissions for a principal",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getgroupmapping": {
     "name": "GetGroupMapping",
     "description": "Grants permission to use Amazon QuickSight, in Enterprise edition, to identify and display the Microsoft Active Directory (Microsoft Active Directory) directory groups that are mapped to roles in Amazon QuickSight",
@@ -886,6 +894,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "batchdeletepolicyassignmentbypolicy": {
+    "name": "BatchDeletePolicyAssignmentByPolicy",
+    "description": "Grants permission to remove a policy assignment from multiple principals",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "batchdeletetopicreviewedanswer": {
     "name": "BatchDeleteTopicReviewedAnswer",
     "description": "Grants permission to delete reviewed answers for a topic",
@@ -909,6 +938,27 @@
     "description": "Grants permission to describe the effective resource limits for users",
     "accessLevel": "Read",
     "resourceTypes": [
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchputpolicyassignmentbypolicy": {
+    "name": "BatchPutPolicyAssignmentByPolicy",
+    "description": "Grants permission to assign a policy to multiple principals",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "limitsProfile",
         "required": true,
@@ -1282,6 +1332,21 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "createknowledgebaserefreshschedule": {
+    "name": "CreateKnowledgeBaseRefreshSchedule",
+    "description": "Grants permission to create a refresh schedule for a knowledge base",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "knowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "createlimitsprofile": {
@@ -1850,6 +1915,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteknowledgebaserefreshschedule": {
+    "name": "DeleteKnowledgeBaseRefreshSchedule",
+    "description": "Grants permission to delete a refresh schedule for a knowledge base",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "knowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletelimitsprofile": {
     "name": "DeleteLimitsProfile",
     "description": "Grants permission to delete a limits profile",
@@ -1896,6 +1976,27 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "deletepolicyassignment": {
+    "name": "DeletePolicyAssignment",
+    "description": "Grants permission to remove a policy assignment from a principal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deleterefreshschedule": {
@@ -2730,6 +2831,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describeknowledgebaserefreshschedule": {
+    "name": "DescribeKnowledgeBaseRefreshSchedule",
+    "description": "Grants permission to describe a refresh schedule for a knowledge base",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "knowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describelimitsprofile": {
     "name": "DescribeLimitsProfile",
     "description": "Grants permission to describe a limits profile",
@@ -3177,6 +3293,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getpolicyassignment": {
+    "name": "GetPolicyAssignment",
+    "description": "Grants permission to describe the policy assigned to a principal for a policy type",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getsessionembedurl": {
     "name": "GetSessionEmbedUrl",
     "description": "Grants permission to get a URL to embed QuickSight console experience",
@@ -3522,6 +3659,21 @@
     ],
     "dependentActions": []
   },
+  "listknowledgebaserefreshschedules": {
+    "name": "ListKnowledgeBaseRefreshSchedules",
+    "description": "Grants permission to list all refresh schedules on a knowledge base",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "knowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listknowledgebases": {
     "name": "ListKnowledgeBases",
     "description": "Grants permission to list all knowledge bases in an account",
@@ -3562,6 +3714,27 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "listprincipalsforpolicy": {
+    "name": "ListPrincipalsForPolicy",
+    "description": "Grants permission to list the principals assigned to a policy",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "listrefreshschedules": {
@@ -3709,6 +3882,12 @@
       },
       {
         "name": "inboundConnector",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "knowledgeBase",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -3956,6 +4135,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "putpolicyassignment": {
+    "name": "PutPolicyAssignment",
+    "description": "Grants permission to assign a policy to a principal",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "custompermissions",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "limitsProfile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "registeruser": {
     "name": "RegisterUser",
     "description": "Grants permission to create a QuickSight user, whose identity is associated with the IAM identity/role specified in the request",
@@ -4139,14 +4339,7 @@
     "name": "SearchKnowledgeBases",
     "description": "Grants permission to search for a sub-set of knowledge bases",
     "accessLevel": "List",
-    "resourceTypes": [
-      {
-        "name": "knowledgeBase",
-        "required": true,
-        "conditionKeys": [],
-        "dependentActions": []
-      }
-    ],
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -4343,6 +4536,12 @@
         "dependentActions": []
       },
       {
+        "name": "knowledgeBase",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "namespace",
         "required": false,
         "conditionKeys": [],
@@ -4488,6 +4687,12 @@
       },
       {
         "name": "ingestion",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "knowledgeBase",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -5054,6 +5259,21 @@
     "name": "UpdateKnowledgeBasePermissions",
     "description": "Grants permission to update the resource policy of a knowledge base",
     "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "knowledgeBase",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateknowledgebaserefreshschedule": {
+    "name": "UpdateKnowledgeBaseRefreshSchedule",
+    "description": "Grants permission to update a refresh schedule for a knowledge base",
+    "accessLevel": "Write",
     "resourceTypes": [
       {
         "name": "knowledgeBase",

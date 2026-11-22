@@ -21,6 +21,20 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "campaign": {
+    "key": "Campaign",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/campaign/${CampaignId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "channelcontract": {
+    "key": "ChannelContract",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/channel-contract/${Identifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "channelhandshake": {
     "key": "ChannelHandshake",
     "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/channel-handshake/${Identifier}",
@@ -40,9 +54,27 @@
     "key": "ConnectionPreferences",
     "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/connection-preferences"
   },
+  "customeraccount": {
+    "key": "CustomerAccount",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/customer-account/${Identifier}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "customeraccountbulkjob": {
+    "key": "CustomerAccountBulkJob",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/customer-account-bulk-job/${Identifier}"
+  },
   "dashboard": {
     "key": "Dashboard",
     "arn": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}"
+  },
+  "datasubscription": {
+    "key": "DataSubscription",
+    "arn": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${Domain}/DataSubscription/${DataSubscriptionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "dataset": {
     "key": "Dataset",
@@ -52,9 +84,13 @@
     "key": "Engagement",
     "arn": "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement/${Identifier}"
   },
+  "engagementgroup": {
+    "key": "EngagementGroup",
+    "arn": "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/engagement-group/${Identifier}"
+  },
   "marketplacerevenueshare": {
     "key": "MarketplaceRevenueShare",
-    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/marketplace-revenue-share/${MarketplaceProductId}",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/marketplace-revenue-share/${MarketplaceRevenueShareId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
@@ -65,6 +101,10 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "opportunitybulkjob": {
+    "key": "OpportunityBulkJob",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/opportunity-bulk-job/${Identifier}"
   },
   "opportunityfromengagementtask": {
     "key": "OpportunityFromEngagementTask",
@@ -105,6 +145,10 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "socialconnection": {
+    "key": "SocialConnection",
+    "arn": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/social-connection/${SocialConnectionId}"
   },
   "solution": {
     "key": "Solution",

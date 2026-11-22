@@ -29,6 +29,30 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createassessment": {
+    "name": "CreateAssessment",
+    "description": "Grants permission to create an assessment of an MSK cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "assessment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createchannel": {
     "name": "CreateChannel",
     "description": "Grants permission to create an MSK Data Channel for an MSK cluster",
@@ -167,6 +191,21 @@
     ],
     "dependentActions": []
   },
+  "deleteassessment": {
+    "name": "DeleteAssessment",
+    "description": "Grants permission to delete an assessment of an MSK cluster and its findings",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "assessment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deletechannel": {
     "name": "DeleteChannel",
     "description": "Grants permission to delete an MSK Data Channel",
@@ -270,6 +309,21 @@
     "resourceTypes": [
       {
         "name": "vpc-connection",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeassessment": {
+    "name": "DescribeAssessment",
+    "description": "Grants permission to describe an assessment of an MSK cluster",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "assessment",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -420,6 +474,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describetopicreassignment": {
+    "name": "DescribeTopicReassignment",
+    "description": "Grants permission to describe a topic reassignment in an Amazon MSK cluster",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "topic-reassignment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describevpcconnection": {
     "name": "DescribeVpcConnection",
     "description": "Grants permission to describe a MSK VPC connection",
@@ -463,6 +538,36 @@
     "description": "Grants permission to get a list of the Apache Kafka versions to which you can update an MSK cluster",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessmentfindings": {
+    "name": "ListAssessmentFindings",
+    "description": "Grants permission to list the findings of an assessment of an MSK cluster",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "assessment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listassessments": {
+    "name": "ListAssessments",
+    "description": "Grants permission to list the assessments of an MSK cluster",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -617,6 +722,27 @@
     "accessLevel": "Read",
     "resourceTypes": [
       {
+        "name": "assessment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "cluster",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtopicreassignments": {
+    "name": "ListTopicReassignments",
+    "description": "Grants permission to list the topic reassignments of an Amazon MSK cluster",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
         "name": "cluster",
         "required": true,
         "conditionKeys": [],
@@ -700,11 +826,59 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "starttopicreassignment": {
+    "name": "StartTopicReassignment",
+    "description": "Grants permission to start a topic reassignment that moves topic partitions between broker types in an Amazon MSK cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "topic-reassignment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stoptopicreassignment": {
+    "name": "StopTopicReassignment",
+    "description": "Grants permission to stop a topic reassignment in an Amazon MSK cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "topic-reassignment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "tagresource": {
     "name": "TagResource",
     "description": "Grants permission to tag an MSK resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "assessment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "cluster",
         "required": false,
@@ -729,6 +903,12 @@
     "description": "Grants permission to remove tags from an MSK resource",
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
+      {
+        "name": "assessment",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "cluster",
         "required": false,

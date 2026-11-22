@@ -1,17 +1,17 @@
 {
   "aws:requesttag/${tagkey}": {
     "key": "aws:RequestTag/${TagKey}",
-    "description": "Filters actions based on the tags that are passed in the request",
+    "description": "Filters access by a tag's key and value in a request",
     "type": "String"
   },
   "aws:resourcetag/${tagkey}": {
     "key": "aws:ResourceTag/${TagKey}",
-    "description": "Filters actions based on the tags associated with the resource",
+    "description": "Filters access by the tags associated with the resource",
     "type": "String"
   },
   "aws:tagkeys": {
     "key": "aws:TagKeys",
-    "description": "Filters actions based on the tag keys that are passed in the request",
+    "description": "Filters access by the tag keys in a request",
     "type": "ArrayOfString"
   },
   "servicediscovery:namespacearn": {
@@ -21,7 +21,7 @@
   },
   "servicediscovery:namespacename": {
     "key": "servicediscovery:NamespaceName",
-    "description": "Filters access by specifying the name of the related namespace",
+    "description": "Filters access by the HTTP name (HttpName) of the namespace specified in the request",
     "type": "String"
   },
   "servicediscovery:servicearn": {

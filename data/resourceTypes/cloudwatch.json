@@ -90,6 +90,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "omni-agent-asset": {
+    "key": "omni-agent-asset",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-agent-asset/${AssetId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "omni-dashboard": {
     "key": "omni-dashboard",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}",

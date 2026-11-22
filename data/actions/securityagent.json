@@ -827,6 +827,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getpentestestimate": {
+    "name": "GetPentestEstimate",
+    "description": "Grants permission to retrieve the latest cost estimate for a penetration test",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getproviderregistrationmanifest": {
     "name": "GetProviderRegistrationManifest",
     "description": "Grants permission to retrieve the provider registration manifest used for browser-based integration registration",
@@ -1372,6 +1387,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startpentestestimationrun": {
+    "name": "StartPentestEstimationRun",
+    "description": "Grants permission to start a cost estimation run for a penetration test",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startpentestjob": {
     "name": "StartPentestJob",
     "description": "Grants permission to initiate the execution of a penetration test",
@@ -1420,6 +1450,21 @@
   "stopcodereviewjob": {
     "name": "StopCodeReviewJob",
     "description": "Grants permission to stop the execution of a running code review",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "AgentSpace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stoppentestestimationrun": {
+    "name": "StopPentestEstimationRun",
+    "description": "Grants permission to stop a running cost estimation run for a penetration test",
     "accessLevel": "Write",
     "resourceTypes": [
       {

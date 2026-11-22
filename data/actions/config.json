@@ -122,11 +122,15 @@
       {
         "name": "ConformancePack",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "config:ConformancePackType"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "config:ConformancePackType"
+    ],
     "dependentActions": []
   },
   "deleteconnector": {
@@ -1023,11 +1027,15 @@
       {
         "name": "ConformancePack",
         "required": true,
-        "conditionKeys": [],
+        "conditionKeys": [
+          "config:ConformancePackType"
+        ],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "config:ConformancePackType"
+    ],
     "dependentActions": []
   },
   "putconnector": {

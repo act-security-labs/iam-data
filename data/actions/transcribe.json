@@ -545,6 +545,27 @@
     ],
     "dependentActions": []
   },
+  "transcribeaudio": {
+    "name": "TranscribeAudio",
+    "description": "Grants permission to transcribe a media file and return the transcript in the response",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "vocabulary",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "vocabularyfilter",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "untagresource": {
     "name": "UntagResource",
     "description": "Grants permission to untag a resource with given key",

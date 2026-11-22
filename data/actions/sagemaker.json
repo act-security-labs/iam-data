@@ -226,6 +226,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "addinferencegateway": {
+    "name": "AddInferenceGateway",
+    "description": "Grants permission to add a HyperPod inference gateway as a member of a global inference gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "addtags": {
     "name": "AddTags",
     "description": "Grants permission to add or overwrite one or more tags for the specified Amazon SageMaker resource",
@@ -388,6 +403,12 @@
         "dependentActions": []
       },
       {
+        "name": "extension",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "feature-group",
         "required": false,
         "conditionKeys": [],
@@ -395,6 +416,12 @@
       },
       {
         "name": "flow-definition",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "global-inference-gateway",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -567,6 +594,12 @@
       },
       {
         "name": "reserved-capacity",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "sm-capacity-reservation",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1097,6 +1130,30 @@
     ],
     "dependentActions": []
   },
+  "createclusterextension": {
+    "name": "CreateClusterExtension",
+    "description": "Grants permission to install an extension on a SageMaker HyperPod cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "extension",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "createclusterschedulerconfig": {
     "name": "CreateClusterSchedulerConfig",
     "description": "Grants permission to create a cluster scheduler config",
@@ -1435,6 +1492,24 @@
       "aws:TagKeys",
       "sagemaker:WorkteamArn",
       "sagemaker:WorkteamType"
+    ],
+    "dependentActions": []
+  },
+  "createglobalinferencegateway": {
+    "name": "CreateGlobalInferenceGateway",
+    "description": "Grants permission to create a global inference gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
     ],
     "dependentActions": []
   },
@@ -2603,6 +2678,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteclusterextension": {
+    "name": "DeleteClusterExtension",
+    "description": "Grants permission to remove an extension from a SageMaker HyperPod cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "extension",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteclusterschedulerconfig": {
     "name": "DeleteClusterSchedulerConfig",
     "description": "Grants permission to delete a cluster scheduler config",
@@ -2835,6 +2931,21 @@
     "resourceTypes": [
       {
         "name": "flow-definition",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteglobalinferencegateway": {
+    "name": "DeleteGlobalInferenceGateway",
+    "description": "Grants permission to delete a global inference gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -3530,6 +3641,12 @@
         "dependentActions": []
       },
       {
+        "name": "extension",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "feature-group",
         "required": false,
         "conditionKeys": [],
@@ -3537,6 +3654,12 @@
       },
       {
         "name": "flow-definition",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "global-inference-gateway",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -3709,6 +3832,12 @@
       },
       {
         "name": "reserved-capacity",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "sm-capacity-reservation",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4052,6 +4181,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describecapacityreservation": {
+    "name": "DescribeCapacityReservation",
+    "description": "Grants permission to return information about a specified capacity reservation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "sm-capacity-reservation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describecluster": {
     "name": "DescribeCluster",
     "description": "Grants permission to return information about a SageMaker HyperPod cluster",
@@ -4074,6 +4218,27 @@
     "resourceTypes": [
       {
         "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeclusterextension": {
+    "name": "DescribeClusterExtension",
+    "description": "Grants permission to return information about an extension installed on a SageMaker HyperPod cluster",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "extension",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -4344,6 +4509,21 @@
     "resourceTypes": [
       {
         "name": "flow-definition",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeglobalinferencegateway": {
+    "name": "DescribeGlobalInferenceGateway",
+    "description": "Grants permission to return the description of a global inference gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -4814,6 +4994,7 @@
       }
     ],
     "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
       "sagemaker:PipelineVersionId"
     ],
     "dependentActions": []
@@ -4830,7 +5011,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
+      "sagemaker:PipelineVersionId"
+    ],
     "dependentActions": []
   },
   "describepipelineexecution": {
@@ -4885,6 +5069,21 @@
     "resourceTypes": [
       {
         "name": "reserved-capacity",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeresourceassociations": {
+    "name": "DescribeResourceAssociations",
+    "description": "Grants permission to return the SageMaker service associations of a specified capacity reservation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "sm-capacity-reservation",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -5184,6 +5383,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getcapacityreservationusage": {
+    "name": "GetCapacityReservationUsage",
+    "description": "Grants permission to return the in-use instance counts of a specified capacity reservation",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "sm-capacity-reservation",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdeployments": {
     "name": "GetDeployments",
     "description": "Grants permission to get deployment plan for device",
@@ -5429,6 +5643,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "invokeglobalinferencegateway": {
+    "name": "InvokeGlobalInferenceGateway",
+    "description": "Grants permission to invoke a global inference gateway",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "invokeglobalinferencegatewaywithresponsestream": {
+    "name": "InvokeGlobalInferenceGatewayWithResponseStream",
+    "description": "Grants permission to invoke a global inference gateway and stream the response",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "invokeinferencerouter": {
     "name": "InvokeInferenceRouter",
     "description": "Grants permission to invoke an inference router",
@@ -5568,9 +5812,40 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listcapacityreservations": {
+    "name": "ListCapacityReservations",
+    "description": "Grants permission to list capacity reservations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listclusterevents": {
     "name": "ListClusterEvents",
     "description": "Grants permission to list events within a SageMaker HyperPod cluster",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listclusterextensionversions": {
+    "name": "ListClusterExtensionVersions",
+    "description": "Grants permission to list the versions of an extension that you can install on a SageMaker HyperPod cluster",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listclusterextensions": {
+    "name": "ListClusterExtensions",
+    "description": "Grants permission to list the extensions installed on a SageMaker HyperPod cluster",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -5734,6 +6009,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listglobalinferencegateways": {
+    "name": "ListGlobalInferenceGateways",
+    "description": "Grants permission to list global inference gateways",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listhubcontentversions": {
     "name": "ListHubContentVersions",
     "description": "Grants permission to list all versions of hub content",
@@ -5838,6 +6121,21 @@
     "description": "Grants permission to list inference experiments",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinferencegateways": {
+    "name": "ListInferenceGateways",
+    "description": "Grants permission to list the member HyperPod inference gateways of a global inference gateway",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -6120,7 +6418,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
+      "sagemaker:PipelineVersionId"
+    ],
     "dependentActions": []
   },
   "listpipelineparametersforexecution": {
@@ -6394,6 +6695,12 @@
         "dependentActions": []
       },
       {
+        "name": "extension",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "feature-group",
         "required": false,
         "conditionKeys": [],
@@ -6401,6 +6708,12 @@
       },
       {
         "name": "flow-definition",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "global-inference-gateway",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -6579,6 +6892,12 @@
       },
       {
         "name": "reserved-capacity",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "sm-capacity-reservation",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -6811,6 +7130,21 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "removeinferencegateway": {
+    "name": "RemoveInferenceGateway",
+    "description": "Grants permission to remove a member HyperPod inference gateway from a global inference gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "renderuitemplate": {
@@ -7080,6 +7414,7 @@
       }
     ],
     "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
       "sagemaker:PipelineVersionId"
     ],
     "dependentActions": []
@@ -7354,7 +7689,10 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
+      "sagemaker:PipelineVersionId"
+    ],
     "dependentActions": []
   },
   "stopprocessingjob": {
@@ -7512,6 +7850,27 @@
       "sagemaker:VpcSecurityGroupIds",
       "sagemaker:VpcSubnets"
     ],
+    "dependentActions": []
+  },
+  "updateclusterextension": {
+    "name": "UpdateClusterExtension",
+    "description": "Grants permission to update an extension installed on a SageMaker HyperPod cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "extension",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updateclusterschedulerconfig": {
@@ -7716,6 +8075,21 @@
     "resourceTypes": [
       {
         "name": "feature-group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateglobalinferencegateway": {
+    "name": "UpdateGlobalInferenceGateway",
+    "description": "Grants permission to update a global inference gateway",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "global-inference-gateway",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -8085,6 +8459,7 @@
       }
     ],
     "conditionKeys": [
+      "sagemaker:PipelineVersionAlias",
       "sagemaker:PipelineVersionId"
     ],
     "dependentActions": []

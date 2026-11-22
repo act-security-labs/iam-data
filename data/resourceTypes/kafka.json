@@ -1,4 +1,11 @@
 {
+  "assessment": {
+    "key": "assessment",
+    "arn": "arn:${Partition}:kafka:${Region}:${Account}:assessment/${ClusterUuid}/${Uuid}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "channel": {
     "key": "channel",
     "arn": "arn:${Partition}:kafka:${Region}:${Account}:channel/${ClusterName}/${ClusterUuid}/${ChannelName}/${Uuid}",
@@ -31,6 +38,10 @@
   "topic": {
     "key": "topic",
     "arn": "arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}"
+  },
+  "topic-reassignment": {
+    "key": "topic-reassignment",
+    "arn": "arn:${Partition}:kafka:${Region}:${Account}:topic-reassignment/${ClusterName}/${ClusterUuid}/${Uuid}"
   },
   "transactional-id": {
     "key": "transactional-id",

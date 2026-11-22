@@ -73,6 +73,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "batchrevokesessions": {
+    "name": "BatchRevokeSessions",
+    "description": "Grants permission to revoke one or more sign-in sessions in your account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createbearertoken": {
     "name": "CreateBearerToken",
     "description": "Grants permission to exchange SigV4 credentials for a bearer token that can be used to access supported AWS services",
@@ -153,7 +161,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "signin:PutSignInDurationBlock"
+    ],
     "dependentActions": []
   },
   "createtrustedidentitypropagationapplicationforconsole": {
@@ -196,6 +206,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getsession": {
+    "name": "GetSession",
+    "description": "Grants permission to retrieve the details of a sign-in session in your account",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "introspectoauth2token": {
     "name": "IntrospectOAuth2Token",
     "description": "Grants permission to inspect the metadata and active state of an OAuth 2 access token or refresh token",
@@ -229,6 +247,14 @@
   "listresourcepermissionstatements": {
     "name": "ListResourcePermissionStatements",
     "description": "Grants permission to list the SignIn Resource Based Policy statements in your account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listsessions": {
+    "name": "ListSessions",
+    "description": "Grants permission to list the sign-in sessions for an IAM user or role in your account",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],

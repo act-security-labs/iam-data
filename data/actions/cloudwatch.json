@@ -231,6 +231,16 @@
     ],
     "dependentActions": []
   },
+  "createomniagentasset": {
+    "name": "CreateOmniAgentAsset",
+    "description": "Grants permission to create an agent asset",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "createomnidashboard": {
     "name": "CreateOmniDashboard",
     "description": "Grants permission to create an omni dashboard",
@@ -524,6 +534,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteomniagentasset": {
+    "name": "DeleteOmniAgentAsset",
+    "description": "Grants permission to delete an agent asset",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-agent-asset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "deleteomnidashboard": {
@@ -1035,6 +1062,31 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getmonitoringassessment": {
+    "name": "GetMonitoringAssessment",
+    "description": "Grants permission to get the status, progress, scope and retention of a monitoring assessment",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getomniagentasset": {
+    "name": "GetOmniAgentAsset",
+    "description": "Grants permission to get an agent asset",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "omni-agent-asset",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "getomnidashboard": {
     "name": "GetOmniDashboard",
     "description": "Grants permission to get an omni dashboard",
@@ -1370,6 +1422,32 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listmonitoringassessmentresults": {
+    "name": "ListMonitoringAssessmentResults",
+    "description": "Grants permission to list the recommendations produced by a monitoring assessment",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listmonitoringassessments": {
+    "name": "ListMonitoringAssessments",
+    "description": "Grants permission to list the monitoring assessments in an account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listomniagentassets": {
+    "name": "ListOmniAgentAssets",
+    "description": "Grants permission to list agent assets",
+    "accessLevel": "List",
+    "resourceTypes": [],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
     ],
@@ -1926,6 +2004,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startmonitoringassessment": {
+    "name": "StartMonitoringAssessment",
+    "description": "Grants permission to start a monitoring assessment that produces recommendations to improve observability",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startomnithreadsession": {
     "name": "StartOmniThreadSession",
     "description": "Grants permission to start an omni thread session",
@@ -2422,6 +2508,23 @@
     "resourceTypes": [
       {
         "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateomniagentasset": {
+    "name": "UpdateOmniAgentAsset",
+    "description": "Grants permission to update an agent asset",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-agent-asset",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

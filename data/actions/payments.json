@@ -1,60 +1,4 @@
 {
-  "deletepaymentinstrument": {
-    "name": "DeletePaymentInstrument",
-    "description": "Grants permission to delete a payment instrument",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "getpaymentstatus": {
-    "name": "GetPaymentStatus",
-    "description": "Grants permission to get payment status of invoices",
-    "accessLevel": "Read",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "listpaymentinstruments": {
-    "name": "ListPaymentInstruments",
-    "description": "Grants permission to list payment instrument metadata",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "listpaymentpreferences": {
-    "name": "ListPaymentPreferences",
-    "description": "Grants permission to get payment preferences (preferred payment currency, preferred payment method, etc.)",
-    "accessLevel": "List",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "makepayment": {
-    "name": "MakePayment",
-    "description": "Grants permission to make a payment, authenticate a payment, verify a payment method, and generate a funding request document for Advance Pay",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "updatepaymentinstrument": {
-    "name": "UpdatePaymentInstrument",
-    "description": "Grants permission to update a payment instrument",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
-  "updatepaymentpreferences": {
-    "name": "UpdatePaymentPreferences",
-    "description": "Grants permission to update payment preferences (preferred payment currency, preferred payment method, etc.)",
-    "accessLevel": "Write",
-    "resourceTypes": [],
-    "conditionKeys": [],
-    "dependentActions": []
-  },
   "acceptfinancingapplicationterms": {
     "name": "AcceptFinancingApplicationTerms",
     "description": "Grants permission to accept financing application terms provided by a lender",
@@ -101,12 +45,18 @@
       {
         "name": "connectedaccount",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletepaymentinstrument": {
+    "name": "DeletePaymentInstrument",
+    "description": "Grants permission to delete a payment instrument",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -118,9 +68,7 @@
       {
         "name": "connectedaccount",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -159,20 +107,11 @@
     "conditionKeys": [],
     "dependentActions": []
   },
-  "getpaymentinstrument": {
-    "name": "GetPaymentInstrument",
-    "description": "Grants permission to get information about a payment instrument",
-    "accessLevel": "List",
-    "resourceTypes": [
-      {
-        "name": "payment-instrument",
-        "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
-        "dependentActions": []
-      }
-    ],
+  "getpaymentstatus": {
+    "name": "GetPaymentStatus",
+    "description": "Grants permission to view payment information, such as payment status, payment history, payments due, financing details, financial records and account balances, including through the GetFinancialRecord, BatchGetFinancialRecord, ListFinancialRecords, and GetAccountBalance APIs",
+    "accessLevel": "Read",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -208,6 +147,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listpaymentpreferences": {
+    "name": "ListPaymentPreferences",
+    "description": "Grants permission to get payment preferences (preferred payment currency, preferred payment method, etc.)",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listpaymentprogramoptions": {
     "name": "ListPaymentProgramOptions",
     "description": "Grants permission to list information about payment options",
@@ -232,20 +179,24 @@
       {
         "name": "connectedaccount",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "payment-instrument",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "makepayment": {
+    "name": "MakePayment",
+    "description": "Grants permission to make a payment, authenticate a payment, verify a payment method, and generate a funding request document for Advance Pay",
+    "accessLevel": "Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -257,25 +208,20 @@
       {
         "name": "connectedaccount",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "payment-instrument",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "untagresource": {
@@ -286,29 +232,96 @@
       {
         "name": "connectedaccount",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "payment-instrument",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "updatefinancingapplication": {
     "name": "UpdateFinancingApplication",
     "description": "Grants permission to update a financing application",
     "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatepaymentinstrument": {
+    "name": "UpdatePaymentInstrument",
+    "description": "Grants permission to update a payment instrument",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatepaymentpreferences": {
+    "name": "UpdatePaymentPreferences",
+    "description": "Grants permission to update payment preferences (preferred payment currency, preferred payment method, etc.)",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchgetfinancialrecord": {
+    "name": "BatchGetFinancialRecord",
+    "description": "Grants permission to get information about multiple financial records",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getaccountbalance": {
+    "name": "GetAccountBalance",
+    "description": "Grants permission to get a balance of the account",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getfinancialrecord": {
+    "name": "GetFinancialRecord",
+    "description": "Grants permission to get information about a financial record",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpaymentinstrument": {
+    "name": "GetPaymentInstrument",
+    "description": "Grants permission to get information about a payment instrument",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "payment-instrument",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listfinancialrecords": {
+    "name": "ListFinancialRecords",
+    "description": "Grants permission to list financial records",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpaymentinstruments": {
+    "name": "ListPaymentInstruments",
+    "description": "Grants permission to list payment instrument metadata",
+    "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []

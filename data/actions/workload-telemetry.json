@@ -1,0 +1,10 @@
+{
+  "putcertificatetelemetry": {
+    "name": "PutCertificateTelemetry",
+    "description": "Grants permission to put certificate discovery and automation telemetry from the AWS Workload Credentials Provider agent",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

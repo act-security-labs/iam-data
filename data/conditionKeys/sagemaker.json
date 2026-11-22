@@ -239,6 +239,11 @@
     "description": "Filters access by the OwnerUserProfile arn associated with the space in the request",
     "type": "ARN"
   },
+  "sagemaker:pipelineversionalias": {
+    "key": "sagemaker:PipelineVersionAlias",
+    "description": "Filters access to specific version aliases of a SageMaker pipeline",
+    "type": "String"
+  },
   "sagemaker:pipelineversionid": {
     "key": "sagemaker:PipelineVersionId",
     "description": "Filters access to specific version IDs of a Sagemaker pipeline",

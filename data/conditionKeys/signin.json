@@ -28,5 +28,10 @@
     "key": "signin:PrincipalArn",
     "description": "Filters access by the principal ARN during pre-authentication console sign-in",
     "type": "ARN"
+  },
+  "signin:putsignindurationblock": {
+    "key": "signin:PutSignInDurationBlock",
+    "description": "Filters access by whether the token request uses an extended sign-in session",
+    "type": "Bool"
   }
 }

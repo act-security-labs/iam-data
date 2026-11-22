@@ -480,6 +480,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listentitycoverages": {
+    "name": "ListEntityCoverages",
+    "description": "Grants permission to list the protected resources covered by a Network Security Manager policy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "policy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listpolicies": {
     "name": "ListPolicies",
     "description": "Grants permission to list policies",
@@ -501,6 +516,16 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listprotectedresourcecoverages": {
+    "name": "ListProtectedResourceCoverages",
+    "description": "Grants permission to list the Network Security Manager entities that cover a protected resource",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "network-security-manager:ProtectedResourceArn"
+    ],
     "dependentActions": []
   },
   "listresourceassociations": {

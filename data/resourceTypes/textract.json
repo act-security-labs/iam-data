@@ -12,5 +12,26 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
+  },
+  "blueprint": {
+    "key": "blueprint",
+    "arn": "arn:${Partition}:textract:${Region}:${Account}:blueprint/${BlueprintId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "job": {
+    "key": "job",
+    "arn": "arn:${Partition}:textract:${Region}:${Account}:job/${JobId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "project": {
+    "key": "project",
+    "arn": "arn:${Partition}:textract:${Region}:${Account}:project/${ProjectId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   }
 }

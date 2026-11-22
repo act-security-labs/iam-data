@@ -89,6 +89,11 @@
     "description": "Filters access by the value that specifies whether the DB instance runs in an Amazon Virtual Private Cloud (Amazon VPC). To indicate that the DB instance runs in an Amazon VPC, specify true",
     "type": "Bool"
   },
+  "rds:vpcnetworkingenabled": {
+    "key": "rds:VpcNetworkingEnabled",
+    "description": "Filters access by the value that specifies whether the DB cluster created by the request uses VPC networking. Evaluates to true when the EnableVPCNetworking request parameter is true or isn't specified. Evaluates to false when EnableVPCNetworking is false, or when WithExpressConfiguration is true and EnableVPCNetworking isn't specified",
+    "type": "Bool"
+  },
   "rds:cluster-pg-tag/${tagkey}": {
     "key": "rds:cluster-pg-tag/${TagKey}",
     "description": "Filters access by the tag attached to a DB cluster parameter group",

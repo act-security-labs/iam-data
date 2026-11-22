@@ -5,6 +5,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "Link",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "Sink",
         "required": true,
         "conditionKeys": [],
@@ -239,6 +245,12 @@
     "resourceTypes": [
       {
         "name": "Link",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Sink",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

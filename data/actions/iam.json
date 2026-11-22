@@ -2556,6 +2556,27 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateopenidconnectprovider": {
+    "name": "UpdateOpenIDConnectProvider",
+    "description": "Grants permission to update the context provider and IAM Identity Center configuration of an existing IAM OpenID Connect (OIDC) provider resource",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "oidc-provider",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "iam:EnableIdentityCenterAssociation",
+      "iam:EnableIdentityPropagation",
+      "iam:RequestIdentityCenterInstanceArn",
+      "iam:ResourceIdentityCenterInstanceArn",
+      "iam:ResourceIdentityProviderIssuers"
+    ],
+    "dependentActions": []
+  },
   "updateopenidconnectproviderthumbprint": {
     "name": "UpdateOpenIDConnectProviderThumbprint",
     "description": "Grants permission to update the entire list of server certificate thumbprints that are associated with an OpenID Connect (OIDC) provider resource",
@@ -2607,7 +2628,7 @@
   },
   "updatesamlprovider": {
     "name": "UpdateSAMLProvider",
-    "description": "Grants permission to update the metadata document for an existing SAML provider resource",
+    "description": "Grants permission to update the SAML metadata document, context provider, and IAM Identity Center configuration of an existing IAM SAML provider resource",
     "accessLevel": "Write",
     "resourceTypes": [
       {

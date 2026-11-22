@@ -57,6 +57,66 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disableinternetaccessgateway": {
+    "name": "DisableInternetAccessGateway",
+    "description": "Grants permission to disable Internet Access Gateway for a DB cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disablevpcnetworking": {
+    "name": "DisableVpcNetworking",
+    "description": "Grants permission to disable VPC networking for a DB cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "enableinternetaccessgateway": {
+    "name": "EnableInternetAccessGateway",
+    "description": "Grants permission to enable Internet Access Gateway for a DB cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "enablevpcnetworking": {
+    "name": "EnableVpcNetworking",
+    "description": "Grants permission to enable VPC networking for a DB cluster",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "cluster",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "modifyrecommendation": {
     "name": "ModifyRecommendation",
     "description": "Grants permission to modify recommendation",
@@ -2442,6 +2502,12 @@
       },
       {
         "name": "pg",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "subgrp",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []

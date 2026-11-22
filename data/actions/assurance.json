@@ -1005,7 +1005,7 @@
   },
   "listdiscoveredresources": {
     "name": "ListDiscoveredResources",
-    "description": "Grants permission to list the resources found by a discovery job (paginated)",
+    "description": "Grants permission to list the resources in scope for an environment or project (paginated)",
     "accessLevel": "Read",
     "resourceTypes": [
       {

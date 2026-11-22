@@ -1,4 +1,34 @@
 {
+  "createsystemsnapshot": {
+    "name": "CreateSystemSnapshot",
+    "description": "Grants permission to enable system snapshot creation for a running application from StartApplication, UpdateApplication, StopApplication, AddApplicationVPCConfiguration, DeleteApplicationVPCConfiguration, AddApplicationCloudWatchLoggingOption and DeleteApplicationCloudWatchLoggingOption",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "application",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "restorefromsnapshot": {
+    "name": "RestoreFromSnapshot",
+    "description": "Grants permission to restore an application from a snapshot",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "addapplicationcloudwatchloggingoption": {
     "name": "AddApplicationCloudWatchLoggingOption",
     "description": "Grants permission to add cloudwatch logging option to the application",
@@ -130,6 +160,24 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createsnapshot": {
+    "name": "CreateSnapshot",
+    "description": "Grants permission to create a snapshot from a running application",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "application",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
   "deleteapplication": {
     "name": "DeleteApplication",
     "description": "Grants permission to delete the application",
@@ -235,6 +283,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deletesnapshot": {
+    "name": "DeleteSnapshot",
+    "description": "Grants permission to delete a snapshot",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeapplication": {
     "name": "DescribeApplication",
     "description": "Grants permission to describe the specified application",
@@ -295,12 +358,75 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describesnapshot": {
+    "name": "DescribeSnapshot",
+    "description": "Grants permission to describe a snapshot",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describesnapshotoperation": {
+    "name": "DescribeSnapshotOperation",
+    "description": "Grants permission to describe a snapshot operation for a snapshot like import, export, create and delete",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "discoverinputschema": {
     "name": "DiscoverInputSchema",
     "description": "Grants permission to discover the input schema for the application",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "exportsnapshot": {
+    "name": "ExportSnapshot",
+    "description": "Grants permission to export an MSF snapshot to a customer-managed S3 location",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "importsnapshot": {
+    "name": "ImportSnapshot",
+    "description": "Grants permission to import a Flink savepoint from a customer-managed S3 location as an MSF snapshot",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "listapplicationoperations": {
@@ -353,6 +479,36 @@
     "description": "Grants permission to list applications for the account",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listsnapshotoperations": {
+    "name": "ListSnapshotOperations",
+    "description": "Grants permission to list snapshot operations for a snapshot like import, export, create and delete",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "snapshot",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listsnapshots": {
+    "name": "ListSnapshots",
+    "description": "Grants permission to list snapshots in an account",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "application",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },

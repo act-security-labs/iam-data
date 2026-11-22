@@ -1,4 +1,8 @@
 {
+  "access-profile": {
+    "key": "access-profile",
+    "arn": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/access-profile/${AccessProfileId}"
+  },
   "agentspace": {
     "key": "agentspace",
     "arn": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}",

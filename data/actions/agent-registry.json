@@ -5,6 +5,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "registry",
         "required": false,
         "conditionKeys": [],
@@ -19,6 +25,12 @@
     "description": "Grants permission to retrieve the resource-based policy for a specified resource",
     "accessLevel": "Read",
     "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "registry",
         "required": false,
@@ -35,6 +47,12 @@
     "accessLevel": "Write",
     "resourceTypes": [
       {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "registry",
         "required": false,
         "conditionKeys": [],
@@ -42,6 +60,60 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "associatepublisher": {
+    "name": "AssociatePublisher",
+    "description": "Grants permission to associate a registry record with a publisher",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "registry-record",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "completeregistryrecordtokenauth": {
+    "name": "CompleteRegistryRecordTokenAuth",
+    "description": "Grants permission to complete a user-delegated OAuth authorization that records in a registry are waiting on",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "registry",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createpublisher": {
+    "name": "CreatePublisher",
+    "description": "Grants permission to create a publisher",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createregistry": {
@@ -71,6 +143,21 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "deletepublisher": {
+    "name": "DeletePublisher",
+    "description": "Grants permission to delete a publisher",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deleteregistry": {
@@ -103,13 +190,43 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disassociatepublisher": {
+    "name": "DisassociatePublisher",
+    "description": "Grants permission to remove a registry record's publisher association",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "registry-record",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getdiscoverableregistryrecord": {
     "name": "GetDiscoverableRegistryRecord",
-    "description": "Grants permission to retrieve an individual approved registry record. This is a permission-only action used for fine-grained access control with BatchGetApprovedRegistryRecord",
+    "description": "Grants permission to retrieve an individual approved registry record. This is a permission-only action used for fine-grained access control with BatchGetDiscoverableRegistryRecord",
     "accessLevel": "Read",
     "resourceTypes": [
       {
         "name": "registry-record",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getpublisher": {
+    "name": "GetPublisher",
+    "description": "Grants permission to retrieve a publisher",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "publisher",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -178,6 +295,29 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listpublisherassociations": {
+    "name": "ListPublisherAssociations",
+    "description": "Grants permission to list the caller's publisher associations",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpublishers": {
+    "name": "ListPublishers",
+    "description": "Grants permission to list the caller's publishers",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listregistries": {
     "name": "ListRegistries",
     "description": "Grants permission to list existing registries",
@@ -206,6 +346,12 @@
     "description": "Grants permission to list tags for an Agent Registry resource",
     "accessLevel": "List",
     "resourceTypes": [
+      {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "registry",
         "required": false,
@@ -258,6 +404,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "registry",
         "required": false,
         "conditionKeys": [],
@@ -282,6 +434,12 @@
     "accessLevel": "Tagging, Write",
     "resourceTypes": [
       {
+        "name": "publisher",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "registry",
         "required": false,
         "conditionKeys": [],
@@ -297,6 +455,21 @@
     "conditionKeys": [
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "updatepublisherassociationapprovalstatus": {
+    "name": "UpdatePublisherAssociationApprovalStatus",
+    "description": "Grants permission to approve or reject a registry record's publisher association",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "registry-record",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updateregistry": {
@@ -336,6 +509,21 @@
     "resourceTypes": [
       {
         "name": "registry-record",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "validatepublisher": {
+    "name": "ValidatePublisher",
+    "description": "Grants permission to start domain verification for a publisher",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "publisher",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

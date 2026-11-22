@@ -1,0 +1,26 @@
+{
+  "getstatistics": {
+    "name": "GetStatistics",
+    "description": "Grants permission to retrieve aggregate statistics over AWS WAFv2 request logs within a specified time window",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getstatisticstimeseries": {
+    "name": "GetStatisticsTimeSeries",
+    "description": "Grants permission to retrieve time-bucketed statistics over AWS WAFv2 request logs within a specified time window",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "search": {
+    "name": "Search",
+    "description": "Grants permission to search individual AWS WAFv2 request log records within a specified time window",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

@@ -15,6 +15,13 @@
     "key": "healthcheck",
     "arn": "arn:${Partition}:route53:::healthcheck/${Id}"
   },
+  "healthchecksource": {
+    "key": "healthchecksource",
+    "arn": "arn:${Partition}:route53:::healthchecksource/${Id}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "hostedzone": {
     "key": "hostedzone",
     "arn": "arn:${Partition}:route53:::hostedzone/${Id}"

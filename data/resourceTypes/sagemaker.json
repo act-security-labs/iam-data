@@ -207,6 +207,14 @@
       "sagemaker:ResourceTag/${TagKey}"
     ]
   },
+  "extension": {
+    "key": "extension",
+    "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:extension/${ClusterIdentifier}/${ExtensionName}/${ExtensionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "sagemaker:ResourceTag/${TagKey}"
+    ]
+  },
   "feature-group": {
     "key": "feature-group",
     "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:feature-group/${FeatureGroupName}",
@@ -218,6 +226,14 @@
   "flow-definition": {
     "key": "flow-definition",
     "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:flow-definition/${FlowDefinitionName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "sagemaker:ResourceTag/${TagKey}"
+    ]
+  },
+  "global-inference-gateway": {
+    "key": "global-inference-gateway",
+    "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:global-inference-gateway/${GlobalInferenceGatewayId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "sagemaker:ResourceTag/${TagKey}"
@@ -505,6 +521,14 @@
   "shared-model-event": {
     "key": "shared-model-event",
     "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:shared-model-event/${EventId}"
+  },
+  "sm-capacity-reservation": {
+    "key": "sm-capacity-reservation",
+    "arn": "arn:${Partition}:sagemaker:${Region}:${Account}:sm-capacity-reservation/${CapacityReservationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "sagemaker:ResourceTag/${TagKey}"
+    ]
   },
   "space": {
     "key": "space",

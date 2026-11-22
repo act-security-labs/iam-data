@@ -7,9 +7,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -24,15 +22,14 @@
       {
         "name": "ManagedApi",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createportal": {
@@ -43,15 +40,14 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createportalpreview": {
@@ -62,9 +58,7 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -79,15 +73,14 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createproductapipage": {
@@ -98,15 +91,14 @@
       {
         "name": "ProductApiPage",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createproductpage": {
@@ -117,15 +109,14 @@
       {
         "name": "ProductPage",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "deletediscoveryconfiguration": {
@@ -136,9 +127,7 @@
       {
         "name": "DiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -153,9 +142,7 @@
       {
         "name": "ManagedApi",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -170,9 +157,7 @@
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -187,9 +172,7 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -204,9 +187,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -221,9 +202,7 @@
       {
         "name": "ProductApiPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -238,9 +217,7 @@
       {
         "name": "ProductPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -255,9 +232,7 @@
       {
         "name": "ProductSharingPolicy",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -272,9 +247,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -297,9 +270,7 @@
       {
         "name": "DiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -314,9 +285,7 @@
       {
         "name": "ManagedApi",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -331,9 +300,7 @@
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -348,9 +315,7 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -365,9 +330,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -382,9 +345,7 @@
       {
         "name": "ProductApiPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -399,9 +360,7 @@
       {
         "name": "ProductPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -416,9 +375,7 @@
       {
         "name": "ProductSharingPolicy",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -449,9 +406,7 @@
       {
         "name": "ManagedApi",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -482,9 +437,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -499,9 +452,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -524,65 +475,49 @@
       {
         "name": "DiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ManagedApi",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Portal",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Product",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductApiPage",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductPage",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductSharingPolicy",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -597,15 +532,14 @@
       {
         "name": "DiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "putorganizationdiscoveryconfiguration": {
@@ -616,15 +550,14 @@
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "putproductsharingpolicy": {
@@ -635,15 +568,14 @@
       {
         "name": "ProductSharingPolicy",
         "required": true,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "startdiscovery": {
@@ -654,17 +586,13 @@
       {
         "name": "DiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -679,17 +607,13 @@
       {
         "name": "DiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -704,85 +628,56 @@
       {
         "name": "DiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ManagedApi",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Portal",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Product",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductApiPage",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductPage",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductSharingPolicy",
         "required": false,
-        "conditionKeys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "untagresource": {
@@ -793,77 +688,55 @@
       {
         "name": "DiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ManagedApi",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "OrganizationDiscoveryConfiguration",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Portal",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "Product",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductApiPage",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductPage",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       },
       {
         "name": "ProductSharingPolicy",
         "required": false,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "updateportal": {
@@ -874,9 +747,7 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -891,9 +762,7 @@
       {
         "name": "Portal",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -908,9 +777,7 @@
       {
         "name": "Product",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -925,9 +792,7 @@
       {
         "name": "ProductApiPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],
@@ -942,9 +807,7 @@
       {
         "name": "ProductPage",
         "required": true,
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ],
+        "conditionKeys": [],
         "dependentActions": []
       }
     ],

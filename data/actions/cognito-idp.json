@@ -553,6 +553,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "cancelpointintimerecovery": {
+    "name": "CancelPointInTimeRecovery",
+    "description": "Grants permission to cancel point in time recovery job for a user pool",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "changepassword": {
     "name": "ChangePassword",
     "description": "Grants permission to change the password for a specified user in a user pool",
@@ -582,6 +597,21 @@
     "description": "Grants permission to confirm registration of a user and handles the existing alias from a previous user",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createcimdpolicy": {
+    "name": "CreateCIMDPolicy",
+    "description": "Grants permission to create a client ID metadata document (CIMD) policy for an app client",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -720,6 +750,21 @@
   "createuserpoolreplica": {
     "name": "CreateUserPoolReplica",
     "description": "Grants permission to create a replica of a user pool",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletecimdpolicy": {
+    "name": "DeleteCIMDPolicy",
+    "description": "Grants permission to delete a client ID metadata document (CIMD) policy",
     "accessLevel": "Write",
     "resourceTypes": [
       {
@@ -898,6 +943,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describecimdpolicy": {
+    "name": "DescribeCIMDPolicy",
+    "description": "Grants permission to get the configuration of a client ID metadata document (CIMD) policy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "describeidentityprovider": {
     "name": "DescribeIdentityProvider",
     "description": "Grants permission to describe any user pool identity provider",
@@ -931,6 +991,21 @@
   "describemanagedloginbrandingbyclient": {
     "name": "DescribeManagedLoginBrandingByClient",
     "description": "Grants permission to get the detailed information about the branding style of managed login associated with an appclient",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describepointintimerecovery": {
+    "name": "DescribePointInTimeRecovery",
+    "description": "Grants permission to describe point in time recovery job for a user pool",
     "accessLevel": "Read",
     "resourceTypes": [
       {
@@ -1090,6 +1165,14 @@
   "getclienttoken": {
     "name": "GetClientToken",
     "description": "Grants permission to issue an access token for machine-to-machine authorization with an app client ID and client secret",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getderivedtoken": {
+    "name": "GetDerivedToken",
+    "description": "Grants permission to exchange a token for one that is further scoped and audience-bound",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -1271,6 +1354,51 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "initiatepointintimerecovery": {
+    "name": "InitiatePointInTimeRecovery",
+    "description": "Grants permission to initiate point in time recovery job for a user pool",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listcimdpolicies": {
+    "name": "ListCIMDPolicies",
+    "description": "Grants permission to list the client ID metadata document (CIMD) policies in a user pool",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listclientmetadataurls": {
+    "name": "ListClientMetadataURLs",
+    "description": "Grants permission to list the client metadata document URLs and their cache state for a client ID metadata document (CIMD) policy",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "listdevices": {
     "name": "ListDevices",
     "description": "Grants permission to list the devices",
@@ -1297,6 +1425,21 @@
   "listidentityproviders": {
     "name": "ListIdentityProviders",
     "description": "Grants permission to list all identity providers in user pools",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listpointintimerecoveries": {
+    "name": "ListPointInTimeRecoveries",
+    "description": "Grants permission to list point in time recovery jobs for a user pool",
     "accessLevel": "List",
     "resourceTypes": [
       {
@@ -1606,6 +1749,21 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startpointintimerecovery": {
+    "name": "StartPointInTimeRecovery",
+    "description": "Grants permission to start point in time recovery job for a user pool",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "startuserimportjob": {
     "name": "StartUserImportJob",
     "description": "Grants permission to start any user import job",
@@ -1674,6 +1832,36 @@
   "updateautheventfeedback": {
     "name": "UpdateAuthEventFeedback",
     "description": "Grants permission to update the feedback for the user authentication event",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatecimdpolicy": {
+    "name": "UpdateCIMDPolicy",
+    "description": "Grants permission to update the configuration of a client ID metadata document (CIMD) policy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "userpool",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateclientmetadataurlstate": {
+    "name": "UpdateClientMetadataURLState",
+    "description": "Grants permission to refresh or invalidate the cached client metadata document for a URL",
     "accessLevel": "Write",
     "resourceTypes": [
       {

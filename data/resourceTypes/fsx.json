@@ -13,6 +13,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "cluster-peer": {
+    "key": "cluster-peer",
+    "arn": "arn:${Partition}:fsx:${Region}:${Account}:cluster-peer/${FileSystemId}/${ClusterPeerId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "file-cache": {
     "key": "file-cache",
     "arn": "arn:${Partition}:fsx:${Region}:${Account}:file-cache/${FileCacheId}",
@@ -27,6 +34,20 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "snapmirror-policy": {
+    "key": "snapmirror-policy",
+    "arn": "arn:${Partition}:fsx:${Region}:${Account}:snapmirror-policy/${FileSystemIdOrStorageVirtualMachineId}/${SnapmirrorPolicyId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "snapmirror-relationship": {
+    "key": "snapmirror-relationship",
+    "arn": "arn:${Partition}:fsx:${Region}:${Account}:snapmirror-relationship/${FileSystemId}/${VolumeId}/${SnapmirrorRelationshipId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "snapshot": {
     "key": "snapshot",
     "arn": "arn:${Partition}:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
@@ -34,9 +55,23 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "snapshot-policy": {
+    "key": "snapshot-policy",
+    "arn": "arn:${Partition}:fsx:${Region}:${Account}:snapshot-policy/${FileSystemIdOrStorageVirtualMachineId}/${SnapshotPolicyId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "storage-virtual-machine": {
     "key": "storage-virtual-machine",
     "arn": "arn:${Partition}:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "svm-peer": {
+    "key": "svm-peer",
+    "arn": "arn:${Partition}:fsx:${Region}:${Account}:svm-peer/${FileSystemId}/${StorageVirtualMachineId}/${StorageVirtualMachinePeerId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]

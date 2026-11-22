@@ -34,6 +34,11 @@
     "description": "Filters access by a specific Catalog",
     "type": "String"
   },
+  "partnercentral:channelcontracttype": {
+    "key": "partnercentral:ChannelContractType",
+    "description": "Filters access by channel contract types",
+    "type": "String"
+  },
   "partnercentral:channelhandshaketype": {
     "key": "partnercentral:ChannelHandshakeType",
     "description": "Filters access by channel handshake types",

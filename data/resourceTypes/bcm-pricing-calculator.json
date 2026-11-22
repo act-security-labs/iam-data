@@ -1,7 +1,10 @@
 {
   "bill-estimate": {
     "key": "bill-estimate",
-    "arn": "arn:${Partition}:bcm-pricing-calculator::${Account}:bill-estimate/${BillEstimateId}"
+    "arn": "arn:${Partition}:bcm-pricing-calculator::${Account}:bill-estimate/${BillEstimateId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "bill-scenario": {
     "key": "bill-scenario",

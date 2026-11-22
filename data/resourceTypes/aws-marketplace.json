@@ -107,6 +107,13 @@
     "key": "Dashboard",
     "arn": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
   },
+  "datasubscription": {
+    "key": "DataSubscription",
+    "arn": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/DataSubscription/${DataSubscriptionId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "sellerdashboard": {
     "key": "SellerDashboard",
     "arn": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"

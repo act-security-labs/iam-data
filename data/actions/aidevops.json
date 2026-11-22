@@ -24,6 +24,105 @@
     ],
     "dependentActions": []
   },
+  "batchcreateaccessprofileassignment": {
+    "name": "BatchCreateAccessProfileAssignment",
+    "description": "Grants permission to assign principals to an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchdeleteaccessprofileassignment": {
+    "name": "BatchDeleteAccessProfileAssignment",
+    "description": "Grants permission to unassign principals from an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchdeleteaccessprofileentitlement": {
+    "name": "BatchDeleteAccessProfileEntitlement",
+    "description": "Grants permission to delete entitlements from an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "batchputaccessprofileentitlement": {
+    "name": "BatchPutAccessProfileEntitlement",
+    "description": "Grants permission to put entitlements on an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createaccessprofile": {
+    "name": "CreateAccessProfile",
+    "description": "Grants permission to create an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createaccesstoken": {
     "name": "CreateAccessToken",
     "description": "Grants permission to create an access token",
@@ -175,6 +274,27 @@
     "description": "Grants permission to create a trigger",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteaccessprofile": {
+    "name": "DeleteAccessProfile",
+    "description": "Grants permission to delete an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "agentspace",
         "required": true,
@@ -416,6 +536,27 @@
     "description": "Grants permission to end a chat for a case",
     "accessLevel": "Write",
     "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getaccessprofile": {
+    "name": "GetAccessProfile",
+    "description": "Grants permission to get an access profile",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
       {
         "name": "agentspace",
         "required": true,
@@ -698,6 +839,63 @@
     "name": "InitiateChatForCase",
     "description": "Grants permission to initiate a chat for a case",
     "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaccessprofileassignments": {
+    "name": "ListAccessProfileAssignments",
+    "description": "Grants permission to list the assignments of an access profile",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaccessprofileentitlements": {
+    "name": "ListAccessProfileEntitlements",
+    "description": "Grants permission to list the entitlements of an access profile",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaccessprofiles": {
+    "name": "ListAccessProfiles",
+    "description": "Grants permission to list access profiles",
+    "accessLevel": "List",
     "resourceTypes": [
       {
         "name": "agentspace",
@@ -1290,6 +1488,42 @@
       "aws:ResourceTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "updateaccessprofile": {
+    "name": "UpdateAccessProfile",
+    "description": "Grants permission to update an access profile",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "access-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateaccessprofilesorder": {
+    "name": "UpdateAccessProfilesOrder",
+    "description": "Grants permission to update the order of access profiles",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "updateagentspace": {
