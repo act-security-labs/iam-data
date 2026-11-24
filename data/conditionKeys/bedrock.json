@@ -41,12 +41,12 @@
   },
   "bedrock:modelarn": {
     "key": "bedrock:ModelArn",
-    "description": "Filters access by the model that a stateful invocation runs, on the authorization whose resource is the project",
+    "description": "Filters access by the model associated with a request authorized against a project",
     "type": "ARN"
   },
   "bedrock:projectarn": {
     "key": "bedrock:ProjectArn",
-    "description": "Filters access by the project that a stateful invocation belongs to, on authorizations whose resource is the inference target it runs",
+    "description": "Filters access by the project associated with a request",
     "type": "ARN"
   },
   "bedrock:promptrouterarn": {

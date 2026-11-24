@@ -1,1 +1,22 @@
-{}
+{
+  "agentspace": {
+    "key": "agentspace",
+    "arn": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}"
+  },
+  "automation": {
+    "key": "automation",
+    "arn": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/automation/${AutomationId}"
+  },
+  "connection": {
+    "key": "connection",
+    "arn": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/connection/${ConnectionId}"
+  },
+  "document": {
+    "key": "document",
+    "arn": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/document/${DocumentId}"
+  },
+  "integration": {
+    "key": "integration",
+    "arn": "arn:${Partition}:finops-agent:${Region}:${Account}:integration/${IntegrationId}"
+  }
+}

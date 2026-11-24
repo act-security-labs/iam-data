@@ -1,7 +1,7 @@
 {
   "allowvendedlogdeliveryforresource": {
     "name": "AllowVendedLogDeliveryForResource",
-    "description": "Grants permission to configure vended log delivery for a knowledge base",
+    "description": "Grants permission to configure vended log delivery for a knowledge base or project",
     "accessLevel": "Permissions management, Write",
     "resourceTypes": [
       {
@@ -2177,7 +2177,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock:ProjectArn"
+    ],
     "dependentActions": []
   },
   "getfoundationmodelavailability": {
@@ -2236,7 +2238,9 @@
         "dependentActions": []
       }
     ],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock:ProjectArn"
+    ],
     "dependentActions": []
   },
   "getingesteddocumentacl": {
@@ -2732,7 +2736,7 @@
       },
       {
         "name": "project",
-        "required": true,
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -2836,6 +2840,8 @@
     "conditionKeys": [
       "bedrock:GuardrailIdentifier",
       "bedrock:InferenceProfileArn",
+      "bedrock:ModelArn",
+      "bedrock:ProjectArn",
       "bedrock:PromptRouterArn",
       "bedrock:ServiceTier"
     ],
@@ -3242,7 +3248,9 @@
     "description": "Grants permission to list Bedrock foundation models that you can use",
     "accessLevel": "List",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock:ProjectArn"
+    ],
     "dependentActions": []
   },
   "listguardrails": {
@@ -3273,7 +3281,9 @@
     "description": "Grants permission to list inference profiles that you can use",
     "accessLevel": "List",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "bedrock:ProjectArn"
+    ],
     "dependentActions": []
   },
   "listingestionjobs": {
