@@ -54,6 +54,11 @@
     "description": "Filters access by the specified prompt router",
     "type": "ARN"
   },
+  "bedrock:provider": {
+    "key": "bedrock:Provider",
+    "description": "Filters access by the provider of a trusted access program",
+    "type": "String"
+  },
   "bedrock:servicetier": {
     "key": "bedrock:ServiceTier",
     "description": "Filters access by the specified ServiceTier",
@@ -63,5 +68,10 @@
     "key": "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn",
     "description": "Filters access by the secretArn containing the credentials of the third party platform",
     "type": "ARN"
+  },
+  "bedrock:trustedaccessprogramoptin": {
+    "key": "bedrock:TrustedAccessProgramOptIn",
+    "description": "Filters access by the requested trusted access program opt-in preference",
+    "type": "String"
   }
 }

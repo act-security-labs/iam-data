@@ -9,6 +9,12 @@
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
       }
     ],
     "conditionKeys": [],
@@ -221,6 +227,21 @@
       {
         "name": "guardrail-profile",
         "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "archiveproject": {
+    "name": "ArchiveProject",
+    "description": "Grants permission to archive a Bedrock project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
         "conditionKeys": [],
         "dependentActions": []
       }
@@ -910,6 +931,25 @@
     ],
     "dependentActions": []
   },
+  "createproject": {
+    "name": "CreateProject",
+    "description": "Grants permission to create a Bedrock project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "bedrock:DataRetentionMode"
+    ],
+    "dependentActions": []
+  },
   "createprompt": {
     "name": "CreatePrompt",
     "description": "Grants permission to create a prompt",
@@ -1028,6 +1068,14 @@
       "aws:RequestTag/${TagKey}",
       "aws:TagKeys"
     ],
+    "dependentActions": []
+  },
+  "deleteaccountdataretentionstorage": {
+    "name": "DeleteAccountDataRetentionStorage",
+    "description": "Grants permission to delete the data retention storage configuration for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deleteagent": {
@@ -1428,6 +1476,29 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteorganizationdataretentionstorage": {
+    "name": "DeleteOrganizationDataRetentionStorage",
+    "description": "Grants permission to delete the data retention storage configuration for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteprojectdataretentionstorage": {
+    "name": "DeleteProjectDataRetentionStorage",
+    "description": "Grants permission to delete the data retention storage configuration for a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "deleteprompt": {
     "name": "DeletePrompt",
     "description": "Grants permission to delete a prompt or its version",
@@ -1622,6 +1693,14 @@
   "getaccountdataretention": {
     "name": "GetAccountDataRetention",
     "description": "Returns the account-wide data retention mode for Amazon Bedrock",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getaccountdataretentionstorage": {
+    "name": "GetAccountDataRetentionStorage",
+    "description": "Grants permission to get the data retention storage configuration for an account",
     "accessLevel": "Read",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -2424,6 +2503,44 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getorganizationdataretentionstorage": {
+    "name": "GetOrganizationDataRetentionStorage",
+    "description": "Grants permission to get the data retention storage configuration for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getproject": {
+    "name": "GetProject",
+    "description": "Grants permission to get a Bedrock project",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getprojectdataretentionstorage": {
+    "name": "GetProjectDataRetentionStorage",
+    "description": "Grants permission to get the data retention storage configuration for a project",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "getprompt": {
     "name": "GetPrompt",
     "description": "Grants permission to retrieve an existing prompt or its version",
@@ -2509,6 +2626,86 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "gettrustedaccessprogram": {
+    "name": "GetTrustedAccessProgram",
+    "description": "Grants permission to get a trusted access program",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
+    "dependentActions": []
+  },
+  "gettrustedaccessprogramaccountenrollment": {
+    "name": "GetTrustedAccessProgramAccountEnrollment",
+    "description": "Grants permission to get trusted access program enrollment for an account",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
+    "dependentActions": []
+  },
+  "gettrustedaccessprogramorganizationenrollment": {
+    "name": "GetTrustedAccessProgramOrganizationEnrollment",
+    "description": "Grants permission to get trusted access program enrollment for an organization",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
+    "dependentActions": []
+  },
+  "gettrustedaccessprogramprojectenrollment": {
+    "name": "GetTrustedAccessProgramProjectEnrollment",
+    "description": "Grants permission to get trusted access program enrollment for a project",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
     "dependentActions": []
   },
   "getusecaseformodelaccess": {
@@ -2815,6 +3012,12 @@
       {
         "name": "inference-profile",
         "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
+        "required": false,
         "conditionKeys": [],
         "dependentActions": []
       },
@@ -3280,7 +3483,20 @@
     "name": "ListInferenceProfiles",
     "description": "Grants permission to list inference profiles that you can use",
     "accessLevel": "List",
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "application-inference-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "inference-profile",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "bedrock:ProjectArn"
     ],
@@ -3399,6 +3615,21 @@
     "description": "Grants permission to list model invocation jobs that you created earlier",
     "accessLevel": "List",
     "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listprojects": {
+    "name": "ListProjects",
+    "description": "Grants permission to list Bedrock projects",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [],
     "dependentActions": []
   },
@@ -3626,6 +3857,12 @@
         "dependentActions": []
       },
       {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "prompt",
         "required": true,
         "conditionKeys": [],
@@ -3657,6 +3894,27 @@
       },
       {
         "name": "session",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtrustedaccessprograms": {
+    "name": "ListTrustedAccessPrograms",
+    "description": "Grants permission to list trusted access programs",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "trusted-access-program",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -3713,6 +3971,14 @@
     ],
     "dependentActions": []
   },
+  "putaccountdataretentionstorage": {
+    "name": "PutAccountDataRetentionStorage",
+    "description": "Grants permission to set the data retention storage configuration for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "putenforcedguardrailconfiguration": {
     "name": "PutEnforcedGuardrailConfiguration",
     "description": "Grants permission to set account-level enforced guardrail configuration",
@@ -3750,6 +4016,89 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putorganizationdataretentionstorage": {
+    "name": "PutOrganizationDataRetentionStorage",
+    "description": "Grants permission to set the data retention storage configuration for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putprojectdataretentionstorage": {
+    "name": "PutProjectDataRetentionStorage",
+    "description": "Grants permission to set the data retention storage configuration for a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "puttrustedaccessprogramaccountenrollment": {
+    "name": "PutTrustedAccessProgramAccountEnrollment",
+    "description": "Grants permission to set trusted access program enrollment preferences for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider",
+      "bedrock:TrustedAccessProgramOptIn"
+    ],
+    "dependentActions": []
+  },
+  "puttrustedaccessprogramorganizationenrollment": {
+    "name": "PutTrustedAccessProgramOrganizationEnrollment",
+    "description": "Grants permission to set trusted access program enrollment preferences for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider",
+      "bedrock:TrustedAccessProgramOptIn"
+    ],
+    "dependentActions": []
+  },
+  "puttrustedaccessprogramprojectenrollment": {
+    "name": "PutTrustedAccessProgramProjectEnrollment",
+    "description": "Grants permission to set trusted access program enrollment preferences for a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider",
+      "bedrock:TrustedAccessProgramOptIn"
+    ],
     "dependentActions": []
   },
   "putusecaseformodelaccess": {
@@ -3870,6 +4219,63 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "starttrustedaccessprogramaccountapplication": {
+    "name": "StartTrustedAccessProgramAccountApplication",
+    "description": "Grants permission to start a trusted access program application for an account",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
+    "dependentActions": []
+  },
+  "starttrustedaccessprogramorganizationapplication": {
+    "name": "StartTrustedAccessProgramOrganizationApplication",
+    "description": "Grants permission to start a trusted access program application for an organization",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
+    "dependentActions": []
+  },
+  "starttrustedaccessprogramprojectapplication": {
+    "name": "StartTrustedAccessProgramProjectApplication",
+    "description": "Grants permission to start a trusted access program application for a project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "trusted-access-program",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:Provider"
+    ],
     "dependentActions": []
   },
   "stopadvancedpromptoptimizationjob": {
@@ -4136,6 +4542,12 @@
         "dependentActions": []
       },
       {
+        "name": "project",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "prompt",
         "required": false,
         "conditionKeys": [],
@@ -4335,6 +4747,12 @@
       },
       {
         "name": "model-invocation-job",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "project",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -4691,6 +5109,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateproject": {
+    "name": "UpdateProject",
+    "description": "Grants permission to update a Bedrock project",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "project",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "bedrock:DataRetentionMode"
+    ],
     "dependentActions": []
   },
   "updateprompt": {

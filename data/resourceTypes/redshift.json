@@ -66,11 +66,17 @@
   },
   "qev2idcapplication": {
     "key": "qev2idcapplication",
-    "arn": "arn:${Partition}:redshift:${Region}:${Account}:qev2idcapplication:${Qev2IdcApplicationId}"
+    "arn": "arn:${Partition}:redshift:${Region}:${Account}:qev2idcapplication:${Qev2IdcApplicationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "redshiftidcapplication": {
     "key": "redshiftidcapplication",
-    "arn": "arn:${Partition}:redshift:${Region}:${Account}:redshiftidcapplication:${RedshiftIdcApplicationId}"
+    "arn": "arn:${Partition}:redshift:${Region}:${Account}:redshiftidcapplication:${RedshiftIdcApplicationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
   },
   "securitygroup": {
     "key": "securitygroup",

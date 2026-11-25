@@ -57,7 +57,10 @@
     "description": "Grants permission to create a qev2 idc application",
     "accessLevel": "Write",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createsavedquery": {
@@ -655,7 +658,10 @@
     "description": "Grants permission to create a redshift idc application",
     "accessLevel": "Write",
     "resourceTypes": [],
-    "conditionKeys": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys"
+    ],
     "dependentActions": []
   },
   "createscheduledaction": {
@@ -739,6 +745,18 @@
       },
       {
         "name": "parametergroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "qev2idcapplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "redshiftidcapplication",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1133,6 +1151,18 @@
       },
       {
         "name": "parametergroup",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "qev2idcapplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "redshiftidcapplication",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -1662,6 +1692,18 @@
         "dependentActions": []
       },
       {
+        "name": "qev2idcapplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "redshiftidcapplication",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "securitygroup",
         "required": false,
         "conditionKeys": [],
@@ -1949,6 +1991,14 @@
         "dependentActions": []
       }
     ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "modifyaccountattributes": {
+    "name": "ModifyAccountAttributes",
+    "description": "Grants permission to modify the account-level settings for Amazon Redshift and Amazon Redshift Serverless in the current AWS Region",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [],
     "conditionKeys": [],
     "dependentActions": []
   },

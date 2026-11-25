@@ -261,5 +261,9 @@
   "system-tool": {
     "key": "system-tool",
     "arn": "arn:${Partition}:bedrock::${Account}:system-tool/${ResourceId}"
+  },
+  "trusted-access-program": {
+    "key": "trusted-access-program",
+    "arn": "arn:${Partition}:bedrock::aws:trusted-access-program/${ProgramId}"
   }
 }
