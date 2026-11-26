@@ -4,6 +4,7 @@
   "services": [
     "amplify",
     "amplifybackend",
+    "amplifygen3",
     "amplifyuibuilder",
     "appsync",
     "devicefarm",

@@ -57,6 +57,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "describeschemas": {
+    "name": "DescribeSchemas",
+    "description": "Grants permission to return the database schema metadata of an RDS resource that is opted in to AWS Schema Catalog schema discovery",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "disableinternetaccessgateway": {
     "name": "DisableInternetAccessGateway",
     "description": "Grants permission to disable Internet Access Gateway for a DB cluster",

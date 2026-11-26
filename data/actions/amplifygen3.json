@@ -1,0 +1,1530 @@
+{
+  "allowvendedlogdeliveryforresource": {
+    "name": "AllowVendedLogDeliveryForResource",
+    "description": "Grants permission to configure vended log delivery for AmplifyGen3",
+    "accessLevel": "Permissions management, Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "associatewebacl": {
+    "name": "AssociateWebACL",
+    "description": "Grants permission to associate a WebACL with an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociatewebacl": {
+    "name": "DisassociateWebACL",
+    "description": "Grants permission to disassociate a WebACL from an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getwebaclforresource": {
+    "name": "GetWebACLForResource",
+    "description": "Grants permission to retrieve the WebACL associated with an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listresourcesforwebacl": {
+    "name": "ListResourcesForWebACL",
+    "description": "Grants permission to list the resources associated with a WebACL",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "acceptforkpullrequestdeployment": {
+    "name": "AcceptForkPullRequestDeployment",
+    "description": "Grants permission to accept a pull request deployment from a forked repository",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "cancelgradualrollout": {
+    "name": "CancelGradualRollout",
+    "description": "Grants permission to cancel a gradual rollout for an alias of an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "connect": {
+    "name": "Connect",
+    "description": "Grants permission to connect to an Amplify Gen 3 backend as a service identity, through the REST interface or Postgres relay",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createapp": {
+    "name": "CreateApp",
+    "description": "Grants permission to create a new App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createdeployment": {
+    "name": "CreateDeployment",
+    "description": "Grants permission to create a deployment for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createdomainassociation": {
+    "name": "CreateDomainAssociation",
+    "description": "Grants permission to create a new domain association for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DomainAssociation",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createenvironment": {
+    "name": "CreateEnvironment",
+    "description": "Grants permission to create a new environment for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createintegrationconfiguration": {
+    "name": "CreateIntegrationConfiguration",
+    "description": "Grants permission to create a new integration configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "IntegrationConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createintegrationconnection": {
+    "name": "CreateIntegrationConnection",
+    "description": "Grants permission to create a connection between an integration configuration and an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createnetworkconnector": {
+    "name": "CreateNetworkConnector",
+    "description": "Grants permission to create a new network connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NetworkConnector",
+        "required": true,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createsourceupload": {
+    "name": "CreateSourceUpload",
+    "description": "Grants permission to create a source upload and retrieve a pre-signed URL for uploading source artifacts",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletealias": {
+    "name": "DeleteAlias",
+    "description": "Grants permission to delete an alias for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteapp": {
+    "name": "DeleteApp",
+    "description": "Grants permission to delete an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletebackendfromapp": {
+    "name": "DeleteBackendFromApp",
+    "description": "Grants permission to delete the backend from an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletebranch": {
+    "name": "DeleteBranch",
+    "description": "Grants permission to delete a branch for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletedeployment": {
+    "name": "DeleteDeployment",
+    "description": "Grants permission to delete a deployment for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Deployment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletedomainassociation": {
+    "name": "DeleteDomainAssociation",
+    "description": "Grants permission to delete a domain association for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DomainAssociation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteenvironment": {
+    "name": "DeleteEnvironment",
+    "description": "Grants permission to delete an environment for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteenvironmentvariables": {
+    "name": "DeleteEnvironmentVariables",
+    "description": "Grants permission to delete environment variables for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletegitconnection": {
+    "name": "DeleteGitConnection",
+    "description": "Grants permission to delete a Git connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteidentityproviderconfig": {
+    "name": "DeleteIdentityProviderConfig",
+    "description": "Grants permission to delete the identity provider configuration for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteintegrationconfiguration": {
+    "name": "DeleteIntegrationConfiguration",
+    "description": "Grants permission to delete an integration configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "IntegrationConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteintegrationconnection": {
+    "name": "DeleteIntegrationConnection",
+    "description": "Grants permission to delete an integration connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletenetworkconnector": {
+    "name": "DeleteNetworkConnector",
+    "description": "Grants permission to delete a network connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NetworkConnector",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletesourceupload": {
+    "name": "DeleteSourceUpload",
+    "description": "Grants permission to delete a source upload",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disableaccesscontrol": {
+    "name": "DisableAccessControl",
+    "description": "Grants permission to disable access control for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "enableaccesscontrol": {
+    "name": "EnableAccessControl",
+    "description": "Grants permission to enable access control for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getaccesscontrol": {
+    "name": "GetAccessControl",
+    "description": "Grants permission to retrieve the access control configuration for an environment of an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getalias": {
+    "name": "GetAlias",
+    "description": "Grants permission to retrieve an alias for an environment of an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getapikey": {
+    "name": "GetApiKey",
+    "description": "Grants permission to retrieve an API key of a branch",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getapp": {
+    "name": "GetApp",
+    "description": "Grants permission to retrieve an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getbranch": {
+    "name": "GetBranch",
+    "description": "Grants permission to retrieve a branch for an environment of an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdeployment": {
+    "name": "GetDeployment",
+    "description": "Grants permission to retrieve a deployment for an environment of an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Deployment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdomainassociation": {
+    "name": "GetDomainAssociation",
+    "description": "Grants permission to retrieve a domain association for an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DomainAssociation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getdomainconnecturl": {
+    "name": "GetDomainConnectUrl",
+    "description": "Grants permission to retrieve a domain connect redirect URL for one-click DNS setup",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "DomainAssociation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getenvironment": {
+    "name": "GetEnvironment",
+    "description": "Grants permission to retrieve an environment for an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getenvironmentsfornetworkconnector": {
+    "name": "GetEnvironmentsForNetworkConnector",
+    "description": "Grants permission to retrieve the environments associated with a network connector",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "NetworkConnector",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getfile": {
+    "name": "GetFile",
+    "description": "Grants permission to retrieve a file from a repository",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getfolder": {
+    "name": "GetFolder",
+    "description": "Grants permission to retrieve a folder from a repository",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getidentityproviderconfig": {
+    "name": "GetIdentityProviderConfig",
+    "description": "Grants permission to retrieve the identity provider configuration for an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getintegrationconfiguration": {
+    "name": "GetIntegrationConfiguration",
+    "description": "Grants permission to retrieve an integration configuration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "IntegrationConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getintegrationconnection": {
+    "name": "GetIntegrationConnection",
+    "description": "Grants permission to retrieve an integration connection",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getnetworkconnector": {
+    "name": "GetNetworkConnector",
+    "description": "Grants permission to retrieve a network connector",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "NetworkConnector",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getrestorewindow": {
+    "name": "GetRestoreWindow",
+    "description": "Grants permission to retrieve the point-in-time restore window of a branch",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getsourceupload": {
+    "name": "GetSourceUpload",
+    "description": "Grants permission to retrieve a source upload",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaccesscontrols": {
+    "name": "ListAccessControls",
+    "description": "Grants permission to list access control configurations for an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listaliases": {
+    "name": "ListAliases",
+    "description": "Grants permission to list aliases for an environment of an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listapikeys": {
+    "name": "ListApiKeys",
+    "description": "Grants permission to list the API keys of a branch",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listapps": {
+    "name": "ListApps",
+    "description": "Grants permission to list Apps",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listbranches": {
+    "name": "ListBranches",
+    "description": "Grants permission to list branches for an environment of an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdeploymentsforapp": {
+    "name": "ListDeploymentsForApp",
+    "description": "Grants permission to list deployments for an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdeploymentsforenvironment": {
+    "name": "ListDeploymentsForEnvironment",
+    "description": "Grants permission to list deployments for an environment of an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdomainassociationsforaccount": {
+    "name": "ListDomainAssociationsForAccount",
+    "description": "Grants permission to list domain associations for an account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listdomainassociationsforapp": {
+    "name": "ListDomainAssociationsForApp",
+    "description": "Grants permission to list domain associations for an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenvironmentvariables": {
+    "name": "ListEnvironmentVariables",
+    "description": "Grants permission to list environment variables for an environment of an App",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listenvironments": {
+    "name": "ListEnvironments",
+    "description": "Grants permission to list environments for an App",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgitbranches": {
+    "name": "ListGitBranches",
+    "description": "Grants permission to list branches for a repository",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgitconnections": {
+    "name": "ListGitConnections",
+    "description": "Grants permission to list Git connections",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrationconfigurations": {
+    "name": "ListIntegrationConfigurations",
+    "description": "Grants permission to list integration configurations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrationconnections": {
+    "name": "ListIntegrationConnections",
+    "description": "Grants permission to list integration connections",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listintegrationtypes": {
+    "name": "ListIntegrationTypes",
+    "description": "Grants permission to list the available integration types",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listnetworkconnectors": {
+    "name": "ListNetworkConnectors",
+    "description": "Grants permission to list network connectors",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listplanviolations": {
+    "name": "ListPlanViolations",
+    "description": "Grants permission to list the resources in your account that a target plan tier does not support",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listrepositories": {
+    "name": "ListRepositories",
+    "description": "Grants permission to list repositories for a Git connection",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listsourceuploads": {
+    "name": "ListSourceUploads",
+    "description": "Grants permission to list source uploads",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list tags for a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "App",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Branch",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Deployment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "DomainAssociation",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Environment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "IntegrationConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "NetworkConnector",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putenvironmentvariables": {
+    "name": "PutEnvironmentVariables",
+    "description": "Grants permission to set environment variables for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "putidentityproviderconfig": {
+    "name": "PutIdentityProviderConfig",
+    "description": "Grants permission to set the identity provider configuration for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "resetcache": {
+    "name": "ResetCache",
+    "description": "Grants permission to purge cached content by cache tag for a deployment of an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Deployment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "restorebranch": {
+    "name": "RestoreBranch",
+    "description": "Grants permission to restore a branch to a point in time into a new branch",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "resumebackend": {
+    "name": "ResumeBackend",
+    "description": "Grants permission to resume the paused backend of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "revokeapikey": {
+    "name": "RevokeApiKey",
+    "description": "Grants permission to revoke an API key of a branch",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Branch",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "rotateidentityprovidersecret": {
+    "name": "RotateIdentityProviderSecret",
+    "description": "Grants permission to rotate the client secret of the identity provider configuration for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startauthorizationflow": {
+    "name": "StartAuthorizationFlow",
+    "description": "Grants permission to start an authorization flow for connecting a Git provider",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startcacherevalidation": {
+    "name": "StartCacheRevalidation",
+    "description": "Grants permission to revalidate cached content by cache tag for a deployment of an environment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Deployment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to tag a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "App",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Branch",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Deployment",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "DomainAssociation",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Environment",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "IntegrationConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "NetworkConnector",
+        "required": false,
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a resource",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "App",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Branch",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Deployment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "DomainAssociation",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "Environment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "IntegrationConfiguration",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "NetworkConnector",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateaccesscontrol": {
+    "name": "UpdateAccessControl",
+    "description": "Grants permission to update the access control configuration for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatealiasrouting": {
+    "name": "UpdateAliasRouting",
+    "description": "Grants permission to update the routing configuration of an alias for an environment of an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateapp": {
+    "name": "UpdateApp",
+    "description": "Grants permission to update an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "App",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatedomainassociation": {
+    "name": "UpdateDomainAssociation",
+    "description": "Grants permission to update a domain association for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "DomainAssociation",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateenvironment": {
+    "name": "UpdateEnvironment",
+    "description": "Grants permission to update an environment for an App",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Environment",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateintegrationconfiguration": {
+    "name": "UpdateIntegrationConfiguration",
+    "description": "Grants permission to update an integration configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "IntegrationConfiguration",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatenetworkconnector": {
+    "name": "UpdateNetworkConnector",
+    "description": "Grants permission to update a network connector",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NetworkConnector",
+        "required": true,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

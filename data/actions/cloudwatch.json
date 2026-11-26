@@ -134,6 +134,23 @@
     ],
     "dependentActions": []
   },
+  "batchgetomnisloreport": {
+    "name": "BatchGetOmniSloReport",
+    "description": "Grants permission to get current reports for Omni SLOs",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "omni-slo",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "batchgetservicelevelindicatorreport": {
     "name": "BatchGetServiceLevelIndicatorReport",
     "description": "Grants permission to batch get service level indicator report",
@@ -155,6 +172,23 @@
       }
     ],
     "conditionKeys": [],
+    "dependentActions": []
+  },
+  "completeexperimentrun": {
+    "name": "CompleteExperimentRun",
+    "description": "Grants permission to complete a run of an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
     "dependentActions": []
   },
   "createaccessgrant": {
@@ -213,6 +247,18 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createexperiment": {
+    "name": "CreateExperiment",
+    "description": "Grants permission to create an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "createingestionendpoint": {
     "name": "CreateIngestionEndpoint",
     "description": "Grants permission to create an ingestion endpoint",
@@ -227,6 +273,18 @@
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "createlookup": {
+    "name": "CreateLookup",
+    "description": "Grants permission to create a lookup",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
       "cloudwatch:HasAccessGrant"
     ],
     "dependentActions": []
@@ -251,6 +309,25 @@
     ],
     "dependentActions": []
   },
+  "createomnislo": {
+    "name": "CreateOmniSlo",
+    "description": "Grants permission to create an Omni SLO",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-slo",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:TagKeys",
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "createomnithread": {
     "name": "CreateOmniThread",
     "description": "Grants permission to create an omni thread",
@@ -264,6 +341,14 @@
   "createonetimedeeplinkcode": {
     "name": "CreateOneTimeDeepLinkCode",
     "description": "Grants permission to create a one-time deep link code",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createprovisioningrolesfororganization": {
+    "name": "CreateProvisioningRolesForOrganization",
+    "description": "Grants permission to create the provisioning roles for an organization member account",
     "accessLevel": "Write",
     "resourceTypes": [],
     "conditionKeys": [],
@@ -459,6 +544,40 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "deleteexperiment": {
+    "name": "DeleteExperiment",
+    "description": "Grants permission to delete an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteexperimentrun": {
+    "name": "DeleteExperimentRun",
+    "description": "Grants permission to delete a run of an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "deleteingestionendpoint": {
     "name": "DeleteIngestionEndpoint",
     "description": "Grants permission to delete an ingestion endpoint",
@@ -496,6 +615,23 @@
     "resourceTypes": [
       {
         "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deletelookup": {
+    "name": "DeleteLookup",
+    "description": "Grants permission to delete a lookup",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "lookup",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -560,6 +696,23 @@
     "resourceTypes": [
       {
         "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "deleteomnislo": {
+    "name": "DeleteOmniSlo",
+    "description": "Grants permission to delete an Omni SLO",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-slo",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -940,6 +1093,40 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "getexperiment": {
+    "name": "GetExperiment",
+    "description": "Grants permission to get an experiment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getexperimentrun": {
+    "name": "GetExperimentRun",
+    "description": "Grants permission to get a run of an experiment",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "getingestionendpoint": {
     "name": "GetIngestionEndpoint",
     "description": "Grants permission to get an ingestion endpoint",
@@ -992,6 +1179,23 @@
     "description": "Grants permission to get an intelligence configuration",
     "accessLevel": "Read",
     "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getlookup": {
+    "name": "GetLookup",
+    "description": "Grants permission to get a lookup",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "lookup",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
     ],
@@ -1094,6 +1298,23 @@
     "resourceTypes": [
       {
         "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "getomnislo": {
+    "name": "GetOmniSlo",
+    "description": "Grants permission to get an Omni SLO",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "omni-slo",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -1336,6 +1557,16 @@
     ],
     "dependentActions": []
   },
+  "listanomalies": {
+    "name": "ListAnomalies",
+    "description": "Grants permission to list anomalies",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "listdashboards": {
     "name": "ListDashboards",
     "description": "Grants permission to return a list of all CloudWatch dashboards in your account",
@@ -1362,6 +1593,33 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listexperimentruns": {
+    "name": "ListExperimentRuns",
+    "description": "Grants permission to list the runs of an experiment",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listexperiments": {
+    "name": "ListExperiments",
+    "description": "Grants permission to list experiments",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "listingestionendpoints": {
     "name": "ListIngestionEndpoints",
     "description": "Grants permission to list ingestion endpoints",
@@ -1370,9 +1628,36 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listintegrationtargets": {
+    "name": "ListIntegrationTargets",
+    "description": "Grants permission to list the targets available on an integration",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "listintegrations": {
     "name": "ListIntegrations",
     "description": "Grants permission to list integrations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listlookups": {
+    "name": "ListLookups",
+    "description": "Grants permission to list lookups",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -1443,6 +1728,16 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "listobservations": {
+    "name": "ListObservations",
+    "description": "Grants permission to list observations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "listomniagentassets": {
     "name": "ListOmniAgentAssets",
     "description": "Grants permission to list agent assets",
@@ -1456,6 +1751,16 @@
   "listomnidashboards": {
     "name": "ListOmniDashboards",
     "description": "Grants permission to list omni dashboards",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "listomnislos": {
+    "name": "ListOmniSlos",
+    "description": "Grants permission to list Omni SLOs",
     "accessLevel": "List",
     "resourceTypes": [],
     "conditionKeys": [
@@ -1557,7 +1862,23 @@
         "dependentActions": []
       },
       {
+        "name": "experiment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "insight-rule",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "lookup",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -1574,6 +1895,14 @@
       },
       {
         "name": "metric-stream",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "omni-slo",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -1785,6 +2114,23 @@
     ],
     "dependentActions": []
   },
+  "putexperimentrunresults": {
+    "name": "PutExperimentRunResults",
+    "description": "Grants permission to report results for a run of an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "putinsightrule": {
     "name": "PutInsightRule",
     "description": "Grants permission to create a new insight rule or replace an existing insight rule",
@@ -1989,6 +2335,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "startexperimentrun": {
+    "name": "StartExperimentRun",
+    "description": "Grants permission to start a run of an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "startmetricstreams": {
     "name": "StartMetricStreams",
     "description": "Grants permission to start all CloudWatch metric streams that you specify",
@@ -2037,6 +2400,23 @@
     "description": "Grants permission to start a telemetry query session",
     "accessLevel": "Write",
     "resourceTypes": [],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "stopexperimentrun": {
+    "name": "StopExperimentRun",
+    "description": "Grants permission to stop a run of an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
     "conditionKeys": [
       "cloudwatch:HasAccessGrant"
     ],
@@ -2125,7 +2505,23 @@
         "dependentActions": []
       },
       {
+        "name": "experiment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "insight-rule",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "lookup",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -2142,6 +2538,14 @@
       },
       {
         "name": "metric-stream",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "omni-slo",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -2293,7 +2697,23 @@
         "dependentActions": []
       },
       {
+        "name": "experiment",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
         "name": "insight-rule",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "lookup",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -2310,6 +2730,14 @@
       },
       {
         "name": "metric-stream",
+        "required": false,
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "dependentActions": []
+      },
+      {
+        "name": "omni-slo",
         "required": false,
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -2486,6 +2914,23 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "updateexperiment": {
+    "name": "UpdateExperiment",
+    "description": "Grants permission to update an experiment",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "experiment",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
   "updateingestionendpoint": {
     "name": "UpdateIngestionEndpoint",
     "description": "Grants permission to update an ingestion endpoint",
@@ -2508,6 +2953,23 @@
     "resourceTypes": [
       {
         "name": "integration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updatelookup": {
+    "name": "UpdateLookup",
+    "description": "Grants permission to update a lookup",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "lookup",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []
@@ -2542,6 +3004,23 @@
     "resourceTypes": [
       {
         "name": "omni-dashboard",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "cloudwatch:HasAccessGrant"
+    ],
+    "dependentActions": []
+  },
+  "updateomnislo": {
+    "name": "UpdateOmniSlo",
+    "description": "Grants permission to update an Omni SLO",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "omni-slo",
         "required": true,
         "conditionKeys": [],
         "dependentActions": []

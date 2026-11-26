@@ -7,6 +7,14 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "createproxywafassociation": {
+    "name": "CreateProxyWafAssociation",
+    "description": "Grants permission to associate a WAF web ACL with a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
   "createwebaclassociation": {
     "name": "CreateWebACLAssociation",
     "description": "Grants permission to associate WAF WebACL to the specified load balancer",
@@ -23,6 +31,14 @@
       "aws:ResourceTag/${TagKey}",
       "elasticloadbalancing:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "deleteproxywafassociation": {
+    "name": "DeleteProxyWafAssociation",
+    "description": "Grants permission to disassociate a WAF web ACL from a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "deletewebaclassociation": {
@@ -67,6 +83,22 @@
       "aws:ResourceTag/${TagKey}",
       "elasticloadbalancing:ResourceTag/${TagKey}"
     ],
+    "dependentActions": []
+  },
+  "getproxywafassociation": {
+    "name": "GetProxyWafAssociation",
+    "description": "Grants permission to get the WAF web ACL associated with a proxy",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproxywafassociations": {
+    "name": "ListProxyWafAssociations",
+    "description": "Grants permission to list the proxies associated with a WAF web ACL",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
     "dependentActions": []
   },
   "setwebacl": {
@@ -140,6 +172,40 @@
     ],
     "dependentActions": []
   },
+  "associatecertificate": {
+    "name": "AssociateCertificate",
+    "description": "Grants permission to associate an ACM certificate with a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "cancelproxyversionupdate": {
+    "name": "CancelProxyVersionUpdate",
+    "description": "Grants permission to cancel an in-progress version update for a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "createlistener": {
     "name": "CreateListener",
     "description": "Grants permission to create a listener for the specified Application Load Balancer",
@@ -196,6 +262,25 @@
       "elasticloadbalancing:Scheme",
       "elasticloadbalancing:SecurityGroup",
       "elasticloadbalancing:Subnet"
+    ],
+    "dependentActions": []
+  },
+  "createproxy": {
+    "name": "CreateProxy",
+    "description": "Grants permission to create a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
     ],
     "dependentActions": []
   },
@@ -310,6 +395,23 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "elasticloadbalancing:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "deleteproxy": {
+    "name": "DeleteProxy",
+    "description": "Grants permission to delete a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
     ],
     "dependentActions": []
   },
@@ -537,6 +639,91 @@
     "conditionKeys": [],
     "dependentActions": []
   },
+  "disassociatecertificate": {
+    "name": "DisassociateCertificate",
+    "description": "Grants permission to disassociate an ACM certificate from a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getproxy": {
+    "name": "GetProxy",
+    "description": "Grants permission to get information about a proxy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getproxyattributes": {
+    "name": "GetProxyAttributes",
+    "description": "Grants permission to get the attributes of a proxy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getproxyconfigurationcontents": {
+    "name": "GetProxyConfigurationContents",
+    "description": "Grants permission to get the configuration file and configuration archive contents of a proxy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "getproxyupdate": {
+    "name": "GetProxyUpdate",
+    "description": "Grants permission to get information about a proxy update",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
   "getresourcepolicy": {
     "name": "GetResourcePolicy",
     "description": "Grants permission to retrieve the resource policy associated with the resource",
@@ -588,6 +775,73 @@
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}",
       "elasticloadbalancing:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listcertificateassociations": {
+    "name": "ListCertificateAssociations",
+    "description": "Grants permission to list the ACM certificate associations for a proxy",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listproxies": {
+    "name": "ListProxies",
+    "description": "Grants permission to list the proxies in your account",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproxyupdates": {
+    "name": "ListProxyUpdates",
+    "description": "Grants permission to list the updates for a proxy",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "listproxyversions": {
+    "name": "ListProxyVersions",
+    "description": "Grants permission to list the available proxy versions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to list the tags for a proxy",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
     ],
     "dependentActions": []
   },
@@ -981,6 +1235,111 @@
       "aws:ResourceTag/${TagKey}",
       "elasticloadbalancing:ResourceTag/${TagKey}",
       "elasticloadbalancing:Subnet"
+    ],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to add tags to a proxy",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a proxy",
+    "accessLevel": "Tagging, Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "updateproxyattributes": {
+    "name": "UpdateProxyAttributes",
+    "description": "Grants permission to update the attributes of a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updateproxyconfiguration": {
+    "name": "UpdateProxyConfiguration",
+    "description": "Grants permission to update the configuration of a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updateproxynetworkconfiguration": {
+    "name": "UpdateProxyNetworkConfiguration",
+    "description": "Grants permission to update the network configuration of a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "updateproxyversion": {
+    "name": "UpdateProxyVersion",
+    "description": "Grants permission to update the version of a proxy",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "proxy",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
     ],
     "dependentActions": []
   },

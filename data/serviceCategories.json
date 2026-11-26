@@ -19,6 +19,7 @@
   "airflow-serverless": "application-integration",
   "amplify": "front-end-web-and-mobile",
   "amplifybackend": "front-end-web-and-mobile",
+  "amplifygen3": "front-end-web-and-mobile",
   "amplifyuibuilder": "front-end-web-and-mobile",
   "aoss": "analytics",
   "apex": "security-identity-and-compliance",

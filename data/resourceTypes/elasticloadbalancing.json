@@ -63,6 +63,13 @@
       "elasticloadbalancing:ResourceTag/${TagKey}"
     ]
   },
+  "proxy": {
+    "key": "proxy",
+    "arn": "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:proxy/${ProxyName}:${ProxyId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "targetgroup": {
     "key": "targetgroup",
     "arn": "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:targetgroup/${TargetGroupName}/${TargetGroupId}",

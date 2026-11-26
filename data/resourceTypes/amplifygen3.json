@@ -1,0 +1,58 @@
+{
+  "alias": {
+    "key": "Alias",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/alias/${AliasName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "app": {
+    "key": "App",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "branch": {
+    "key": "Branch",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/branch/${BranchName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "deployment": {
+    "key": "Deployment",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/deployment/${DeploymentId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "domainassociation": {
+    "key": "DomainAssociation",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/domain/${DomainName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "environment": {
+    "key": "Environment",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "integrationconfiguration": {
+    "key": "IntegrationConfiguration",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:integration-configuration/${IntegrationName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "networkconnector": {
+    "key": "NetworkConnector",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:network-connector/${NetworkConnectorName}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  }
+}

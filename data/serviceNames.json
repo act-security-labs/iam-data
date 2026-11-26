@@ -19,6 +19,7 @@
   "airflow-serverless": "AWS MWAA Serverless",
   "amplify": "AWS Amplify",
   "amplifybackend": "AWS Amplify Admin",
+  "amplifygen3": "AWS Amplify Gen 3",
   "amplifyuibuilder": "AWS Amplify UI Builder",
   "aoss": "Amazon OpenSearch Serverless",
   "apex": "AWS Edge Analytics Platform",

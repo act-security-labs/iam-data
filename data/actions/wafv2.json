@@ -71,6 +71,12 @@
         "dependentActions": []
       },
       {
+        "name": "amplifygen3-app",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "apigateway",
         "required": false,
         "conditionKeys": [],
@@ -84,6 +90,12 @@
       },
       {
         "name": "appsync",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "elb-proxy",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -397,6 +409,12 @@
         "dependentActions": []
       },
       {
+        "name": "amplifygen3-app",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "apigateway",
         "required": false,
         "conditionKeys": [],
@@ -410,6 +428,12 @@
       },
       {
         "name": "appsync",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "elb-proxy",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -688,6 +712,12 @@
         "dependentActions": []
       },
       {
+        "name": "amplifygen3-app",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "apigateway",
         "required": false,
         "conditionKeys": [],
@@ -701,6 +731,12 @@
       },
       {
         "name": "appsync",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "elb-proxy",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []
@@ -848,7 +884,19 @@
         "dependentActions": []
       },
       {
+        "name": "amplifygen3-app",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
         "name": "apprunner",
+        "required": false,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "elb-proxy",
         "required": false,
         "conditionKeys": [],
         "dependentActions": []

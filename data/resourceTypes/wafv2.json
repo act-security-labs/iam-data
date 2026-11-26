@@ -7,6 +7,10 @@
     "key": "amplify-app",
     "arn": "arn:${Partition}:amplify:${Region}:${Account}:apps/${AppId}"
   },
+  "amplifygen3-app": {
+    "key": "amplifygen3-app",
+    "arn": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}"
+  },
   "apigateway": {
     "key": "apigateway",
     "arn": "arn:${Partition}:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}"
@@ -18,6 +22,10 @@
   "appsync": {
     "key": "appsync",
     "arn": "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}"
+  },
+  "elb-proxy": {
+    "key": "elb-proxy",
+    "arn": "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:proxy/${ProxyName}:${ProxyId}"
   },
   "ipset": {
     "key": "ipset",

@@ -55,6 +55,13 @@
       "aws:ResourceTag/${TagKey}"
     ]
   },
+  "experiment": {
+    "key": "experiment",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:experiment/${ExperimentId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
   "ingestion-endpoint": {
     "key": "ingestion-endpoint",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}",
@@ -72,6 +79,13 @@
   "integration": {
     "key": "integration",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "lookup": {
+    "key": "lookup",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:lookup/${LookupName}/${LookupId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
@@ -100,6 +114,13 @@
   "omni-dashboard": {
     "key": "omni-dashboard",
     "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}",
+    "conditionKeys": [
+      "aws:ResourceTag/${TagKey}"
+    ]
+  },
+  "omni-slo": {
+    "key": "omni-slo",
+    "arn": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-slo/${SloId}",
     "conditionKeys": [
       "aws:ResourceTag/${TagKey}"
     ]
