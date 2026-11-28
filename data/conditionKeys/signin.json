@@ -1,4 +1,9 @@
 {
+  "signin:maxsigninsessionduration": {
+    "key": "signin:MaxSigninSessionDuration",
+    "description": "Filters access by the maximum allowed sign-in session duration, in seconds, for OAuth-based authentication",
+    "type": "Numeric"
+  },
   "signin:oauthclientauthentication": {
     "key": "signin:OAuthClientAuthentication",
     "description": "Filters access by the client authentication method used in the OAuth token request",

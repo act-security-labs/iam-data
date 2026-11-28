@@ -162,6 +162,7 @@
       }
     ],
     "conditionKeys": [
+      "signin:MaxSigninSessionDuration",
       "signin:PutSignInDurationBlock"
     ],
     "dependentActions": []

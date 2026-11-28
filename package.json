@@ -1,12 +1,12 @@
 {
   "name": "@actsecurity/iam-data",
-  "version": "0.22.202611261",
+  "version": "0.22.202611281",
   "description": "AWS IAM Data",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/act-security-labs/iam-data.git"
   },
-  "updatedAt": "2026-11-26T13:34:28.038Z",
+  "updatedAt": "2026-11-28T04:41:50.485Z",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
